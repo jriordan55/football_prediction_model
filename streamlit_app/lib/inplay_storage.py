@@ -27,6 +27,7 @@ CSV_COLUMNS = [
     "distance",
     "possession",
     "yard_line",
+    "score_margin",
     "home",
     "away",
     "home_score",

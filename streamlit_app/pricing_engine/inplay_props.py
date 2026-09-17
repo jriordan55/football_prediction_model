@@ -1,4 +1,4 @@
-"""In-play player prop projections from live box stats + pregame rate."""
+"""In-play player prop projections — box + pregame pace, anchored to live sim team totals."""
 from __future__ import annotations
 
 from typing import Any
@@ -6,6 +6,8 @@ from typing import Any
 from lib.prop_pricing import analyze_prop_line, prop_key_from_row, side_win_prob
 from lib.prop_results import model_pick_side, stat_from_box
 from lib.odds_math import ev_pct, implied_to_american
+
+from pricing_engine.situation_model import PlaySituation, correlated_live_prop_projection
 
 
 def _elapsed_frac(period: int, clock_seconds: int | None) -> float:
@@ -39,19 +41,50 @@ def enrich_live_prop_row(
     pregame_proj: float | None,
     period: int,
     clock_seconds: int | None,
+    sit: PlaySituation | None = None,
+    home: str = "",
+    away: str = "",
+    live_sim: dict[str, Any] | None = None,
+    pregame_sim: dict[str, Any] | None = None,
+    home_team_box: dict[str, float] | None = None,
+    away_team_box: dict[str, float] | None = None,
 ) -> dict[str, Any]:
     from lib.prop_board_enrich import prop_display_name
+    from lib.nfl_team_registry import teams_match as nfl_match
+    from lib.team_registry import teams_match as cfb_match
 
     prop_key = str(row.get("prop_key") or prop_key_from_row(row) or "")
     market = prop_display_name(prop_key)
     player = str(row.get("player") or "")
     elapsed = _elapsed_frac(period, clock_seconds)
     actual = stat_from_box(player, market, box_stats) if player and box_stats else None
-    proj = live_prop_projection(
-        pregame_proj=pregame_proj,
-        current_stat=actual,
-        elapsed_frac=elapsed,
-    )
+    team = str(row.get("team") or "")
+    team_box: dict[str, float] = {}
+    if team and (cfb_match(team, home) or nfl_match(team, home)):
+        team_box = dict(home_team_box or {})
+    elif team and (cfb_match(team, away) or nfl_match(team, away)):
+        team_box = dict(away_team_box or {})
+
+    if sit is not None:
+        proj = correlated_live_prop_projection(
+            prop_key=prop_key,
+            team=team or None,
+            home=home,
+            away=away,
+            pregame_proj=pregame_proj,
+            current_stat=actual,
+            elapsed_frac=elapsed,
+            live_sim=live_sim,
+            pregame_sim=pregame_sim,
+            team_box=team_box,
+            sit=sit,
+        )
+    else:
+        proj = live_prop_projection(
+            pregame_proj=pregame_proj,
+            current_stat=actual,
+            elapsed_frac=elapsed,
+        )
     out = dict(row)
     out["actual_stat"] = actual
     out["live_projection"] = proj

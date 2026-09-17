@@ -25,6 +25,7 @@ from pricing_engine.constants import DEFAULT_SIMS
 from pricing_engine.fourc_board import _find_board_game
 from pricing_engine.inplay_context import build_play_context
 from pricing_engine.inplay_markets import game_market_rows, prop_market_rows
+from pricing_engine.situation_model import parse_play_situation
 from pricing_engine.inplay_props import enrich_live_prop_row
 from pricing_engine.simulator import run_matchup_simulation
 from pricing_engine.ui.props_table import build_prop_projection_map, row_prop_key
@@ -169,13 +170,19 @@ def capture_game(
         pid = str(play.get("id") or f"tick-{captured_at}")
         period = int(play.get("period") or situation.get("period") or 1)
         clock = play.get("clock") or situation.get("clock")
+        play_sit = parse_play_situation(play, situation, home=home, away=away)
         live_game = {
             "status": "in",
             "period": period,
             "clock": clock,
-            "home_score": int(play.get("homeScore") or play.get("home_score") or 0),
-            "away_score": int(play.get("awayScore") or play.get("away_score") or 0),
+            "home_score": play_sit.home_score,
+            "away_score": play_sit.away_score,
             "win_prob_home": win_prob_home,
+            "situation": play_sit,
+            "down": play_sit.down,
+            "distance": play_sit.distance,
+            "yard_line": play_sit.yard_line,
+            "possession": play_sit.possession_text,
         }
         sim = run_matchup_simulation(
             sport, home, away,
@@ -195,7 +202,14 @@ def capture_game(
                     box_stats=box_stats,
                     pregame_proj=pre_proj,
                     period=period,
-                    clock_seconds=situation.get("clockSeconds"),
+                    clock_seconds=play_sit.clock_seconds or situation.get("clockSeconds"),
+                    sit=play_sit,
+                    home=home,
+                    away=away,
+                    live_sim=sim,
+                    pregame_sim=pregame_sim,
+                    home_team_box=home_yards,
+                    away_team_box=away_yards,
                 )
             )
         pregame_bundle = {"sim": pregame_sim, "odds_quotes": (pregame or {}).get("_odds_quotes") or []}

@@ -82,6 +82,10 @@ def _live_fingerprint(live: dict) -> tuple:
         live.get("home_score"),
         live.get("away_score"),
         live.get("win_prob_home"),
+        live.get("down"),
+        live.get("distance"),
+        live.get("yard_line"),
+        live.get("possession"),
     )
 
 
@@ -115,10 +119,30 @@ def _live_enriched_state(sport: str, year: int, week: int, home: str, away: str,
     eid = game.get("event_id") or game.get("id")
     if eid:
         try:
+            from lib.espn_live import derive_situation, fetch_game_plays, _team_yards
+            from pricing_engine.situation_model import parse_play_situation
+
             summary = fetch_game_summary(str(eid), sport=sport)
             wp = latest_win_probability(summary)
             if wp.get("homeWinPct") is not None:
                 live["win_prob_home"] = wp["homeWinPct"]
+            plays = fetch_game_plays(str(eid), sport=sport)
+            situation = derive_situation(summary, live, plays)
+            latest = plays[-1] if plays else {}
+            play_sit = parse_play_situation(latest, situation, home=home, away=away)
+            live["event_id"] = str(eid)
+            box = parse_espn_boxscore(summary)
+            live["_box_stats"] = box
+            live["situation"] = play_sit
+            live["down"] = play_sit.down
+            live["distance"] = play_sit.distance
+            live["yard_line"] = play_sit.yard_line
+            live["possession"] = play_sit.possession_text
+            live["home_score"] = play_sit.home_score
+            live["away_score"] = play_sit.away_score
+            live["period"] = play_sit.period
+            live["clock"] = play_sit.clock
+            live["_team_yards"] = _team_yards(summary)
         except Exception:
             pass
     return live
@@ -127,27 +151,24 @@ def _live_enriched_state(sport: str, year: int, week: int, home: str, away: str,
 def _live_prop_projections(
     props: list,
     *,
-    sport: str,
-    game: dict,
+    home: str,
+    away: str,
     pregame_map: dict,
     live: dict,
+    live_sim: dict | None,
+    pregame_sim: dict | None,
 ) -> dict[tuple[str, str, str], float]:
-    eid = game.get("event_id") or game.get("id")
     box: dict = {}
-    clock_sec = None
+    play_sit = live.get("situation")
     period = int(live.get("period") or 1)
-    if eid:
-        try:
-            summary = fetch_game_summary(str(eid), sport=sport)
-            box = parse_espn_boxscore(summary)
-            from lib.espn_live import derive_situation, fetch_game_plays
-
-            plays = fetch_game_plays(str(eid), sport=sport)
-            sit = derive_situation(summary, {"status": live}, plays)
-            period = int(sit.get("period") or period)
-            clock_sec = sit.get("clockSeconds")
-        except Exception:
-            pass
+    clock_sec = None
+    if play_sit is not None:
+        period = int(play_sit.period or period)
+        clock_sec = play_sit.clock_seconds
+    home_yards, away_yards = ({}, {})
+    if live.get("_team_yards"):
+        away_yards, home_yards = live["_team_yards"]
+    box = live.get("_box_stats") or box
     out: dict[tuple[str, str, str], float] = {}
     for prop in props:
         pk = row_prop_key(prop)
@@ -159,6 +180,13 @@ def _live_prop_projections(
             pregame_proj=pre,
             period=period,
             clock_seconds=clock_sec,
+            sit=play_sit,
+            home=home,
+            away=away,
+            live_sim=live_sim,
+            pregame_sim=pregame_sim,
+            home_team_box=home_yards,
+            away_team_box=away_yards,
         )
         lp = enriched.get("live_projection")
         if lp is not None:
@@ -293,6 +321,7 @@ def _bootstrap_projections(
     spread, total = _resolve_lines(payload["quotes"], game)
     # Projections always from pricing engine — archive supplies odds/lines only.
     st.session_state.pe_sim = _stable_prematch_sim(sport, home, away, year, week, spread, total)
+    st.session_state.pe_pregame_sim = st.session_state.pe_sim
     props = payload["props"]
     sig = tuple(
         (str(p.get("player") or ""), str(p.get("prop_key") or ""), str(p.get("line") or ""))
@@ -429,10 +458,12 @@ def main() -> None:
             pre = st.session_state.get("pe_prop_projs") or {}
             st.session_state.pe_live_prop_projs = _live_prop_projections(
                 payload["props"],
-                sport=sport,
-                game=game,
+                home=home,
+                away=away,
                 pregame_map=pre,
                 live=live,
+                live_sim=st.session_state.get("pe_sim"),
+                pregame_sim=st.session_state.get("pe_pregame_sim"),
             )
             st.session_state.pe_live_fp = fp
 

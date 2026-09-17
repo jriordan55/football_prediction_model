@@ -15,11 +15,14 @@ def build_play_context(
 ) -> dict[str, Any]:
     hp = win_prob_home
     away_wp = (100.0 - hp) if hp is not None else None
+    hs = int(play.get("homeScore") or play.get("home_score") or 0)
+    aw = int(play.get("awayScore") or play.get("away_score") or 0)
     return {
         "down": play.get("down") or _down_from_situation(situation),
         "distance": play.get("distance") or _distance_from_situation(situation),
         "possession": play.get("possession") or situation.get("possession"),
         "yard_line": play.get("yardLine") or situation.get("yardLine"),
+        "score_margin": hs - aw,
         "home_win_prob": round(hp, 1) if hp is not None else None,
         "away_win_prob": round(away_wp, 1) if away_wp is not None else None,
         "home_pass_yds": _num(home_yards.get("pass")),
