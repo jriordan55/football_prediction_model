@@ -1,0 +1,4307 @@
+{
+  "capturedAt": "2026-08-10T15:42:57.047Z",
+  "mode": "prematch",
+  "sport": "MLB",
+  "markets": [
+    "Moneyline",
+    "Spread",
+    "Total",
+    "1st Inning Moneyline",
+    "1st Inning Spread",
+    "1st Inning Total",
+    "2nd Inning Moneyline",
+    "2nd Inning Spread",
+    "2nd Inning Total",
+    "3rd Inning Moneyline",
+    "3rd Inning Spread",
+    "3rd Inning Total",
+    "4th Inning Moneyline",
+    "4th Inning Spread",
+    "4th Inning Total",
+    "5th Inning Moneyline",
+    "5th Inning Spread",
+    "5th Inning Total",
+    "6th Inning Moneyline",
+    "6th Inning Spread",
+    "6th Inning Total",
+    "7th Inning Moneyline",
+    "7th Inning Spread",
+    "7th Inning Total",
+    "8th Inning Moneyline",
+    "8th Inning Spread",
+    "8th Inning Total",
+    "9th Inning Moneyline",
+    "9th Inning Spread",
+    "9th Inning Total",
+    "Hits",
+    "Home Runs",
+    "RBIs",
+    "Runs",
+    "Bases",
+    "Hits + Runs + RBIs",
+    "Strikeouts Thrown",
+    "Outs"
+  ],
+  "sportsbooks": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "betonline",
+    "thescore",
+    "consensus"
+  ],
+  "oddsCount": 0,
+  "newPlays": 0,
+  "gameStates": 10,
+  "injuries": 96,
+  "liveGames": 0,
+  "games": [
+    {
+      "id": "401816469",
+      "name": "Boston Red Sox at Toronto Blue Jays",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 7:07 PM EDT"
+      },
+      "away": {
+        "id": "2",
+        "homeAway": "away",
+        "abbreviation": "BOS",
+        "name": "Boston Red Sox",
+        "shortName": "Red Sox",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bos.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "14",
+        "homeAway": "home",
+        "abbreviation": "TOR",
+        "name": "Toronto Blue Jays",
+        "shortName": "Blue Jays",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tor.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816470",
+      "name": "New York Mets at Atlanta Braves",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 7:15 PM EDT"
+      },
+      "away": {
+        "id": "21",
+        "homeAway": "away",
+        "abbreviation": "NYM",
+        "name": "New York Mets",
+        "shortName": "Mets",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nym.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "15",
+        "homeAway": "home",
+        "abbreviation": "ATL",
+        "name": "Atlanta Braves",
+        "shortName": "Braves",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816471",
+      "name": "Baltimore Orioles at Minnesota Twins",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 7:40 PM EDT"
+      },
+      "away": {
+        "id": "1",
+        "homeAway": "away",
+        "abbreviation": "BAL",
+        "name": "Baltimore Orioles",
+        "shortName": "Orioles",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bal.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "9",
+        "homeAway": "home",
+        "abbreviation": "MIN",
+        "name": "Minnesota Twins",
+        "shortName": "Twins",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816472",
+      "name": "Philadelphia Phillies at St. Louis Cardinals",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 7:45 PM EDT"
+      },
+      "away": {
+        "id": "22",
+        "homeAway": "away",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Phillies",
+        "shortName": "Phillies",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "24",
+        "homeAway": "home",
+        "abbreviation": "STL",
+        "name": "St. Louis Cardinals",
+        "shortName": "Cardinals",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/stl.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816478",
+      "name": "Texas Rangers at Los Angeles Angels",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 9:38 PM EDT"
+      },
+      "away": {
+        "id": "13",
+        "homeAway": "away",
+        "abbreviation": "TEX",
+        "name": "Texas Rangers",
+        "shortName": "Rangers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tex.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "3",
+        "homeAway": "home",
+        "abbreviation": "LAA",
+        "name": "Los Angeles Angels",
+        "shortName": "Angels",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/laa.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816473",
+      "name": "Colorado Rockies at Arizona Diamondbacks",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 9:40 PM EDT"
+      },
+      "away": {
+        "id": "27",
+        "homeAway": "away",
+        "abbreviation": "COL",
+        "name": "Colorado Rockies",
+        "shortName": "Rockies",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/col.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "29",
+        "homeAway": "home",
+        "abbreviation": "ARI",
+        "name": "Arizona Diamondbacks",
+        "shortName": "Diamondbacks",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ari.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816476",
+      "name": "Milwaukee Brewers at San Diego Padres",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 9:40 PM EDT"
+      },
+      "away": {
+        "id": "8",
+        "homeAway": "away",
+        "abbreviation": "MIL",
+        "name": "Milwaukee Brewers",
+        "shortName": "Brewers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "25",
+        "homeAway": "home",
+        "abbreviation": "SD",
+        "name": "San Diego Padres",
+        "shortName": "Padres",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816477",
+      "name": "Tampa Bay Rays at Athletics Athletics",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 9:40 PM EDT"
+      },
+      "away": {
+        "id": "30",
+        "homeAway": "away",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Rays",
+        "shortName": "Rays",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tb.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "11",
+        "homeAway": "home",
+        "abbreviation": "ATH",
+        "name": "Athletics",
+        "shortName": "Athletics",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ath.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816474",
+      "name": "Houston Astros at San Francisco Giants",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 9:45 PM EDT"
+      },
+      "away": {
+        "id": "18",
+        "homeAway": "away",
+        "abbreviation": "HOU",
+        "name": "Houston Astros",
+        "shortName": "Astros",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "26",
+        "homeAway": "home",
+        "abbreviation": "SF",
+        "name": "San Francisco Giants",
+        "shortName": "Giants",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sf.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816475",
+      "name": "Kansas City Royals at Los Angeles Dodgers",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "8/10 - 10:10 PM EDT"
+      },
+      "away": {
+        "id": "7",
+        "homeAway": "away",
+        "abbreviation": "KC",
+        "name": "Kansas City Royals",
+        "shortName": "Royals",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/kc.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "19",
+        "homeAway": "home",
+        "abbreviation": "LAD",
+        "name": "Los Angeles Dodgers",
+        "shortName": "Dodgers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    }
+  ],
+  "odds": [],
+  "details": [
+    {
+      "fetchedAt": "2026-08-10T15:43:19.864Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816469",
+        "name": "Boston Red Sox at Toronto Blue Jays",
+        "shortName": "BOS @ TOR",
+        "date": "2026-08-10T23:07Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 7:07 PM EDT"
+        },
+        "venue": "Rogers Centre",
+        "away": {
+          "id": "2",
+          "homeAway": "away",
+          "abbreviation": "BOS",
+          "name": "Boston Red Sox",
+          "shortName": "Red Sox",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bos.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "14",
+          "homeAway": "home",
+          "abbreviation": "TOR",
+          "name": "Toronto Blue Jays",
+          "shortName": "Blue Jays",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tor.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "2",
+            "homeAway": "away",
+            "abbreviation": "BOS",
+            "name": "Boston Red Sox",
+            "shortName": "Red Sox",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bos.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "14",
+            "homeAway": "home",
+            "abbreviation": "TOR",
+            "name": "Toronto Blue Jays",
+            "shortName": "Blue Jays",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tor.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Ernie Clement",
+              "value": ".284",
+              "team": "TOR"
+            },
+            {
+              "athlete": "Willson Contreras",
+              "value": ".285",
+              "team": "BOS"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Kazuma Okamoto",
+              "value": "24",
+              "team": "TOR"
+            },
+            {
+              "athlete": "Willson Contreras",
+              "value": "23",
+              "team": "BOS"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Kazuma Okamoto",
+              "value": "70",
+              "team": "TOR"
+            },
+            {
+              "athlete": "Willson Contreras",
+              "value": "70",
+              "team": "BOS"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Dylan Cease",
+              "value": "2.28",
+              "team": "TOR"
+            },
+            {
+              "athlete": "Sonny Gray",
+              "value": "2.78",
+              "team": "BOS"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Dylan Cease",
+              "value": "7",
+              "team": "TOR"
+            },
+            {
+              "athlete": "Sonny Gray",
+              "value": "14",
+              "team": "BOS"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Dylan Cease",
+              "value": "184",
+              "team": "TOR"
+            },
+            {
+              "athlete": "Payton Tolle",
+              "value": "124",
+              "team": "BOS"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Boston Red Sox",
+          "abbreviation": "BOS",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/bos.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "117"
+            },
+            {
+              "label": "Batting G",
+              "value": "117"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "70"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1301"
+            },
+            {
+              "label": "Batting SO",
+              "value": "961"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "499"
+            },
+            {
+              "label": "Batting SH",
+              "value": "26"
+            },
+            {
+              "label": "Batting H",
+              "value": "972"
+            },
+            {
+              "label": "Batting SB",
+              "value": "90"
+            },
+            {
+              "label": "Batting BB",
+              "value": "362"
+            },
+            {
+              "label": "Batting CI",
+              "value": "2"
+            },
+            {
+              "label": "Batting R",
+              "value": "523"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "117"
+            },
+            {
+              "label": "Pitching G",
+              "value": "117"
+            }
+          ]
+        },
+        {
+          "team": "Toronto Blue Jays",
+          "abbreviation": "TOR",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "119"
+            },
+            {
+              "label": "Batting G",
+              "value": "119"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "43"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1383"
+            },
+            {
+              "label": "Batting SO",
+              "value": "873"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "448"
+            },
+            {
+              "label": "Batting SH",
+              "value": "16"
+            },
+            {
+              "label": "Batting H",
+              "value": "969"
+            },
+            {
+              "label": "Batting SB",
+              "value": "56"
+            },
+            {
+              "label": "Batting BB",
+              "value": "326"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "469"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "119"
+            },
+            {
+              "label": "Pitching G",
+              "value": "119"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "George Springer",
+          "position": "DH",
+          "team": "TOR",
+          "status": "Day-To-Day",
+          "injury": "Soreness",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Lenyn Sosa",
+          "position": "2B",
+          "team": "TOR",
+          "status": "60-Day-IL",
+          "injury": "Bruise",
+          "returnDate": "2026-08-15",
+          "note": null
+        },
+        {
+          "player": "Luis Urias",
+          "position": "2B",
+          "team": "TOR",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-18",
+          "note": null
+        },
+        {
+          "player": "Joe Mantiply",
+          "position": "RP",
+          "team": "TOR",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-18",
+          "note": null
+        },
+        {
+          "player": "Spencer Arrighetti",
+          "position": "SP",
+          "team": "TOR",
+          "status": "15-Day-IL",
+          "injury": "Soreness",
+          "returnDate": "2026-08-25",
+          "note": null
+        },
+        {
+          "player": "Masataka Yoshida",
+          "position": "DH",
+          "team": "BOS",
+          "status": "Day-To-Day",
+          "injury": "Not Specified",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Adley Rutschman",
+          "position": "C",
+          "team": "BOS",
+          "status": "10-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-11",
+          "note": null
+        },
+        {
+          "player": "Johan Oviedo",
+          "position": "SP",
+          "team": "BOS",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-12",
+          "note": null
+        },
+        {
+          "player": "Isiah Kiner-Falefa",
+          "position": "2B",
+          "team": "BOS",
+          "status": "10-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-14",
+          "note": null
+        },
+        {
+          "player": "Trevor Story",
+          "position": "SS",
+          "team": "BOS",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-17",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:19.902Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816470",
+        "name": "New York Mets at Atlanta Braves",
+        "shortName": "NYM @ ATL",
+        "date": "2026-08-10T23:15Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 7:15 PM EDT"
+        },
+        "venue": "Truist Park",
+        "away": {
+          "id": "21",
+          "homeAway": "away",
+          "abbreviation": "NYM",
+          "name": "New York Mets",
+          "shortName": "Mets",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nym.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "15",
+          "homeAway": "home",
+          "abbreviation": "ATL",
+          "name": "Atlanta Braves",
+          "shortName": "Braves",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "21",
+            "homeAway": "away",
+            "abbreviation": "NYM",
+            "name": "New York Mets",
+            "shortName": "Mets",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nym.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "15",
+            "homeAway": "home",
+            "abbreviation": "ATL",
+            "name": "Atlanta Braves",
+            "shortName": "Braves",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Michael Harris II",
+              "value": ".291",
+              "team": "ATL"
+            },
+            {
+              "athlete": "Carson Benge",
+              "value": ".272",
+              "team": "NYM"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Matt Olson",
+              "value": "34",
+              "team": "ATL"
+            },
+            {
+              "athlete": "Juan Soto",
+              "value": "21",
+              "team": "NYM"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Matt Olson",
+              "value": "72",
+              "team": "ATL"
+            },
+            {
+              "athlete": "Bo Bichette",
+              "value": "59",
+              "team": "NYM"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Chris Sale",
+              "value": "2.20",
+              "team": "ATL"
+            },
+            {
+              "athlete": "Nolan McLean",
+              "value": "3.51",
+              "team": "NYM"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Chris Sale",
+              "value": "12",
+              "team": "ATL"
+            },
+            {
+              "athlete": "Nolan McLean",
+              "value": "8",
+              "team": "NYM"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Chris Sale",
+              "value": "151",
+              "team": "ATL"
+            },
+            {
+              "athlete": "Nolan McLean",
+              "value": "156",
+              "team": "NYM"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "New York Mets",
+          "abbreviation": "NYM",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/nym.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "119"
+            },
+            {
+              "label": "Batting G",
+              "value": "119"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "41"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1305"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1015"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "476"
+            },
+            {
+              "label": "Batting SH",
+              "value": "16"
+            },
+            {
+              "label": "Batting H",
+              "value": "943"
+            },
+            {
+              "label": "Batting SB",
+              "value": "63"
+            },
+            {
+              "label": "Batting BB",
+              "value": "382"
+            },
+            {
+              "label": "Batting CI",
+              "value": "4"
+            },
+            {
+              "label": "Batting R",
+              "value": "499"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "119"
+            },
+            {
+              "label": "Pitching G",
+              "value": "119"
+            }
+          ]
+        },
+        {
+          "team": "Atlanta Braves",
+          "abbreviation": "ATL",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/atl.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "47"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1271"
+            },
+            {
+              "label": "Batting SO",
+              "value": "954"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "554"
+            },
+            {
+              "label": "Batting SH",
+              "value": "6"
+            },
+            {
+              "label": "Batting H",
+              "value": "997"
+            },
+            {
+              "label": "Batting SB",
+              "value": "57"
+            },
+            {
+              "label": "Batting BB",
+              "value": "346"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "576"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Reynaldo Lopez",
+          "position": "RP",
+          "team": "ATL",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-14",
+          "note": null
+        },
+        {
+          "player": "Joe Jimenez",
+          "position": "RP",
+          "team": "ATL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-20",
+          "note": null
+        },
+        {
+          "player": "Robert Suarez",
+          "position": "RP",
+          "team": "ATL",
+          "status": "15-Day-IL",
+          "injury": "Soreness",
+          "returnDate": "2026-08-25",
+          "note": null
+        },
+        {
+          "player": "Spencer Schwellenbach",
+          "position": "SP",
+          "team": "ATL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-09-01",
+          "note": null
+        },
+        {
+          "player": "Spencer Strider",
+          "position": "SP",
+          "team": "ATL",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2027-02-01",
+          "note": null
+        },
+        {
+          "player": "Austin Warren",
+          "position": "RP",
+          "team": "NYM",
+          "status": "15-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Justin Hagenman",
+          "position": "RP",
+          "team": "NYM",
+          "status": "60-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-08-19",
+          "note": null
+        },
+        {
+          "player": "Mark Vientos",
+          "position": "1B",
+          "team": "NYM",
+          "status": "10-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-08-25",
+          "note": null
+        },
+        {
+          "player": "Cionel Perez",
+          "position": "RP",
+          "team": "NYM",
+          "status": "15-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-09-01",
+          "note": null
+        },
+        {
+          "player": "Juan Soto",
+          "position": "LF",
+          "team": "NYM",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-09-01",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:19.926Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816471",
+        "name": "Baltimore Orioles at Minnesota Twins",
+        "shortName": "BAL @ MIN",
+        "date": "2026-08-10T23:40Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 7:40 PM EDT"
+        },
+        "venue": "Target Field",
+        "away": {
+          "id": "1",
+          "homeAway": "away",
+          "abbreviation": "BAL",
+          "name": "Baltimore Orioles",
+          "shortName": "Orioles",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bal.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "9",
+          "homeAway": "home",
+          "abbreviation": "MIN",
+          "name": "Minnesota Twins",
+          "shortName": "Twins",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "1",
+            "homeAway": "away",
+            "abbreviation": "BAL",
+            "name": "Baltimore Orioles",
+            "shortName": "Orioles",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bal.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "9",
+            "homeAway": "home",
+            "abbreviation": "MIN",
+            "name": "Minnesota Twins",
+            "shortName": "Twins",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Luke Keaschall",
+              "value": ".262",
+              "team": "MIN"
+            },
+            {
+              "athlete": "Pete Alonso",
+              "value": ".252",
+              "team": "BAL"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Byron Buxton",
+              "value": "25",
+              "team": "MIN"
+            },
+            {
+              "athlete": "Pete Alonso",
+              "value": "25",
+              "team": "BAL"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Josh Bell",
+              "value": "68",
+              "team": "MIN"
+            },
+            {
+              "athlete": "Pete Alonso",
+              "value": "75",
+              "team": "BAL"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Joe Ryan",
+              "value": "3.65",
+              "team": "MIN"
+            },
+            {
+              "athlete": "Kyle Bradish",
+              "value": "3.68",
+              "team": "BAL"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Taj Bradley",
+              "value": "9",
+              "team": "MIN"
+            },
+            {
+              "athlete": "Brandon Young",
+              "value": "8",
+              "team": "BAL"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Taj Bradley",
+              "value": "148",
+              "team": "MIN"
+            },
+            {
+              "athlete": "Kyle Bradish",
+              "value": "121",
+              "team": "BAL"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Baltimore Orioles",
+          "abbreviation": "BAL",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/bal.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "43"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1195"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1085"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "510"
+            },
+            {
+              "label": "Batting SH",
+              "value": "15"
+            },
+            {
+              "label": "Batting H",
+              "value": "919"
+            },
+            {
+              "label": "Batting SB",
+              "value": "64"
+            },
+            {
+              "label": "Batting BB",
+              "value": "459"
+            },
+            {
+              "label": "Batting CI",
+              "value": "2"
+            },
+            {
+              "label": "Batting R",
+              "value": "528"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        },
+        {
+          "team": "Minnesota Twins",
+          "abbreviation": "MIN",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/min.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "119"
+            },
+            {
+              "label": "Batting G",
+              "value": "119"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "63"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1251"
+            },
+            {
+              "label": "Batting SO",
+              "value": "963"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "525"
+            },
+            {
+              "label": "Batting SH",
+              "value": "6"
+            },
+            {
+              "label": "Batting H",
+              "value": "973"
+            },
+            {
+              "label": "Batting SB",
+              "value": "72"
+            },
+            {
+              "label": "Batting BB",
+              "value": "390"
+            },
+            {
+              "label": "Batting CI",
+              "value": "0"
+            },
+            {
+              "label": "Batting R",
+              "value": "553"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "119"
+            },
+            {
+              "label": "Pitching G",
+              "value": "119"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Zebby Matthews",
+          "position": "SP",
+          "team": "MIN",
+          "status": "Day-To-Day",
+          "injury": "Abrasion",
+          "returnDate": "2026-08-12",
+          "note": null
+        },
+        {
+          "player": "Byron Buxton",
+          "position": "CF",
+          "team": "MIN",
+          "status": "10-Day-IL",
+          "injury": "Pinched Nerve",
+          "returnDate": "2026-08-15",
+          "note": null
+        },
+        {
+          "player": "Joe Ryan",
+          "position": "SP",
+          "team": "MIN",
+          "status": "15-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-21",
+          "note": null
+        },
+        {
+          "player": "Mike Paredes",
+          "position": "SP",
+          "team": "MIN",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-09-21",
+          "note": null
+        },
+        {
+          "player": "Mick Abel",
+          "position": "SP",
+          "team": "MIN",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-09-25",
+          "note": null
+        },
+        {
+          "player": "Chris Bassitt",
+          "position": "SP",
+          "team": "BAL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-15",
+          "note": null
+        },
+        {
+          "player": "Blaze Alexander",
+          "position": "3B",
+          "team": "BAL",
+          "status": "10-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-08-21",
+          "note": null
+        },
+        {
+          "player": "Samuel Basallo",
+          "position": "C",
+          "team": "BAL",
+          "status": "10-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-21",
+          "note": null
+        },
+        {
+          "player": "Ryan Helsley",
+          "position": "RP",
+          "team": "BAL",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-09-03",
+          "note": null
+        },
+        {
+          "player": "Felix Bautista",
+          "position": "RP",
+          "team": "BAL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-09-07",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:19.951Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816472",
+        "name": "Philadelphia Phillies at St. Louis Cardinals",
+        "shortName": "PHI @ STL",
+        "date": "2026-08-10T23:45Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 7:45 PM EDT"
+        },
+        "venue": "Busch Stadium",
+        "away": {
+          "id": "22",
+          "homeAway": "away",
+          "abbreviation": "PHI",
+          "name": "Philadelphia Phillies",
+          "shortName": "Phillies",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "24",
+          "homeAway": "home",
+          "abbreviation": "STL",
+          "name": "St. Louis Cardinals",
+          "shortName": "Cardinals",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/stl.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "22",
+            "homeAway": "away",
+            "abbreviation": "PHI",
+            "name": "Philadelphia Phillies",
+            "shortName": "Phillies",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "24",
+            "homeAway": "home",
+            "abbreviation": "STL",
+            "name": "St. Louis Cardinals",
+            "shortName": "Cardinals",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/stl.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Jordan Walker",
+              "value": ".285",
+              "team": "STL"
+            },
+            {
+              "athlete": "Brandon Marsh",
+              "value": ".274",
+              "team": "PHI"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Jordan Walker",
+              "value": "23",
+              "team": "STL"
+            },
+            {
+              "athlete": "Kyle Schwarber",
+              "value": "35",
+              "team": "PHI"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Jordan Walker",
+              "value": "83",
+              "team": "STL"
+            },
+            {
+              "athlete": "Bryce Harper",
+              "value": "71",
+              "team": "PHI"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Andre Pallante",
+              "value": "3.63",
+              "team": "STL"
+            },
+            {
+              "athlete": "Cristopher Sanchez",
+              "value": "2.65",
+              "team": "PHI"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Andre Pallante",
+              "value": "12",
+              "team": "STL"
+            },
+            {
+              "athlete": "Cristopher Sanchez",
+              "value": "15",
+              "team": "PHI"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Matthew Liberatore",
+              "value": "110",
+              "team": "STL"
+            },
+            {
+              "athlete": "Jesus Luzardo",
+              "value": "176",
+              "team": "PHI"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Philadelphia Phillies",
+          "abbreviation": "PHI",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "119"
+            },
+            {
+              "label": "Batting G",
+              "value": "119"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "50"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1302"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1024"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "511"
+            },
+            {
+              "label": "Batting SH",
+              "value": "8"
+            },
+            {
+              "label": "Batting H",
+              "value": "949"
+            },
+            {
+              "label": "Batting SB",
+              "value": "92"
+            },
+            {
+              "label": "Batting BB",
+              "value": "370"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "528"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "119"
+            },
+            {
+              "label": "Pitching G",
+              "value": "119"
+            }
+          ]
+        },
+        {
+          "team": "St. Louis Cardinals",
+          "abbreviation": "STL",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/stl.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "71"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1380"
+            },
+            {
+              "label": "Batting SO",
+              "value": "905"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "502"
+            },
+            {
+              "label": "Batting SH",
+              "value": "18"
+            },
+            {
+              "label": "Batting H",
+              "value": "952"
+            },
+            {
+              "label": "Batting SB",
+              "value": "71"
+            },
+            {
+              "label": "Batting BB",
+              "value": "384"
+            },
+            {
+              "label": "Batting CI",
+              "value": "2"
+            },
+            {
+              "label": "Batting R",
+              "value": "515"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Ramon Urias",
+          "position": "3B",
+          "team": "STL",
+          "status": "60-Day-IL",
+          "injury": "Tendinitis",
+          "returnDate": "2026-08-25",
+          "note": null
+        },
+        {
+          "player": "Max Rajcic",
+          "position": "RP",
+          "team": "STL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2027-09-01",
+          "note": null
+        },
+        {
+          "player": "Derek Hill",
+          "position": "CF",
+          "team": "PHI",
+          "status": "Day-To-Day",
+          "injury": "Bruise",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Rafael Marchan",
+          "position": "C",
+          "team": "PHI",
+          "status": "10-Day-IL",
+          "injury": "Tendinitis",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Caleb Kilian",
+          "position": "RP",
+          "team": "PHI",
+          "status": "Day-To-Day",
+          "injury": "Not Specified",
+          "returnDate": "2026-08-11",
+          "note": null
+        },
+        {
+          "player": "Tanner Banks",
+          "position": "RP",
+          "team": "PHI",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-09-07",
+          "note": null
+        },
+        {
+          "player": "Johan Rojas",
+          "position": "CF",
+          "team": "PHI",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2027-02-01",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:19.980Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816478",
+        "name": "Texas Rangers at Los Angeles Angels",
+        "shortName": "TEX @ LAA",
+        "date": "2026-08-11T01:38Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 9:38 PM EDT"
+        },
+        "venue": "Angel Stadium",
+        "away": {
+          "id": "13",
+          "homeAway": "away",
+          "abbreviation": "TEX",
+          "name": "Texas Rangers",
+          "shortName": "Rangers",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tex.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "3",
+          "homeAway": "home",
+          "abbreviation": "LAA",
+          "name": "Los Angeles Angels",
+          "shortName": "Angels",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/laa.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "13",
+            "homeAway": "away",
+            "abbreviation": "TEX",
+            "name": "Texas Rangers",
+            "shortName": "Rangers",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tex.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "3",
+            "homeAway": "home",
+            "abbreviation": "LAA",
+            "name": "Los Angeles Angels",
+            "shortName": "Angels",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/laa.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Nolan Schanuel",
+              "value": ".274",
+              "team": "LAA"
+            },
+            {
+              "athlete": "Josh Jung",
+              "value": ".294",
+              "team": "TEX"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Zach Neto",
+              "value": "20",
+              "team": "LAA"
+            },
+            {
+              "athlete": "Joc Pederson",
+              "value": "21",
+              "team": "TEX"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Zach Neto",
+              "value": "51",
+              "team": "LAA"
+            },
+            {
+              "athlete": "Jake Burger",
+              "value": "66",
+              "team": "TEX"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Reid Detmers",
+              "value": "4.12",
+              "team": "LAA"
+            },
+            {
+              "athlete": "Jacob deGrom",
+              "value": "3.87",
+              "team": "TEX"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Walbert Urena",
+              "value": "7",
+              "team": "LAA"
+            },
+            {
+              "athlete": "Nathan Eovaldi",
+              "value": "10",
+              "team": "TEX"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Reid Detmers",
+              "value": "150",
+              "team": "LAA"
+            },
+            {
+              "athlete": "Jacob deGrom",
+              "value": "144",
+              "team": "TEX"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Texas Rangers",
+          "abbreviation": "TEX",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/tex.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "55"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1269"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1002"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "472"
+            },
+            {
+              "label": "Batting SH",
+              "value": "21"
+            },
+            {
+              "label": "Batting H",
+              "value": "958"
+            },
+            {
+              "label": "Batting SB",
+              "value": "58"
+            },
+            {
+              "label": "Batting BB",
+              "value": "377"
+            },
+            {
+              "label": "Batting CI",
+              "value": "1"
+            },
+            {
+              "label": "Batting R",
+              "value": "489"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        },
+        {
+          "team": "Los Angeles Angels",
+          "abbreviation": "LAA",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "66"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1190"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1122"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "465"
+            },
+            {
+              "label": "Batting SH",
+              "value": "14"
+            },
+            {
+              "label": "Batting H",
+              "value": "930"
+            },
+            {
+              "label": "Batting SB",
+              "value": "57"
+            },
+            {
+              "label": "Batting BB",
+              "value": "374"
+            },
+            {
+              "label": "Batting CI",
+              "value": "2"
+            },
+            {
+              "label": "Batting R",
+              "value": "484"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Sebastian Rivero",
+          "position": "C",
+          "team": "LAA",
+          "status": "10-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-12",
+          "note": null
+        },
+        {
+          "player": "Yusei Kikuchi",
+          "position": "SP",
+          "team": "LAA",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-16",
+          "note": null
+        },
+        {
+          "player": "Sam Bachman",
+          "position": "RP",
+          "team": "LAA",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-18",
+          "note": null
+        },
+        {
+          "player": "Yoan Moncada",
+          "position": "3B",
+          "team": "LAA",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-21",
+          "note": null
+        },
+        {
+          "player": "Robert Stephenson",
+          "position": "RP",
+          "team": "LAA",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2027-02-01",
+          "note": null
+        },
+        {
+          "player": "Jakob Junis",
+          "position": "RP",
+          "team": "TEX",
+          "status": "15-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-13",
+          "note": null
+        },
+        {
+          "player": "Michael Helman",
+          "position": "CF",
+          "team": "TEX",
+          "status": "60-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-08-13",
+          "note": null
+        },
+        {
+          "player": "Carter Baumler",
+          "position": "RP",
+          "team": "TEX",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-15",
+          "note": null
+        },
+        {
+          "player": "Josh Jung",
+          "position": "3B",
+          "team": "TEX",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-18",
+          "note": null
+        },
+        {
+          "player": "Kyle Higashioka",
+          "position": "C",
+          "team": "TEX",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-18",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:20.004Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816473",
+        "name": "Colorado Rockies at Arizona Diamondbacks",
+        "shortName": "COL @ ARI",
+        "date": "2026-08-11T01:40Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 9:40 PM EDT"
+        },
+        "venue": "Chase Field",
+        "away": {
+          "id": "27",
+          "homeAway": "away",
+          "abbreviation": "COL",
+          "name": "Colorado Rockies",
+          "shortName": "Rockies",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/col.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "29",
+          "homeAway": "home",
+          "abbreviation": "ARI",
+          "name": "Arizona Diamondbacks",
+          "shortName": "Diamondbacks",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ari.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "27",
+            "homeAway": "away",
+            "abbreviation": "COL",
+            "name": "Colorado Rockies",
+            "shortName": "Rockies",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/col.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "29",
+            "homeAway": "home",
+            "abbreviation": "ARI",
+            "name": "Arizona Diamondbacks",
+            "shortName": "Diamondbacks",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ari.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Gabriel Moreno",
+              "value": ".302",
+              "team": "ARI"
+            },
+            {
+              "athlete": "Jake McCarthy",
+              "value": ".306",
+              "team": "COL"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Ketel Marte",
+              "value": "20",
+              "team": "ARI"
+            },
+            {
+              "athlete": "Hunter Goodman",
+              "value": "34",
+              "team": "COL"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Ketel Marte",
+              "value": "64",
+              "team": "ARI"
+            },
+            {
+              "athlete": "Hunter Goodman",
+              "value": "69",
+              "team": "COL"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Eduardo Rodriguez",
+              "value": "2.70",
+              "team": "ARI"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Eduardo Rodriguez",
+              "value": "11",
+              "team": "ARI"
+            },
+            {
+              "athlete": "Tomoyuki Sugano",
+              "value": "11",
+              "team": "COL"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Eduardo Rodriguez",
+              "value": "101",
+              "team": "ARI"
+            },
+            {
+              "athlete": "Kyle Freeland",
+              "value": "96",
+              "team": "COL"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Colorado Rockies",
+          "abbreviation": "COL",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/col.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "60"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1240"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1019"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "545"
+            },
+            {
+              "label": "Batting SH",
+              "value": "15"
+            },
+            {
+              "label": "Batting H",
+              "value": "1029"
+            },
+            {
+              "label": "Batting SB",
+              "value": "80"
+            },
+            {
+              "label": "Batting BB",
+              "value": "361"
+            },
+            {
+              "label": "Batting CI",
+              "value": "0"
+            },
+            {
+              "label": "Batting R",
+              "value": "568"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        },
+        {
+          "team": "Arizona Diamondbacks",
+          "abbreviation": "ARI",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/ari.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "119"
+            },
+            {
+              "label": "Batting G",
+              "value": "119"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "42"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1356"
+            },
+            {
+              "label": "Batting SO",
+              "value": "869"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "510"
+            },
+            {
+              "label": "Batting SH",
+              "value": "28"
+            },
+            {
+              "label": "Batting H",
+              "value": "965"
+            },
+            {
+              "label": "Batting SB",
+              "value": "76"
+            },
+            {
+              "label": "Batting BB",
+              "value": "396"
+            },
+            {
+              "label": "Batting CI",
+              "value": "2"
+            },
+            {
+              "label": "Batting R",
+              "value": "537"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "119"
+            },
+            {
+              "label": "Pitching G",
+              "value": "119"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Michael Soroka",
+          "position": "SP",
+          "team": "ARI",
+          "status": "15-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Merrill Kelly",
+          "position": "SP",
+          "team": "ARI",
+          "status": "Day-To-Day",
+          "injury": "Cramps",
+          "returnDate": "2026-08-12",
+          "note": null
+        },
+        {
+          "player": "Jordan Lawlar",
+          "position": "LF",
+          "team": "ARI",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-14",
+          "note": null
+        },
+        {
+          "player": "Lourdes Gurriel Jr.",
+          "position": "LF",
+          "team": "ARI",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-21",
+          "note": null
+        },
+        {
+          "player": "Drey Jameson",
+          "position": "RP",
+          "team": "ARI",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-21",
+          "note": null
+        },
+        {
+          "player": "Jaden Hill",
+          "position": "RP",
+          "team": "COL",
+          "status": "15-Day-IL",
+          "injury": "Tendinitis",
+          "returnDate": "2026-08-17",
+          "note": null
+        },
+        {
+          "player": "McCade Brown",
+          "position": "SP",
+          "team": "COL",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-22",
+          "note": null
+        },
+        {
+          "player": "Jeff Criswell",
+          "position": "RP",
+          "team": "COL",
+          "status": "15-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-24",
+          "note": null
+        },
+        {
+          "player": "Jose Quintana",
+          "position": "SP",
+          "team": "COL",
+          "status": "60-Day-IL",
+          "injury": "Sprain",
+          "returnDate": "2026-08-28",
+          "note": null
+        },
+        {
+          "player": "Kris Bryant",
+          "position": "DH",
+          "team": "COL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-09-02",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:20.033Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816476",
+        "name": "Milwaukee Brewers at San Diego Padres",
+        "shortName": "MIL @ SD",
+        "date": "2026-08-11T01:40Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 9:40 PM EDT"
+        },
+        "venue": "Petco Park",
+        "away": {
+          "id": "8",
+          "homeAway": "away",
+          "abbreviation": "MIL",
+          "name": "Milwaukee Brewers",
+          "shortName": "Brewers",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "25",
+          "homeAway": "home",
+          "abbreviation": "SD",
+          "name": "San Diego Padres",
+          "shortName": "Padres",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "8",
+            "homeAway": "away",
+            "abbreviation": "MIL",
+            "name": "Milwaukee Brewers",
+            "shortName": "Brewers",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "25",
+            "homeAway": "home",
+            "abbreviation": "SD",
+            "name": "San Diego Padres",
+            "shortName": "Padres",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Fernando Tatis Jr.",
+              "value": ".283",
+              "team": "SD"
+            },
+            {
+              "athlete": "Jackson Chourio",
+              "value": ".275",
+              "team": "MIL"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Manny Machado",
+              "value": "23",
+              "team": "SD"
+            },
+            {
+              "athlete": "Jake Bauers",
+              "value": "21",
+              "team": "MIL"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Manny Machado",
+              "value": "70",
+              "team": "SD"
+            },
+            {
+              "athlete": "Brice Turang",
+              "value": "74",
+              "team": "MIL"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Michael King",
+              "value": "3.37",
+              "team": "SD"
+            },
+            {
+              "athlete": "Jacob Misiorowski",
+              "value": "1.76",
+              "team": "MIL"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Randy Vasquez",
+              "value": "8",
+              "team": "SD"
+            },
+            {
+              "athlete": "Aaron Ashby",
+              "value": "13",
+              "team": "MIL"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Michael King",
+              "value": "120",
+              "team": "SD"
+            },
+            {
+              "athlete": "Jacob Misiorowski",
+              "value": "204",
+              "team": "MIL"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Milwaukee Brewers",
+          "abbreviation": "MIL",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "29"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1482"
+            },
+            {
+              "label": "Batting SO",
+              "value": "978"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "554"
+            },
+            {
+              "label": "Batting SH",
+              "value": "29"
+            },
+            {
+              "label": "Batting H",
+              "value": "1006"
+            },
+            {
+              "label": "Batting SB",
+              "value": "117"
+            },
+            {
+              "label": "Batting BB",
+              "value": "489"
+            },
+            {
+              "label": "Batting CI",
+              "value": "7"
+            },
+            {
+              "label": "Batting R",
+              "value": "585"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        },
+        {
+          "team": "San Diego Padres",
+          "abbreviation": "SD",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "119"
+            },
+            {
+              "label": "Batting G",
+              "value": "119"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "45"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1374"
+            },
+            {
+              "label": "Batting SO",
+              "value": "967"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "486"
+            },
+            {
+              "label": "Batting SH",
+              "value": "18"
+            },
+            {
+              "label": "Batting H",
+              "value": "927"
+            },
+            {
+              "label": "Batting SB",
+              "value": "119"
+            },
+            {
+              "label": "Batting BB",
+              "value": "404"
+            },
+            {
+              "label": "Batting CI",
+              "value": "1"
+            },
+            {
+              "label": "Batting R",
+              "value": "504"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "119"
+            },
+            {
+              "label": "Pitching G",
+              "value": "119"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "David Morgan",
+          "position": "RP",
+          "team": "SD",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Samad Taylor",
+          "position": "LF",
+          "team": "SD",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-15",
+          "note": null
+        },
+        {
+          "player": "Miguel Andujar",
+          "position": "DH",
+          "team": "SD",
+          "status": "10-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-08-24",
+          "note": null
+        },
+        {
+          "player": "Lucas Giolito",
+          "position": "SP",
+          "team": "SD",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-25",
+          "note": null
+        },
+        {
+          "player": "Joe Musgrove",
+          "position": "SP",
+          "team": "SD",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-26",
+          "note": null
+        },
+        {
+          "player": "Joey Ortiz",
+          "position": "SS",
+          "team": "MIL",
+          "status": "Day-To-Day",
+          "injury": "Not Specified",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Joel Kuhnel",
+          "position": "RP",
+          "team": "MIL",
+          "status": "15-Day-IL",
+          "injury": "Tendinitis",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "JoJo Romero",
+          "position": "RP",
+          "team": "MIL",
+          "status": "15-Day-IL",
+          "injury": "Abdomen",
+          "returnDate": "2026-08-14",
+          "note": null
+        },
+        {
+          "player": "Sal Frelick",
+          "position": "RF",
+          "team": "MIL",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-18",
+          "note": null
+        },
+        {
+          "player": "Cooper Pratt",
+          "position": "SS",
+          "team": "MIL",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-19",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:20.057Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816477",
+        "name": "Tampa Bay Rays at Athletics Athletics",
+        "shortName": "TB @ ATH",
+        "date": "2026-08-11T01:40Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 9:40 PM EDT"
+        },
+        "venue": "Sutter Health Park",
+        "away": {
+          "id": "30",
+          "homeAway": "away",
+          "abbreviation": "TB",
+          "name": "Tampa Bay Rays",
+          "shortName": "Rays",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tb.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "11",
+          "homeAway": "home",
+          "abbreviation": "ATH",
+          "name": "Athletics",
+          "shortName": "Athletics",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ath.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "30",
+            "homeAway": "away",
+            "abbreviation": "TB",
+            "name": "Tampa Bay Rays",
+            "shortName": "Rays",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tb.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "11",
+            "homeAway": "home",
+            "abbreviation": "ATH",
+            "name": "Athletics",
+            "shortName": "Athletics",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ath.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Shea Langeliers",
+              "value": ".263",
+              "team": "ATH"
+            },
+            {
+              "athlete": "Chandler Simpson",
+              "value": ".304",
+              "team": "TB"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Shea Langeliers",
+              "value": "23",
+              "team": "ATH"
+            },
+            {
+              "athlete": "Junior Caminero",
+              "value": "33",
+              "team": "TB"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Nick Kurtz",
+              "value": "69",
+              "team": "ATH"
+            },
+            {
+              "athlete": "Jonathan Aranda",
+              "value": "72",
+              "team": "TB"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "J.T. Ginn",
+              "value": "3.41",
+              "team": "ATH"
+            },
+            {
+              "athlete": "Nick Martinez",
+              "value": "2.65",
+              "team": "TB"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "J.T. Ginn",
+              "value": "8",
+              "team": "ATH"
+            },
+            {
+              "athlete": "Nick Martinez",
+              "value": "11",
+              "team": "TB"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "J.T. Ginn",
+              "value": "107",
+              "team": "ATH"
+            },
+            {
+              "athlete": "Drew Rasmussen",
+              "value": "130",
+              "team": "TB"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Tampa Bay Rays",
+          "abbreviation": "TB",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/tb.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "117"
+            },
+            {
+              "label": "Batting G",
+              "value": "117"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "44"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1427"
+            },
+            {
+              "label": "Batting SO",
+              "value": "838"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "494"
+            },
+            {
+              "label": "Batting SH",
+              "value": "34"
+            },
+            {
+              "label": "Batting H",
+              "value": "1011"
+            },
+            {
+              "label": "Batting SB",
+              "value": "116"
+            },
+            {
+              "label": "Batting BB",
+              "value": "383"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "519"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "117"
+            },
+            {
+              "label": "Pitching G",
+              "value": "117"
+            }
+          ]
+        },
+        {
+          "team": "Athletics",
+          "abbreviation": "ATH",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/ath.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "52"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1379"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1028"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "489"
+            },
+            {
+              "label": "Batting SH",
+              "value": "17"
+            },
+            {
+              "label": "Batting H",
+              "value": "974"
+            },
+            {
+              "label": "Batting SB",
+              "value": "62"
+            },
+            {
+              "label": "Batting BB",
+              "value": "393"
+            },
+            {
+              "label": "Batting CI",
+              "value": "1"
+            },
+            {
+              "label": "Batting R",
+              "value": "510"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Zack Gelof",
+          "position": "3B",
+          "team": "ATH",
+          "status": "10-Day-IL",
+          "injury": "Laceration",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Nick Kurtz",
+          "position": "1B",
+          "team": "ATH",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-11",
+          "note": null
+        },
+        {
+          "player": "Denzel Clarke",
+          "position": "CF",
+          "team": "ATH",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-11",
+          "note": null
+        },
+        {
+          "player": "Justin Sterner",
+          "position": "RP",
+          "team": "ATH",
+          "status": "15-Day-IL",
+          "injury": "Soreness",
+          "returnDate": "2026-08-13",
+          "note": null
+        },
+        {
+          "player": "Brooks Kriske",
+          "position": "RP",
+          "team": "ATH",
+          "status": "60-Day-IL",
+          "injury": "Pinched Nerve",
+          "returnDate": "2026-08-16",
+          "note": null
+        },
+        {
+          "player": "Gavin Lux",
+          "position": "LF",
+          "team": "TB",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-12",
+          "note": null
+        },
+        {
+          "player": "Jake Fraley",
+          "position": "RF",
+          "team": "TB",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-14",
+          "note": null
+        },
+        {
+          "player": "Manuel Rodriguez",
+          "position": "RP",
+          "team": "TB",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-14",
+          "note": null
+        },
+        {
+          "player": "Edwin Uceta",
+          "position": "RP",
+          "team": "TB",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-14",
+          "note": null
+        },
+        {
+          "player": "Shane McClanahan",
+          "position": "SP",
+          "team": "TB",
+          "status": "15-Day-IL",
+          "injury": "Not Specified",
+          "returnDate": "2026-08-15",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:20.093Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816474",
+        "name": "Houston Astros at San Francisco Giants",
+        "shortName": "HOU @ SF",
+        "date": "2026-08-11T01:45Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 9:45 PM EDT"
+        },
+        "venue": "Oracle Park",
+        "away": {
+          "id": "18",
+          "homeAway": "away",
+          "abbreviation": "HOU",
+          "name": "Houston Astros",
+          "shortName": "Astros",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "26",
+          "homeAway": "home",
+          "abbreviation": "SF",
+          "name": "San Francisco Giants",
+          "shortName": "Giants",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sf.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "18",
+            "homeAway": "away",
+            "abbreviation": "HOU",
+            "name": "Houston Astros",
+            "shortName": "Astros",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "26",
+            "homeAway": "home",
+            "abbreviation": "SF",
+            "name": "San Francisco Giants",
+            "shortName": "Giants",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sf.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Jung Hoo Lee",
+              "value": ".298",
+              "team": "SF"
+            },
+            {
+              "athlete": "Yordan Alvarez",
+              "value": ".322",
+              "team": "HOU"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Rafael Devers",
+              "value": "24",
+              "team": "SF"
+            },
+            {
+              "athlete": "Yordan Alvarez",
+              "value": "35",
+              "team": "HOU"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Rafael Devers",
+              "value": "64",
+              "team": "SF"
+            },
+            {
+              "athlete": "Yordan Alvarez",
+              "value": "86",
+              "team": "HOU"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Logan Webb",
+              "value": "3.59",
+              "team": "SF"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Logan Webb",
+              "value": "7",
+              "team": "SF"
+            },
+            {
+              "athlete": "Peter Lambert",
+              "value": "8",
+              "team": "HOU"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Landen Roupp",
+              "value": "123",
+              "team": "SF"
+            },
+            {
+              "athlete": "Peter Lambert",
+              "value": "111",
+              "team": "HOU"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Houston Astros",
+          "abbreviation": "HOU",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/hou.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "119"
+            },
+            {
+              "label": "Batting G",
+              "value": "119"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "57"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1316"
+            },
+            {
+              "label": "Batting SO",
+              "value": "969"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "523"
+            },
+            {
+              "label": "Batting SH",
+              "value": "15"
+            },
+            {
+              "label": "Batting H",
+              "value": "983"
+            },
+            {
+              "label": "Batting SB",
+              "value": "38"
+            },
+            {
+              "label": "Batting BB",
+              "value": "402"
+            },
+            {
+              "label": "Batting CI",
+              "value": "2"
+            },
+            {
+              "label": "Batting R",
+              "value": "550"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "119"
+            },
+            {
+              "label": "Pitching G",
+              "value": "119"
+            }
+          ]
+        },
+        {
+          "team": "San Francisco Giants",
+          "abbreviation": "SF",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/sf.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "39"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1313"
+            },
+            {
+              "label": "Batting SO",
+              "value": "930"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "466"
+            },
+            {
+              "label": "Batting SH",
+              "value": "22"
+            },
+            {
+              "label": "Batting H",
+              "value": "1001"
+            },
+            {
+              "label": "Batting SB",
+              "value": "53"
+            },
+            {
+              "label": "Batting BB",
+              "value": "309"
+            },
+            {
+              "label": "Batting CI",
+              "value": "0"
+            },
+            {
+              "label": "Batting R",
+              "value": "485"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Daniel Susac",
+          "position": "C",
+          "team": "SF",
+          "status": "Day-To-Day",
+          "injury": "Bruise",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Victor Bericoto",
+          "position": "RF",
+          "team": "SF",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-10",
+          "note": null
+        },
+        {
+          "player": "Jesus Rodriguez",
+          "position": "C",
+          "team": "SF",
+          "status": "10-Day-IL",
+          "injury": "Pinched Nerve",
+          "returnDate": "2026-08-11",
+          "note": null
+        },
+        {
+          "player": "Joel Peguero",
+          "position": "RP",
+          "team": "SF",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-24",
+          "note": null
+        },
+        {
+          "player": "Marcelo Mayer",
+          "position": "2B",
+          "team": "SF",
+          "status": "10-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-08-28",
+          "note": null
+        },
+        {
+          "player": "Mike Burrows",
+          "position": "SP",
+          "team": "HOU",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-18",
+          "note": null
+        },
+        {
+          "player": "Brice Matthews",
+          "position": "CF",
+          "team": "HOU",
+          "status": "10-Day-IL",
+          "injury": "Sprain",
+          "returnDate": "2026-08-18",
+          "note": null
+        },
+        {
+          "player": "Carlos Correa",
+          "position": "SS",
+          "team": "HOU",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-09-24",
+          "note": null
+        },
+        {
+          "player": "Brandon Walter",
+          "position": "SP",
+          "team": "HOU",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2027-02-01",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-08-10T15:43:20.137Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816475",
+        "name": "Kansas City Royals at Los Angeles Dodgers",
+        "shortName": "KC @ LAD",
+        "date": "2026-08-11T02:10Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "8/10 - 10:10 PM EDT"
+        },
+        "venue": "Dodger Stadium",
+        "away": {
+          "id": "7",
+          "homeAway": "away",
+          "abbreviation": "KC",
+          "name": "Kansas City Royals",
+          "shortName": "Royals",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/kc.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "19",
+          "homeAway": "home",
+          "abbreviation": "LAD",
+          "name": "Los Angeles Dodgers",
+          "shortName": "Dodgers",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "7",
+            "homeAway": "away",
+            "abbreviation": "KC",
+            "name": "Kansas City Royals",
+            "shortName": "Royals",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/kc.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "19",
+            "homeAway": "home",
+            "abbreviation": "LAD",
+            "name": "Los Angeles Dodgers",
+            "shortName": "Dodgers",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Freddie Freeman",
+              "value": ".303",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Bobby Witt Jr.",
+              "value": ".284",
+              "team": "KC"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Shohei Ohtani",
+              "value": "26",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Jac Caglianone",
+              "value": "20",
+              "team": "KC"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Andy Pages",
+              "value": "76",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Carter Jensen",
+              "value": "55",
+              "team": "KC"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Yoshinobu Yamamoto",
+              "value": "2.65",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Michael Wacha",
+              "value": "3.44",
+              "team": "KC"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Yoshinobu Yamamoto",
+              "value": "11",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Noah Cameron",
+              "value": "6",
+              "team": "KC"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Yoshinobu Yamamoto",
+              "value": "127",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Noah Cameron",
+              "value": "116",
+              "team": "KC"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Kansas City Royals",
+          "abbreviation": "KC",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/kc.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "119"
+            },
+            {
+              "label": "Batting G",
+              "value": "119"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "41"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1250"
+            },
+            {
+              "label": "Batting SO",
+              "value": "932"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "469"
+            },
+            {
+              "label": "Batting SH",
+              "value": "20"
+            },
+            {
+              "label": "Batting H",
+              "value": "977"
+            },
+            {
+              "label": "Batting SB",
+              "value": "90"
+            },
+            {
+              "label": "Batting BB",
+              "value": "366"
+            },
+            {
+              "label": "Batting CI",
+              "value": "0"
+            },
+            {
+              "label": "Batting R",
+              "value": "492"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "119"
+            },
+            {
+              "label": "Pitching G",
+              "value": "119"
+            }
+          ]
+        },
+        {
+          "team": "Los Angeles Dodgers",
+          "abbreviation": "LAD",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "118"
+            },
+            {
+              "label": "Batting G",
+              "value": "118"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "41"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1237"
+            },
+            {
+              "label": "Batting SO",
+              "value": "926"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "556"
+            },
+            {
+              "label": "Batting SH",
+              "value": "12"
+            },
+            {
+              "label": "Batting H",
+              "value": "1036"
+            },
+            {
+              "label": "Batting SB",
+              "value": "45"
+            },
+            {
+              "label": "Batting BB",
+              "value": "443"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "591"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "118"
+            },
+            {
+              "label": "Pitching G",
+              "value": "118"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Blake Snell",
+          "position": "SP",
+          "team": "LAD",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-11",
+          "note": null
+        },
+        {
+          "player": "Brock Stewart",
+          "position": "RP",
+          "team": "LAD",
+          "status": "15-Day-IL",
+          "injury": "Tendinitis",
+          "returnDate": "2026-08-15",
+          "note": null
+        },
+        {
+          "player": "Blake Treinen",
+          "position": "RP",
+          "team": "LAD",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-15",
+          "note": null
+        },
+        {
+          "player": "Jake Cousins",
+          "position": "RP",
+          "team": "LAD",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-15",
+          "note": null
+        },
+        {
+          "player": "Ben Casparius",
+          "position": "RP",
+          "team": "LAD",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-17",
+          "note": null
+        },
+        {
+          "player": "Beck Way",
+          "position": "RP",
+          "team": "KC",
+          "status": "15-Day-IL",
+          "injury": "Spasms",
+          "returnDate": "2026-08-12",
+          "note": null
+        },
+        {
+          "player": "Vinnie Pasquantino",
+          "position": "1B",
+          "team": "KC",
+          "status": "10-Day-IL",
+          "injury": "Soreness",
+          "returnDate": "2026-08-14",
+          "note": null
+        },
+        {
+          "player": "Maikel Garcia",
+          "position": "3B",
+          "team": "KC",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-17",
+          "note": null
+        },
+        {
+          "player": "Nick Mears",
+          "position": "RP",
+          "team": "KC",
+          "status": "60-Day-IL",
+          "injury": "Pinched Nerve",
+          "returnDate": "2026-08-21",
+          "note": null
+        },
+        {
+          "player": "James McArthur",
+          "position": "RP",
+          "team": "KC",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-22",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    }
+  ]
+}

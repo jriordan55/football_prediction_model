@@ -1,0 +1,13 @@
+.env
+data/
+!data/pricing_history/
+!data/pricing_history/**
+!data/inplay_pricing/
+!data/inplay_pricing/**
+streamlit_app/static/fourc_live_*.json
+streamlit_app/static/odds_live_*.json
+site/
+sports-leader-mcp/
+.tools/
+node_modules/
+.cursor/

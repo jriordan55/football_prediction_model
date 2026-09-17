@@ -1,0 +1,55 @@
+name: Pricing daily snapshot
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+    inputs:
+      capture_type:
+        description: "daily_open | daily_close | both"
+        required: false
+        default: "both"
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    env:
+      FOURC_ODDS_ENABLED: "1"
+      STREAMLIT_CSV_LOG: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: pip install -r streamlit_app/requirements.txt
+
+      - name: Run pricing snapshot
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TYPE="${{ github.event.inputs.capture_type }}"
+            if [ "$TYPE" = "both" ] || [ -z "$TYPE" ]; then
+              python scripts/snapshot_pricing_day.py --capture-type daily_open
+              python scripts/snapshot_pricing_day.py --capture-type daily_close
+            else
+              python scripts/snapshot_pricing_day.py --capture-type "$TYPE"
+            fi
+          else
+            H=$(date -u +%H)
+            if [ "$H" = "14" ]; then
+              python scripts/snapshot_pricing_day.py --capture-type daily_open
+            else
+              python scripts/snapshot_pricing_day.py --capture-type daily_close
+            fi
+          fi
+
+      - name: Commit pricing history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/pricing_history data/streamlit_csv_log data/inplay_pricing || true
+          git diff --staged --quiet || git commit -m "chore: pricing daily snapshot"
+          git push || true

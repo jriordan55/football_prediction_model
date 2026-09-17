@@ -1,0 +1,1664 @@
+{
+  "schema_version": 1,
+  "sport": "cfb",
+  "year": 2026,
+  "week": 0,
+  "captured_at": "2026-09-17T17:32:26.284539+00:00",
+  "capture_type": "backfill",
+  "methodology": {
+    "game_sim": "pricing_engine.simulator.run_matchup_simulation",
+    "props": "pricing_engine.ui.props_table.compute_prop_projection",
+    "sims": 3000
+  },
+  "source": "game_board_cache+props_board",
+  "games": [
+    {
+      "home": "TCU",
+      "away": "North Carolina",
+      "matchup": "North Carolina @ TCU",
+      "event_id": "401856766",
+      "kickoff": "2026-08-29T16:00:00.000Z",
+      "completed": true,
+      "home_score": 10,
+      "away_score": 15,
+      "lines": {
+        "spread": null,
+        "total": null
+      },
+      "odds_quotes": [],
+      "sim": {
+        "home": "TCU",
+        "away": "North Carolina",
+        "sport": "cfb",
+        "model": "sp_plus",
+        "live_state": "unplayed",
+        "spread": -8.5,
+        "total": 56.0,
+        "home_lambda": 32.253865,
+        "away_lambda": 23.647585,
+        "n_sims": 3000,
+        "markets": [
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "TCU",
+            "line": -8.5,
+            "projection": 8.4,
+            "prob": 0.487,
+            "price": "+105"
+          },
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "North Carolina",
+            "line": 8.5,
+            "projection": 8.4,
+            "prob": 0.513,
+            "price": "-105"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Over",
+            "line": 56.0,
+            "projection": 55.6,
+            "prob": 0.4457,
+            "price": "+124"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Under",
+            "line": 56.0,
+            "projection": 55.6,
+            "prob": 0.5543,
+            "price": "-124"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "TCU",
+            "line": null,
+            "projection": "70.9%",
+            "prob": 0.7093,
+            "price": "-244"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "North Carolina",
+            "line": null,
+            "projection": "29.1%",
+            "prob": 0.2907,
+            "price": "+244"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "TCU",
+            "line": 32.5,
+            "projection": 32.0,
+            "prob": 0.4493,
+            "price": "+123"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "North Carolina",
+            "line": 23.5,
+            "projection": 23.6,
+            "prob": 0.4547,
+            "price": "+120"
+          },
+          {
+            "period": "1Q",
+            "market": "Spread",
+            "selection": "TCU",
+            "line": -2.0,
+            "projection": null,
+            "prob": 0.5507,
+            "price": "-123"
+          },
+          {
+            "period": "1Q",
+            "market": "Total",
+            "selection": "Over",
+            "line": 13.0,
+            "projection": null,
+            "prob": 0.4213,
+            "price": "+137"
+          },
+          {
+            "period": "1H",
+            "market": "Spread",
+            "selection": "TCU",
+            "line": -4.5,
+            "projection": null,
+            "prob": 0.495,
+            "price": "+102"
+          },
+          {
+            "period": "1H",
+            "market": "Total",
+            "selection": "Over",
+            "line": 30.5,
+            "projection": null,
+            "prob": 0.4637,
+            "price": "+116"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "TCU",
+            "line": 413.5,
+            "projection": 413.6,
+            "prob": 0.501,
+            "price": "-100"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "North Carolina",
+            "line": 146.0,
+            "projection": 146.1,
+            "prob": 0.4963,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "TCU",
+            "line": 183.0,
+            "projection": 182.8,
+            "prob": 0.4953,
+            "price": "+102"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "North Carolina",
+            "line": 64.5,
+            "projection": 64.6,
+            "prob": 0.5003,
+            "price": "-100"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "TCU",
+            "line": 6.5,
+            "projection": 6.7,
+            "prob": 0.5373,
+            "price": "-116"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "North Carolina",
+            "line": 2.5,
+            "projection": 2.4,
+            "prob": 0.465,
+            "price": "+115"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Game",
+            "line": 559.5,
+            "projection": 559.7,
+            "prob": 0.504,
+            "price": "-102"
+          }
+        ],
+        "scoreboard": {
+          "home_mean": 32.0,
+          "away_mean": 23.6,
+          "total_mean": 55.6
+        }
+      },
+      "props": []
+    },
+    {
+      "home": "USC",
+      "away": "San Jos\u00e9 State",
+      "matchup": "San Jos\u00e9 State @ USC",
+      "event_id": "401864494",
+      "kickoff": "2026-08-29T19:00:00.000Z",
+      "completed": true,
+      "home_score": 42,
+      "away_score": 26,
+      "lines": {
+        "spread": null,
+        "total": null
+      },
+      "odds_quotes": [],
+      "sim": {
+        "home": "USC",
+        "away": "San Jos\u00e9 State",
+        "sport": "cfb",
+        "model": "sp_plus",
+        "live_state": "unplayed",
+        "spread": -34.0,
+        "total": 56.5,
+        "home_lambda": 45.19014,
+        "away_lambda": 11.250860000000003,
+        "n_sims": 3000,
+        "markets": [
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "USC",
+            "line": -34.0,
+            "projection": 33.4,
+            "prob": 0.4597,
+            "price": "+118"
+          },
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "San Jos\u00e9 State",
+            "line": 34.0,
+            "projection": 33.4,
+            "prob": 0.5403,
+            "price": "-118"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Over",
+            "line": 56.5,
+            "projection": 55.8,
+            "prob": 0.447,
+            "price": "+124"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Under",
+            "line": 56.5,
+            "projection": 55.8,
+            "prob": 0.553,
+            "price": "-124"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "USC",
+            "line": null,
+            "projection": "99.2%",
+            "prob": 0.9923,
+            "price": "-12943"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "San Jos\u00e9 State",
+            "line": null,
+            "projection": "0.8%",
+            "prob": 0.0077,
+            "price": "+12943"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "USC",
+            "line": 45.0,
+            "projection": 44.6,
+            "prob": 0.4323,
+            "price": "+131"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "San Jos\u00e9 State",
+            "line": 11.5,
+            "projection": 11.2,
+            "prob": 0.4393,
+            "price": "+128"
+          },
+          {
+            "period": "1Q",
+            "market": "Spread",
+            "selection": "USC",
+            "line": -8.0,
+            "projection": null,
+            "prob": 0.4907,
+            "price": "+104"
+          },
+          {
+            "period": "1Q",
+            "market": "Total",
+            "selection": "Over",
+            "line": 13.0,
+            "projection": null,
+            "prob": 0.4217,
+            "price": "+137"
+          },
+          {
+            "period": "1H",
+            "market": "Spread",
+            "selection": "USC",
+            "line": -18.0,
+            "projection": null,
+            "prob": 0.492,
+            "price": "+103"
+          },
+          {
+            "period": "1H",
+            "market": "Total",
+            "selection": "Over",
+            "line": 30.5,
+            "projection": null,
+            "prob": 0.4577,
+            "price": "+118"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "USC",
+            "line": 578.0,
+            "projection": 578.0,
+            "prob": 0.4923,
+            "price": "+103"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "San Jos\u00e9 State",
+            "line": 70.0,
+            "projection": 69.9,
+            "prob": 0.5007,
+            "price": "-100"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "USC",
+            "line": 255.5,
+            "projection": 255.5,
+            "prob": 0.493,
+            "price": "+103"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "San Jos\u00e9 State",
+            "line": 39.0,
+            "projection": 39.2,
+            "prob": 0.5007,
+            "price": "-100"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "USC",
+            "line": 9.5,
+            "projection": 9.4,
+            "prob": 0.471,
+            "price": "+112"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "San Jos\u00e9 State",
+            "line": 1.0,
+            "projection": 1.1,
+            "prob": 0.2917,
+            "price": "+243"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Game",
+            "line": 648.0,
+            "projection": 647.9,
+            "prob": 0.4923,
+            "price": "+103"
+          }
+        ],
+        "scoreboard": {
+          "home_mean": 44.6,
+          "away_mean": 11.2,
+          "total_mean": 55.8
+        }
+      },
+      "props": []
+    },
+    {
+      "home": "Virginia",
+      "away": "NC State",
+      "matchup": "NC State @ Virginia",
+      "event_id": "401858202",
+      "kickoff": "2026-08-29T19:30:00.000Z",
+      "completed": true,
+      "home_score": 34,
+      "away_score": 8,
+      "lines": {
+        "spread": null,
+        "total": null
+      },
+      "odds_quotes": [],
+      "sim": {
+        "home": "Virginia",
+        "away": "NC State",
+        "sport": "cfb",
+        "model": "sp_plus",
+        "live_state": "unplayed",
+        "spread": -3.5,
+        "total": 56.0,
+        "home_lambda": 29.580489999999998,
+        "away_lambda": 26.27641,
+        "n_sims": 3000,
+        "markets": [
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "Virginia",
+            "line": -3.5,
+            "projection": 2.8,
+            "prob": 0.4783,
+            "price": "+109"
+          },
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "NC State",
+            "line": 3.5,
+            "projection": 2.8,
+            "prob": 0.5217,
+            "price": "-109"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Over",
+            "line": 56.0,
+            "projection": 55.9,
+            "prob": 0.4607,
+            "price": "+117"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Under",
+            "line": 56.0,
+            "projection": 55.9,
+            "prob": 0.5393,
+            "price": "-117"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "Virginia",
+            "line": null,
+            "projection": "56.0%",
+            "prob": 0.5597,
+            "price": "-127"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "NC State",
+            "line": null,
+            "projection": "44.0%",
+            "prob": 0.4403,
+            "price": "+127"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "Virginia",
+            "line": 29.5,
+            "projection": 29.4,
+            "prob": 0.4547,
+            "price": "+120"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "NC State",
+            "line": 26.5,
+            "projection": 26.5,
+            "prob": 0.468,
+            "price": "+114"
+          },
+          {
+            "period": "1Q",
+            "market": "Spread",
+            "selection": "Virginia",
+            "line": -0.5,
+            "projection": null,
+            "prob": 0.513,
+            "price": "-105"
+          },
+          {
+            "period": "1Q",
+            "market": "Total",
+            "selection": "Over",
+            "line": 13.0,
+            "projection": null,
+            "prob": 0.4267,
+            "price": "+134"
+          },
+          {
+            "period": "1H",
+            "market": "Spread",
+            "selection": "Virginia",
+            "line": -1.5,
+            "projection": null,
+            "prob": 0.5,
+            "price": "-100"
+          },
+          {
+            "period": "1H",
+            "market": "Total",
+            "selection": "Over",
+            "line": 30.5,
+            "projection": null,
+            "prob": 0.4803,
+            "price": "+108"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Virginia",
+            "line": 379.5,
+            "projection": 379.6,
+            "prob": 0.504,
+            "price": "-102"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "NC State",
+            "line": 162.0,
+            "projection": 162.0,
+            "prob": 0.4947,
+            "price": "+102"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "Virginia",
+            "line": 168.0,
+            "projection": 167.8,
+            "prob": 0.5,
+            "price": "-100"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "NC State",
+            "line": 71.5,
+            "projection": 71.6,
+            "prob": 0.4973,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "Virginia",
+            "line": 6.0,
+            "projection": 6.1,
+            "prob": 0.4213,
+            "price": "+137"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "NC State",
+            "line": 2.5,
+            "projection": 2.6,
+            "prob": 0.5277,
+            "price": "-112"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Game",
+            "line": 541.5,
+            "projection": 541.6,
+            "prob": 0.511,
+            "price": "-104"
+          }
+        ],
+        "scoreboard": {
+          "home_mean": 29.4,
+          "away_mean": 26.5,
+          "total_mean": 55.9
+        }
+      },
+      "props": []
+    },
+    {
+      "home": "North Dakota State",
+      "away": "Jacksonville State",
+      "matchup": "Jacksonville State @ North Dakota State",
+      "event_id": "401864577",
+      "kickoff": "2026-08-29T21:30:00.000Z",
+      "completed": true,
+      "home_score": 33,
+      "away_score": 7,
+      "lines": {
+        "spread": null,
+        "total": null
+      },
+      "odds_quotes": [],
+      "sim": {
+        "home": "North Dakota State",
+        "away": "Jacksonville State",
+        "sport": "cfb",
+        "model": "sp_plus",
+        "live_state": "unplayed",
+        "spread": -8.0,
+        "total": 57.0,
+        "home_lambda": 32.5802,
+        "away_lambda": 24.435,
+        "n_sims": 3000,
+        "markets": [
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "North Dakota State",
+            "line": -8.0,
+            "projection": 8.2,
+            "prob": 0.515,
+            "price": "-106"
+          },
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "Jacksonville State",
+            "line": 8.0,
+            "projection": 8.2,
+            "prob": 0.485,
+            "price": "+106"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Over",
+            "line": 57.0,
+            "projection": 57.0,
+            "prob": 0.4507,
+            "price": "+122"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Under",
+            "line": 57.0,
+            "projection": 57.0,
+            "prob": 0.5493,
+            "price": "-122"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "North Dakota State",
+            "line": null,
+            "projection": "69.6%",
+            "prob": 0.696,
+            "price": "-229"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "Jacksonville State",
+            "line": null,
+            "projection": "30.4%",
+            "prob": 0.304,
+            "price": "+229"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "North Dakota State",
+            "line": 32.5,
+            "projection": 32.6,
+            "prob": 0.461,
+            "price": "+117"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "Jacksonville State",
+            "line": 24.5,
+            "projection": 24.4,
+            "prob": 0.457,
+            "price": "+119"
+          },
+          {
+            "period": "1Q",
+            "market": "Spread",
+            "selection": "North Dakota State",
+            "line": -2.0,
+            "projection": null,
+            "prob": 0.5397,
+            "price": "-117"
+          },
+          {
+            "period": "1Q",
+            "market": "Total",
+            "selection": "Over",
+            "line": 13.5,
+            "projection": null,
+            "prob": 0.451,
+            "price": "+122"
+          },
+          {
+            "period": "1H",
+            "market": "Spread",
+            "selection": "North Dakota State",
+            "line": -4.5,
+            "projection": null,
+            "prob": 0.4907,
+            "price": "+104"
+          },
+          {
+            "period": "1H",
+            "market": "Total",
+            "selection": "Over",
+            "line": 31.0,
+            "projection": null,
+            "prob": 0.4403,
+            "price": "+127"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "North Dakota State",
+            "line": 418.5,
+            "projection": 418.4,
+            "prob": 0.5013,
+            "price": "-101"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Jacksonville State",
+            "line": 150.5,
+            "projection": 150.5,
+            "prob": 0.4983,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "North Dakota State",
+            "line": 185.0,
+            "projection": 185.0,
+            "prob": 0.4977,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "Jacksonville State",
+            "line": 66.5,
+            "projection": 66.5,
+            "prob": 0.4987,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "North Dakota State",
+            "line": 7.0,
+            "projection": 6.8,
+            "prob": 0.359,
+            "price": "+179"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "Jacksonville State",
+            "line": 2.5,
+            "projection": 2.4,
+            "prob": 0.485,
+            "price": "+106"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Game",
+            "line": 569.0,
+            "projection": 568.9,
+            "prob": 0.4913,
+            "price": "+104"
+          }
+        ],
+        "scoreboard": {
+          "home_mean": 32.6,
+          "away_mean": 24.4,
+          "total_mean": 57.0
+        }
+      },
+      "props": []
+    },
+    {
+      "home": "Eastern Michigan",
+      "away": "Sacramento State",
+      "matchup": "Sacramento State @ Eastern Michigan",
+      "event_id": "401866408",
+      "kickoff": "2026-08-29T22:30:00.000Z",
+      "completed": true,
+      "home_score": 28,
+      "away_score": 17,
+      "lines": {
+        "spread": null,
+        "total": null
+      },
+      "odds_quotes": [],
+      "sim": {
+        "home": "Eastern Michigan",
+        "away": "Sacramento State",
+        "sport": "cfb",
+        "model": "sp_plus",
+        "live_state": "unplayed",
+        "spread": -7.0,
+        "total": 58.5,
+        "home_lambda": 32.708205,
+        "away_lambda": 25.787045,
+        "n_sims": 3000,
+        "markets": [
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "Eastern Michigan",
+            "line": -7.0,
+            "projection": 7.2,
+            "prob": 0.5133,
+            "price": "-105"
+          },
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "Sacramento State",
+            "line": 7.0,
+            "projection": 7.2,
+            "prob": 0.4867,
+            "price": "+105"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Over",
+            "line": 58.5,
+            "projection": 59.0,
+            "prob": 0.495,
+            "price": "+102"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Under",
+            "line": 58.5,
+            "projection": 59.0,
+            "prob": 0.505,
+            "price": "-102"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "Eastern Michigan",
+            "line": null,
+            "projection": "67.6%",
+            "prob": 0.676,
+            "price": "-209"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "Sacramento State",
+            "line": null,
+            "projection": "32.4%",
+            "prob": 0.324,
+            "price": "+209"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "Eastern Michigan",
+            "line": 32.5,
+            "projection": 33.1,
+            "prob": 0.4883,
+            "price": "+105"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "Sacramento State",
+            "line": 26.0,
+            "projection": 25.9,
+            "prob": 0.4253,
+            "price": "+135"
+          },
+          {
+            "period": "1Q",
+            "market": "Spread",
+            "selection": "Eastern Michigan",
+            "line": -1.5,
+            "projection": null,
+            "prob": 0.5183,
+            "price": "-108"
+          },
+          {
+            "period": "1Q",
+            "market": "Total",
+            "selection": "Over",
+            "line": 14.0,
+            "projection": null,
+            "prob": 0.4037,
+            "price": "+148"
+          },
+          {
+            "period": "1H",
+            "market": "Spread",
+            "selection": "Eastern Michigan",
+            "line": -4.0,
+            "projection": null,
+            "prob": 0.517,
+            "price": "-107"
+          },
+          {
+            "period": "1H",
+            "market": "Total",
+            "selection": "Over",
+            "line": 32.0,
+            "projection": null,
+            "prob": 0.4587,
+            "price": "+118"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Eastern Michigan",
+            "line": 415.5,
+            "projection": 415.7,
+            "prob": 0.4947,
+            "price": "+102"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Sacramento State",
+            "line": 162.0,
+            "projection": 162.2,
+            "prob": 0.5047,
+            "price": "-102"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "Eastern Michigan",
+            "line": 184.0,
+            "projection": 183.8,
+            "prob": 0.4887,
+            "price": "+105"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "Sacramento State",
+            "line": 71.5,
+            "projection": 71.7,
+            "prob": 0.5073,
+            "price": "-103"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "Eastern Michigan",
+            "line": 6.5,
+            "projection": 6.7,
+            "prob": 0.54,
+            "price": "-117"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "Sacramento State",
+            "line": 2.5,
+            "projection": 2.6,
+            "prob": 0.536,
+            "price": "-116"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Game",
+            "line": 577.5,
+            "projection": 577.9,
+            "prob": 0.5013,
+            "price": "-101"
+          }
+        ],
+        "scoreboard": {
+          "home_mean": 33.1,
+          "away_mean": 25.9,
+          "total_mean": 59.0
+        }
+      },
+      "props": []
+    },
+    {
+      "home": "Stanford",
+      "away": "Hawai'i",
+      "matchup": "Hawai'i @ Stanford",
+      "event_id": "401858201",
+      "kickoff": "2026-08-29T23:00:00.000Z",
+      "completed": true,
+      "home_score": 37,
+      "away_score": 27,
+      "lines": {
+        "spread": null,
+        "total": null
+      },
+      "odds_quotes": [],
+      "sim": {
+        "home": "Stanford",
+        "away": "Hawai'i",
+        "sport": "cfb",
+        "model": "sp_plus",
+        "live_state": "unplayed",
+        "spread": -3.0,
+        "total": 57.0,
+        "home_lambda": 29.979655,
+        "away_lambda": 26.802895,
+        "n_sims": 3000,
+        "markets": [
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "Stanford",
+            "line": -3.0,
+            "projection": 2.8,
+            "prob": 0.5017,
+            "price": "-101"
+          },
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "Hawai'i",
+            "line": 3.0,
+            "projection": 2.8,
+            "prob": 0.4983,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Over",
+            "line": 57.0,
+            "projection": 56.1,
+            "prob": 0.4317,
+            "price": "+132"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Under",
+            "line": 57.0,
+            "projection": 56.1,
+            "prob": 0.5683,
+            "price": "-132"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "Stanford",
+            "line": null,
+            "projection": "56.0%",
+            "prob": 0.5597,
+            "price": "-127"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "Hawai'i",
+            "line": null,
+            "projection": "44.0%",
+            "prob": 0.4403,
+            "price": "+127"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "Stanford",
+            "line": 30.0,
+            "projection": 29.4,
+            "prob": 0.4117,
+            "price": "+143"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "Hawai'i",
+            "line": 27.0,
+            "projection": 26.6,
+            "prob": 0.4267,
+            "price": "+134"
+          },
+          {
+            "period": "1Q",
+            "market": "Spread",
+            "selection": "Stanford",
+            "line": -0.5,
+            "projection": null,
+            "prob": 0.511,
+            "price": "-104"
+          },
+          {
+            "period": "1Q",
+            "market": "Total",
+            "selection": "Over",
+            "line": 13.0,
+            "projection": null,
+            "prob": 0.441,
+            "price": "+127"
+          },
+          {
+            "period": "1H",
+            "market": "Spread",
+            "selection": "Stanford",
+            "line": -1.5,
+            "projection": null,
+            "prob": 0.4917,
+            "price": "+103"
+          },
+          {
+            "period": "1H",
+            "market": "Total",
+            "selection": "Over",
+            "line": 30.5,
+            "projection": null,
+            "prob": 0.475,
+            "price": "+111"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Stanford",
+            "line": 382.0,
+            "projection": 381.9,
+            "prob": 0.4903,
+            "price": "+104"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Hawai'i",
+            "line": 168.0,
+            "projection": 167.8,
+            "prob": 0.5053,
+            "price": "-102"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "Stanford",
+            "line": 169.0,
+            "projection": 168.9,
+            "prob": 0.4877,
+            "price": "+105"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "Hawai'i",
+            "line": 74.0,
+            "projection": 74.2,
+            "prob": 0.505,
+            "price": "-102"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "Stanford",
+            "line": 6.0,
+            "projection": 6.2,
+            "prob": 0.4257,
+            "price": "+135"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "Hawai'i",
+            "line": 2.5,
+            "projection": 2.7,
+            "prob": 0.5623,
+            "price": "-128"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Game",
+            "line": 550.0,
+            "projection": 549.7,
+            "prob": 0.4653,
+            "price": "+115"
+          }
+        ],
+        "scoreboard": {
+          "home_mean": 29.4,
+          "away_mean": 26.6,
+          "total_mean": 56.1
+        }
+      },
+      "props": []
+    },
+    {
+      "home": "Florida State",
+      "away": "New Mexico State",
+      "matchup": "New Mexico State @ Florida State",
+      "event_id": "401864570",
+      "kickoff": "2026-08-29T23:00:00.000Z",
+      "completed": true,
+      "home_score": 34,
+      "away_score": 17,
+      "lines": {
+        "spread": null,
+        "total": null
+      },
+      "odds_quotes": [],
+      "sim": {
+        "home": "Florida State",
+        "away": "New Mexico State",
+        "sport": "cfb",
+        "model": "sp_plus",
+        "live_state": "unplayed",
+        "spread": -29.0,
+        "total": 57.0,
+        "home_lambda": 43.118610000000004,
+        "away_lambda": 13.886689999999998,
+        "n_sims": 3000,
+        "markets": [
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "Florida State",
+            "line": -29.0,
+            "projection": 29.1,
+            "prob": 0.4957,
+            "price": "+102"
+          },
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "New Mexico State",
+            "line": 29.0,
+            "projection": 29.1,
+            "prob": 0.5043,
+            "price": "-102"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Over",
+            "line": 57.0,
+            "projection": 57.1,
+            "prob": 0.4547,
+            "price": "+120"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Under",
+            "line": 57.0,
+            "projection": 57.1,
+            "prob": 0.5453,
+            "price": "-120"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "Florida State",
+            "line": null,
+            "projection": "97.5%",
+            "prob": 0.9753,
+            "price": "-3954"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "New Mexico State",
+            "line": null,
+            "projection": "2.5%",
+            "prob": 0.0247,
+            "price": "+3954"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "Florida State",
+            "line": 43.0,
+            "projection": 43.1,
+            "prob": 0.4497,
+            "price": "+122"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "New Mexico State",
+            "line": 14.0,
+            "projection": 14.0,
+            "prob": 0.4237,
+            "price": "+136"
+          },
+          {
+            "period": "1Q",
+            "market": "Spread",
+            "selection": "Florida State",
+            "line": -7.0,
+            "projection": null,
+            "prob": 0.509,
+            "price": "-104"
+          },
+          {
+            "period": "1Q",
+            "market": "Total",
+            "selection": "Over",
+            "line": 13.5,
+            "projection": null,
+            "prob": 0.4513,
+            "price": "+122"
+          },
+          {
+            "period": "1H",
+            "market": "Spread",
+            "selection": "Florida State",
+            "line": -16.0,
+            "projection": null,
+            "prob": 0.4907,
+            "price": "+104"
+          },
+          {
+            "period": "1H",
+            "market": "Total",
+            "selection": "Over",
+            "line": 31.0,
+            "projection": null,
+            "prob": 0.447,
+            "price": "+124"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Florida State",
+            "line": 550.5,
+            "projection": 550.5,
+            "prob": 0.4883,
+            "price": "+105"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "New Mexico State",
+            "line": 86.5,
+            "projection": 86.6,
+            "prob": 0.5117,
+            "price": "-105"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "Florida State",
+            "line": 243.5,
+            "projection": 243.4,
+            "prob": 0.4877,
+            "price": "+105"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "New Mexico State",
+            "line": 39.5,
+            "projection": 39.4,
+            "prob": 0.507,
+            "price": "-103"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "Florida State",
+            "line": 9.0,
+            "projection": 8.9,
+            "prob": 0.406,
+            "price": "+146"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "New Mexico State",
+            "line": 1.5,
+            "projection": 1.4,
+            "prob": 0.461,
+            "price": "+117"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Game",
+            "line": 637.0,
+            "projection": 637.1,
+            "prob": 0.4867,
+            "price": "+105"
+          }
+        ],
+        "scoreboard": {
+          "home_mean": 43.1,
+          "away_mean": 14.0,
+          "total_mean": 57.1
+        }
+      },
+      "props": []
+    },
+    {
+      "home": "UNLV",
+      "away": "Memphis",
+      "matchup": "Memphis @ UNLV",
+      "event_id": "401862693",
+      "kickoff": "2026-08-30T02:00:00.000Z",
+      "completed": true,
+      "home_score": 21,
+      "away_score": 27,
+      "lines": {
+        "spread": null,
+        "total": null
+      },
+      "odds_quotes": [],
+      "sim": {
+        "home": "UNLV",
+        "away": "Memphis",
+        "sport": "cfb",
+        "model": "sp_plus",
+        "live_state": "unplayed",
+        "spread": -4.0,
+        "total": 56.5,
+        "home_lambda": 30.240655,
+        "away_lambda": 26.106295,
+        "n_sims": 3000,
+        "markets": [
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "UNLV",
+            "line": -4.0,
+            "projection": 4.4,
+            "prob": 0.5213,
+            "price": "-109"
+          },
+          {
+            "period": "FG",
+            "market": "Spread",
+            "selection": "Memphis",
+            "line": 4.0,
+            "projection": 4.4,
+            "prob": 0.4787,
+            "price": "+109"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Over",
+            "line": 56.5,
+            "projection": 56.0,
+            "prob": 0.4563,
+            "price": "+119"
+          },
+          {
+            "period": "FG",
+            "market": "Total",
+            "selection": "Under",
+            "line": 56.5,
+            "projection": 56.0,
+            "prob": 0.5437,
+            "price": "-119"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "UNLV",
+            "line": null,
+            "projection": "60.2%",
+            "prob": 0.602,
+            "price": "-151"
+          },
+          {
+            "period": "FG",
+            "market": "ML",
+            "selection": "Memphis",
+            "line": null,
+            "projection": "39.8%",
+            "prob": 0.398,
+            "price": "+151"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "UNLV",
+            "line": 30.0,
+            "projection": 30.2,
+            "prob": 0.4437,
+            "price": "+125"
+          },
+          {
+            "period": "FG",
+            "market": "Team Total",
+            "selection": "Memphis",
+            "line": 26.0,
+            "projection": 25.8,
+            "prob": 0.4327,
+            "price": "+131"
+          },
+          {
+            "period": "1Q",
+            "market": "Spread",
+            "selection": "UNLV",
+            "line": -1.0,
+            "projection": null,
+            "prob": 0.553,
+            "price": "-124"
+          },
+          {
+            "period": "1Q",
+            "market": "Total",
+            "selection": "Over",
+            "line": 13.0,
+            "projection": null,
+            "prob": 0.433,
+            "price": "+131"
+          },
+          {
+            "period": "1H",
+            "market": "Spread",
+            "selection": "UNLV",
+            "line": -2.5,
+            "projection": null,
+            "prob": 0.4883,
+            "price": "+105"
+          },
+          {
+            "period": "1H",
+            "market": "Total",
+            "selection": "Over",
+            "line": 30.5,
+            "projection": null,
+            "prob": 0.4713,
+            "price": "+112"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "UNLV",
+            "line": 388.0,
+            "projection": 388.1,
+            "prob": 0.4987,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Memphis",
+            "line": 161.0,
+            "projection": 161.0,
+            "prob": 0.4983,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "UNLV",
+            "line": 171.5,
+            "projection": 171.6,
+            "prob": 0.5,
+            "price": "-100"
+          },
+          {
+            "period": "FG",
+            "market": "Rush Yds",
+            "selection": "Memphis",
+            "line": 71.0,
+            "projection": 71.2,
+            "prob": 0.4977,
+            "price": "+101"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "UNLV",
+            "line": 6.5,
+            "projection": 6.3,
+            "prob": 0.4517,
+            "price": "+121"
+          },
+          {
+            "period": "FG",
+            "market": "TDs",
+            "selection": "Memphis",
+            "line": 2.5,
+            "projection": 2.6,
+            "prob": 0.526,
+            "price": "-111"
+          },
+          {
+            "period": "FG",
+            "market": "Pass Yds",
+            "selection": "Game",
+            "line": 549.0,
+            "projection": 549.1,
+            "prob": 0.488,
+            "price": "+105"
+          }
+        ],
+        "scoreboard": {
+          "home_mean": 30.2,
+          "away_mean": 25.8,
+          "total_mean": 56.0
+        }
+      },
+      "props": []
+    }
+  ]
+}

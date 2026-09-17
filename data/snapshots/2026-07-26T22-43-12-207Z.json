@@ -1,0 +1,968 @@
+{
+  "capturedAt": "2026-07-26T22:43:12.207Z",
+  "mode": "prematch",
+  "sport": "MLB",
+  "markets": [
+    "Moneyline",
+    "Spread",
+    "Total",
+    "1st Inning Moneyline",
+    "1st Inning Spread",
+    "1st Inning Total",
+    "2nd Inning Moneyline",
+    "2nd Inning Spread",
+    "2nd Inning Total",
+    "3rd Inning Moneyline",
+    "3rd Inning Spread",
+    "3rd Inning Total",
+    "4th Inning Moneyline",
+    "4th Inning Spread",
+    "4th Inning Total",
+    "5th Inning Moneyline",
+    "5th Inning Spread",
+    "5th Inning Total",
+    "6th Inning Moneyline",
+    "6th Inning Spread",
+    "6th Inning Total",
+    "7th Inning Moneyline",
+    "7th Inning Spread",
+    "7th Inning Total",
+    "8th Inning Moneyline",
+    "8th Inning Spread",
+    "8th Inning Total",
+    "9th Inning Moneyline",
+    "9th Inning Spread",
+    "9th Inning Total",
+    "Hits",
+    "Home Runs",
+    "RBIs",
+    "Runs",
+    "Bases",
+    "Hits + Runs + RBIs",
+    "Strikeouts Thrown",
+    "Outs"
+  ],
+  "sportsbooks": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "betonline",
+    "thescore",
+    "consensus"
+  ],
+  "oddsCount": 0,
+  "newPlays": 0,
+  "gameStates": 1,
+  "injuries": 10,
+  "liveGames": 0,
+  "games": [
+    {
+      "id": "401816268",
+      "name": "Cleveland Guardians at Tampa Bay Rays",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "5",
+        "homeAway": "away",
+        "abbreviation": "CLE",
+        "name": "Cleveland Guardians",
+        "shortName": "Guardians",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/cle.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "30",
+        "homeAway": "home",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Rays",
+        "shortName": "Rays",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tb.png",
+        "score": "1",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816265",
+      "name": "Arizona Diamondbacks at Washington Nationals",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "29",
+        "homeAway": "away",
+        "abbreviation": "ARI",
+        "name": "Arizona Diamondbacks",
+        "shortName": "Diamondbacks",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ari.png",
+        "score": "7",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "20",
+        "homeAway": "home",
+        "abbreviation": "WSH",
+        "name": "Washington Nationals",
+        "shortName": "Nationals",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/wsh.png",
+        "score": "10",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816266",
+      "name": "Atlanta Braves at Baltimore Orioles",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final/11",
+        "shortDetail": "Final/11"
+      },
+      "away": {
+        "id": "15",
+        "homeAway": "away",
+        "abbreviation": "ATL",
+        "name": "Atlanta Braves",
+        "shortName": "Braves",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+        "score": "3",
+        "record": "",
+        "winner": true
+      },
+      "home": {
+        "id": "1",
+        "homeAway": "home",
+        "abbreviation": "BAL",
+        "name": "Baltimore Orioles",
+        "shortName": "Orioles",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bal.png",
+        "score": "2",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816267",
+      "name": "Chicago Cubs at Pittsburgh Pirates",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "16",
+        "homeAway": "away",
+        "abbreviation": "CHC",
+        "name": "Chicago Cubs",
+        "shortName": "Cubs",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chc.png",
+        "score": "7",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "23",
+        "homeAway": "home",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Pirates",
+        "shortName": "Pirates",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/pit.png",
+        "score": "8",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816273",
+      "name": "Toronto Blue Jays at Boston Red Sox",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "14",
+        "homeAway": "away",
+        "abbreviation": "TOR",
+        "name": "Toronto Blue Jays",
+        "shortName": "Blue Jays",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tor.png",
+        "score": "1",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "2",
+        "homeAway": "home",
+        "abbreviation": "BOS",
+        "name": "Boston Red Sox",
+        "shortName": "Red Sox",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bos.png",
+        "score": "6",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816269",
+      "name": "Kansas City Royals at Detroit Tigers",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "7",
+        "homeAway": "away",
+        "abbreviation": "KC",
+        "name": "Kansas City Royals",
+        "shortName": "Royals",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/kc.png",
+        "score": "5",
+        "record": "",
+        "winner": true
+      },
+      "home": {
+        "id": "6",
+        "homeAway": "home",
+        "abbreviation": "DET",
+        "name": "Detroit Tigers",
+        "shortName": "Tigers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/det.png",
+        "score": "4",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816270",
+      "name": "Los Angeles Dodgers at New York Mets",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "19",
+        "homeAway": "away",
+        "abbreviation": "LAD",
+        "name": "Los Angeles Dodgers",
+        "shortName": "Dodgers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "21",
+        "homeAway": "home",
+        "abbreviation": "NYM",
+        "name": "New York Mets",
+        "shortName": "Mets",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nym.png",
+        "score": "8",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816272",
+      "name": "San Diego Padres at Miami Marlins",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "25",
+        "homeAway": "away",
+        "abbreviation": "SD",
+        "name": "San Diego Padres",
+        "shortName": "Padres",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+        "score": "5",
+        "record": "",
+        "winner": true
+      },
+      "home": {
+        "id": "28",
+        "homeAway": "home",
+        "abbreviation": "MIA",
+        "name": "Miami Marlins",
+        "shortName": "Marlins",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mia.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816274",
+      "name": "Athletics Athletics at Minnesota Twins",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "11",
+        "homeAway": "away",
+        "abbreviation": "ATH",
+        "name": "Athletics",
+        "shortName": "Athletics",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ath.png",
+        "score": "8",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "9",
+        "homeAway": "home",
+        "abbreviation": "MIN",
+        "name": "Minnesota Twins",
+        "shortName": "Twins",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
+        "score": "11",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816276",
+      "name": "Colorado Rockies at Milwaukee Brewers",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "27",
+        "homeAway": "away",
+        "abbreviation": "COL",
+        "name": "Colorado Rockies",
+        "shortName": "Rockies",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/col.png",
+        "score": "2",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "8",
+        "homeAway": "home",
+        "abbreviation": "MIL",
+        "name": "Milwaukee Brewers",
+        "shortName": "Brewers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
+        "score": "11",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816277",
+      "name": "Houston Astros at Chicago White Sox",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "18",
+        "homeAway": "away",
+        "abbreviation": "HOU",
+        "name": "Houston Astros",
+        "shortName": "Astros",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "4",
+        "homeAway": "home",
+        "abbreviation": "CHW",
+        "name": "Chicago White Sox",
+        "shortName": "White Sox",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chw.png",
+        "score": "12",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816275",
+      "name": "Cincinnati Reds at St. Louis Cardinals",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final/10",
+        "shortDetail": "Final/10"
+      },
+      "away": {
+        "id": "17",
+        "homeAway": "away",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Reds",
+        "shortName": "Reds",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/cin.png",
+        "score": "5",
+        "record": "",
+        "winner": true
+      },
+      "home": {
+        "id": "24",
+        "homeAway": "home",
+        "abbreviation": "STL",
+        "name": "St. Louis Cardinals",
+        "shortName": "Cardinals",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/stl.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816278",
+      "name": "Seattle Mariners at Texas Rangers",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "12",
+        "homeAway": "away",
+        "abbreviation": "SEA",
+        "name": "Seattle Mariners",
+        "shortName": "Mariners",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sea.png",
+        "score": "6",
+        "record": "",
+        "winner": true
+      },
+      "home": {
+        "id": "13",
+        "homeAway": "home",
+        "abbreviation": "TEX",
+        "name": "Texas Rangers",
+        "shortName": "Rangers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tex.png",
+        "score": "4",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816279",
+      "name": "Los Angeles Angels at San Francisco Giants",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "3",
+        "homeAway": "away",
+        "abbreviation": "LAA",
+        "name": "Los Angeles Angels",
+        "shortName": "Angels",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/laa.png",
+        "score": "4",
+        "record": "",
+        "winner": true
+      },
+      "home": {
+        "id": "26",
+        "homeAway": "home",
+        "abbreviation": "SF",
+        "name": "San Francisco Giants",
+        "shortName": "Giants",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sf.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401816271",
+      "name": "New York Yankees at Philadelphia Phillies",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "7/26 - 7:20 PM EDT"
+      },
+      "away": {
+        "id": "10",
+        "homeAway": "away",
+        "abbreviation": "NYY",
+        "name": "New York Yankees",
+        "shortName": "Yankees",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "22",
+        "homeAway": "home",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Phillies",
+        "shortName": "Phillies",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    }
+  ],
+  "odds": [],
+  "details": [
+    {
+      "fetchedAt": "2026-07-26T22:43:42.034Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401816271",
+        "name": "New York Yankees at Philadelphia Phillies",
+        "shortName": "NYY @ PHI",
+        "date": "2026-07-26T23:20Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "7/26 - 7:20 PM EDT"
+        },
+        "venue": "Citizens Bank Park",
+        "away": {
+          "id": "10",
+          "homeAway": "away",
+          "abbreviation": "NYY",
+          "name": "New York Yankees",
+          "shortName": "Yankees",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "22",
+          "homeAway": "home",
+          "abbreviation": "PHI",
+          "name": "Philadelphia Phillies",
+          "shortName": "Phillies",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "10",
+            "homeAway": "away",
+            "abbreviation": "NYY",
+            "name": "New York Yankees",
+            "shortName": "Yankees",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "22",
+            "homeAway": "home",
+            "abbreviation": "PHI",
+            "name": "Philadelphia Phillies",
+            "shortName": "Phillies",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Brandon Marsh",
+              "value": ".287",
+              "team": "PHI"
+            },
+            {
+              "athlete": "Ben Rice",
+              "value": ".271",
+              "team": "NYY"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Kyle Schwarber",
+              "value": "33",
+              "team": "PHI"
+            },
+            {
+              "athlete": "Ben Rice",
+              "value": "30",
+              "team": "NYY"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Bryce Harper",
+              "value": "61",
+              "team": "PHI"
+            },
+            {
+              "athlete": "Ben Rice",
+              "value": "71",
+              "team": "NYY"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Cristopher Sanchez",
+              "value": "2.65",
+              "team": "PHI"
+            },
+            {
+              "athlete": "Cam Schlittler",
+              "value": "2.07",
+              "team": "NYY"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Cristopher Sanchez",
+              "value": "12",
+              "team": "PHI"
+            },
+            {
+              "athlete": "Cam Schlittler",
+              "value": "10",
+              "team": "NYY"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Jesus Luzardo",
+              "value": "152",
+              "team": "PHI"
+            },
+            {
+              "athlete": "Cam Schlittler",
+              "value": "157",
+              "team": "NYY"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "New York Yankees",
+          "abbreviation": "NYY",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "104"
+            },
+            {
+              "label": "Batting G",
+              "value": "104"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "22"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1040"
+            },
+            {
+              "label": "Batting SO",
+              "value": "940"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "461"
+            },
+            {
+              "label": "Batting SH",
+              "value": "6"
+            },
+            {
+              "label": "Batting H",
+              "value": "805"
+            },
+            {
+              "label": "Batting SB",
+              "value": "98"
+            },
+            {
+              "label": "Batting BB",
+              "value": "384"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "484"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "104"
+            },
+            {
+              "label": "Pitching G",
+              "value": "104"
+            }
+          ]
+        },
+        {
+          "team": "Philadelphia Phillies",
+          "abbreviation": "PHI",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "105"
+            },
+            {
+              "label": "Batting G",
+              "value": "105"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "44"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1139"
+            },
+            {
+              "label": "Batting SO",
+              "value": "933"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "434"
+            },
+            {
+              "label": "Batting SH",
+              "value": "6"
+            },
+            {
+              "label": "Batting H",
+              "value": "828"
+            },
+            {
+              "label": "Batting SB",
+              "value": "77"
+            },
+            {
+              "label": "Batting BB",
+              "value": "304"
+            },
+            {
+              "label": "Batting CI",
+              "value": "2"
+            },
+            {
+              "label": "Batting R",
+              "value": "449"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "105"
+            },
+            {
+              "label": "Pitching G",
+              "value": "105"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Garrett Stubbs",
+          "position": "C",
+          "team": "PHI",
+          "status": "10-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-07-28",
+          "note": null
+        },
+        {
+          "player": "Lou Trivino",
+          "position": "RP",
+          "team": "PHI",
+          "status": "15-Day-IL",
+          "injury": "Spasms",
+          "returnDate": "2026-08-01",
+          "note": null
+        },
+        {
+          "player": "Rafael Marchan",
+          "position": "C",
+          "team": "PHI",
+          "status": "10-Day-IL",
+          "injury": "Tendinitis",
+          "returnDate": "2026-08-03",
+          "note": null
+        },
+        {
+          "player": "Tanner Banks",
+          "position": "RP",
+          "team": "PHI",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-09-07",
+          "note": null
+        },
+        {
+          "player": "Brad Keller",
+          "position": "RP",
+          "team": "PHI",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2027-02-01",
+          "note": null
+        },
+        {
+          "player": "Cody Bellinger",
+          "position": "LF",
+          "team": "NYY",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-04",
+          "note": null
+        },
+        {
+          "player": "Aaron Judge",
+          "position": "RF",
+          "team": "NYY",
+          "status": "60-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-08-07",
+          "note": null
+        },
+        {
+          "player": "Clarke Schmidt",
+          "position": "SP",
+          "team": "NYY",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-08-11",
+          "note": null
+        },
+        {
+          "player": "Carlos Rodon",
+          "position": "SP",
+          "team": "NYY",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-08-11",
+          "note": null
+        },
+        {
+          "player": "Giancarlo Stanton",
+          "position": "DH",
+          "team": "NYY",
+          "status": "10-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2026-08-11",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    }
+  ]
+}
