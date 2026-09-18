@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "sport": "nfl",
+  "year": 2026,
+  "week": 2,
+  "captured_at": "2026-09-18T00:28:51.178953+00:00",
+  "capture_type": "inplay",
+  "methodology": {
+    "version": 3,
+    "game_sim": "pricing_engine.simulator.run_matchup_simulation",
+    "props": "pricing_engine.ui.props_table.compute_prop_projection",
+    "pit": "pricing_engine.pit",
+    "sims": 3000
+  },
+  "source": "inplay_runner",
+  "games": [
+    {
+      "home": "Buffalo Bills",
+      "away": "Detroit Lions",
+      "event_id": "401872932",
+      "pregame_captured_at": null,
+      "pregame_capture_type": null,
+      "new_plays": 13,
+      "rows_written": 78,
+      "last_play": {
+        "id": "401872932317",
+        "text": "(No Huddle) J.Allen left guard for 1 yard, TOUCHDOWN. T.Bass extra point is GOOD, Center-R.Ferguson, Holder-T.Doman.",
+        "type": "Rushing Touchdown",
+        "period": 1,
+        "clock": "9:09",
+        "scoringPlay": true,
+        "scoreValue": 6,
+        "awayScore": 0,
+        "homeScore": 7,
+        "down": 1,
+        "distance": 1,
+        "yardLine": 99,
+        "possession": "DET 1"
+      },
+      "odds_quotes": [
+        {
+          "book_id": "pinnacle",
+          "price": -371,
+          "book": "Pinnacle",
+          "line": null,
+          "side": "home",
+          "selection": "Buffalo Bills",
+          "market": "ML",
+          "market_key": "ML"
+        },
+        {
+          "book_id": "3et",
+          "price": 340,
+          "book": "3ET",
+          "line": null,
+          "side": "away",
+          "selection": "Detroit Lions",
+          "market": "ML",
+          "market_key": "ML"
+        },
+        {
+          "book_id": "polymarket",
+          "price": -150,
+          "book": "Polymarket",
+          "line": -5.5,
+          "side": "home",
+          "selection": "Buffalo Bills",
+          "market": "Spread",
+          "market_key": "Spread"
+        },
+        {
+          "book_id": "polymarket",
+          "price": 3428,
+          "book": "Polymarket",
+          "line": 5.5,
+          "side": "away",
+          "selection": "Detroit Lions",
+          "market": "Spread",
+          "market_key": "Spread"
+        },
+        {
+          "book_id": "polymarket",
+          "price": -144,
+          "book": "Polymarket",
+          "line": 54.5,
+          "side": "over",
+          "selection": "Over",
+          "market": "Total",
+          "market_key": "Total"
+        },
+        {
+          "book_id": "polymarket",
+          "price": 138,
+          "book": "Polymarket",
+          "line": 54.5,
+          "side": "under",
+          "selection": "Under",
+          "market": "Total",
+          "market_key": "Total"
+        }
+      ],
+      "sim": {
+        "error": "no_ratings",
+        "home": "Buffalo Bills",
+        "away": "Detroit Lions"
+      },
+      "props": []
+    }
+  ]
+}

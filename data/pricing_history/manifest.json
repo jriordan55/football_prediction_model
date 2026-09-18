@@ -384,7 +384,19 @@
       "quote_count": 192,
       "prop_count": 569,
       "source": "game_board_cache+props_board"
+    },
+    {
+      "sport": "nfl",
+      "year": 2026,
+      "week": 2,
+      "captured_at": "2026-09-18T00:28:51.178953+00:00",
+      "capture_type": "inplay",
+      "path": "nfl/2026/w2/captures/2026-09-18T002851-178953p0000_inplay.json",
+      "game_count": 1,
+      "quote_count": 6,
+      "prop_count": 0,
+      "source": "inplay_runner"
     }
   ],
-  "updated_at": "2026-09-17T19:18:15.989178+00:00"
+  "updated_at": "2026-09-18T00:28:52.315719+00:00"
 }
