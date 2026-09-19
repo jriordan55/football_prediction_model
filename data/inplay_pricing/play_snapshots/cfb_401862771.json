@@ -1,0 +1,3390 @@
+{
+  "sport": "cfb",
+  "event_id": "401862771",
+  "updated_at": "2026-09-19T22:53:38.518889+00:00",
+  "plays": {
+    "4018627713": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.5,
+        "away_mean": 29.2,
+        "total_mean": 61.7,
+        "exp_spread_home": -3.3000000000000007,
+        "exp_spread_away": 3.3000000000000007,
+        "home_win_pct": 57.58,
+        "away_win_pct": 42.42
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:55"
+    },
+    "401862771191": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 40.0,
+        "away_mean": 28.7,
+        "total_mean": 68.7,
+        "exp_spread_home": -11.3,
+        "exp_spread_away": 11.3,
+        "home_win_pct": 74.8,
+        "away_win_pct": 25.2
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:52"
+    },
+    "40186277114": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.3,
+        "away_mean": 29.1,
+        "total_mean": 61.4,
+        "exp_spread_home": -3.1999999999999957,
+        "exp_spread_away": 3.1999999999999957,
+        "home_win_pct": 57.720000000000006,
+        "away_win_pct": 42.28
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:40"
+    },
+    "401862771200": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 39.9,
+        "away_mean": 28.8,
+        "total_mean": 68.7,
+        "exp_spread_home": -11.099999999999998,
+        "exp_spread_away": 11.099999999999998,
+        "home_win_pct": 74.52,
+        "away_win_pct": 25.480000000000004
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:37"
+    },
+    "401862771203": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 40.1,
+        "away_mean": 28.9,
+        "total_mean": 69.0,
+        "exp_spread_home": -11.200000000000003,
+        "exp_spread_away": 11.200000000000003,
+        "home_win_pct": 74.66000000000001,
+        "away_win_pct": 25.34
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:31"
+    },
+    "401862771206": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 43.1,
+        "away_mean": 28.3,
+        "total_mean": 71.4,
+        "exp_spread_home": -14.8,
+        "exp_spread_away": 14.8,
+        "home_win_pct": 80.82000000000001,
+        "away_win_pct": 19.18
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:27"
+    },
+    "40186277119": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.4,
+        "away_mean": 29.1,
+        "total_mean": 61.5,
+        "exp_spread_home": -3.299999999999997,
+        "exp_spread_away": 3.299999999999997,
+        "home_win_pct": 57.53,
+        "away_win_pct": 42.47
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:25"
+    },
+    "40186277124": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.6,
+        "away_mean": 29.3,
+        "total_mean": 61.9,
+        "exp_spread_home": -3.3000000000000007,
+        "exp_spread_away": 3.3000000000000007,
+        "home_win_pct": 57.53,
+        "away_win_pct": 42.47
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:12"
+    },
+    "40186277128": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.0,
+        "away_mean": 28.9,
+        "total_mean": 60.9,
+        "exp_spread_home": -3.1000000000000014,
+        "exp_spread_away": 3.1000000000000014,
+        "home_win_pct": 57.31,
+        "away_win_pct": 42.69
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "13:32"
+    },
+    "40186277131": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.4,
+        "away_mean": 29.0,
+        "total_mean": 61.4,
+        "exp_spread_home": -3.3999999999999986,
+        "exp_spread_away": 3.3999999999999986,
+        "home_win_pct": 57.79,
+        "away_win_pct": 42.21
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "13:25"
+    },
+    "40186277134": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.0,
+        "away_mean": 28.9,
+        "total_mean": 60.9,
+        "exp_spread_home": -3.1000000000000014,
+        "exp_spread_away": 3.1000000000000014,
+        "home_win_pct": 57.49999999999999,
+        "away_win_pct": 42.5
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "13:13"
+    },
+    "40186277142": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.1,
+        "away_mean": 28.8,
+        "total_mean": 60.9,
+        "exp_spread_home": -3.3000000000000007,
+        "exp_spread_away": 3.3000000000000007,
+        "home_win_pct": 57.74,
+        "away_win_pct": 42.26
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "13:06"
+    },
+    "40186277145": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.9,
+        "away_mean": 28.7,
+        "total_mean": 60.6,
+        "exp_spread_home": -3.1999999999999993,
+        "exp_spread_away": 3.1999999999999993,
+        "home_win_pct": 57.52,
+        "away_win_pct": 42.480000000000004
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "12:38"
+    },
+    "40186277150": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.7,
+        "away_mean": 28.6,
+        "total_mean": 60.3,
+        "exp_spread_home": -3.099999999999998,
+        "exp_spread_away": 3.099999999999998,
+        "home_win_pct": 57.48,
+        "away_win_pct": 42.52
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "12:22"
+    },
+    "40186277155": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.4,
+        "away_mean": 28.3,
+        "total_mean": 59.7,
+        "exp_spread_home": -3.099999999999998,
+        "exp_spread_away": 3.099999999999998,
+        "home_win_pct": 57.52,
+        "away_win_pct": 42.480000000000004
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "11:53"
+    },
+    "40186277161": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.3,
+        "away_mean": 28.2,
+        "total_mean": 59.5,
+        "exp_spread_home": -3.1000000000000014,
+        "exp_spread_away": 3.1000000000000014,
+        "home_win_pct": 57.379999999999995,
+        "away_win_pct": 42.620000000000005
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "11:42"
+    },
+    "40186277165": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.1,
+        "away_mean": 28.0,
+        "total_mean": 59.1,
+        "exp_spread_home": -3.1000000000000014,
+        "exp_spread_away": 3.1000000000000014,
+        "home_win_pct": 57.36,
+        "away_win_pct": 42.64
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "11:23"
+    },
+    "40186277169": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.9,
+        "away_mean": 27.7,
+        "total_mean": 58.6,
+        "exp_spread_home": -3.1999999999999993,
+        "exp_spread_away": 3.1999999999999993,
+        "home_win_pct": 57.48,
+        "away_win_pct": 42.52
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "11:05"
+    },
+    "40186277173": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": -118,
+          "book": "Kalshi",
+          "liquidity": 2084.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -258,
+          "book": "Kalshi",
+          "liquidity": 1157.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -300,
+          "book": "Kalshi",
+          "liquidity": 1131.0,
+          "line": 52.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -123,
+          "book": "Kalshi",
+          "liquidity": 1192.0,
+          "line": 52.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -377,
+          "book": "Polymarket US",
+          "liquidity": 3022.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 365,
+          "book": "Polymarket US",
+          "liquidity": 2064.0,
+          "line": null,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.5,
+        "away_mean": 27.5,
+        "total_mean": 58.0,
+        "exp_spread_home": -3.0,
+        "exp_spread_away": 3.0,
+        "home_win_pct": 57.37,
+        "away_win_pct": 42.63
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:35"
+    },
+    "40186277177": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.3,
+        "away_mean": 27.3,
+        "total_mean": 57.6,
+        "exp_spread_home": -3.0,
+        "exp_spread_away": 3.0,
+        "home_win_pct": 57.3,
+        "away_win_pct": 42.699999999999996
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:56"
+    },
+    "40186277182": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.1,
+        "away_mean": 27.1,
+        "total_mean": 57.2,
+        "exp_spread_home": -3.0,
+        "exp_spread_away": 3.0,
+        "home_win_pct": 57.34,
+        "away_win_pct": 42.66
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:18"
+    },
+    "40186277186": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.6,
+        "away_mean": 26.5,
+        "total_mean": 56.1,
+        "exp_spread_home": -3.1000000000000014,
+        "exp_spread_away": 3.1000000000000014,
+        "home_win_pct": 57.42,
+        "away_win_pct": 42.58
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:39"
+    },
+    "40186277191": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.3,
+        "away_mean": 26.3,
+        "total_mean": 55.6,
+        "exp_spread_home": -3.0,
+        "exp_spread_away": 3.0,
+        "home_win_pct": 57.26,
+        "away_win_pct": 42.74
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:32"
+    },
+    "40186277194": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.3,
+        "away_mean": 26.4,
+        "total_mean": 55.7,
+        "exp_spread_home": -2.900000000000002,
+        "exp_spread_away": 2.900000000000002,
+        "home_win_pct": 56.99999999999999,
+        "away_win_pct": 43.0
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:08"
+    },
+    "40186277198": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 28.8,
+        "away_mean": 26.1,
+        "total_mean": 54.9,
+        "exp_spread_home": -2.6999999999999993,
+        "exp_spread_away": 2.6999999999999993,
+        "home_win_pct": 56.86,
+        "away_win_pct": 43.14
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:34"
+    },
+    "401862771102": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.0,
+        "away_mean": 26.1,
+        "total_mean": 55.1,
+        "exp_spread_home": -2.8999999999999986,
+        "exp_spread_away": 2.8999999999999986,
+        "home_win_pct": 57.26,
+        "away_win_pct": 42.74
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:27"
+    },
+    "401862771106": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 28.6,
+        "away_mean": 25.7,
+        "total_mean": 54.3,
+        "exp_spread_home": -2.900000000000002,
+        "exp_spread_away": 2.900000000000002,
+        "home_win_pct": 57.06,
+        "away_win_pct": 42.94
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:50"
+    },
+    "401862771111": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 28.2,
+        "away_mean": 25.4,
+        "total_mean": 53.6,
+        "exp_spread_home": -2.8000000000000007,
+        "exp_spread_away": 2.8000000000000007,
+        "home_win_pct": 56.93,
+        "away_win_pct": 43.07
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:10"
+    },
+    "401862771116": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 27.9,
+        "away_mean": 25.0,
+        "total_mean": 52.9,
+        "exp_spread_home": -2.8999999999999986,
+        "exp_spread_away": 2.8999999999999986,
+        "home_win_pct": 57.06,
+        "away_win_pct": 42.94
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:41"
+    },
+    "401862771121": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 27.7,
+        "away_mean": 24.9,
+        "total_mean": 52.6,
+        "exp_spread_home": -2.8000000000000007,
+        "exp_spread_away": 2.8000000000000007,
+        "home_win_pct": 56.92,
+        "away_win_pct": 43.08
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:10"
+    },
+    "401862771125": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 27.6,
+        "away_mean": 24.8,
+        "total_mean": 52.4,
+        "exp_spread_home": -2.8000000000000007,
+        "exp_spread_away": 2.8000000000000007,
+        "home_win_pct": 57.18,
+        "away_win_pct": 42.82
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:47"
+    },
+    "401862771129": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 26.9,
+        "away_mean": 24.2,
+        "total_mean": 51.1,
+        "exp_spread_home": -2.6999999999999993,
+        "exp_spread_away": 2.6999999999999993,
+        "home_win_pct": 57.089999999999996,
+        "away_win_pct": 42.91
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:40"
+    },
+    "401862771193": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.1,
+        "away_mean": 23.5,
+        "total_mean": 57.6,
+        "exp_spread_home": -10.600000000000001,
+        "exp_spread_away": 10.600000000000001,
+        "home_win_pct": 75.27000000000001,
+        "away_win_pct": 24.73
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:19"
+    },
+    "401862771138": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 26.5,
+        "away_mean": 23.7,
+        "total_mean": 50.2,
+        "exp_spread_home": -2.8000000000000007,
+        "exp_spread_away": 2.8000000000000007,
+        "home_win_pct": 56.99999999999999,
+        "away_win_pct": 43.0
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:46"
+    },
+    "401862771141": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 26.1,
+        "away_mean": 23.6,
+        "total_mean": 49.7,
+        "exp_spread_home": -2.5,
+        "exp_spread_away": 2.5,
+        "home_win_pct": 56.620000000000005,
+        "away_win_pct": 43.38
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:35"
+    },
+    "401862771148": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 26.2,
+        "away_mean": 23.5,
+        "total_mean": 49.7,
+        "exp_spread_home": -2.6999999999999993,
+        "exp_spread_away": 2.6999999999999993,
+        "home_win_pct": 56.89999999999999,
+        "away_win_pct": 43.1
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:25"
+    },
+    "401862771153": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.5,
+        "away_mean": 23.2,
+        "total_mean": 56.7,
+        "exp_spread_home": -10.3,
+        "exp_spread_away": 10.3,
+        "home_win_pct": 75.05,
+        "away_win_pct": 24.95
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:12"
+    },
+    "401862771160": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.5,
+        "away_mean": 23.2,
+        "total_mean": 56.7,
+        "exp_spread_home": -10.3,
+        "exp_spread_away": 10.3,
+        "home_win_pct": 75.05,
+        "away_win_pct": 24.95
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:12"
+    },
+    "401862771163": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.5,
+        "away_mean": 23.0,
+        "total_mean": 56.5,
+        "exp_spread_home": -10.5,
+        "exp_spread_away": 10.5,
+        "home_win_pct": 75.4,
+        "away_win_pct": 24.6
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:05"
+    },
+    "401862771167": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.1,
+        "away_mean": 22.5,
+        "total_mean": 55.6,
+        "exp_spread_home": -10.600000000000001,
+        "exp_spread_away": 10.600000000000001,
+        "home_win_pct": 75.56,
+        "away_win_pct": 24.44
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:27"
+    },
+    "401862771171": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.7,
+        "away_mean": 22.4,
+        "total_mean": 55.1,
+        "exp_spread_home": -10.300000000000004,
+        "exp_spread_away": 10.300000000000004,
+        "home_win_pct": 75.06,
+        "away_win_pct": 24.94
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:52"
+    },
+    "401862771178": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.7,
+        "away_mean": 22.3,
+        "total_mean": 55.0,
+        "exp_spread_home": -10.400000000000002,
+        "exp_spread_away": 10.400000000000002,
+        "home_win_pct": 75.27000000000001,
+        "away_win_pct": 24.73
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:44"
+    },
+    "401862771182": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.3,
+        "away_mean": 21.9,
+        "total_mean": 54.2,
+        "exp_spread_home": -10.399999999999999,
+        "exp_spread_away": 10.399999999999999,
+        "home_win_pct": 75.52,
+        "away_win_pct": 24.48
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:11"
+    },
+    "401862771186": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.3,
+        "away_mean": 21.9,
+        "total_mean": 54.2,
+        "exp_spread_home": -10.399999999999999,
+        "exp_spread_away": 10.399999999999999,
+        "home_win_pct": 75.52,
+        "away_win_pct": 24.48
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:11"
+    },
+    "401862771211": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 39.5,
+        "away_mean": 25.5,
+        "total_mean": 65.0,
+        "exp_spread_home": -14.0,
+        "exp_spread_away": 14.0,
+        "home_win_pct": 80.95,
+        "away_win_pct": 19.05
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:00"
+    },
+    "401862771215": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.0,
+        "away_mean": 21.4,
+        "total_mean": 56.4,
+        "exp_spread_home": -13.600000000000001,
+        "exp_spread_away": 13.600000000000001,
+        "home_win_pct": 81.98,
+        "away_win_pct": 18.02
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:27"
+    },
+    "401862771220": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.2,
+        "away_mean": 21.5,
+        "total_mean": 56.7,
+        "exp_spread_home": -13.700000000000003,
+        "exp_spread_away": 13.700000000000003,
+        "home_win_pct": 81.95,
+        "away_win_pct": 18.05
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:16"
+    },
+    "401862771224": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.0,
+        "away_mean": 21.3,
+        "total_mean": 56.3,
+        "exp_spread_home": -13.7,
+        "exp_spread_away": 13.7,
+        "home_win_pct": 82.17999999999999,
+        "away_win_pct": 17.82
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:42"
+    },
+    "401862771228": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.3,
+        "away_mean": 20.6,
+        "total_mean": 54.9,
+        "exp_spread_home": -13.699999999999996,
+        "exp_spread_away": 13.699999999999996,
+        "home_win_pct": 82.32000000000001,
+        "away_win_pct": 17.68
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:55"
+    },
+    "401862771233": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.2,
+        "away_mean": 20.6,
+        "total_mean": 54.8,
+        "exp_spread_home": -13.600000000000001,
+        "exp_spread_away": 13.600000000000001,
+        "home_win_pct": 82.36,
+        "away_win_pct": 17.64
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:35"
+    },
+    "401862771237": {
+      "captured_at": "2026-09-19T22:48:56.970275+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 100,
+          "book": "Kalshi",
+          "liquidity": 1588.0,
+          "line": -8.5,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": -109,
+          "book": "Kalshi",
+          "liquidity": 1151.0,
+          "line": 8.5,
+          "side": "away",
+          "selection": "Florida International",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": -546,
+          "book": "Novig",
+          "liquidity": 1690.0,
+          "line": 58.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 58.5
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": -355,
+          "book": "Polymarket US",
+          "liquidity": 13863.0,
+          "line": null,
+          "side": "home",
+          "selection": "Florida Atlantic",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.6,
+        "away_mean": 20.2,
+        "total_mean": 53.8,
+        "exp_spread_home": -13.400000000000002,
+        "exp_spread_away": 13.400000000000002,
+        "home_win_pct": 82.22,
+        "away_win_pct": 17.78
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:56"
+    }
+  }
+}
