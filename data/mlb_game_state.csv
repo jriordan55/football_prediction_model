@@ -66472,3 +66472,53 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-19T23:31:06.804Z,401817005,Toronto Blue Jays at Texas Rangers,in,Top 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.689,Globe Life Field,,,,,,,,,,,,,,,,0
 2026-09-19T23:31:06.804Z,401817003,Atlanta Braves at Houston Astros,in,Top 2nd,Atlanta Braves,Houston Astros,0,1,0.622,Daikin Park,,,,,,,,,,,,,,,,0
 2026-09-19T23:31:06.804Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 1st,Washington Nationals,St. Louis Cardinals,2,0,0.317,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-19T23:31:39.089Z,401817002,Philadelphia Phillies at New York Mets,in,Top 9th,Philadelphia Phillies,New York Mets,3,10,0.999,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:31:39.089Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 4th,Athletics,Cleveland Guardians,3,10,0.979,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:31:39.089Z,401816999,Chicago Cubs at Cincinnati Reds,in,Middle 4th,Chicago Cubs,Cincinnati Reds,1,0,0.328,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:31:39.089Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Bottom 3rd,Kansas City Royals,Pittsburgh Pirates,1,2,0.769,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:31:39.089Z,401817005,Toronto Blue Jays at Texas Rangers,in,Top 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.689,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:31:39.089Z,401817003,Atlanta Braves at Houston Astros,in,Top 2nd,Atlanta Braves,Houston Astros,0,1,0.622,Daikin Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:31:39.089Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 1st,Washington Nationals,St. Louis Cardinals,2,0,0.317,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:19.164Z,401817002,Philadelphia Phillies at New York Mets,in,Top 9th,Philadelphia Phillies,New York Mets,3,10,1,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:19.164Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 4th,Athletics,Cleveland Guardians,3,10,0.979,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:19.164Z,401816999,Chicago Cubs at Cincinnati Reds,in,Bottom 4th,Chicago Cubs,Cincinnati Reds,1,0,0.328,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:19.164Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Bottom 3rd,Kansas City Royals,Pittsburgh Pirates,1,2,0.769,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:19.164Z,401817005,Toronto Blue Jays at Texas Rangers,in,Middle 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.695,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:19.164Z,401817003,Atlanta Braves at Houston Astros,in,Top 2nd,Atlanta Braves,Houston Astros,0,1,0.627,Daikin Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:19.164Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 1st,Washington Nationals,St. Louis Cardinals,2,0,0.317,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:58.850Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 4th,Athletics,Cleveland Guardians,4,10,0.966,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:58.850Z,401816999,Chicago Cubs at Cincinnati Reds,in,Bottom 4th,Chicago Cubs,Cincinnati Reds,1,0,0.328,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:58.850Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Bottom 3rd,Kansas City Royals,Pittsburgh Pirates,1,2,0.769,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:58.850Z,401817005,Toronto Blue Jays at Texas Rangers,in,Middle 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.695,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:58.850Z,401817003,Atlanta Braves at Houston Astros,in,Top 2nd,Atlanta Braves,Houston Astros,0,1,0.627,Daikin Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:32:58.850Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 1st,Washington Nationals,St. Louis Cardinals,2,0,0.301,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-19T23:33:40.772Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 4th,Athletics,Cleveland Guardians,4,10,0.966,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:33:40.772Z,401816999,Chicago Cubs at Cincinnati Reds,in,Bottom 4th,Chicago Cubs,Cincinnati Reds,1,0,0.32,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:33:40.772Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Bottom 3rd,Kansas City Royals,Pittsburgh Pirates,1,2,0.746,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:33:40.772Z,401817005,Toronto Blue Jays at Texas Rangers,in,Middle 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.695,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:33:40.772Z,401817003,Atlanta Braves at Houston Astros,in,Top 2nd,Atlanta Braves,Houston Astros,0,1,0.627,Daikin Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:33:40.772Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 1st,Washington Nationals,St. Louis Cardinals,2,0,0.301,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-19T23:34:20.829Z,401816997,Athletics Athletics at Cleveland Guardians,in,Middle 4th,Athletics,Cleveland Guardians,4,10,0.966,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:34:20.829Z,401816999,Chicago Cubs at Cincinnati Reds,in,Bottom 4th,Chicago Cubs,Cincinnati Reds,1,0,0.299,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:34:20.829Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Bottom 3rd,Kansas City Royals,Pittsburgh Pirates,1,2,0.746,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:34:20.829Z,401817005,Toronto Blue Jays at Texas Rangers,in,Bottom 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.695,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:34:20.829Z,401817003,Atlanta Braves at Houston Astros,in,Top 2nd,Atlanta Braves,Houston Astros,0,1,0.627,Daikin Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:34:20.829Z,401817006,Washington Nationals at St. Louis Cardinals,in,Middle 1st,Washington Nationals,St. Louis Cardinals,2,0,0.301,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:00.388Z,401816997,Athletics Athletics at Cleveland Guardians,in,Middle 4th,Athletics,Cleveland Guardians,4,10,0.966,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:00.388Z,401816999,Chicago Cubs at Cincinnati Reds,in,Bottom 4th,Chicago Cubs,Cincinnati Reds,1,0,0.299,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:00.388Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Bottom 3rd,Kansas City Royals,Pittsburgh Pirates,1,2,0.746,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:00.388Z,401817005,Toronto Blue Jays at Texas Rangers,in,Bottom 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.695,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:00.388Z,401817003,Atlanta Braves at Houston Astros,in,Top 2nd,Atlanta Braves,Houston Astros,0,1,0.643,Daikin Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:00.388Z,401817006,Washington Nationals at St. Louis Cardinals,in,Middle 1st,Washington Nationals,St. Louis Cardinals,2,0,0.333,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:40.196Z,401816997,Athletics Athletics at Cleveland Guardians,in,Bottom 4th,Athletics,Cleveland Guardians,4,10,0.966,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:40.196Z,401816999,Chicago Cubs at Cincinnati Reds,in,Bottom 4th,Chicago Cubs,Cincinnati Reds,1,0,0.299,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:40.196Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Bottom 3rd,Kansas City Royals,Pittsburgh Pirates,1,2,0.758,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:40.196Z,401817005,Toronto Blue Jays at Texas Rangers,in,Bottom 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.695,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:40.196Z,401817003,Atlanta Braves at Houston Astros,in,Top 2nd,Atlanta Braves,Houston Astros,0,1,0.643,Daikin Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:35:40.196Z,401817006,Washington Nationals at St. Louis Cardinals,in,Middle 1st,Washington Nationals,St. Louis Cardinals,2,0,0.333,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-19T23:36:19.630Z,401816997,Athletics Athletics at Cleveland Guardians,in,Bottom 4th,Athletics,Cleveland Guardians,4,10,0.966,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:36:19.630Z,401816999,Chicago Cubs at Cincinnati Reds,in,End 4th,Chicago Cubs,Cincinnati Reds,1,0,0.286,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:36:19.630Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,End 3rd,Kansas City Royals,Pittsburgh Pirates,1,2,0.729,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:36:19.630Z,401817005,Toronto Blue Jays at Texas Rangers,in,Bottom 2nd,Toronto Blue Jays,Texas Rangers,0,1,0.721,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:36:19.630Z,401817003,Atlanta Braves at Houston Astros,in,Middle 2nd,Atlanta Braves,Houston Astros,0,1,0.65,Daikin Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:36:19.630Z,401817006,Washington Nationals at St. Louis Cardinals,in,Bottom 1st,Washington Nationals,St. Louis Cardinals,2,0,0.333,Busch Stadium,,,,,,,,,,,,,,,,0
