@@ -66183,3 +66183,35 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-19T22:59:51.895Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,2,5,0.836,Progressive Field,,,,,,,,,,,,,,,,0
 2026-09-19T22:59:51.895Z,401816999,Chicago Cubs at Cincinnati Reds,in,Top 2nd,Chicago Cubs,Cincinnati Reds,0,0,0.327,Great American Ball Park,,,,,,,,,,,,,,,,0
 2026-09-19T22:59:51.895Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Top 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.576,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:00:24.569Z,401817002,Philadelphia Phillies at New York Mets,in,End 7th,Philadelphia Phillies,New York Mets,3,6,0.942,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:00:24.569Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,2,5,0.836,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:00:24.569Z,401816999,Chicago Cubs at Cincinnati Reds,in,Top 2nd,Chicago Cubs,Cincinnati Reds,0,0,0.327,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:00:24.569Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Top 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.576,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:01:04.712Z,401817002,Philadelphia Phillies at New York Mets,in,Top 8th,Philadelphia Phillies,New York Mets,3,6,0.942,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:01:04.712Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,2,5,0.864,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:01:04.712Z,401816999,Chicago Cubs at Cincinnati Reds,in,Top 2nd,Chicago Cubs,Cincinnati Reds,0,0,0.348,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:01:04.712Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Top 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.576,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:01:47.190Z,401817002,Philadelphia Phillies at New York Mets,in,Top 8th,Philadelphia Phillies,New York Mets,3,6,0.942,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:01:47.190Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,2,5,0.864,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:01:47.190Z,401816999,Chicago Cubs at Cincinnati Reds,in,Top 2nd,Chicago Cubs,Cincinnati Reds,0,0,0.348,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:01:47.190Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Top 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.649,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:02:25.912Z,401817002,Philadelphia Phillies at New York Mets,in,Top 8th,Philadelphia Phillies,New York Mets,3,6,0.959,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:02:25.912Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,2,5,0.864,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:02:25.912Z,401816999,Chicago Cubs at Cincinnati Reds,in,Top 2nd,Chicago Cubs,Cincinnati Reds,1,0,0.324,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:02:25.912Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Top 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.637,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:03:05.647Z,401817002,Philadelphia Phillies at New York Mets,in,Top 8th,Philadelphia Phillies,New York Mets,3,6,0.959,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:03:05.647Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,2,5,0.864,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:03:05.647Z,401816999,Chicago Cubs at Cincinnati Reds,in,Top 2nd,Chicago Cubs,Cincinnati Reds,1,0,0.324,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:03:05.647Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Middle 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.654,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:03:44.751Z,401817002,Philadelphia Phillies at New York Mets,in,Top 8th,Philadelphia Phillies,New York Mets,3,6,0.969,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:03:44.751Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,2,5,0.878,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:03:44.751Z,401816999,Chicago Cubs at Cincinnati Reds,in,Middle 2nd,Chicago Cubs,Cincinnati Reds,1,0,0.339,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:03:44.751Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Middle 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.654,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:04:25.353Z,401817002,Philadelphia Phillies at New York Mets,in,Top 8th,Philadelphia Phillies,New York Mets,3,6,0.969,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:04:25.353Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,2,5,0.878,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:04:25.353Z,401816999,Chicago Cubs at Cincinnati Reds,in,Middle 2nd,Chicago Cubs,Cincinnati Reds,1,0,0.339,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:04:25.353Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Middle 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.654,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:05:05.215Z,401817002,Philadelphia Phillies at New York Mets,in,Middle 8th,Philadelphia Phillies,New York Mets,3,6,0.972,Citi Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:05:05.215Z,401816997,Athletics Athletics at Cleveland Guardians,in,Top 3rd,Athletics,Cleveland Guardians,3,5,0.878,Progressive Field,,,,,,,,,,,,,,,,0
+2026-09-19T23:05:05.215Z,401816999,Chicago Cubs at Cincinnati Reds,in,Middle 2nd,Chicago Cubs,Cincinnati Reds,1,0,0.339,Great American Ball Park,,,,,,,,,,,,,,,,0
+2026-09-19T23:05:05.215Z,401817000,Kansas City Royals at Pittsburgh Pirates,in,Bottom 2nd,Kansas City Royals,Pittsburgh Pirates,0,0,0.654,PNC Park,,,,,,,,,,,,,,,,0
