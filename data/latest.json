@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-19T23:25:51.898Z",
+  "capturedAt": "2026-09-19T23:31:06.804Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 8,
+  "newPlays": 16,
   "gameStates": 7,
   "injuries": 0,
   "liveGames": 7,
@@ -199,8 +199,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 3rd",
-        "shortDetail": "Bot 3rd"
+        "detail": "Top 4th",
+        "shortDetail": "Top 4th"
       },
       "away": {
         "id": "11",
@@ -233,8 +233,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 3rd",
-        "shortDetail": "End 3rd"
+        "detail": "Middle 4th",
+        "shortDetail": "Mid 4th"
       },
       "away": {
         "id": "16",
@@ -335,8 +335,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 1st",
-        "shortDetail": "Bot 1st"
+        "detail": "Top 2nd",
+        "shortDetail": "Top 2nd"
       },
       "away": {
         "id": "15",
@@ -356,7 +356,7 @@
         "name": "Houston Astros",
         "shortName": "Astros",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
-        "score": "0",
+        "score": "1",
         "record": "",
         "winner": false
       },
