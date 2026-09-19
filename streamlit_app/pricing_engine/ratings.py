@@ -1,4 +1,4 @@
-"""Rating inputs — SP+ (CFB) and ELO/nfelo (NFL)."""
+"""Rating inputs — FEI (CFB) and ELO/nfelo (NFL)."""
 from __future__ import annotations
 
 from typing import Any
@@ -17,7 +17,7 @@ def price_base_game(
     market_total: float | None = None,
     neutral: bool = False,
 ) -> dict[str, Any] | None:
-    """Return spread/total/lambdas from SP+ or NFL ELO ratings."""
+    """Return spread/total/lambdas from FEI (CFB) or NFL ELO ratings."""
     from lib.config import DEFAULT_YEAR
     from pricing_engine.pit import ratings_should_refresh
 
@@ -35,9 +35,9 @@ def price_base_game(
             market_total=market_total,
             refresh_ratings=refresh,
         )
-    from lib.sp_projections import price_game_from_sp
+    from lib.fei_projections import price_game_from_fei
 
-    base = price_game_from_sp(
+    base = price_game_from_fei(
         home,
         away,
         season=season,
@@ -60,19 +60,18 @@ def price_base_game(
 
 
 def rating_label(sport: str) -> str:
-    return "SP+" if str(sport).lower() == SPORT_CFB else "ELO"
+    return "FEI" if str(sport).lower() == SPORT_CFB else "ELO"
 
 
 def default_team_rates(home_lambda: float, away_lambda: float) -> tuple[dict[str, float], dict[str, float]]:
     """Fallback yard/TD rates from score lambdas."""
-    home = {
-        "pass_yds": max(80, home_lambda * 9.5),
-        "rush_yds": max(60, home_lambda * 4.2),
-        "tds": max(0.5, home_lambda / 6.5),
-    }
-    away = {
-        "pass_yds": max(80, away_lambda * 9.5),
-        "rush_yds": max(60, away_lambda * 4.2),
-        "tds": max(0.5, away_lambda / 6.5),
-    }
-    return home, away
+    def _side_rates(lam: float) -> dict[str, float]:
+        pass_yds = max(80.0, lam * 9.5)
+        return {
+            "pass_yds": pass_yds,
+            "rush_yds": max(60.0, lam * 4.2),
+            "tds": max(0.5, lam / 6.5),
+            "completions": max(15.0, pass_yds / 11.0),
+        }
+
+    return _side_rates(home_lambda), _side_rates(away_lambda)

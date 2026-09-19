@@ -94,6 +94,27 @@ MARKET_KEY_TO_LABEL: dict[str, str] = {
     "player_reception_yds": "receiving yards",
 }
 
+PROP_KEY_TO_LABEL: dict[str, str] = {
+    "pass_yds": "passing yards",
+    "pass_yds_q1": "1st quarter pass yards",
+    "rush_yds": "rushing yards",
+    "rec_yds": "receiving yards",
+    "receptions": "receptions",
+    "pass_tds": "passing tds",
+    "pass_attempts": "pass attempts",
+    "pass_completions": "pass completions",
+    "rush_attempts": "rush attempts",
+    "tds": "anytime touchdown",
+}
+
+
+def prop_label_for_key(prop_key: str | None) -> str:
+    """Canonical market label for internal prop keys (rush_yds → passing yards)."""
+    pk = str(prop_key or "").lower().strip()
+    if pk in PROP_KEY_TO_LABEL:
+        return PROP_KEY_TO_LABEL[pk]
+    return normalize_prop_market(pk.replace("_", " "))
+
 # Plausible main-line ranges by prop key (reject cross-market bleed).
 LINE_BOUNDS: dict[str, tuple[float, float]] = {
     "pass_yds": (80.0, 450.0),
@@ -194,6 +215,39 @@ def norm_cdf(x: float, mean: float, sd: float) -> float:
         return 1.0 if x >= mean else 0.0
     z = (x - mean) / sd
     return 0.5 * (1.0 + _erf(z / math.sqrt(2)))
+
+
+def _std_norm_cdf(z: float) -> float:
+    return 0.5 * (1.0 + _erf(z / math.sqrt(2)))
+
+
+# Right-skewed counting stats — log-normal over prob (Layer 3), not symmetric normal.
+LOGNORMAL_PROP_KEYS = frozenset({
+    "pass_yds",
+    "pass_yds_q1",
+    "rush_yds",
+    "rec_yds",
+    "receptions",
+    "pass_attempts",
+    "pass_completions",
+    "rush_attempts",
+})
+
+
+def lognormal_over_prob(mean: float, line: float, cv: float) -> float | None:
+    """
+    P(X > line) when X ~ LogNormal with E[X]=mean and CV=cv.
+    Matches Layer 3 right-skew tab (mean > median → lower over prob than normal).
+    """
+    if not math.isfinite(mean) or mean <= 0 or not math.isfinite(line) or line <= 0:
+        return None
+    if not math.isfinite(cv) or cv <= 0:
+        return None
+    sigma2 = math.log(1.0 + cv * cv)
+    mu = math.log(mean) - sigma2 / 2.0
+    sigma = math.sqrt(sigma2)
+    z = (math.log(line) - mu) / sigma
+    return max(0.01, min(0.99, 1.0 - _std_norm_cdf(z)))
 
 
 def _round_pct(n: float | None) -> float | None:
@@ -357,13 +411,22 @@ def analyze_prop_line(
         return None
 
     sd = max(0.5, projection * mult)
-    over_pct = _round_pct(1.0 - norm_cdf(line, projection, sd))
+    cv = sd / max(projection, 0.01)
+    if key in LOGNORMAL_PROP_KEYS:
+        p_over = lognormal_over_prob(projection, line, cv)
+    else:
+        p_over = 1.0 - norm_cdf(line, projection, sd)
+    over_pct = _round_pct(p_over)
     implied = american_to_implied(over_price) if over_price else None
+    median = round(projection * math.exp(-math.log(1.0 + cv * cv) / 2.0), 1) if key in LOGNORMAL_PROP_KEYS else None
     return {
         "mean": round(projection, 1),
         "sd": round(sd, 1),
+        "cv": round(cv, 4),
+        "median": median,
         "over_pct": over_pct,
         "implied_over": _round_pct(implied),
+        "distribution": "lognormal" if key in LOGNORMAL_PROP_KEYS else "normal",
     }
 
 

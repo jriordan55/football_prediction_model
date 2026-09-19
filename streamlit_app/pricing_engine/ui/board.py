@@ -10,6 +10,7 @@ from lib.odds_math import ev_pct, implied_to_american
 from lib.team_logos import enrich_row_logos, logo_img_html
 
 from pricing_engine.grading import grade_market_quote
+from pricing_engine.pit import game_is_final
 
 
 def esc(val: object) -> str:
@@ -208,7 +209,7 @@ def render_matchup_header(
         hp = game.get("home_score")
     if ap is None and game:
         ap = game.get("away_score")
-    final = hp is not None and ap is not None and bool(game and game.get("completed"))
+    final = bool(game and game_is_final(game))
 
     if final:
         score_html = (
@@ -302,8 +303,11 @@ def render_market_table(
             graded = grade_market_quote(
                 key, q, game=game, sim=sim, home=home, away=away, quotes=quotes,
             )
-            roi_txt = _fmt_roi_pct(graded.get("expected_roi_pct"))
-            roi_cls = edge_cls if graded.get("expected_roi_pct") is not None else "bo-pe-neutral"
+            roi_val = graded.get("realized_roi_pct")
+            if roi_val is None:
+                roi_val = graded.get("expected_roi_pct")
+            roi_txt = _fmt_roi_pct(roi_val)
+            roi_cls = edge_cls if roi_val is not None else "bo-pe-neutral"
             grade_cols = (
                 f'<td class="bo-pe-actual">{esc(graded.get("actual"))}</td>'
                 f"<td>{_result_badge(graded.get('result'))}</td>"

@@ -490,18 +490,46 @@ def _better_american(a: int, b: int) -> int:
     return a if a > b else b
 
 
-def _best_retail_entry(entries: list[list[Any]] | None) -> dict[str, Any] | None:
+def _liquidity_from_entry(entry: list[Any]) -> float | None:
+    if not entry or len(entry) < 4:
+        return None
+    try:
+        val = float(entry[3])
+        return val if val > 0 else None
+    except (TypeError, ValueError):
+        return None
+
+
+def _quote_from_book_entry(entry: list[Any]) -> dict[str, Any] | None:
+    if not entry or len(entry) < 2:
+        return None
+    book_id = _fourc_book_id(str(entry[0]))
+    if not book_id or book_id in _UI_SKIP_BOOKS:
+        return None
+    price = _price_int(entry[1])
+    if price is None or price == 0:
+        return None
+    row: dict[str, Any] = {"book_id": book_id, "price": price, "book": book_label(book_id)}
+    liq = _liquidity_from_entry(entry)
+    if liq is not None:
+        row["liquidity"] = liq
+    return row
+
+
+def _best_retail_entry(
+    entries: list[list[Any]] | None,
+    *,
+    allowed_books: frozenset[str] | set[str] | None = None,
+) -> dict[str, Any] | None:
     best: dict[str, Any] | None = None
     for entry in entries or []:
-        if not entry or len(entry) < 2:
+        row = _quote_from_book_entry(entry)
+        if not row:
             continue
-        book_id = _fourc_book_id(str(entry[0]))
-        if not book_id or book_id in _UI_SKIP_BOOKS:
+        book_id = str(row.get("book_id") or "")
+        if allowed_books and book_id not in allowed_books:
             continue
-        price = _price_int(entry[1])
-        if price is None or price == 0:
-            continue
-        row = {"book_id": book_id, "price": price, "book": book_label(book_id)}
+        price = int(row["price"])
         if best is None:
             best = row
             continue
@@ -510,7 +538,11 @@ def _best_retail_entry(entries: list[list[Any]] | None) -> dict[str, Any] | None
     return best
 
 
-def _quote_from_cell(cell: list[Any]) -> dict[str, Any] | None:
+def _quote_from_cell(
+    cell: list[Any],
+    *,
+    allowed_books: frozenset[str] | set[str] | None = None,
+) -> dict[str, Any] | None:
     if not cell or len(cell) < 5:
         return None
     entries: list[list[Any]] = []
@@ -522,7 +554,7 @@ def _quote_from_cell(cell: list[Any]) -> dict[str, Any] | None:
         for item in extras:
             if isinstance(item, list) and len(item) >= 2:
                 entries.append(item)
-    best = _best_retail_entry(entries)
+    best = _best_retail_entry(entries, allowed_books=allowed_books)
     if not best:
         return None
     try:
@@ -606,6 +638,7 @@ def _prop_side_quotes_from_detail(
     line: float,
     *,
     sport: str,
+    allowed_books: frozenset[str] | set[str] | None = None,
 ) -> tuple[dict[str, Any] | None, dict[str, Any] | None]:
     try:
         payload = _get(f"game/{game_id}/market/tot?prop={prop_id}", sport=sport)
@@ -617,8 +650,8 @@ def _prop_side_quotes_from_detail(
         side_map = lines.get(str(float(line)))
     if not isinstance(side_map, dict):
         return None, None
-    over = _best_retail_entry(side_map.get("over"))
-    under = _best_retail_entry(side_map.get("under"))
+    over = _best_retail_entry(side_map.get("over"), allowed_books=allowed_books)
+    under = _best_retail_entry(side_map.get("under"), allowed_books=allowed_books)
     return over, under
 
 
@@ -629,6 +662,7 @@ def fetch_game_player_props(
     home: str | None = None,
     away: str | None = None,
     event: str | None = None,
+    allowed_books: frozenset[str] | set[str] | None = None,
 ) -> list[dict[str, Any]]:
     """Player props for one game — retail over/under at the main line only."""
     sid = str(sport or SPORT_CFB).lower()
@@ -661,7 +695,7 @@ def fetch_game_player_props(
         for cell in prop.get("cells") or []:
             if not cell or str(cell[0] or "") != "tot":
                 continue
-            q = _quote_from_cell(cell)
+            q = _quote_from_cell(cell, allowed_books=allowed_books)
             if not q:
                 continue
             if str(q.get("side") or "").lower() == "over":
@@ -671,7 +705,11 @@ def fetch_game_player_props(
 
         if not over_q and not under_q:
             over_q, under_q = _prop_side_quotes_from_detail(
-                str(game_id), str(prop.get("id") or ""), line, sport=sid,
+                str(game_id),
+                str(prop.get("id") or ""),
+                line,
+                sport=sid,
+                allowed_books=allowed_books,
             )
         if not over_q and not under_q:
             continue

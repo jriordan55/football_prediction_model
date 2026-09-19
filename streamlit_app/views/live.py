@@ -8,14 +8,15 @@ import streamlit as st
 
 from lib.app_filters import render_global_filters
 from lib.espn_live import (
-    fetch_game_summary,
+    fetch_game_plays_cached,
+    fetch_game_summary_cached,
     fetch_live_game_detail,
     fetch_live_scoreboard,
     latest_win_probability,
     derive_situation,
     _team_yards,
-    fetch_game_plays,
     _plays_from_drives,
+    live_poll_bucket,
     slate_rows_for_matchup,
 )
 from lib.live_display import render_live_card, render_live_detail
@@ -38,6 +39,8 @@ def _win_display_mode() -> str:
 def _clear_live_cache() -> None:
     fetch_live_scoreboard.clear()
     fetch_live_game_detail.clear()
+    fetch_game_summary_cached.clear()
+    fetch_game_plays_cached.clear()
     _board_with_projections.clear()
 
 
@@ -77,10 +80,10 @@ def _pregame_for_game(g: dict, slate) -> dict:
     return pre
 
 
-def _enrich_live_context(g: dict, summary: dict | None) -> None:
+def _enrich_live_context(g: dict, summary: dict | None, *, sport: str, tick: int) -> None:
     if not summary:
         return
-    plays = fetch_game_plays(g["event_id"])
+    plays = fetch_game_plays_cached(g["event_id"], sport, tick=tick)
     if not plays:
         plays = _plays_from_drives(summary)
     g["situation"] = derive_situation(summary, g, plays)
@@ -107,7 +110,7 @@ def _project_game(g: dict, pre: dict) -> dict:
 
 @st.cache_data(ttl=12, show_spinner=False)
 def _board_with_projections(sport: str, year: int, week: int, slate_sig: str, tick: int) -> list[dict]:
-    _ = tick, slate_sig
+    _ = slate_sig
     games = fetch_live_scoreboard(sport, week=week, year=year, tab=TAB)
     slate = load_slate_df(sport, year, week if week != 0 else 1)
     out = []
@@ -115,8 +118,8 @@ def _board_with_projections(sport: str, year: int, week: int, slate_sig: str, ti
         pre = _pregame_for_game(g, slate)
         if g["status"]["state"] == "in":
             try:
-                summary = fetch_game_summary(g["event_id"], tab=TAB)
-                _enrich_live_context(g, summary)
+                summary = fetch_game_summary_cached(g["event_id"], sport, tab=TAB, tick=tick)
+                _enrich_live_context(g, summary, sport=sport, tick=tick)
             except Exception:
                 pass
         out.append(_project_game(g, pre))

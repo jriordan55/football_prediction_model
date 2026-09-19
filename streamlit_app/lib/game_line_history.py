@@ -391,6 +391,122 @@ def moneyline_from_snapshots(
     }
 
 
+def closing_board_quotes_from_snapshots(
+    home: str,
+    away: str,
+    *,
+    kickoff: Any = None,
+) -> dict[str, dict[str, Any]]:
+    """Best retail closing quotes per board cell from The Odds API snapshots (pre-kickoff)."""
+    from pricing_engine.constants import PRICING_UI_BOOKS
+
+    from lib.fourc_odds_client import _better_american
+
+    sub = _snapshot_rows_for_matchup(home, away)
+    if sub.empty:
+        return {}
+
+    sub = sub.copy()
+    sub["snapshot_at"] = pd.to_datetime(sub["snapshot_at"], utc=True, errors="coerce")
+    sub = sub.dropna(subset=["snapshot_at"])
+    if sub.empty:
+        return {}
+
+    kick_ts = _kickoff_ts(kickoff)
+    if kick_ts is not None:
+        pre = sub[sub["snapshot_at"] < kick_ts]
+        if not pre.empty:
+            sub = pre
+
+    sub = sub.sort_values("snapshot_at")
+    by_key_book: dict[str, dict[str, dict[str, Any]]] = {}
+
+    for _, row in sub.iterrows():
+        book = str(row.get("book_id") or "").lower()
+        if book not in PRICING_UI_BOOKS:
+            continue
+        mk = str(row.get("market_key") or "").lower()
+        sel = str(row.get("selection") or "")
+        try:
+            price = int(float(row.get("price")))
+        except (TypeError, ValueError):
+            continue
+        line = row.get("line")
+        try:
+            line_f = float(line) if line is not None else None
+        except (TypeError, ValueError):
+            line_f = None
+
+        if mk in {"spreads", "spread"}:
+            slot = match_selection_to_side(sel, home, away)
+            if slot == "home":
+                key, q_sel, q_line = "spread_home", home, line_f
+            elif slot == "away":
+                key, q_sel, q_line = "spread_away", away, line_f
+            else:
+                continue
+            q = {
+                "book_id": book,
+                "market": "Spread",
+                "selection": q_sel,
+                "line": q_line,
+                "price": price,
+                "source": "theoddsapi",
+            }
+        elif mk in {"totals", "total"}:
+            sel_l = sel.lower()
+            if "over" in sel_l:
+                key, q_sel = "total_over", "Over"
+            elif "under" in sel_l:
+                key, q_sel = "total_under", "Under"
+            else:
+                continue
+            q = {
+                "book_id": book,
+                "market": "Total",
+                "selection": q_sel,
+                "line": line_f,
+                "price": price,
+                "source": "theoddsapi",
+            }
+        elif mk in {"h2h", "moneyline", "ml"}:
+            slot = match_selection_to_side(sel, home, away)
+            if slot == "home":
+                key, q_sel = "ml_home", home
+            elif slot == "away":
+                key, q_sel = "ml_away", away
+            else:
+                continue
+            q = {
+                "book_id": book,
+                "market": "ML",
+                "selection": q_sel,
+                "line": None,
+                "price": price,
+                "source": "theoddsapi",
+            }
+        else:
+            continue
+
+        by_key_book.setdefault(key, {})[book] = q
+
+    out: dict[str, dict[str, Any]] = {}
+    for key, book_map in by_key_book.items():
+        best: dict[str, Any] | None = None
+        for q in book_map.values():
+            if best is None:
+                best = q
+                continue
+            try:
+                if _better_american(int(q["price"]), int(best["price"])) == int(q["price"]):
+                    best = q
+            except (TypeError, ValueError):
+                pass
+        if best:
+            out[key] = best
+    return out
+
+
 def _lines_from_snapshots_for_book(
     home: str,
     away: str,
@@ -482,6 +598,23 @@ def opening_closing_lines_cached(
     from .clv_report import _find_opener_quotes, _home_spread_from_snapshot, _total_from_snapshot
 
     open_spread = open_total = close_spread = close_total = None
+
+    if week is not None:
+        try:
+            from .pricing_history import load_game_open_close
+            from .sport_context import SPORT_CFB, SPORT_NFL
+
+            for sport in (SPORT_CFB, SPORT_NFL):
+                ph = load_game_open_close(sport, year, week, home, away)
+                if not ph:
+                    continue
+                open_spread = open_spread if open_spread is not None else ph.get("openSpread")
+                open_total = open_total if open_total is not None else ph.get("openTotal")
+                close_spread = close_spread if close_spread is not None else ph.get("closeSpread")
+                close_total = close_total if close_total is not None else ph.get("closeTotal")
+                break
+        except Exception:
+            pass
 
     snap = _lines_from_snapshots(home, away, kickoff=kickoff)
     open_spread = snap.get("openSpread")

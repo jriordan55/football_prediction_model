@@ -13,6 +13,7 @@ from lib.fourc_odds_client import (
     _game_names,
 )
 from lib.inplay_storage import append_rows, load_seen_plays, save_seen_plays
+from lib.pbp_snapshots import backfill_missing_play_snapshots, ensure_total_quotes, record_play_snapshot
 from lib.pricing_history import (
     METHODOLOGY,
     SCHEMA_VERSION,
@@ -62,15 +63,17 @@ def _load_odds_and_props(
     sport: str,
     home: str,
     away: str,
-) -> tuple[dict[str, dict[str, Any]], list[dict[str, Any]]]:
+) -> tuple[dict[str, dict[str, Any]], list[dict[str, Any]], dict[str, Any] | None]:
     quotes: dict[str, dict[str, Any]] = {}
     props: list[dict[str, Any]] = []
+    board_game: dict[str, Any] | None = None
     try:
         board = fetch_board(sport=sport)
     except Exception:
         board = {}
     game = _find_board_game(board, home, away, sport=sport) if board else None
     if game:
+        board_game = game
         quotes = parse_board_game_quotes(game)
         gid = str(game.get("id") or "")
         if gid:
@@ -81,7 +84,7 @@ def _load_odds_and_props(
                 props = []
     from lib.pricing_history import prepare_props_for_ui
 
-    return quotes, prepare_props_for_ui(props)
+    return quotes, prepare_props_for_ui(props), board_game
 
 
 def _pregame_prop_map(pregame: dict[str, Any] | None, *, year: int, week: int) -> dict[tuple[str, str, str], float]:
@@ -130,8 +133,9 @@ def capture_game(
     )
     if resolved_week is not None:
         week = int(resolved_week)
-    quotes, props = _load_odds_and_props(sport, home, away)
+    quotes, props, board_game = _load_odds_and_props(sport, home, away)
     spread, total = _resolve_lines(quotes, pregame)
+    quotes = ensure_total_quotes(quotes, game=board_game, pregame_total=total)
     pregame_sim = _pregame_sim(sport, home, away, year=year, week=week, pregame=pregame, spread=spread, total=total)
     pregame_props = _pregame_prop_map(pregame, year=year, week=week)
 
@@ -165,12 +169,21 @@ def capture_game(
     last_play: dict[str, Any] | None = None
     sim: dict[str, Any] | None = pregame_sim
     live_props: list[dict[str, Any]] = []
+    latest_quotes = quotes
+    latest_spread = spread
+    latest_total = total
+    latest_board = board_game
 
     for play in new_plays:
         pid = str(play.get("id") or f"tick-{captured_at}")
+        quotes, _, board_game = _load_odds_and_props(sport, home, away)
+        spread, total = _resolve_lines(quotes, pregame)
+        quotes = ensure_total_quotes(quotes, game=board_game, pregame_total=total)
+        latest_quotes, latest_spread, latest_total, latest_board = quotes, spread, total, board_game
         period = int(play.get("period") or situation.get("period") or 1)
         clock = play.get("clock") or situation.get("clock")
         play_sit = parse_play_situation(play, situation, home=home, away=away)
+        ml_home_q = quotes.get("ml_home") or {}
         live_game = {
             "status": "in",
             "period": period,
@@ -178,6 +191,7 @@ def capture_game(
             "home_score": play_sit.home_score,
             "away_score": play_sit.away_score,
             "win_prob_home": win_prob_home,
+            "market_ml_home": ml_home_q.get("price"),
             "situation": play_sit,
             "down": play_sit.down,
             "distance": play_sit.distance,
@@ -190,28 +204,31 @@ def capture_game(
             market_spread=spread, market_total=total,
             live_game=live_game, n_sims=DEFAULT_SIMS,
         )
-        live_props: list[dict[str, Any]] = []
-        for prop in props:
-            pk = row_prop_key(prop)
-            pre_proj = pregame_props.get(
-                (str(prop.get("player") or ""), str(prop.get("prop_key") or pk or ""), str(prop.get("line") or ""))
-            )
-            live_props.append(
-                enrich_live_prop_row(
-                    prop,
-                    box_stats=box_stats,
-                    pregame_proj=pre_proj,
-                    period=period,
-                    clock_seconds=play_sit.clock_seconds or situation.get("clockSeconds"),
-                    sit=play_sit,
-                    home=home,
-                    away=away,
-                    live_sim=sim,
-                    pregame_sim=pregame_sim,
-                    home_team_box=home_yards,
-                    away_team_box=away_yards,
+        if sport == SPORT_CFB:
+            live_props = props
+        else:
+            live_props = []
+            for prop in props:
+                pk = row_prop_key(prop)
+                pre_proj = pregame_props.get(
+                    (str(prop.get("player") or ""), str(prop.get("prop_key") or pk or ""), str(prop.get("line") or ""))
                 )
-            )
+                live_props.append(
+                    enrich_live_prop_row(
+                        prop,
+                        box_stats=box_stats,
+                        pregame_proj=pre_proj,
+                        period=period,
+                        clock_seconds=play_sit.clock_seconds or situation.get("clockSeconds"),
+                        sit=play_sit,
+                        home=home,
+                        away=away,
+                        live_sim=sim,
+                        pregame_sim=pregame_sim,
+                        home_team_box=home_yards,
+                        away_team_box=away_yards,
+                    )
+                )
         pregame_bundle = {"sim": pregame_sim, "odds_quotes": (pregame or {}).get("_odds_quotes") or []}
         play_context = build_play_context(
             play=play,
@@ -251,8 +268,33 @@ def capture_game(
                 play_context=play_context,
             )
         )
+        record_play_snapshot(
+            sport=sport,
+            event_id=str(event_id),
+            play=play,
+            quotes=quotes,
+            sim=sim,
+            home=home,
+            away=away,
+            source="daemon",
+            captured_at=captured_at,
+            game=board_game,
+            pregame_total=total,
+        )
         seen.add(pid)
         last_play = play
+
+    backfill_missing_play_snapshots(
+        sport=sport,
+        year=year,
+        week=week,
+        event_id=str(event_id),
+        home=home,
+        away=away,
+        quotes=latest_quotes,
+        market_spread=latest_spread,
+        market_total=latest_total,
+    )
 
     csv_path = append_rows(all_rows)
 
@@ -292,6 +334,44 @@ def capture_game(
         meta={"home": home, "away": away, "sport": sport, "last_captured_at": captured_at},
     )
 
+    xlsx_path: str | None = None
+    from pricing_engine.pit import game_is_final
+
+    comps = (summary.get("header") or {}).get("competitions") or [{}]
+    comp = comps[0] if comps else {}
+    competitors = comp.get("competitors") or []
+    home_score = away_score = None
+    for c in competitors:
+        if str(c.get("homeAway") or "").lower() == "home":
+            home_score = c.get("score")
+        elif str(c.get("homeAway") or "").lower() == "away":
+            away_score = c.get("score")
+    final_game = {
+        "homePoints": home_score,
+        "awayPoints": away_score,
+        "status": comp.get("status"),
+        "completed": str((comp.get("status") or {}).get("type", {}).get("state") or "").lower() in ("post", "final"),
+    }
+    if game_is_final(final_game):
+        try:
+            from lib.pbp_export import export_pbp_game_xlsx
+
+            exported = export_pbp_game_xlsx(
+                sport=sport,
+                event_id=str(event_id),
+                home=home,
+                away=away,
+                year=year,
+                week=week,
+                quotes=latest_quotes,
+                pregame=pregame,
+                pregame_sim=pregame_sim,
+            )
+            if exported:
+                xlsx_path = str(exported)
+        except Exception:
+            pass
+
     return {
         "event_id": event_id,
         "home": home,
@@ -299,6 +379,7 @@ def capture_game(
         "new_plays": len(new_plays),
         "rows_written": len(all_rows),
         "csv_path": str(csv_path),
+        "xlsx_path": xlsx_path,
     }
 
 

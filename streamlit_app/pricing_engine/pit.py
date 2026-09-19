@@ -28,7 +28,7 @@ def game_is_final(game: dict[str, Any]) -> bool:
         status = str(game["status"].get("state") or game["status"].get("name") or "").lower()
     if any(tok in status for tok in ("final", "complete", "closed")):
         return True
-    return game.get("completed") is not False
+    return game.get("completed") is True
 
 
 def ratings_should_refresh(sport: str, year: int, week: int | None) -> bool:

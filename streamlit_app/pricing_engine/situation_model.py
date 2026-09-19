@@ -1,9 +1,15 @@
 """In-play situation — down/distance, field, possession, score margin → pace adjustments."""
 from __future__ import annotations
 
+import math
 import re
 from dataclasses import dataclass
 from typing import Any
+
+# Median form / sim-anchored derivative blend (pregame props track parent MC means).
+PREGAME_PACE_WEIGHT = 0.35
+PREGAME_SIM_WEIGHT = 0.65
+YARDS_PER_COMPLETION = 11.0
 
 from lib.live_projections import _garbage_multipliers
 
@@ -240,6 +246,11 @@ def sim_team_stat_means(sim: dict[str, Any] | None, *, home: str, away: str) -> 
                 out["home_pass_yds"] = val
             elif sel == away:
                 out["away_pass_yds"] = val
+        elif mk == "Comp":
+            if sel == home:
+                out["home_completions"] = val
+            elif sel == away:
+                out["away_completions"] = val
         elif mk == "Rush Yds":
             if sel == home:
                 out["home_rush_yds"] = val
@@ -250,7 +261,111 @@ def sim_team_stat_means(sim: dict[str, Any] | None, *, home: str, away: str) -> 
                 out["home_points_alt"] = val
             elif sel == away:
                 out["away_points_alt"] = val
+        elif mk == "TDs":
+            if sel == home:
+                out["home_tds"] = val
+            elif sel == away:
+                out["away_tds"] = val
     return out
+
+
+def _team_baseline_rate(sim: dict[str, Any], side: str, stat_key: str) -> float | None:
+    """Season-pace team rate from score lambdas — denominator for player share."""
+    from pricing_engine.ratings import default_team_rates
+
+    try:
+        hl = float(sim.get("home_lambda") or 22)
+        al = float(sim.get("away_lambda") or 22)
+    except (TypeError, ValueError):
+        return None
+    home_rates, away_rates = default_team_rates(hl, al)
+    rates = home_rates if side == "home" else away_rates
+    if stat_key == "pass_yds":
+        return float(rates["pass_yds"])
+    if stat_key == "rush_yds":
+        return float(rates["rush_yds"])
+    if stat_key == "completions":
+        return float(rates["completions"])
+    if stat_key == "points":
+        return float(rates["tds"])
+    return None
+
+
+def _sim_team_stat(sim_team: dict[str, float], side: str, stat_key: str) -> float | None:
+    prefix = f"{side}_"
+    if stat_key == "pass_yds":
+        val = sim_team.get(f"{prefix}pass_yds")
+    elif stat_key == "rush_yds":
+        val = sim_team.get(f"{prefix}rush_yds")
+    elif stat_key == "completions":
+        comp = sim_team.get(f"{prefix}completions")
+        if comp is not None:
+            return float(comp)
+        val = sim_team.get(f"{prefix}pass_yds")
+        if val is not None:
+            return float(val) / YARDS_PER_COMPLETION
+        return None
+    elif stat_key == "points":
+        val = sim_team.get(f"{prefix}tds") or sim_team.get(f"{prefix}points") or sim_team.get(f"{prefix}points_alt")
+    else:
+        return None
+    try:
+        return float(val) if val is not None else None
+    except (TypeError, ValueError):
+        return None
+
+
+def correlated_pregame_prop_projection(
+    *,
+    prop_key: str,
+    team: str | None,
+    home: str,
+    away: str,
+    ewma_proj: float | None,
+    sim: dict[str, Any] | None,
+    td_prob: bool = False,
+) -> float | None:
+    """
+    Pregame player prop as a derivative of the Monte Carlo game sim.
+
+    Player share = median rate / baseline team rate; anchor = sim team mean × share.
+    Blended 35% median form / 65% sim-anchored (matches live prop correlation).
+    """
+    if ewma_proj is None:
+        return None
+    if not sim or sim.get("error"):
+        return ewma_proj
+
+    side = _team_side(str(team or ""), home, away) if team else None
+    stat_key = _prop_team_stat_key(prop_key)
+    if not side or not stat_key:
+        return ewma_proj
+
+    sim_team = sim_team_stat_means(sim, home=home, away=away)
+    sim_final = _sim_team_stat(sim_team, side, stat_key)
+    team_base = _team_baseline_rate(sim, side, stat_key)
+    if sim_final is None or team_base is None or float(team_base) <= 0:
+        return ewma_proj
+
+    if td_prob:
+        try:
+            player_rate = -math.log(max(0.02, 1.0 - min(0.98, float(ewma_proj))))
+        except (ValueError, ZeroDivisionError):
+            player_rate = float(ewma_proj)
+        share = player_rate / float(team_base)
+    else:
+        share = float(ewma_proj) / float(team_base)
+
+    share = max(0.02, min(0.85, share))
+    anchor_raw = float(sim_final) * share
+
+    if td_prob:
+        anchor = max(0.01, min(0.99, 1.0 - math.exp(-anchor_raw)))
+        blended = PREGAME_PACE_WEIGHT * float(ewma_proj) + PREGAME_SIM_WEIGHT * anchor
+        return round(max(0.01, min(0.99, blended)), 3)
+
+    anchor = round(anchor_raw, 1)
+    return round(PREGAME_PACE_WEIGHT * float(ewma_proj) + PREGAME_SIM_WEIGHT * anchor, 1)
 
 
 def _team_side(team: str, home: str, away: str) -> str | None:
@@ -272,8 +387,8 @@ def _prop_team_stat_key(prop_key: str) -> str | None:
         return "rush_yds"
     if "rec" in pk and "yard" in pk:
         return "pass_yds"  # team pass volume proxy for receiving corps
-    if "reception" in pk:
-        return "pass_yds"
+    if pk == "receptions" or (pk.startswith("rec") and "yard" not in pk and "yds" not in pk):
+        return "completions"
     if "td" in pk:
         return "points"
     return None
@@ -317,6 +432,12 @@ def correlated_live_prop_projection(
             sim_final = live_team.get(f"{prefix}pass_yds")
             pre_team_val = pre_team.get(f"{prefix}pass_yds")
             box_cur = float(team_box.get("pass") or 0)
+        elif stat_key == "completions":
+            sim_pass = live_team.get(f"{prefix}pass_yds")
+            pre_pass = pre_team.get(f"{prefix}pass_yds")
+            sim_final = float(sim_pass) / 11.0 if sim_pass is not None else None
+            pre_team_val = float(pre_pass) / 11.0 if pre_pass is not None else None
+            box_cur = float(team_box.get("rec") or team_box.get("pass_comp") or 0)
         elif stat_key == "rush_yds":
             sim_final = live_team.get(f"{prefix}rush_yds")
             pre_team_val = pre_team.get(f"{prefix}rush_yds")

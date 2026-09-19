@@ -15,7 +15,7 @@ NFL_TD_SPLIT = (0.58, 0.37, 0.05)
 NFL_SACKS_PER_GAME = 2.39
 NFL_INTS_PER_GAME = 0.70
 
-# CFB (Bill Connelly SP+ calibration)
+# CFB (BCF Toys FEI calibration — bcftoys.com)
 CFB_LEAGUE_AVG = 28.5
 CFB_HFA = 2.81
 CFB_R_DISPERSION = 10.5
@@ -32,3 +32,18 @@ LIVE_POLL_SEC = 8
 ODDS_POLL_SEC = 5
 FOURC_POLL_SEC = 5
 PROJECTION_CACHE_TTL = 3600
+
+# Pricing UI — retail books shown on player props (best line per side)
+PRICING_UI_BOOKS: frozenset[str] = frozenset(
+    {
+        "draftkings",
+        "fanduel",
+        "betmgm",
+        "novig",
+        "fanatics",
+        "thescore",
+        "kalshi",
+        "pinnacle",
+        "betonline",
+    }
+)

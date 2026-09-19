@@ -28,19 +28,17 @@ def _parse_num(s: Any) -> float | None:
         return None
 
 
-def stat_from_box(name: str, market: str, box_stats: dict[str, dict[str, float]]) -> float | None:
+def _lookup_player_stats(name: str, box_stats: dict[str, dict[str, float]]) -> dict[str, float] | None:
     norm = _normalize_name(name)
     player_stats = box_stats.get(norm)
     if not player_stats:
         player_stats = box_stats.get(name.lower())
     if not player_stats:
-        # exact normalized key
         for k, v in box_stats.items():
             if _normalize_name(k) == norm:
                 player_stats = v
                 break
     if not player_stats:
-        # fuzzy: last name match (prefer unique)
         last = norm.split()[-1] if norm else ""
         if last:
             matches = [(k, v) for k, v in box_stats.items() if k.endswith(last) or last in k.split()]
@@ -52,17 +50,57 @@ def stat_from_box(name: str, market: str, box_stats: dict[str, dict[str, float]]
                     if first and first in k:
                         player_stats = v
                         break
+    return player_stats
+
+
+_PROP_KEY_BOX_FIELD: dict[str, str] = {
+    "pass_yds": "pass_yds",
+    "pass_yds_q1": "pass_yds",
+    "rush_yds": "rush_yds",
+    "rec_yds": "rec_yds",
+    "receptions": "rec",
+    "pass_tds": "pass_tds",
+    "pass_attempts": "pass_att",
+    "pass_completions": "pass_comp",
+    "rush_attempts": "rush_att",
+    "tds": "td",
+}
+
+
+def stat_for_prop_key(
+    name: str,
+    prop_key: str,
+    box_stats: dict[str, dict[str, float]],
+) -> float | None:
+    """Box-score stat for an internal prop key (rush_yds, rec_yds, …)."""
+    if not name or not box_stats:
+        return None
+    player_stats = _lookup_player_stats(name, box_stats)
+    if not player_stats:
+        return None
+    pk = str(prop_key or "").lower().strip()
+    if pk == "tds":
+        td = player_stats.get("td")
+        return 1.0 if td is not None and td >= 1 else 0.0
+    field = _PROP_KEY_BOX_FIELD.get(pk)
+    if field:
+        return player_stats.get(field)
+    return stat_from_box(name, prop_key.replace("_", " "), box_stats)
+
+
+def stat_from_box(name: str, market: str, box_stats: dict[str, dict[str, float]]) -> float | None:
+    player_stats = _lookup_player_stats(name, box_stats)
     if not player_stats:
         return None
 
     mkt = str(market or "").lower()
-    if "pass" in mkt and "yard" in mkt:
+    if "pass" in mkt and ("yard" in mkt or "yds" in mkt):
         return player_stats.get("pass_yds")
     if "pass" in mkt and ("touchdown" in mkt or " td" in mkt or mkt.endswith(" td") or mkt == "pass tds"):
         return player_stats.get("pass_tds")
-    if "rush" in mkt and "yard" in mkt:
+    if "rush" in mkt and ("yard" in mkt or "yds" in mkt):
         return player_stats.get("rush_yds")
-    if "rec" in mkt and "yard" in mkt:
+    if ("rec" in mkt or "receiv" in mkt) and ("yard" in mkt or "yds" in mkt):
         return player_stats.get("rec_yds")
     if "reception" in mkt:
         return player_stats.get("rec")
@@ -75,6 +113,8 @@ def stat_from_box(name: str, market: str, box_stats: dict[str, dict[str, float]]
         return player_stats.get("pass_att")
     if "completion" in mkt:
         return player_stats.get("pass_comp")
+    if "rush" in mkt and "attempt" in mkt:
+        return player_stats.get("rush_att")
     return None
 
 
@@ -157,6 +197,8 @@ def parse_espn_boxscore(summary: dict[str, Any]) -> dict[str, dict[str, float]]:
                         bucket.setdefault("td", 0)
                         bucket["td"] = (bucket.get("td") or 0) + td_val
                 elif gname == "rushing":
+                    if "CAR" in labels:
+                        bucket["rush_att"] = _parse_num(stats[labels.index("CAR")])
                     if "YDS" in labels:
                         bucket["rush_yds"] = _parse_num(stats[labels.index("YDS")])
                     if "TD" in labels:

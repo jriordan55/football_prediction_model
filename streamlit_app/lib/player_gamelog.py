@@ -43,6 +43,7 @@ STAT_FIELDS = {
     "receptions": "receptions",
     "pass_tds": "passingTouchdowns",
     "tds": "rushingTouchdowns",  # anytime TD proxy from rush TD column when no better field
+    "rec_tds": "receivingTouchdowns",
 }
 
 Q1_PASS_YDS_SHARE = 0.28
@@ -51,11 +52,23 @@ Q1_PASS_YDS_SHARE = 0.28
 def gamelog_prop_series(df: pd.DataFrame, prop_key: str) -> pd.Series | None:
     """Stat series from ESPN gamelog; Q1 pass yds derived from full-game passing yards."""
     pk = (prop_key or "").lower()
+    if pk == "tds":
+        rush = df["tds"] if "tds" in df.columns else 0.0
+        rec = df["rec_tds"] if "rec_tds" in df.columns else 0.0
+        return (rush + rec).clip(lower=0.0)
     if pk in df.columns:
         return df[pk]
     if pk == "pass_yds_q1" and "pass_yds" in df.columns:
         return df["pass_yds"] * Q1_PASS_YDS_SHARE
     return None
+
+
+def anytime_td_hit_series(df: pd.DataFrame) -> pd.Series | None:
+    """Binary 1/0 — player scored at least one TD (rush + rec) in the game."""
+    series = gamelog_prop_series(df, "tds")
+    if series is None:
+        return None
+    return (series.fillna(0.0) >= 1.0).astype(float)
 
 SESSION = requests.Session()
 SESSION.headers.update(

@@ -84,7 +84,7 @@ def run_matchup_simulation(
     live_game: dict[str, Any] | None = None,
     n_sims: int = DEFAULT_SIMS,
 ) -> dict[str, Any]:
-    # Ratings/lambdas from pure SP+ or ELO — never blend posted lines into score draws.
+    # Ratings/lambdas from FEI (CFB) or ELO — never blend posted lines into score draws.
     base = price_base_game(
         sport,
         home,
@@ -200,8 +200,16 @@ def run_matchup_simulation(
     away_rush_mean = round(float(np.mean(away_rush)), 1)
     home_td_mean = round(float(np.mean(home_tds)), 1)
     away_td_mean = round(float(np.mean(away_tds)), 1)
+    home_comp = np.round(home_pass / 11.0).astype(int)
+    away_comp = np.round(away_pass / 11.0).astype(int)
+    home_comp_line = _round_half(float(np.mean(home_comp)))
+    away_comp_line = _round_half(float(np.mean(away_comp)))
+    home_comp_mean = round(float(np.mean(home_comp)), 1)
+    away_comp_mean = round(float(np.mean(away_comp)), 1)
     add("Pass Yds", home, home_pass_line, _over_prob(home_pass.astype(float), home_pass_line), projection=home_pass_mean)
     add("Pass Yds", away, away_pass_line, _over_prob(away_pass.astype(float), away_pass_line), projection=away_pass_mean)
+    add("Comp", home, home_comp_line, _over_prob(home_comp.astype(float), home_comp_line), projection=home_comp_mean)
+    add("Comp", away, away_comp_line, _over_prob(away_comp.astype(float), away_comp_line), projection=away_comp_mean)
     add("Rush Yds", home, home_rush_line, _over_prob(home_rush.astype(float), home_rush_line), projection=home_rush_mean)
     add("Rush Yds", away, away_rush_line, _over_prob(away_rush.astype(float), away_rush_line), projection=away_rush_mean)
     add("TDs", home, home_td_line, _over_prob(home_tds.astype(float), home_td_line), projection=home_td_mean)
@@ -210,11 +218,11 @@ def run_matchup_simulation(
     game_pass_mean = round(home_pass_mean + away_pass_mean, 1)
     add("Pass Yds", "Game", game_pass, _over_prob((home_pass + away_pass).astype(float), game_pass), projection=game_pass_mean)
 
-    return {
+    out = {
         "home": home,
         "away": away,
         "sport": sport,
-        "model": base.get("model") or ("sp_plus" if sport == "cfb" else "elo"),
+        "model": base.get("model") or ("fei" if sport == "cfb" else "elo"),
         "live_state": live.get("state"),
         "spread": spread_line,
         "total": total_line,
@@ -230,3 +238,16 @@ def run_matchup_simulation(
             "total_mean": round(float(np.mean(totals)), 1),
         },
     }
+
+    if live.get("state") == "live":
+        from pricing_engine.live_calibrate import calibrate_live_sim
+
+        out = calibrate_live_sim(
+            out,
+            live=live,
+            model_spread=model_spread,
+            market_spread=spread_line,
+            market_ml_home=live.get("market_ml_home"),
+        )
+
+    return out

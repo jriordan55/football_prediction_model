@@ -19,7 +19,7 @@ MARKET_BLEND = 0.08  # final anchor toward posted line
 # Max swing from core rate after matchup adjustment.
 CORE_SWING = 0.20
 
-# EWMA — recent games weighted heavier (span ~4–5 games).
+# EWMA — recent games weighted heavier (span ~4–5 games); blended with median in _robust_recent_rate.
 EWMA_ALPHA = 0.32
 RECENT_LIMIT = 10
 
@@ -60,6 +60,7 @@ ACTIVE_THRESHOLDS: dict[str, float] = {
     "rec_yds": 8.0,
     "receptions": 1.0,
     "pass_tds": 0.5,
+    "tds": 1.0,
 }
 
 # Role baselines when market line unavailable.

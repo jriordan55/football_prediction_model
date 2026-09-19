@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import re
+import time
 from typing import Any
 
 import streamlit as st
@@ -46,6 +47,33 @@ def fetch_game_plays(event_id: str, *, sport: str | None = None, limit: int = 40
         page_data = _get(f"{url}&page={page}")
         items.extend(page_data.get("items") or [])
     return [_compact_play(p) for p in items if _compact_play(p).get("text")]
+
+
+def live_poll_bucket(ttl: int = 8) -> int:
+    """Time bucket for short-lived Streamlit caches during live polling."""
+    return int(time.time()) // max(1, int(ttl))
+
+
+@st.cache_data(ttl=8, show_spinner=False)
+def fetch_game_summary_cached(
+    event_id: str,
+    sport: str,
+    tab: str | None = None,
+    tick: int = 0,
+) -> dict[str, Any]:
+    _ = tick
+    return fetch_game_summary(event_id, sport=sport, tab=tab)
+
+
+@st.cache_data(ttl=8, show_spinner=False)
+def fetch_game_plays_cached(
+    event_id: str,
+    sport: str,
+    limit: int = 400,
+    tick: int = 0,
+) -> list[dict[str, Any]]:
+    _ = tick
+    return fetch_game_plays(event_id, sport=sport, limit=limit)
 
 
 def _plays_from_drives(summary: dict[str, Any]) -> list[dict[str, Any]]:
@@ -255,7 +283,7 @@ def fetch_scoreboard_events(
     return [_compact_game_from_event(ev) for ev in data.get("events") or []]
 
 
-@st.cache_data(ttl=12, show_spinner=False)
+@st.cache_data(ttl=5, show_spinner=False)
 def fetch_live_scoreboard(sport: str, week: int, year: int, tab: str | None = None) -> list[dict[str, Any]]:
     _ = tab, year
     return fetch_scoreboard_events(sport, week=week)
@@ -366,8 +394,8 @@ def fetch_live_game_detail(
     import json
 
     _ = tick
-    summary = fetch_game_summary(event_id, sport=sport, tab=tab)
-    plays = fetch_game_plays(event_id, sport=sport)
+    summary = fetch_game_summary_cached(event_id, sport, tab=tab, tick=tick)
+    plays = fetch_game_plays_cached(event_id, sport, limit=400, tick=tick)
     if not plays:
         plays = _plays_from_drives(summary)
     slate_rows = json.loads(slate_json) if slate_json else None

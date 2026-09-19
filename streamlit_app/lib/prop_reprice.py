@@ -102,57 +102,42 @@ def _baseline_on_team(player: str, team: str | None) -> dict[str, Any] | None:
     return _load_baselines().get(_name_team_key(player, team))
 
 
-def resolve_prop_team(row: dict[str, Any], *, skip_starters: bool = False) -> str | None:
-    """Correct slate team tags using baselines, starters, and ESPN."""
-    from .sport_context import SPORT_NFL, get_sport
+@lru_cache(maxsize=2048)
+def _resolve_prop_team_cached(
+    player: str,
+    home: str,
+    away: str,
+    prop_key: str,
+    stored: str,
+    skip_starters: bool,
+) -> str | None:
+    return _resolve_prop_team_impl(
+        player,
+        home,
+        away,
+        prop_key,
+        stored,
+        skip_starters=skip_starters,
+    )
 
-    home = row.get("home")
-    away = row.get("away")
-    stored = row.get("team")
-    player = str(row.get("player") or "")
 
-    if get_sport() == SPORT_NFL:
-        if not skip_starters:
-            try:
-                from .prop_starters import starter_for_player
-
-                info = starter_for_player(
-                    player,
-                    home=str(home or ""),
-                    away=str(away or ""),
-                    team=str(stored or "") if stored else None,
-                )
-                if info and info.get("team"):
-                    tm = str(info["team"])
-                    if home and away:
-                        if teams_match(tm, home) or teams_match(tm, away):
-                            return tm
-                    else:
-                        return tm
-            except Exception:
-                pass
-
-        try:
-            from .player_gamelog import espn_team_for_player
-
-            espn_team = espn_team_for_player(player, home, away)
-            if espn_team:
-                return espn_team
-        except Exception:
-            pass
-
-        if stored and home and away and (teams_match(stored, home) or teams_match(stored, away)):
-            return str(stored)
+def _resolve_prop_team_impl(
+    player: str,
+    home: str | None,
+    away: str | None,
+    prop_key: str,
+    stored: str | None,
+    *,
+    skip_starters: bool,
+) -> str | None:
+    """Resolve which side of the matchup a player belongs to — never guess away/home."""
+    if not player or not home or not away:
         return None
 
-    prop_key = (prop_key_from_row(row) or "").lower()
-
-    home_bl = _baseline_on_team(player, home)
-    away_bl = _baseline_on_team(player, away)
-    if home_bl and not away_bl:
-        return str(home)
-    if away_bl and not home_bl:
-        return str(away)
+    home_s, away_s = str(home), str(away)
+    stored_s = str(stored or "").strip()
+    if stored_s and not (teams_match(stored_s, home_s) or teams_match(stored_s, away_s)):
+        stored_s = ""
 
     if not skip_starters:
         try:
@@ -160,60 +145,127 @@ def resolve_prop_team(row: dict[str, Any], *, skip_starters: bool = False) -> st
 
             info = starter_for_player(
                 player,
-                home=str(home or ""),
-                away=str(away or ""),
-                team=str(stored or "") if stored else None,
+                home=home_s,
+                away=away_s,
+                team=stored_s or None,
             )
             if info and info.get("team"):
                 tm = str(info["team"])
-                if home and away:
-                    if teams_match(tm, home) or teams_match(tm, away):
-                        return tm
-                else:
+                if teams_match(tm, home_s) or teams_match(tm, away_s):
                     return tm
         except Exception:
             pass
 
-        try:
-            from .player_gamelog import espn_team_for_player
-
-            espn_team = espn_team_for_player(player, home, away)
-            if espn_team:
-                return espn_team
-        except Exception:
-            pass
-
     try:
-        line_f = float(row.get("line"))
-    except (TypeError, ValueError):
-        line_f = None
+        from .player_gamelog import espn_team_for_player
 
-    field = BASELINE_FIELDS.get(prop_key)
+        espn_team = espn_team_for_player(player, home_s, away_s)
+        if espn_team and (teams_match(espn_team, home_s) or teams_match(espn_team, away_s)):
+            return espn_team
+    except Exception:
+        pass
 
+    home_bl = _baseline_on_team(player, home_s)
+    away_bl = _baseline_on_team(player, away_s)
+    if home_bl and not away_bl:
+        return home_s
+    if away_bl and not home_bl:
+        return away_s
+
+    field = BASELINE_FIELDS.get(str(prop_key or "").lower())
     if home_bl and away_bl and field:
         h_val = float(home_bl.get(field) or 0)
         a_val = float(away_bl.get(field) or 0)
-        return str(home if h_val >= a_val else away)
+        if h_val > 0 or a_val > 0:
+            return home_s if h_val >= a_val else away_s
 
     prior = find_baseline_by_name(player)
-    if prior and field:
+    if prior:
         prior_team = str(prior.get("team") or "")
-        if home and _team_key(prior_team) == _team_key(home):
-            return str(home)
-        if away and _team_key(prior_team) == _team_key(away):
-            return str(away)
+        if _team_key(prior_team) == _team_key(home_s):
+            return home_s
+        if _team_key(prior_team) == _team_key(away_s):
+            return away_s
 
-    if stored and home and away and line_f and field and prior:
-        pg = float(prior.get(field) or 0)
-        if pg < line_f * 0.45:
-            if _team_key(stored) == _team_key(home):
-                return str(away)
-            if _team_key(stored) == _team_key(away):
-                return str(home)
+    if stored_s and (teams_match(stored_s, home_s) or teams_match(stored_s, away_s)):
+        return stored_s
+    return None
 
-    if stored in (home, away):
-        return str(stored)
-    return str(away or home or stored or "")
+
+def resolve_prop_team(row: dict[str, Any], *, skip_starters: bool = False) -> str | None:
+    """Correct slate team tags using starters, ESPN, and season baselines."""
+    home = row.get("home")
+    away = row.get("away")
+    player = str(row.get("player") or "")
+    if not player or not home or not away:
+        return None
+    stored = str(row.get("team") or "")
+    if stored and (teams_match(stored, str(home)) or teams_match(stored, str(away))):
+        return stored
+    prop_key = str(row.get("prop_key") or prop_key_from_row(row) or "")
+    return _resolve_prop_team_cached(
+        player,
+        str(home),
+        str(away),
+        prop_key,
+        stored,
+        bool(skip_starters),
+    )
+
+
+def attach_prop_teams(props: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Resolve and persist team tags once when props are loaded."""
+    if not props:
+        return []
+    home = str(props[0].get("home") or "")
+    away = str(props[0].get("away") or "")
+    starter_index: dict[str, dict[str, Any]] = {}
+    if home and away:
+        try:
+            from .prop_starters import build_starter_index
+
+            starter_index = build_starter_index([home, away])
+        except Exception:
+            starter_index = {}
+
+    out: list[dict[str, Any]] = []
+    for raw in props:
+        row = dict(raw)
+        player = str(row.get("player") or "")
+        row_home = str(row.get("home") or home)
+        row_away = str(row.get("away") or away)
+        if not player or not row_home or not row_away:
+            out.append(row)
+            continue
+
+        team = row.get("team")
+        if team and not (
+            teams_match(str(team), row_home) or teams_match(str(team), row_away)
+        ):
+            team = None
+
+        if not team:
+            hit = starter_index.get(_normalize_name(player))
+            if hit and hit.get("team"):
+                tm = str(hit["team"])
+                if teams_match(tm, row_home) or teams_match(tm, row_away):
+                    team = tm
+
+        if not team:
+            home_bl = _baseline_on_team(player, row_home)
+            away_bl = _baseline_on_team(player, row_away)
+            if home_bl and not away_bl:
+                team = row_home
+            elif away_bl and not home_bl:
+                team = row_away
+
+        if not team:
+            team = resolve_prop_team(row, skip_starters=False)
+
+        if team:
+            row["team"] = team
+        out.append(row)
+    return out
 
 
 def team_logo_for(row: dict[str, Any], team: str | None) -> str | None:

@@ -14,7 +14,7 @@ from .sport_context import SPORT_CFB, SPORT_NFL, sport_disk_tag
 PRICING_HISTORY_DIR = DATA_DIR / "pricing_history"
 SCHEMA_VERSION = 1
 METHODOLOGY = {
-    "version": 3,
+    "version": 6,
     "game_sim": "pricing_engine.simulator.run_matchup_simulation",
     "props": "pricing_engine.ui.props_table.compute_prop_projection",
     "pit": "pricing_engine.pit",
@@ -857,7 +857,9 @@ def prepare_props_for_ui(props: list[dict[str, Any]]) -> list[dict[str, Any]]:
         if stored is not None and row.get("modelProj") is None:
             row["modelProj"] = stored
         out.append(row)
-    return out
+    from lib.prop_reprice import attach_prop_teams
+
+    return attach_prop_teams(out)
 
 
 def archived_props_for_ui(props: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -880,6 +882,654 @@ def prop_projection_map_from_archived(props: list[dict[str, Any]]) -> dict[tuple
     return out
 
 
+_CAPTURE_PRIORITY: dict[str, int] = {
+    "game_close": 0,
+    "game_open": 1,
+    "pregame_view": 2,
+    "daily_close": 3,
+    "snapshot": 4,
+    "backfill": 5,
+}
+
+_PREGAME_CAPTURE_TYPES = frozenset({"game_close", "game_open", "pregame_view", "daily_close", "snapshot", "backfill"})
+
+
+def _week_search_order(sport: str, week_hint: int | None) -> list[int]:
+    from .sport_context import get_sport_config
+
+    cfg = get_sport_config(sport)
+    min_w = int(cfg.get("min_week", 0))
+    max_w = int(cfg.get("max_week", 18))
+    order: list[int] = []
+    if week_hint is not None:
+        for w in (int(week_hint), int(week_hint) - 1, int(week_hint) + 1):
+            if min_w <= w <= max_w and w not in order:
+                order.append(w)
+    for w in range(min_w, max_w + 1):
+        if w not in order:
+            order.append(w)
+    return order
+
+
+def _stored_bundle_score(capture_type: str, game: dict[str, Any], captured_at: str) -> tuple:
+    pri = _CAPTURE_PRIORITY.get(str(capture_type or ""), 99)
+    has_sim = 1 if game.get("sim") else 0
+    nprops = len(game.get("props") or [])
+    nquotes = len(game.get("odds_quotes") or [])
+    return (pri, -has_sim, -nprops, -nquotes, str(captured_at or ""))
+
+
+def matchup_has_capture(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+    *,
+    capture_types: frozenset[str] | None = None,
+) -> bool:
+    for fp in _capture_files(sport, year, week):
+        try:
+            payload = json.loads(fp.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError, TypeError, ValueError):
+            continue
+        cap_type = str(payload.get("capture_type") or "")
+        if capture_types and cap_type not in capture_types:
+            continue
+        for game in payload.get("games") or []:
+            if _matchup_teams(home, away, str(game.get("home") or ""), str(game.get("away") or "")):
+                return True
+    return False
+
+
+def load_stored_game_bundle(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+) -> dict[str, Any] | None:
+    """Best archived game bundle for a matchup (game_close preferred)."""
+    best: tuple[tuple, dict[str, Any]] | None = None
+    for wk in _week_search_order(sport, week):
+        for fp in _capture_files(sport, year, wk):
+            try:
+                payload = json.loads(fp.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError, TypeError, ValueError):
+                continue
+            cap_type = str(payload.get("capture_type") or "")
+            captured_at = str(payload.get("captured_at") or "")
+            for game in payload.get("games") or []:
+                if not _matchup_teams(home, away, str(game.get("home") or ""), str(game.get("away") or "")):
+                    continue
+                bundle = {
+                    **game,
+                    "_captured_at": captured_at,
+                    "_capture_type": cap_type,
+                    "_source": payload.get("source"),
+                    "_week": wk,
+                }
+                score = _stored_bundle_score(cap_type, game, captured_at)
+                if best is None or score < best[0]:
+                    best = (score, bundle)
+    return best[1] if best else None
+
+
+def load_game_card_matchup(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+) -> dict[str, Any] | None:
+    for card in load_game_cards_file(sport, year, week):
+        if _matchup_teams(home, away, str(card.get("home") or ""), str(card.get("away") or "")):
+            return card
+    return None
+
+
+def board_quotes_to_flat(
+    quotes: dict[str, dict[str, Any]],
+    *,
+    home: str,
+    away: str,
+    event_id: str | None = None,
+) -> list[dict[str, Any]]:
+    market_key = {"Spread": "spreads", "Total": "totals", "ML": "h2h"}
+    out: list[dict[str, Any]] = []
+    for q in quotes.values():
+        if not q:
+            continue
+        mk = market_key.get(str(q.get("market") or ""), str(q.get("market") or "").lower())
+        out.append(
+            {
+                "market_key": mk,
+                "selection": q.get("selection"),
+                "line": q.get("line"),
+                "price": q.get("price"),
+                "book_id": q.get("book_id"),
+                "home": home,
+                "away": away,
+                "event_id": event_id,
+                "source": q.get("source") or "pregame_view",
+            }
+        )
+    return out
+
+
+def quotes_from_open_close_lines(
+    home: str,
+    away: str,
+    lines: dict[str, Any],
+    *,
+    use_close: bool = True,
+) -> dict[str, dict[str, Any]]:
+    """Build pricing-board quotes from archived closing/opening lines."""
+    src = str(lines.get("source") or lines.get("book") or "history")
+    prefix = "close" if use_close else "open"
+    spread = lines.get(f"{prefix}Spread")
+    if spread is None:
+        spread = lines.get("closeSpread") if use_close else lines.get("openSpread")
+    if spread is None:
+        spread = lines.get("spread")
+    total = lines.get(f"{prefix}Total")
+    if total is None:
+        total = lines.get("closeTotal") if use_close else lines.get("openTotal")
+    if total is None:
+        total = lines.get("total")
+    home_ml = lines.get(f"{prefix}HomeMoneyline")
+    if home_ml is None:
+        home_ml = lines.get("closeHomeMoneyline") if use_close else lines.get("openHomeMoneyline")
+    away_ml = lines.get(f"{prefix}AwayMoneyline")
+    if away_ml is None:
+        away_ml = lines.get("closeAwayMoneyline") if use_close else lines.get("openAwayMoneyline")
+
+    out: dict[str, dict[str, Any]] = {}
+    if spread is not None:
+        try:
+            sp = float(spread)
+            out["spread_home"] = {
+                "book_id": src,
+                "market": "Spread",
+                "selection": home,
+                "line": sp,
+                "price": None,
+                "source": src,
+            }
+            out["spread_away"] = {
+                "book_id": src,
+                "market": "Spread",
+                "selection": away,
+                "line": -sp,
+                "price": None,
+                "source": src,
+            }
+        except (TypeError, ValueError):
+            pass
+    if total is not None:
+        try:
+            tot = float(total)
+            out["total_over"] = {
+                "book_id": src,
+                "market": "Total",
+                "selection": "Over",
+                "line": tot,
+                "price": None,
+                "source": src,
+            }
+            out["total_under"] = {
+                "book_id": src,
+                "market": "Total",
+                "selection": "Under",
+                "line": tot,
+                "price": None,
+                "source": src,
+            }
+        except (TypeError, ValueError):
+            pass
+    if home_ml is not None:
+        try:
+            out["ml_home"] = {
+                "book_id": src,
+                "market": "ML",
+                "selection": home,
+                "line": None,
+                "price": int(float(home_ml)),
+                "source": src,
+            }
+        except (TypeError, ValueError):
+            pass
+    if away_ml is not None:
+        try:
+            out["ml_away"] = {
+                "book_id": src,
+                "market": "ML",
+                "selection": away,
+                "line": None,
+                "price": int(float(away_ml)),
+                "source": src,
+            }
+        except (TypeError, ValueError):
+            pass
+    return out
+
+
+def resolve_historical_lines(
+    home: str,
+    away: str,
+    *,
+    sport: str,
+    year: int,
+    week: int,
+    game: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Closing lines for a finished game — ESPN pickcenter, snapshots, fastR."""
+    g = game or {}
+    event_id = g.get("event_id") or g.get("id")
+    kickoff = g.get("kickoff") or g.get("startDate")
+
+    from lib.game_line_history import opening_closing_lines
+
+    oc = opening_closing_lines(
+        home,
+        away,
+        event_id=str(event_id) if event_id else None,
+        year=int(year),
+        kickoff=kickoff,
+        skip_espn=False,
+    )
+    try:
+        from lib.fastr_market_lines import fastr_open_close_lines_cached
+
+        fr = fastr_open_close_lines_cached(home, away, int(year), week=int(week), sport=sport)
+        for key in (
+            "openSpread",
+            "closeSpread",
+            "openTotal",
+            "closeTotal",
+            "closeHomeMoneyline",
+            "closeAwayMoneyline",
+            "openHomeMoneyline",
+            "openAwayMoneyline",
+        ):
+            if oc.get(key) is None and fr.get(key) is not None:
+                oc[key] = fr.get(key)
+        if not oc.get("source") and fr.get("source"):
+            oc["source"] = fr.get("source")
+    except Exception:
+        pass
+    return oc
+
+
+def _quotes_have_retail_board(quotes: dict[str, dict[str, Any]]) -> bool:
+    return any(
+        str((q or {}).get("book_id") or "").lower() not in ("4c", "4codds", "onyx", "")
+        and ((q or {}).get("line") is not None or (q or {}).get("price") is not None)
+        for q in quotes.values()
+    )
+
+
+def _matchup_slug(home: str, away: str) -> str:
+    from lib.nfl_team_registry import team_key as nfl_key
+    from lib.team_registry import team_key as cfb_key
+
+    hk = cfb_key(home) or nfl_key(home) or str(home or "").lower().replace(" ", "_")
+    ak = cfb_key(away) or nfl_key(away) or str(away or "").lower().replace(" ", "_")
+    return f"{ak}_at_{hk}"
+
+
+def pregame_snapshot_path(sport: str, year: int, week: int, home: str, away: str) -> Path:
+    return week_dir(sport, year, week) / "games" / f"{_matchup_slug(home, away)}.json"
+
+
+def load_pregame_snapshot(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+) -> dict[str, Any] | None:
+    """Canonical frozen pregame bundle for one matchup (updated every odds poll pre-kickoff)."""
+    for wk in _week_search_order(sport, week):
+        path = pregame_snapshot_path(sport, year, wk, home, away)
+        if not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError, TypeError, ValueError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        quotes = data.get("quotes")
+        if not quotes and data.get("odds_quotes"):
+            quotes = flat_quotes_to_board(data["odds_quotes"], home=home, away=away)
+        return {
+            **data,
+            "home": data.get("home") or home,
+            "away": data.get("away") or away,
+            "quotes": quotes or {},
+            "props": data.get("props") or [],
+            "sim": data.get("sim"),
+            "lines": data.get("lines") or {},
+            "odds_quotes": data.get("odds_quotes")
+            or board_quotes_to_flat(quotes or {}, home=home, away=away, event_id=data.get("event_id")),
+            "_captured_at": data.get("updated_at") or data.get("captured_at"),
+            "_capture_type": "pregame_snapshot",
+            "_source": data.get("source") or "pricing_ui",
+            "_week": wk,
+        }
+    return None
+
+
+def save_pregame_snapshot(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+    *,
+    game: dict[str, Any],
+    quotes: dict[str, dict[str, Any]],
+    props: list[dict[str, Any]],
+    sim: dict[str, Any] | None,
+    prop_map: dict[tuple[str, str, str], float] | None = None,
+) -> bool:
+    """Always upsert the canonical pregame file while the game is still upcoming."""
+    from pricing_engine.pit import game_is_final
+    from pricing_engine.ui.props_table import prop_projection_key
+
+    if game_is_final(game):
+        return False
+    if not _quotes_have_retail_board(quotes) and not props:
+        return False
+
+    spread = quotes.get("spread_home", {}).get("line")
+    if spread is None and quotes.get("spread_away", {}).get("line") is not None:
+        try:
+            spread = -float(quotes["spread_away"]["line"])
+        except (TypeError, ValueError):
+            spread = None
+    total = quotes.get("total_over", {}).get("line") or quotes.get("total_under", {}).get("line")
+
+    props_out: list[dict[str, Any]] = []
+    for raw in props:
+        row = dict(raw)
+        if prop_map:
+            pkey = prop_projection_key(row)
+            if pkey in prop_map:
+                row["projection"] = prop_map[pkey]
+        props_out.append(row)
+
+    event_id = game.get("event_id") or game.get("id")
+    payload: dict[str, Any] = {
+        "schema_version": SCHEMA_VERSION,
+        "sport": sport,
+        "year": int(year),
+        "week": int(week),
+        "home": home,
+        "away": away,
+        "event_id": event_id,
+        "kickoff": game.get("kickoff") or game.get("startDate"),
+        "updated_at": _utc_now_iso(),
+        "lines": {"spread": spread, "total": total},
+        "quotes": quotes,
+        "odds_quotes": board_quotes_to_flat(
+            quotes, home=home, away=away, event_id=str(event_id) if event_id else None,
+        ),
+        "props": props_out,
+        "sim": sim,
+        "methodology": METHODOLOGY,
+        "source": "pricing_ui",
+    }
+
+    try:
+        payload["open_close"] = resolve_historical_lines(
+            home, away, sport=sport, year=int(year), week=int(week), game=game,
+        )
+    except Exception:
+        pass
+
+    _write_snapshot_file(sport, year, week, home, away, payload)
+    return True
+
+
+def _write_snapshot_file(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+    payload: dict[str, Any],
+) -> Path:
+    path = pregame_snapshot_path(sport, year, week, home, away)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+    return path
+
+
+def build_completed_backtest_bundle(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+    game: dict[str, Any],
+) -> dict[str, Any] | None:
+    """
+    Point-in-time backtest bundle for a finished game without a UI snapshot.
+    Odds + props from The Odds API archives; sim/projections frozen at display week.
+    """
+    from lib.game_line_history import closing_board_quotes_from_snapshots
+    from pricing_engine.simulator import run_matchup_simulation
+    from pricing_engine.ui.props_table import build_prop_projection_map, prop_projection_key
+
+    quotes: dict[str, dict[str, Any]] = {}
+    props: list[dict[str, Any]] = []
+    sim: dict[str, Any] | None = None
+    source = "theoddsapi"
+
+    stored = load_stored_game_bundle(sport, year, week, home, away)
+    if stored:
+        flat = stored.get("odds_quotes") or []
+        if flat:
+            quotes = flat_quotes_to_board(flat, home=home, away=away)
+            source = str(stored.get("_source") or "pricing_history")
+        props = archived_props_for_ui(stored.get("props") or [])
+        sim = stored.get("sim")
+
+    kickoff = game.get("kickoff") or game.get("startDate")
+    if not _quotes_have_retail_board(quotes):
+        snap_quotes = closing_board_quotes_from_snapshots(home, away, kickoff=kickoff)
+        if snap_quotes:
+            quotes = snap_quotes
+            source = "theoddsapi"
+
+    if not props:
+        board_rows = props_for_matchup(load_props_board(sport, year, week), home=home, away=away)
+        props = archived_props_for_ui(board_rows)
+        if props and source != "theoddsapi":
+            source = "props_board_cache"
+
+    if not _quotes_have_retail_board(quotes) and not props:
+        return None
+
+    spread = quotes.get("spread_home", {}).get("line")
+    if spread is None and quotes.get("spread_away", {}).get("line") is not None:
+        try:
+            spread = -float(quotes["spread_away"]["line"])
+        except (TypeError, ValueError):
+            spread = None
+    total = quotes.get("total_over", {}).get("line") or quotes.get("total_under", {}).get("line")
+
+    if sim is None:
+        sim = run_matchup_simulation(
+            sport, home, away,
+            season=year, week=week,
+            market_spread=spread, market_total=total,
+        )
+
+    prop_map = build_prop_projection_map(
+        props, year=year, week=week, sim=sim, home=home, away=away, backtest=True,
+    )
+    props_out: list[dict[str, Any]] = []
+    for raw in props:
+        row = dict(raw)
+        pkey = prop_projection_key(row)
+        if pkey in prop_map:
+            row["projection"] = prop_map[pkey]
+        props_out.append(row)
+
+    event_id = game.get("event_id") or game.get("id")
+    payload: dict[str, Any] = {
+        "schema_version": SCHEMA_VERSION,
+        "sport": sport,
+        "year": int(year),
+        "week": int(week),
+        "home": home,
+        "away": away,
+        "event_id": event_id,
+        "kickoff": kickoff,
+        "updated_at": _utc_now_iso(),
+        "lines": {"spread": spread, "total": total},
+        "quotes": quotes,
+        "odds_quotes": board_quotes_to_flat(
+            quotes, home=home, away=away, event_id=str(event_id) if event_id else None,
+        ),
+        "props": props_out,
+        "sim": sim,
+        "methodology": METHODOLOGY,
+        "source": source,
+        "backtest": True,
+    }
+    try:
+        payload["open_close"] = resolve_historical_lines(
+            home, away, sport=sport, year=int(year), week=int(week), game=game,
+        )
+    except Exception:
+        pass
+
+    _write_snapshot_file(sport, year, week, home, away, payload)
+    archived = {
+        **payload,
+        "_captured_at": payload["updated_at"],
+        "_capture_type": "completed_backtest",
+        "_source": source,
+    }
+    return {
+        "quotes": quotes,
+        "props": props_out,
+        "archived_game": archived,
+        "source": source,
+        "stored": archived,
+        "fetched_at": payload["updated_at"],
+    }
+
+
+def load_final_pregame_bundle(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+    *,
+    game: dict[str, Any] | None = None,
+    live_quotes: dict[str, dict[str, Any]] | None = None,
+    live_props: list[dict[str, Any]] | None = None,
+    strict: bool = False,
+) -> dict[str, Any]:
+    """
+    Restore pregame odds, props, and sim for a completed game.
+    Falls back through pricing_history, board cache, props cache, and line archives.
+    """
+    quotes = dict(live_quotes or {})
+    props = list(live_props or [])
+    archived_game: dict[str, Any] | None = None
+    source = "live"
+
+    snap = load_pregame_snapshot(sport, year, week, home, away)
+    if snap:
+        archived_game = snap
+        if snap.get("quotes"):
+            quotes = snap["quotes"]
+            source = "pregame_snapshot"
+        if snap.get("props"):
+            props = archived_props_for_ui(snap["props"])
+            source = "pregame_snapshot"
+        return {
+            "quotes": quotes,
+            "props": props,
+            "archived_game": archived_game,
+            "source": source,
+            "stored": snap,
+        }
+
+    stored = load_stored_game_bundle(sport, year, week, home, away)
+    if stored:
+        archived_game = stored
+        if not _quotes_have_retail_board(quotes):
+            flat = stored.get("odds_quotes") or []
+            if flat:
+                quotes = flat_quotes_to_board(flat, home=home, away=away)
+                source = str(stored.get("_source") or "pricing_history")
+        if not props:
+            props = archived_props_for_ui(stored.get("props") or [])
+            if props:
+                source = str(stored.get("_source") or "pricing_history")
+
+    if not _quotes_have_retail_board(quotes):
+        card = load_game_card_matchup(sport, year, week, home, away)
+        if card:
+            flat = merge_quotes(quotes_from_game_card(card), [])
+            if flat:
+                quotes = flat_quotes_to_board(flat, home=home, away=away)
+                source = "game_board_cache"
+                if archived_game is None:
+                    archived_game = {
+                        "home": home,
+                        "away": away,
+                        "event_id": card.get("event_id"),
+                        "lines": lines_from_card(card),
+                        "odds_quotes": flat,
+                    }
+
+    if not props:
+        board_rows = props_for_matchup(load_props_board(sport, year, week), home=home, away=away)
+        props = archived_props_for_ui(board_rows)
+        if props:
+            source = "props_board_cache" if source == "live" else source
+
+    if strict and game and not _quotes_have_retail_board(quotes) and not props:
+        backtest = build_completed_backtest_bundle(sport, year, week, home, away, game)
+        if backtest:
+            return backtest
+
+    if not strict and not _quotes_have_retail_board(quotes):
+        hist = resolve_historical_lines(home, away, sport=sport, year=year, week=week, game=game)
+        hist_quotes = quotes_from_open_close_lines(home, away, hist, use_close=True)
+        if hist_quotes:
+            quotes = hist_quotes
+            source = str(hist.get("source") or "line_history")
+            if archived_game is None:
+                archived_game = {
+                    "home": home,
+                    "away": away,
+                    "event_id": (game or {}).get("event_id") or (game or {}).get("id"),
+                    "lines": {"spread": hist.get("closeSpread"), "total": hist.get("closeTotal")},
+                    "odds_quotes": board_quotes_to_flat(hist_quotes, home=home, away=away),
+                }
+
+    if archived_game and stored and stored.get("sim"):
+        archived_game = {**archived_game, "sim": stored.get("sim"), "props": stored.get("props") or props}
+
+    return {
+        "quotes": quotes,
+        "props": props,
+        "archived_game": archived_game,
+        "source": source,
+        "stored": stored,
+    }
+
+
 def daily_snapshot_times(df: pd.DataFrame) -> dict[str, dict[str, pd.Timestamp | None]]:
     """First and last snapshot timestamp per calendar day."""
     if df.empty or "snapshot_at" not in df.columns:
@@ -894,3 +1544,151 @@ def daily_snapshot_times(df: pd.DataFrame) -> dict[str, dict[str, pd.Timestamp |
             "close": grp["snapshot_at"].iloc[-1],
         }
     return out
+
+
+OPEN_CLOSE_STATE_PATH = PRICING_HISTORY_DIR / "open_close_state.json"
+CLOSE_BEFORE_KICKOFF_MINUTES = 20
+
+
+def load_open_close_state() -> dict[str, Any]:
+    if not OPEN_CLOSE_STATE_PATH.exists():
+        return {"schema_version": 1, "games": {}}
+    try:
+        data = json.loads(OPEN_CLOSE_STATE_PATH.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            data.setdefault("games", {})
+            return data
+    except (json.JSONDecodeError, OSError, TypeError, ValueError):
+        pass
+    return {"schema_version": 1, "games": {}}
+
+
+def save_open_close_state(state: dict[str, Any]) -> None:
+    OPEN_CLOSE_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    state["updated_at"] = _utc_now_iso()
+    OPEN_CLOSE_STATE_PATH.write_text(json.dumps(state, indent=2, default=str), encoding="utf-8")
+
+
+def _game_state_key(sport: str, game_id: str) -> str:
+    return f"{sport}:{game_id}"
+
+
+def open_close_captured(state: dict[str, Any], sport: str, game_id: str, capture_type: str) -> bool:
+    entry = (state.get("games") or {}).get(_game_state_key(sport, game_id)) or {}
+    return bool(entry.get(capture_type))
+
+
+def mark_open_close_captured(
+    state: dict[str, Any],
+    *,
+    sport: str,
+    game_id: str,
+    capture_type: str,
+    path: str,
+    captured_at: str,
+) -> None:
+    games = state.setdefault("games", {})
+    key = _game_state_key(sport, game_id)
+    entry = dict(games.get(key) or {})
+    entry[capture_type] = {"path": path, "captured_at": captured_at}
+    games[key] = entry
+
+
+def _parse_kickoff_ts(kickoff: Any) -> datetime | None:
+    if kickoff is None:
+        return None
+    try:
+        if isinstance(kickoff, (int, float)):
+            ts = float(kickoff)
+            if ts > 1e12:
+                ts /= 1000.0
+            return datetime.fromtimestamp(ts, tz=timezone.utc)
+        text = str(kickoff).strip()
+        if text.isdigit():
+            ts = float(text)
+            if ts > 1e12:
+                ts /= 1000.0
+            return datetime.fromtimestamp(ts, tz=timezone.utc)
+        dt = datetime.fromisoformat(text.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except (TypeError, ValueError, OSError):
+        return None
+
+
+def should_capture_game_open(
+    *,
+    kickoff: Any,
+    now: datetime | None = None,
+    already_captured: bool,
+    has_quotes: bool,
+) -> bool:
+    if already_captured or not has_quotes:
+        return False
+    kick = _parse_kickoff_ts(kickoff)
+    cur = now or datetime.now(timezone.utc)
+    if kick is not None and kick <= cur:
+        return False
+    return True
+
+
+def should_capture_game_close(
+    *,
+    kickoff: Any,
+    now: datetime | None = None,
+    already_captured: bool,
+    has_quotes: bool,
+) -> bool:
+    if already_captured or not has_quotes:
+        return False
+    kick = _parse_kickoff_ts(kickoff)
+    cur = now or datetime.now(timezone.utc)
+    if kick is None:
+        return False
+    if kick <= cur:
+        return True
+    mins = (kick - cur).total_seconds() / 60.0
+    return mins <= CLOSE_BEFORE_KICKOFF_MINUTES
+
+
+def load_game_open_close(
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+) -> dict[str, Any] | None:
+    """Return opening/closing lines from kickoff-aware 4C captures when available."""
+    out: dict[str, Any] = {}
+    for capture_type, prefix in (("game_open", "open"), ("game_close", "close")):
+        for fp in sorted(captures_dir(sport, year, week).glob(f"*_{capture_type}.json")):
+            try:
+                payload = json.loads(fp.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError, TypeError, ValueError):
+                continue
+            for game in payload.get("games") or []:
+                if not _matchup_teams(home, away, str(game.get("home") or ""), str(game.get("away") or "")):
+                    continue
+                lines = game.get("lines") or {}
+                if lines.get("spread") is not None:
+                    out[f"{prefix}Spread"] = lines.get("spread")
+                if lines.get("total") is not None:
+                    out[f"{prefix}Total"] = lines.get("total")
+                out[f"{prefix}CapturedAt"] = payload.get("captured_at")
+                out[f"{prefix}Source"] = payload.get("source") or "4codds"
+                break
+    return out or None
+
+
+def capture_exists_today(capture_type: str, *, sport: str | None = None) -> bool:
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    for entry in _load_manifest().get("captures") or []:
+        if str(entry.get("capture_type") or "") != capture_type:
+            continue
+        if sport and str(entry.get("sport") or "") != sport:
+            continue
+        captured_at = str(entry.get("captured_at") or "")
+        if captured_at.startswith(today):
+            return True
+    return False

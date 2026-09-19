@@ -686,7 +686,7 @@ def render() -> None:
         callout("No props match your filters.", "info")
         return
 
-    row_labels = [_row_pick_label(r.to_dict()) for _, r in view.iterrows()]
+    row_labels = [_row_pick_label(r) for r in view.to_dict("records")]
     prev = st.session_state.get("pp_row_select")
     default_idx = row_labels.index(prev) if prev in row_labels else 0
     st.markdown('<div class="bo-pp-select-wrap">', unsafe_allow_html=True)

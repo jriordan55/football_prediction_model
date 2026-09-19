@@ -2,9 +2,13 @@
 from __future__ import annotations
 
 import sys
+import time
+from contextlib import nullcontext
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
+import pandas as pd
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
@@ -12,14 +16,20 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lib.config import load_env
-from lib.espn_client import fetch_game_summary, fetch_scoreboard_cached
-from lib.espn_live import fetch_live_scoreboard, latest_win_probability
+from lib.espn_client import fetch_scoreboard_cached
+from lib.espn_live import (
+    fetch_game_plays_cached,
+    fetch_game_summary_cached,
+    fetch_live_scoreboard,
+    latest_win_probability,
+    live_poll_bucket,
+)
 from lib.prop_results import parse_espn_boxscore
 from lib.fourc_odds_client import fourc_odds_enabled
 from lib.games import list_games_for_display_week
 from pricing_engine.pit import game_is_final
 from lib.sport_context import SPORT_CFB, SPORT_NFL, get_sport, get_sport_config, init_sport, set_sport
-from lib.styling import apply_theme, section_label
+from lib.styling import section_label
 from lib.team_logos import enrich_row_logos
 
 from pricing_engine.constants import DEFAULT_SIMS, LIVE_POLL_SEC, ODDS_POLL_SEC, PROJECTION_CACHE_TTL
@@ -32,9 +42,10 @@ from pricing_engine.ui.props_table import (
     row_prop_key,
 )
 from pricing_engine.inplay_props import enrich_live_prop_row
-from pricing_engine.ui.inplay_table import inplay_rows_for_game, render_inplay_html
+from pricing_engine.pbp_log import load_matchup_pbp_log
+from pricing_engine.ui.inplay_table import render_pbp_log_html
 from pricing_engine.ui.render import render_html
-from pricing_engine.ui.theme import pricing_board_css
+from pricing_engine.ui.theme import apply_pricing_theme, pricing_board_css
 
 load_env()
 
@@ -49,15 +60,17 @@ if "pe_year" not in st.session_state:
     st.session_state.pe_year = _cfg.get("default_year", 2026)
 
 # Bump when projection methodology changes to invalidate cached session sims.
-_PROJ_METHODOLOGY_VER = 5
+_PROJ_METHODOLOGY_VER = 11
+_PBP_CAPTURE_MIN_SEC = 20
+_PBP_RENDER_MIN_SEC = 12
 
 _PROP_TABS = [
-    ("rush_yds", "Rush Yds"),
-    ("rec_yds", "Rec Yds"),
+    ("rush_yds", "Rush Yards"),
+    ("rec_yds", "Rec Yards"),
     ("receptions", "Receptions"),
-    ("pass_yds", "Pass Yds"),
+    ("pass_yds", "Pass Yards"),
     ("pass_tds", "Pass TDs"),
-    ("tds", "TDs"),
+    ("tds", "Anytime TD"),
 ]
 
 
@@ -68,10 +81,71 @@ def _team(val: object) -> str:
 
 
 def _is_live(status: object) -> bool:
-    s = str(status or "").lower()
     if isinstance(status, dict):
-        s = str(status.get("state") or "").lower()
-    return s in ("in", "live", "in progress", "halftime")
+        state = str(status.get("state") or "").lower()
+        if state in ("in", "live", "halftime"):
+            return True
+        status = status.get("description") or status.get("detail") or status.get("name") or state
+    s = str(status or "").lower().strip()
+    if s in ("in", "live", "in progress", "halftime"):
+        return True
+    if "final" in s or "scheduled" in s or "pregame" in s or s == "pre":
+        return False
+    if any(tok in s for tok in ("progress", "quarter", "halftime", "half time", "end of 1", "end of 2", "end of 3", "end of 4")):
+        return True
+    return False
+
+
+def _game_is_live(
+    game: dict,
+    *,
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+) -> bool:
+    if game_is_final(game):
+        return False
+    if _is_live(game.get("status")) or _is_live(game.get("status_state")):
+        return True
+    live = _live_state(sport, year, week, home, away)
+    if live and _is_live(live.get("status")):
+        return True
+    try:
+        hp = int(game.get("homePoints") if game.get("homePoints") is not None else game.get("home_score"))
+        ap = int(game.get("awayPoints") if game.get("awayPoints") is not None else game.get("away_score"))
+        if (hp > 0 or ap > 0) and not game_is_final({**game, "homePoints": hp, "awayPoints": ap}):
+            return True
+    except (TypeError, ValueError):
+        pass
+    return False
+
+
+def _merge_live_scoreboard(
+    game: dict,
+    *,
+    sport: str,
+    year: int,
+    week: int,
+    home: str,
+    away: str,
+) -> dict:
+    row = dict(game)
+    live = _live_state(sport, year, week, home, away)
+    if not live:
+        return row
+    if live.get("status"):
+        row["status"] = live["status"]
+    if live.get("period") is not None:
+        row["period"] = live["period"]
+    if live.get("clock"):
+        row["clock"] = live["clock"]
+    if live.get("home_score") is not None:
+        row["homePoints"] = live["home_score"]
+    if live.get("away_score") is not None:
+        row["awayPoints"] = live["away_score"]
+    return row
 
 
 def _live_fingerprint(live: dict) -> tuple:
@@ -87,6 +161,28 @@ def _live_fingerprint(live: dict) -> tuple:
         live.get("yard_line"),
         live.get("possession"),
     )
+
+
+def _pregame_snapshot_sig(
+    quotes: dict[str, dict[str, Any]],
+    props: list,
+    spread: float | None,
+    total: float | None,
+) -> tuple:
+    quote_bits = tuple(
+        sorted(
+            (k, (q or {}).get("line"), (q or {}).get("price"))
+            for k, q in (quotes or {}).items()
+        )
+    )
+    return (spread, total, len(props), quote_bits)
+
+
+def _pbp_play_sig(plays: list[dict]) -> tuple[int, str]:
+    if not plays:
+        return (0, "")
+    last = plays[-1] or {}
+    return (len(plays), str(last.get("id") or ""))
 
 
 def _live_state(sport: str, year: int, week: int, home: str, away: str) -> dict:
@@ -119,14 +215,15 @@ def _live_enriched_state(sport: str, year: int, week: int, home: str, away: str,
     eid = game.get("event_id") or game.get("id")
     if eid:
         try:
-            from lib.espn_live import derive_situation, fetch_game_plays, _team_yards
+            from lib.espn_live import derive_situation, _team_yards
             from pricing_engine.situation_model import parse_play_situation
 
-            summary = fetch_game_summary(str(eid), sport=sport)
+            tick = live_poll_bucket()
+            summary = fetch_game_summary_cached(str(eid), sport, tick=tick)
             wp = latest_win_probability(summary)
             if wp.get("homeWinPct") is not None:
                 live["win_prob_home"] = wp["homeWinPct"]
-            plays = fetch_game_plays(str(eid), sport=sport)
+            plays = fetch_game_plays_cached(str(eid), sport, tick=tick)
             situation = derive_situation(summary, live, plays)
             latest = plays[-1] if plays else {}
             play_sit = parse_play_situation(latest, situation, home=home, away=away)
@@ -198,30 +295,71 @@ def _live_prop_projections(
 
 @st.cache_data(ttl=60, show_spinner=False)
 def _slate(sport: str, year: int, week: int) -> list[dict]:
+    from lib.games import lookup_completed_game, merge_completed
+
+    sb = fetch_scoreboard_cached(week=max(week, 1), year=year, sport=sport)
+    sb_rows = sb.to_dict("records") if not sb.empty else []
     games = list_games_for_display_week(year, week, sport=sport)
     if games:
         out = [{"home": _team(g.get("home")), "away": _team(g.get("away")), **g} for g in games]
     else:
-        sb = fetch_scoreboard_cached(week=max(week, 1), year=year, sport=sport)
-        if sb.empty:
+        if not sb_rows:
             return []
-        out = [{"home": _team(r.get("home")), "away": _team(r.get("away")), **r} for r in sb.to_dict("records")]
-
-    sb = fetch_scoreboard_cached(week=max(week, 1), year=year, sport=sport)
+        out = [{"home": _team(r.get("home")), "away": _team(r.get("away")), **r} for r in sb_rows]
     logo_by_team: dict[str, dict] = {}
-    if not sb.empty:
-        for r in sb.to_dict("records"):
-            for side in ("home", "away"):
-                name = _team(r.get(side))
-                if name:
-                    logo_by_team[name.lower()] = {
-                        f"{side}_logo": r.get(f"{side}_logo"),
-                        "kickoff": r.get("kickoff") or r.get("date_str"),
-                    }
+    score_by_matchup: dict[str, dict] = {}
+    for r in sb_rows:
+        home_n = _team(r.get("home"))
+        away_n = _team(r.get("away"))
+        if home_n and away_n:
+            key = f"{away_n.lower()}|{home_n.lower()}"
+            score_by_matchup[key] = r
+        for side in ("home", "away"):
+            name = _team(r.get(side))
+            if name:
+                logo_by_team[name.lower()] = {
+                    f"{side}_logo": r.get(f"{side}_logo"),
+                    "kickoff": r.get("kickoff") or r.get("date_str"),
+                }
 
     enriched: list[dict] = []
     for g in out:
         row = enrich_row_logos(dict(g))
+        home_n = str(row.get("home") or "")
+        away_n = str(row.get("away") or "")
+        sb_hit = score_by_matchup.get(f"{away_n.lower()}|{home_n.lower()}")
+        if sb_hit:
+            row["event_id"] = row.get("event_id") or row.get("id") or sb_hit.get("event_id")
+            if row.get("homePoints") is None and sb_hit.get("home_score") is not None:
+                row["homePoints"] = sb_hit.get("home_score")
+            if row.get("awayPoints") is None and sb_hit.get("away_score") is not None:
+                row["awayPoints"] = sb_hit.get("away_score")
+            if not row.get("completed") and sb_hit.get("completed"):
+                row["completed"] = bool(sb_hit.get("completed"))
+            if sb_hit.get("status"):
+                row["status"] = sb_hit.get("status")
+            if sb_hit.get("status_state"):
+                row["status_state"] = sb_hit.get("status_state")
+
+        cfbd = lookup_completed_game(year, home_n, away_n, sport=sport)
+        merged = merge_completed(
+            cfbd,
+            home_n,
+            away_n,
+            home_pts=row.get("homePoints"),
+            away_pts=row.get("awayPoints"),
+            status_completed=bool(row.get("completed")),
+            sport=sport,
+        )
+        if merged:
+            row["homePoints"] = merged.get("homePoints", row.get("homePoints"))
+            row["awayPoints"] = merged.get("awayPoints", row.get("awayPoints"))
+            row["completed"] = bool(merged.get("completed", row.get("completed")))
+            if merged.get("homeLineScores"):
+                row["homeLineScores"] = merged.get("homeLineScores")
+            if merged.get("awayLineScores"):
+                row["awayLineScores"] = merged.get("awayLineScores")
+
         for side in ("home", "away"):
             name = str(row.get(side) or "").lower()
             extra = logo_by_team.get(name) or {}
@@ -287,17 +425,22 @@ def _stable_prematch_sim(
 
 
 @st.cache_data(ttl=PROJECTION_CACHE_TTL, show_spinner=False)
-def _stable_prop_projections(
+def _cached_matchup_sim(
     sport: str,
     home: str,
     away: str,
     year: int,
     week: int,
-    props_sig: tuple[tuple[str, str, str], ...],
-) -> dict[tuple[str, str, str], float]:
-    _ = sport
-    payload = load_matchup_odds(sport, home, away, year=year, week=week)
-    return build_prop_projection_map(payload["props"], year=year, week=week)
+    spread: float | None,
+    total: float | None,
+) -> dict:
+    """Monte Carlo game sim — cached per matchup so prop tabs don't re-sim."""
+    return run_matchup_simulation(
+        sport, home, away,
+        season=year, week=week,
+        market_spread=spread, market_total=total,
+        live_game=None, n_sims=DEFAULT_SIMS,
+    )
 
 
 def _projection_key(sport: str, home: str, away: str, year: int, week: int) -> tuple:
@@ -313,21 +456,51 @@ def _bootstrap_projections(
     game: dict,
 ) -> None:
     """Lock game + player projections when the selected matchup changes."""
+    final = game_is_final(game)
     key = _projection_key(sport, home, away, year, week)
-    if st.session_state.get("pe_proj_key") == key:
+    if st.session_state.get("pe_proj_key") == key and not final:
         return
 
-    payload = load_matchup_odds(sport, home, away, year=year, week=week)
-    spread, total = _resolve_lines(payload["quotes"], game)
-    # Projections always from pricing engine — archive supplies odds/lines only.
-    st.session_state.pe_sim = _stable_prematch_sim(sport, home, away, year, week, spread, total)
-    st.session_state.pe_pregame_sim = st.session_state.pe_sim
-    props = payload["props"]
-    sig = tuple(
-        (str(p.get("player") or ""), str(p.get("prop_key") or ""), str(p.get("line") or ""))
-        for p in props
+    payload = load_matchup_odds(
+        sport, home, away, year=year, week=week, game=game, completed=final,
     )
-    st.session_state.pe_prop_projs = _stable_prop_projections(sport, home, away, year, week, sig)
+    spread, total = _resolve_lines(payload["quotes"], game)
+    props = payload["props"]
+    archived = payload.get("archived_game") or {}
+
+    sim = archived.get("sim") if final and archived.get("sim") else None
+    prop_map = None
+    if final and archived:
+        from lib.pricing_history import prop_projection_map_from_archived
+
+        prop_map = prop_projection_map_from_archived(archived.get("props") or props)
+
+    if sim is None:
+        if final:
+            sim = run_matchup_simulation(
+                sport, home, away,
+                season=year, week=week,
+                market_spread=spread, market_total=total,
+                live_game=None, n_sims=DEFAULT_SIMS,
+            )
+            prop_map = build_prop_projection_map(
+                props, year=year, week=week, sim=sim,
+                home=home, away=away, backtest=True,
+            )
+        else:
+            sim = _cached_matchup_sim(sport, home, away, year, week, spread, total)
+            prop_map = build_prop_projection_map(
+                props,
+                year=year,
+                week=week,
+                sim=sim,
+                home=home,
+                away=away,
+            )
+
+    st.session_state.pe_sim = sim
+    st.session_state.pe_pregame_sim = sim
+    st.session_state.pe_prop_projs = prop_map or {}
     st.session_state.pe_proj_key = key
     st.session_state.pe_sim_spread = spread
     st.session_state.pe_sim_total = total
@@ -337,10 +510,14 @@ def _bootstrap_projections(
 def _render_player_props(
     props: list,
     *,
+    sport: str,
     year: int,
     week: int,
     projections: dict[tuple[str, str, str], float] | None = None,
     game: dict | None = None,
+    sim: dict | None = None,
+    home: str | None = None,
+    away: str | None = None,
     completed: bool = False,
 ) -> None:
     if not props:
@@ -360,10 +537,15 @@ def _render_player_props(
 
     st.markdown('<div class="bo-pe-prop-tabs">', unsafe_allow_html=True)
     cols = st.columns(min(len(tabs), 6))
+    active_tab = st.session_state.pe_prop_tab
     for i, (key, label) in enumerate(tabs[:6]):
         with cols[i]:
-            count = sum(1 for p in props if row_prop_key(p) == key)
-            if st.button(f"{label} {count}", key=f"pe_tab_{key}", use_container_width=True):
+            if st.button(
+                label,
+                key=f"pe_tab_{key}",
+                use_container_width=True,
+                type="primary" if active_tab == key else "secondary",
+            ):
                 st.session_state.pe_prop_tab = key
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -374,14 +556,18 @@ def _render_player_props(
         week=week,
         stat_filter=stat,
         projections=projections,
-        game=game,
+        game=game or {},
+        sim=sim,
+        home=home,
+        away=away,
         completed=completed,
+        sport=sport,
     )
     render_html(html_out)
 
 
 def main() -> None:
-    apply_theme()
+    apply_pricing_theme()
     st.markdown(pricing_board_css(), unsafe_allow_html=True)
 
     sport = get_sport()
@@ -393,12 +579,23 @@ def main() -> None:
     with c1:
         st.markdown('<div class="bo-hero-eyebrow">PRICING</div>', unsafe_allow_html=True)
     with c2:
-        if st.button("CFB", key="pe_cfb", use_container_width=True, type="primary" if sport == SPORT_CFB else "secondary"):
+        if st.button(
+            "CFB",
+            key="pe_cfb",
+            use_container_width=True,
+            type="primary" if sport == SPORT_CFB else "secondary",
+        ):
             set_sport(SPORT_CFB)
             cfg_cfb = get_sport_config(SPORT_CFB)
             st.session_state.pe_year = int(cfg_cfb["default_year"])
             st.session_state.pe_week = int(cfg_cfb["default_week"])
-            st.session_state.pop("pe_proj_key", None)
+            for key in ("pe_proj_key", "pe_prop_projs", "pe_sim", "pe_pregame_sim", "pe_live_prop_projs", "pe_live_fp"):
+                st.session_state.pop(key, None)
+            _slate.clear()
+            _cached_matchup_sim.clear()
+            fetch_live_scoreboard.clear()
+            fetch_game_summary_cached.clear()
+            fetch_game_plays_cached.clear()
             st.rerun()
     with c3:
         if st.button("NFL", key="pe_nfl", use_container_width=True, type="primary" if sport == SPORT_NFL else "secondary"):
@@ -406,7 +603,13 @@ def main() -> None:
             cfg_nfl = get_sport_config(SPORT_NFL)
             st.session_state.pe_year = int(cfg_nfl["default_year"])
             st.session_state.pe_week = int(cfg_nfl["default_week"])
-            st.session_state.pop("pe_proj_key", None)
+            for key in ("pe_proj_key", "pe_prop_projs", "pe_sim", "pe_pregame_sim", "pe_live_prop_projs", "pe_live_fp"):
+                st.session_state.pop(key, None)
+            _slate.clear()
+            _cached_matchup_sim.clear()
+            fetch_live_scoreboard.clear()
+            fetch_game_summary_cached.clear()
+            fetch_game_plays_cached.clear()
             st.rerun()
     with c4:
         st.session_state.pe_week = st.number_input(
@@ -434,55 +637,67 @@ def main() -> None:
 
     game = games[labels.index(pick)]
     home, away = game["home"], game["away"]
-    live_now = _is_live(game.get("status"))
-    completed = game_is_final(game)
 
     _bootstrap_projections(sport, home, away, year, week, game)
 
-    if live_now:
-        @st.fragment(run_every=LIVE_POLL_SEC)
-        def _live_sim_refresh():
-            live = _live_enriched_state(sport, year, week, home, away, game)
-            fp = _live_fingerprint(live)
-            if st.session_state.get("pe_live_fp") == fp:
-                return
-            spread = st.session_state.get("pe_sim_spread")
-            total = st.session_state.get("pe_sim_total")
-            st.session_state.pe_sim = run_matchup_simulation(
-                sport, home, away,
-                season=year, week=week,
-                market_spread=spread, market_total=total,
-                live_game=live, n_sims=DEFAULT_SIMS,
-            )
-            payload = load_matchup_odds(sport, home, away, year=year, week=week)
-            pre = st.session_state.get("pe_prop_projs") or {}
-            st.session_state.pe_live_prop_projs = _live_prop_projections(
-                payload["props"],
-                home=home,
-                away=away,
-                pregame_map=pre,
-                live=live,
-                live_sim=st.session_state.get("pe_sim"),
-                pregame_sim=st.session_state.get("pe_pregame_sim"),
-            )
-            st.session_state.pe_live_fp = fp
-
-        _live_sim_refresh()
-
     @st.fragment(run_every=ODDS_POLL_SEC)
     def _live_odds_panel():
-        payload = load_matchup_odds(sport, home, away, year=year, week=week)
+        fresh_game = _merge_live_scoreboard(
+            dict(game), sport=sport, year=year, week=week, home=home, away=away,
+        )
+        live_now = _game_is_live(
+            fresh_game, sport=sport, year=year, week=week, home=home, away=away,
+        )
+        completed = game_is_final(fresh_game)
+
+        if live_now:
+            live = _live_enriched_state(sport, year, week, home, away, fresh_game)
+            fp = _live_fingerprint(live)
+            if st.session_state.get("pe_live_fp") != fp:
+                spread = st.session_state.get("pe_sim_spread")
+                total = st.session_state.get("pe_sim_total")
+                st.session_state.pe_sim = run_matchup_simulation(
+                    sport, home, away,
+                    season=year, week=week,
+                    market_spread=spread, market_total=total,
+                    live_game=live, n_sims=DEFAULT_SIMS,
+                )
+                if sport != SPORT_CFB:
+                    payload_live = load_matchup_odds(sport, home, away, year=year, week=week)
+                    pre = st.session_state.get("pe_prop_projs") or {}
+                    st.session_state.pe_live_prop_projs = _live_prop_projections(
+                        payload_live["props"],
+                        home=home,
+                        away=away,
+                        pregame_map=pre,
+                        live=live,
+                        live_sim=st.session_state.get("pe_sim"),
+                        pregame_sim=st.session_state.get("pe_pregame_sim"),
+                    )
+                st.session_state.pe_live_fp = fp
+        else:
+            live = None
+
+        payload = load_matchup_odds(
+            sport, home, away, year=year, week=week, game=fresh_game, completed=completed,
+        )
         q = payload["quotes"]
         props = payload["props"]
         sim = st.session_state.get("pe_sim")
-        if live_now:
+        if live_now and sport != SPORT_CFB:
             prop_projs = st.session_state.get("pe_live_prop_projs") or st.session_state.get("pe_prop_projs") or {}
         else:
             prop_projs = st.session_state.get("pe_prop_projs") or {}
-        live = _live_enriched_state(sport, year, week, home, away, game) if live_now else None
 
-        grade_game = dict(game)
-        archived = payload.get("archived_game") or {}
+        grade_game = dict(fresh_game)
+        from lib.pricing_history import load_pregame_snapshot
+
+        snap = load_pregame_snapshot(sport, year, week, home, away)
+        archived = dict(snap) if snap else {}
+        payload_arch = payload.get("archived_game") or {}
+        for key, val in payload_arch.items():
+            if val is not None and (key not in archived or not archived.get(key)):
+                archived[key] = val
         if archived.get("event_id") and not grade_game.get("event_id"):
             grade_game["event_id"] = archived.get("event_id")
         if archived.get("home_score") is not None and grade_game.get("homePoints") is None:
@@ -490,6 +705,46 @@ def main() -> None:
         if archived.get("away_score") is not None and grade_game.get("awayPoints") is None:
             grade_game["awayPoints"] = archived.get("away_score")
         game_completed = game_is_final(grade_game)
+        if game_completed:
+            grade_game["completed"] = True
+            if archived.get("sim"):
+                sim = archived["sim"]
+            if archived.get("props"):
+                from lib.pricing_history import prop_projection_map_from_archived
+
+                prop_projs = prop_projection_map_from_archived(archived["props"])
+            if payload.get("source") == "theoddsapi":
+                st.caption(
+                    "Historical odds from The Odds API snapshots + props cache. "
+                    "Projections are frozen at pre-kickoff form (no look-ahead)."
+                )
+            elif not q and not props:
+                st.warning(
+                    "No pregame snapshot for this game. Open the pricing page before kickoff "
+                    "so lines, props, and projections are saved automatically."
+                )
+        elif not live_now and (q or props or sim):
+            from lib.pricing_history import save_pregame_snapshot
+
+            pbp_spread_snap, pbp_total_snap = _resolve_lines(q, grade_game)
+            snap_sig = _pregame_snapshot_sig(q, props, pbp_spread_snap, pbp_total_snap)
+            snap_key = f"pe_snap_sig_{sport}_{year}_{week}_{home}|{away}"
+            if st.session_state.get(snap_key) != snap_sig:
+                save_pregame_snapshot(
+                    sport,
+                    year,
+                    week,
+                    home,
+                    away,
+                    game=fresh_game,
+                    quotes=q,
+                    props=props,
+                    sim=st.session_state.get("pe_pregame_sim") or sim,
+                    prop_map=prop_projs,
+                )
+                st.session_state[snap_key] = snap_sig
+            if st.session_state.get("pe_pregame_sim") is None and sim:
+                st.session_state.pe_pregame_sim = sim
 
         section_label("Game Markets")
         render_html(render_market_table(q, sim, game=grade_game, live=live, completed=game_completed))
@@ -497,18 +752,125 @@ def main() -> None:
         section_label("Player Props")
         _render_player_props(
             props,
+            sport=sport,
             year=year,
             week=week,
             projections=prop_projs,
             game=grade_game,
+            sim=sim,
+            home=home,
+            away=away,
             completed=game_completed,
         )
 
-        if live_now:
-            section_label("In-Play Log (PBP × Markets)")
-            eid = grade_game.get("event_id") or archived.get("event_id")
-            ip_df = inplay_rows_for_game(sport=sport, event_id=str(eid) if eid else None, home=home, away=away)
-            render_html(render_inplay_html(ip_df))
+        from pricing_engine.grading import _resolve_event_id
+
+        eid = _resolve_event_id(
+            grade_game,
+            home=home,
+            away=away,
+            sport=sport,
+            year=year,
+            week=week,
+        ) or grade_game.get("event_id") or archived.get("event_id")
+        pregame_bundle = archived if archived else None
+        if not pregame_bundle and (q or props):
+            pregame_bundle = {
+                "home": home,
+                "away": away,
+                "quotes": q,
+                "props": props,
+                "sim": sim,
+                "event_id": eid,
+            }
+        pbp_spread, pbp_total = _resolve_lines(q, grade_game)
+        pbp_cache_key = f"pe_pbp_{eid}" if eid else ""
+        pbp_plays: list = st.session_state.get(pbp_cache_key, []) if pbp_cache_key else []
+        pbp_err = ""
+        logo_game = enrich_row_logos(dict(grade_game))
+        if eid and (live_now or game_completed):
+            try:
+                tick = live_poll_bucket()
+                espn_plays = fetch_game_plays_cached(str(eid), sport, tick=tick)
+                play_sig = _pbp_play_sig(espn_plays)
+                sig_key = f"pe_pbp_sig_{eid}"
+                ts_key = f"pe_pbp_ts_{eid}"
+                cap_ts_key = f"pe_pbp_cap_ts_{eid}"
+                now = time.time()
+                prev_sig = st.session_state.get(sig_key)
+                prev_ts = float(st.session_state.get(ts_key) or 0.0)
+                need_render = (
+                    not pbp_plays
+                    or play_sig != prev_sig
+                    or now - prev_ts >= _PBP_RENDER_MIN_SEC
+                )
+                if need_render:
+                    capture = (
+                        live_now
+                        and play_sig != prev_sig
+                        and now - float(st.session_state.get(cap_ts_key) or 0.0) >= _PBP_CAPTURE_MIN_SEC
+                    )
+                    summary = fetch_game_summary_cached(str(eid), sport, tick=tick)
+                    fresh_pbp = load_matchup_pbp_log(
+                        sport=sport,
+                        year=year,
+                        week=week,
+                        event_id=str(eid),
+                        home=home,
+                        away=away,
+                        quotes=q,
+                        props=props,
+                        spread=pbp_spread,
+                        total=pbp_total,
+                        pregame=pregame_bundle or archived,
+                        pregame_sim=st.session_state.get("pe_pregame_sim") or archived.get("sim") or sim,
+                        live=live_now,
+                        completed=game_completed,
+                        home_logo=logo_game.get("homeLogo") or logo_game.get("home_logo"),
+                        away_logo=logo_game.get("awayLogo") or logo_game.get("away_logo"),
+                        capture_snapshots=capture,
+                        summary=summary,
+                        plays=espn_plays,
+                    )
+                    if fresh_pbp:
+                        pbp_plays = fresh_pbp
+                        st.session_state[pbp_cache_key] = fresh_pbp
+                        st.session_state[sig_key] = play_sig
+                        st.session_state[ts_key] = now
+                        if capture:
+                            st.session_state[cap_ts_key] = now
+            except Exception as exc:
+                pbp_err = str(exc)
+        elif not eid:
+            st.caption("No ESPN event id for this game — PBP log unavailable.")
+        elif not live_now and not game_completed:
+            st.caption("Play-by-play log appears when the game goes live and after final.")
+        if pbp_err and not pbp_plays:
+            st.caption(f"PBP load issue: {pbp_err}")
+        if not pbp_plays and (live_now or game_completed) and not pbp_err:
+            st.caption("No spread/total/ML quotes available for the play-by-play log.")
+
+        if game_completed and eid and not st.session_state.get(f"pe_pbp_xlsx_{eid}"):
+            try:
+                from lib.pbp_export import export_pbp_game_xlsx
+
+                xlsx_path = export_pbp_game_xlsx(
+                    sport=sport,
+                    event_id=str(eid),
+                    home=home,
+                    away=away,
+                    year=year,
+                    week=week,
+                    quotes=q,
+                    pregame=pregame_bundle or archived,
+                    pregame_sim=st.session_state.get("pe_pregame_sim") or archived.get("sim") or sim,
+                )
+                if xlsx_path:
+                    st.session_state[f"pe_pbp_xlsx_{eid}"] = str(xlsx_path)
+            except Exception:
+                pass
+
+        render_html(render_pbp_log_html(pbp_plays, live=live_now))
 
     _live_odds_panel()
 

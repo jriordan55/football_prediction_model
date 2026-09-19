@@ -129,6 +129,7 @@ def _parse_scoreboard_event(ev: dict[str, Any]) -> dict[str, Any]:
         "lon": venue.get("address", {}).get("longitude") or venue.get("longitude"),
         "indoor": venue.get("indoor"),
         "status": status_type.get("description"),
+        "status_state": status_type.get("state"),
         "broadcast": broadcast,
         "broadcast_logo": broadcast_logo,
     }

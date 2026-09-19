@@ -74,28 +74,16 @@ def adjust_lambdas_for_live(
     h_rem = home_lambda * remain
     a_rem = away_lambda * remain
 
-    # Situation: margin, down/distance, field, possession
+    # Light situation tilt only — heavy boosts caused runaway live win %.
     sit = live.get("situation")
     if sit is not None:
         from pricing_engine.situation_model import pace_total_multiplier, team_scoring_multipliers
 
         hm, am = team_scoring_multipliers(sit)
         pace = pace_total_multiplier(sit)
-        h_rem *= hm * pace
-        a_rem *= am * pace
-
-    # If in-play win prob available, tilt remaining lambdas
-    wp = live.get("win_prob_home")
-    if wp is not None:
-        try:
-            p = float(wp)
-            if p > 1.0:
-                p /= 100.0
-            margin = (p - 0.5) * 4.0 * remain
-            h_rem = max(0.5, h_rem + margin / 2)
-            a_rem = max(0.5, a_rem - margin / 2)
-        except (TypeError, ValueError):
-            pass
+        blend = 0.35
+        h_rem *= (1 - blend) + blend * hm * pace
+        a_rem *= (1 - blend) + blend * am * pace
 
     fixed = {
         "home": int(live.get("home_score") or 0),

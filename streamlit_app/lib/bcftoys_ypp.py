@@ -14,7 +14,7 @@ CACHE_PATH = DATA_DIR / "bcftoys_ypp_2026.json"
 UPLOAD_CANDIDATES = [
     ROOT / "uploads" / "2026-ypp-1.md",
     Path(__file__).resolve().parents[2] / "uploads" / "2026-ypp-1.md",
-    Path.home() / ".cursor" / "projects" / "c-Users-student-Documents-mlb-pbp-model" / "uploads" / "2026-ypp-1.md",
+    Path.home() / ".cursor" / "projects" / "c-Users-student-Documents-football-prediction-model" / "uploads" / "2026-ypp-1.md",
 ]
 
 
