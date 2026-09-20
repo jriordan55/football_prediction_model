@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-20T17:35:04.163Z",
+  "capturedAt": "2026-09-20T17:40:20.567Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 0,
-  "gameStates": 3,
+  "newPlays": 10,
+  "gameStates": 5,
   "injuries": 0,
-  "liveGames": 3,
+  "liveGames": 5,
   "games": [
     {
       "id": "401817017",
@@ -63,8 +63,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 2nd",
-        "shortDetail": "Top 2nd"
+        "detail": "Bottom 2nd",
+        "shortDetail": "Bot 2nd"
       },
       "away": {
         "id": "22",
@@ -94,11 +94,11 @@
       "id": "401817015",
       "name": "Kansas City Royals at Pittsburgh Pirates",
       "status": {
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "description": "Scheduled",
-        "detail": "Scheduled",
-        "shortDetail": "9/20 - 1:35 PM EDT"
+        "description": "In Progress",
+        "detail": "Top 1st",
+        "shortDetail": "Top 1st"
       },
       "away": {
         "id": "7",
@@ -162,11 +162,11 @@
       "id": "401817013",
       "name": "Boston Red Sox at Tampa Bay Rays",
       "status": {
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "description": "Scheduled",
-        "detail": "Scheduled",
-        "shortDetail": "9/20 - 1:40 PM EDT"
+        "description": "In Progress",
+        "detail": "Top 1st",
+        "shortDetail": "Top 1st"
       },
       "away": {
         "id": "2",
