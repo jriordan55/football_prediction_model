@@ -1,0 +1,139 @@
+{
+  "sport": "nfl",
+  "event_id": "401872946",
+  "updated_at": "2026-09-20T17:02:57.192084+00:00",
+  "plays": {
+    "4018729461": {
+      "captured_at": "2026-09-20T17:02:51.908990+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "4cx",
+          "price": 101,
+          "book": "4Cx",
+          "liquidity": 1980.2,
+          "line": -4.5,
+          "side": "home",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "lowvig",
+          "price": -101,
+          "book": "LowVig",
+          "line": 4.5,
+          "side": "away",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "4cx",
+          "price": 106,
+          "book": "4Cx",
+          "liquidity": 1143.4,
+          "line": 41.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "novig",
+          "price": 3227,
+          "book": "Novig",
+          "line": 41.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "apex",
+          "price": -208,
+          "book": "Apex",
+          "liquidity": 7000.0,
+          "line": null,
+          "side": "home",
+          "selection": "New England Patriots",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 6156,
+          "book": "Novig",
+          "line": null,
+          "side": "away",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187294640": {
+      "captured_at": "2026-09-20T17:02:51.908990+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "4cx",
+          "price": 101,
+          "book": "4Cx",
+          "liquidity": 1980.2,
+          "line": -4.5,
+          "side": "home",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "lowvig",
+          "price": -101,
+          "book": "LowVig",
+          "line": 4.5,
+          "side": "away",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "4cx",
+          "price": 106,
+          "book": "4Cx",
+          "liquidity": 1143.4,
+          "line": 41.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "novig",
+          "price": 3227,
+          "book": "Novig",
+          "line": 41.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "apex",
+          "price": -208,
+          "book": "Apex",
+          "liquidity": 7000.0,
+          "line": null,
+          "side": "home",
+          "selection": "New England Patriots",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 6156,
+          "book": "Novig",
+          "line": null,
+          "side": "away",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    }
+  }
+}
