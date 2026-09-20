@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-20T22:49:10.644Z",
+  "capturedAt": "2026-09-20T22:54:40.887Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 2,
-  "gameStates": 3,
+  "newPlays": 4,
+  "gameStates": 1,
   "injuries": 0,
-  "liveGames": 3,
+  "liveGames": 1,
   "games": [
     {
       "id": "401817017",
@@ -267,8 +267,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 3rd",
-        "shortDetail": "Bot 3rd"
+        "detail": "Top 4th",
+        "shortDetail": "Top 4th"
       },
       "away": {
         "id": "6",
@@ -400,11 +400,11 @@
       "id": "401817024",
       "name": "Minnesota Twins at Los Angeles Angels",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Bottom 9th",
-        "shortDetail": "Bot 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "9",
@@ -415,7 +415,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
         "score": "8",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "home": {
         "id": "3",
@@ -468,11 +468,11 @@
       "id": "401817025",
       "name": "New York Yankees at Arizona Diamondbacks",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "End 8th",
-        "shortDetail": "End 8th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "10",
@@ -494,7 +494,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ari.png",
         "score": "8",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "matchedEvent": null
     },
