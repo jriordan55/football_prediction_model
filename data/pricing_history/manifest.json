@@ -468,7 +468,19 @@
       "quote_count": 0,
       "prop_count": 0,
       "source": "inplay_runner"
+    },
+    {
+      "sport": "cfb",
+      "year": 2026,
+      "week": 3,
+      "captured_at": "2026-09-20T00:27:27.923959+00:00",
+      "capture_type": "inplay",
+      "path": "cfb/2026/w3/captures/2026-09-20T002727-923959p0000_inplay.json",
+      "game_count": 1,
+      "quote_count": 0,
+      "prop_count": 0,
+      "source": "inplay_runner"
     }
   ],
-  "updated_at": "2026-09-19T22:53:44.140361+00:00"
+  "updated_at": "2026-09-20T00:28:29.528168+00:00"
 }
