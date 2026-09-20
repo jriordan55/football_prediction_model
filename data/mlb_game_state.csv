@@ -72548,3 +72548,48 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-20T22:26:47.431Z,401817023,Miami Marlins at San Diego Padres,in,Top 9th,Miami Marlins,San Diego Padres,3,7,0.994,Petco Park,,,,,,,,,,,,,,,,0
 2026-09-20T22:26:47.431Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,6,0.89,Chase Field,,,,,,,,,,,,,,,,0
 2026-09-20T22:26:47.431Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.885,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:15.126Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,0,0.583,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:15.126Z,401817024,Minnesota Twins at Los Angeles Angels,in,Top 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:15.126Z,401817023,Miami Marlins at San Diego Padres,in,Top 9th,Miami Marlins,San Diego Padres,3,7,0.998,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:15.126Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,6,0.89,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:15.126Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.885,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:51.050Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,0,0.553,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:51.050Z,401817024,Minnesota Twins at Los Angeles Angels,in,Top 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:51.050Z,401817023,Miami Marlins at San Diego Padres,in,Top 9th,Miami Marlins,San Diego Padres,3,7,0.998,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:51.050Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,7,0.89,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:27:51.050Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.885,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:25.812Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,0,0.553,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:25.812Z,401817024,Minnesota Twins at Los Angeles Angels,in,Middle 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:25.812Z,401817023,Miami Marlins at San Diego Padres,in,Top 9th,Miami Marlins,San Diego Padres,3,7,1,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:25.812Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,7,0.958,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:25.812Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.885,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:59.522Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,0,0.553,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:59.522Z,401817024,Minnesota Twins at Los Angeles Angels,in,Middle 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:59.522Z,401817023,Miami Marlins at San Diego Padres,in,Top 9th,Miami Marlins,San Diego Padres,3,7,1,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:59.522Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,7,0.958,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:28:59.522Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.885,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:29:33.425Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,0,0.553,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:29:33.425Z,401817024,Minnesota Twins at Los Angeles Angels,in,Middle 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:29:33.425Z,401817023,Miami Marlins at San Diego Padres,in,Top 9th,Miami Marlins,San Diego Padres,3,7,1,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T22:29:33.425Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,8,0.958,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:29:33.425Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.885,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:30:07.389Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,0,0.553,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:30:07.389Z,401817024,Minnesota Twins at Los Angeles Angels,in,Middle 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:30:07.389Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,8,0.973,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:30:07.389Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.897,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:30:41.072Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,0,0.553,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:30:41.072Z,401817024,Minnesota Twins at Los Angeles Angels,in,Bottom 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:30:41.072Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,8,0.973,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:30:41.072Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.897,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:31:14.913Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,0,0.553,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:31:14.913Z,401817024,Minnesota Twins at Los Angeles Angels,in,Bottom 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:31:14.913Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,8,0.973,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:31:14.913Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.897,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:31:48.983Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,1,0.553,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:31:48.983Z,401817024,Minnesota Twins at Los Angeles Angels,in,Bottom 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:31:48.983Z,401817025,New York Yankees at Arizona Diamondbacks,in,Bottom 7th,New York Yankees,Arizona Diamondbacks,4,8,0.976,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:31:48.983Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.897,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:32:23.060Z,401817019,Detroit Tigers at Chicago White Sox,in,Bottom 2nd,Detroit Tigers,Chicago White Sox,0,1,0.679,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:32:23.060Z,401817024,Minnesota Twins at Los Angeles Angels,in,Bottom 8th,Minnesota Twins,Los Angeles Angels,8,0,0.001,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T22:32:23.060Z,401817025,New York Yankees at Arizona Diamondbacks,in,End 7th,New York Yankees,Arizona Diamondbacks,4,8,0.976,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T22:32:23.060Z,401817026,San Francisco Giants at Los Angeles Dodgers,in,Bottom 8th,San Francisco Giants,Los Angeles Dodgers,1,2,0.873,Dodger Stadium,,,,,,,,,,,,,,,,0
