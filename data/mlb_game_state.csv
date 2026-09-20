@@ -67819,3 +67819,51 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-20T01:58:52.185Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.472,Petco Park,,,,,,,,,,,,,,,,0
 2026-09-20T01:58:52.185Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Middle 3rd,San Francisco Giants,Los Angeles Dodgers,2,2,0.773,Dodger Stadium,,,,,,,,,,,,,,,,0
 2026-09-20T01:58:52.185Z,401817009,Minnesota Twins at Los Angeles Angels,in,Top 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.565,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T01:59:26.139Z,401817006,Washington Nationals at St. Louis Cardinals,in,Bottom 8th,Washington Nationals,St. Louis Cardinals,3,2,0.224,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T01:59:26.139Z,401817007,Seattle Mariners at Colorado Rockies,in,Bottom 6th,Seattle Mariners,Colorado Rockies,3,1,0.352,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-20T01:59:26.139Z,401817010,New York Yankees at Arizona Diamondbacks,in,Bottom 5th,New York Yankees,Arizona Diamondbacks,1,0,0.389,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T01:59:26.139Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.472,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T01:59:26.139Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Middle 3rd,San Francisco Giants,Los Angeles Dodgers,2,2,0.773,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T01:59:26.139Z,401817009,Minnesota Twins at Los Angeles Angels,in,Top 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.565,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:05.915Z,401817006,Washington Nationals at St. Louis Cardinals,in,Bottom 8th,Washington Nationals,St. Louis Cardinals,3,2,0.224,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:05.915Z,401817007,Seattle Mariners at Colorado Rockies,in,Bottom 6th,Seattle Mariners,Colorado Rockies,3,1,0.352,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:05.915Z,401817010,New York Yankees at Arizona Diamondbacks,in,Bottom 5th,New York Yankees,Arizona Diamondbacks,1,0,0.389,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:05.915Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.472,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:05.915Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Bottom 3rd,San Francisco Giants,Los Angeles Dodgers,2,2,0.773,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:05.915Z,401817009,Minnesota Twins at Los Angeles Angels,in,Top 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.565,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:46.021Z,401817006,Washington Nationals at St. Louis Cardinals,in,End 8th,Washington Nationals,St. Louis Cardinals,3,2,0.179,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:46.021Z,401817007,Seattle Mariners at Colorado Rockies,in,Bottom 6th,Seattle Mariners,Colorado Rockies,3,1,0.276,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:46.021Z,401817010,New York Yankees at Arizona Diamondbacks,in,Bottom 5th,New York Yankees,Arizona Diamondbacks,1,0,0.358,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:46.021Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.472,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:46.021Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Bottom 3rd,San Francisco Giants,Los Angeles Dodgers,2,2,0.773,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:00:46.021Z,401817009,Minnesota Twins at Los Angeles Angels,in,Top 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.541,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:01:26.266Z,401817006,Washington Nationals at St. Louis Cardinals,in,End 8th,Washington Nationals,St. Louis Cardinals,3,2,0.179,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:01:26.266Z,401817007,Seattle Mariners at Colorado Rockies,in,Bottom 6th,Seattle Mariners,Colorado Rockies,3,1,0.276,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:01:26.266Z,401817010,New York Yankees at Arizona Diamondbacks,in,Bottom 5th,New York Yankees,Arizona Diamondbacks,1,0,0.358,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:01:26.266Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.472,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T02:01:26.266Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Bottom 3rd,San Francisco Giants,Los Angeles Dodgers,2,3,0.857,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:01:26.266Z,401817009,Minnesota Twins at Los Angeles Angels,in,Top 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.541,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:06.441Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 9th,Washington Nationals,St. Louis Cardinals,3,2,0.179,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:06.441Z,401817007,Seattle Mariners at Colorado Rockies,in,Top 7th,Seattle Mariners,Colorado Rockies,3,1,0.276,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:06.441Z,401817010,New York Yankees at Arizona Diamondbacks,in,Bottom 5th,New York Yankees,Arizona Diamondbacks,1,0,0.358,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:06.441Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.456,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:06.441Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Bottom 3rd,San Francisco Giants,Los Angeles Dodgers,2,3,0.857,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:06.441Z,401817009,Minnesota Twins at Los Angeles Angels,in,Middle 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.541,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:47.209Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 9th,Washington Nationals,St. Louis Cardinals,3,2,0.179,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:47.209Z,401817007,Seattle Mariners at Colorado Rockies,in,Top 7th,Seattle Mariners,Colorado Rockies,3,1,0.276,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:47.209Z,401817010,New York Yankees at Arizona Diamondbacks,in,Bottom 5th,New York Yankees,Arizona Diamondbacks,1,2,0.661,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:47.209Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.456,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:47.209Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Bottom 3rd,San Francisco Giants,Los Angeles Dodgers,2,3,0.857,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:02:47.209Z,401817009,Minnesota Twins at Los Angeles Angels,in,Middle 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.569,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:03:27.028Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 9th,Washington Nationals,St. Louis Cardinals,3,2,0.179,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:03:27.028Z,401817007,Seattle Mariners at Colorado Rockies,in,Top 7th,Seattle Mariners,Colorado Rockies,3,1,0.276,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:03:27.028Z,401817010,New York Yankees at Arizona Diamondbacks,in,Bottom 5th,New York Yankees,Arizona Diamondbacks,1,2,0.661,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:03:27.028Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.456,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T02:03:27.028Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Bottom 3rd,San Francisco Giants,Los Angeles Dodgers,2,3,0.844,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:03:27.028Z,401817009,Minnesota Twins at Los Angeles Angels,in,Middle 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.569,Angel Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:04:07.366Z,401817006,Washington Nationals at St. Louis Cardinals,in,Top 9th,Washington Nationals,St. Louis Cardinals,3,2,0.201,Busch Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:04:07.366Z,401817007,Seattle Mariners at Colorado Rockies,in,Top 7th,Seattle Mariners,Colorado Rockies,3,1,0.276,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:04:07.366Z,401817010,New York Yankees at Arizona Diamondbacks,in,Bottom 5th,New York Yankees,Arizona Diamondbacks,1,2,0.661,Chase Field,,,,,,,,,,,,,,,,0
+2026-09-20T02:04:07.366Z,401817008,Miami Marlins at San Diego Padres,in,Top 4th,Miami Marlins,San Diego Padres,5,4,0.456,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-20T02:04:07.366Z,401817011,San Francisco Giants at Los Angeles Dodgers,in,Bottom 3rd,San Francisco Giants,Los Angeles Dodgers,2,3,0.844,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-20T02:04:07.366Z,401817009,Minnesota Twins at Los Angeles Angels,in,Bottom 2nd,Minnesota Twins,Los Angeles Angels,0,0,0.569,Angel Stadium,,,,,,,,,,,,,,,,0
