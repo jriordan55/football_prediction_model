@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-20T02:51:53.647Z",
+  "capturedAt": "2026-09-20T02:57:14.515Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 16,
+  "newPlays": 12,
   "gameStates": 6,
   "injuries": 0,
   "liveGames": 6,
@@ -379,7 +379,7 @@
         "name": "Washington Nationals",
         "shortName": "Nationals",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/wsh.png",
-        "score": "5",
+        "score": "8",
         "record": "",
         "winner": false
       },
@@ -505,8 +505,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 5th",
-        "shortDetail": "Bot 5th"
+        "detail": "Top 6th",
+        "shortDetail": "Top 6th"
       },
       "away": {
         "id": "26",
@@ -526,7 +526,7 @@
         "name": "Los Angeles Dodgers",
         "shortName": "Dodgers",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
-        "score": "4",
+        "score": "7",
         "record": "",
         "winner": false
       },
@@ -539,8 +539,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 4th",
-        "shortDetail": "Bot 4th"
+        "detail": "Top 5th",
+        "shortDetail": "Top 5th"
       },
       "away": {
         "id": "9",
@@ -549,7 +549,7 @@
         "name": "Minnesota Twins",
         "shortName": "Twins",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
-        "score": "3",
+        "score": "4",
         "record": "",
         "winner": false
       },
