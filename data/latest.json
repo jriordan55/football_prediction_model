@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-20T03:02:29.757Z",
+  "capturedAt": "2026-09-20T03:07:44.883Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 9,
+  "newPlays": 14,
   "gameStates": 5,
   "injuries": 0,
   "liveGames": 5,
@@ -390,7 +390,7 @@
         "name": "St. Louis Cardinals",
         "shortName": "Cardinals",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/stl.png",
-        "score": "4",
+        "score": "5",
         "record": "",
         "winner": false
       },
@@ -526,7 +526,7 @@
         "name": "Los Angeles Dodgers",
         "shortName": "Dodgers",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
-        "score": "7",
+        "score": "8",
         "record": "",
         "winner": false
       },
@@ -539,8 +539,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Middle 5th",
-        "shortDetail": "Mid 5th"
+        "detail": "Bottom 5th",
+        "shortDetail": "Bot 5th"
       },
       "away": {
         "id": "9",
