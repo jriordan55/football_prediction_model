@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-20T03:59:47.580Z",
+  "capturedAt": "2026-09-20T04:04:55.305Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 6,
-  "gameStates": 3,
+  "newPlays": 1,
+  "gameStates": 2,
   "injuries": 0,
-  "liveGames": 3,
+  "liveGames": 2,
   "games": [
     {
       "id": "401817004",
@@ -471,8 +471,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 9th",
-        "shortDetail": "Top 9th"
+        "detail": "Middle 9th",
+        "shortDetail": "Mid 9th"
       },
       "away": {
         "id": "28",
@@ -481,7 +481,7 @@
         "name": "Miami Marlins",
         "shortName": "Marlins",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mia.png",
-        "score": "5",
+        "score": "6",
         "record": "",
         "winner": false
       },
@@ -502,11 +502,11 @@
       "id": "401817011",
       "name": "San Francisco Giants at Los Angeles Dodgers",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Top 9th",
-        "shortDetail": "Top 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "26",
@@ -528,7 +528,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
         "score": "10",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "matchedEvent": null
     },
@@ -549,7 +549,7 @@
         "name": "Minnesota Twins",
         "shortName": "Twins",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
-        "score": "4",
+        "score": "5",
         "record": "",
         "winner": false
       },
