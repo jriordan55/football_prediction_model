@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-20T03:13:02.038Z",
+  "capturedAt": "2026-09-20T03:18:18.388Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 10,
-  "gameStates": 5,
+  "newPlays": 9,
+  "gameStates": 4,
   "injuries": 0,
-  "liveGames": 5,
+  "liveGames": 4,
   "games": [
     {
       "id": "401817004",
@@ -366,11 +366,11 @@
       "id": "401817006",
       "name": "Washington Nationals at St. Louis Cardinals",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Bottom 11th",
-        "shortDetail": "Bot 11th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final/11",
+        "shortDetail": "Final/11"
       },
       "away": {
         "id": "20",
@@ -381,7 +381,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/wsh.png",
         "score": "8",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "home": {
         "id": "24",
@@ -526,7 +526,7 @@
         "name": "Los Angeles Dodgers",
         "shortName": "Dodgers",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
-        "score": "8",
+        "score": "10",
         "record": "",
         "winner": false
       },
@@ -539,8 +539,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 5th",
-        "shortDetail": "End 5th"
+        "detail": "Top 6th",
+        "shortDetail": "Top 6th"
       },
       "away": {
         "id": "9",
