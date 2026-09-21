@@ -1,0 +1,3049 @@
+{
+  "sport": "nfl",
+  "event_id": "401872945",
+  "updated_at": "2026-09-21T01:35:21.536209+00:00",
+  "plays": {
+    "4018729451": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187294539": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187294565": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187294587": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:23"
+    },
+    "401872945109": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:44"
+    },
+    "401872945133": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:06"
+    },
+    "401872945158": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:29"
+    },
+    "401872945180": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:51"
+    },
+    "401872945202": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:08"
+    },
+    "401872945235": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:54"
+    },
+    "401872945257": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:15"
+    },
+    "401872945282": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "9:34"
+    },
+    "401872945318": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:08"
+    },
+    "401872945374": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:25"
+    },
+    "401872945340": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:25"
+    },
+    "401872945381": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:25"
+    },
+    "401872945411": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:20"
+    },
+    "401872945438": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:43"
+    },
+    "401872945463": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:01"
+    },
+    "401872945485": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:22"
+    },
+    "401872945508": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:17"
+    },
+    "401872945541": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:09"
+    },
+    "401872945531": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:09"
+    },
+    "401872945551": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:09"
+    },
+    "401872945592": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:03"
+    },
+    "401872945614": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:25"
+    },
+    "401872945641": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:18"
+    },
+    "401872945697": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:34"
+    },
+    "401872945663": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:34"
+    },
+    "401872945704": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:34"
+    },
+    "401872945734": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:27"
+    },
+    "401872945756": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:49"
+    },
+    "401872945786": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:12"
+    },
+    "401872945800": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:27"
+    },
+    "401872945813": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:27"
+    },
+    "401872945846": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:45"
+    },
+    "401872945869": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:38"
+    },
+    "401872945894": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:55"
+    },
+    "401872945916": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:17"
+    },
+    "401872945938": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:00"
+    },
+    "401872945958": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "15:00"
+    },
+    "401872945981": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:57"
+    },
+    "4018729451004": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:48"
+    },
+    "4018729451024": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:48"
+    },
+    "4018729451063": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:43"
+    },
+    "4018729451088": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:07"
+    },
+    "4018729451110": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:32"
+    },
+    "4018729451135": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:52"
+    },
+    "4018729451158": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:47"
+    },
+    "4018729451169": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:42"
+    },
+    "4018729451179": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:42"
+    },
+    "4018729451213": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:00"
+    },
+    "4018729451243": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:18"
+    },
+    "4018729451279": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:11"
+    },
+    "4018729451301": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:31"
+    },
+    "4018729451324": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:26"
+    },
+    "4018729451348": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:26"
+    },
+    "4018729451372": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:26"
+    },
+    "4018729451407": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:44"
+    },
+    "4018729451397": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:44"
+    },
+    "4018729451417": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:44"
+    },
+    "4018729451447": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:39"
+    },
+    "4018729451477": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "8:55"
+    },
+    "4018729451511": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "8:25"
+    },
+    "4018729451553": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:46"
+    },
+    "4018729451577": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:10"
+    },
+    "4018729451599": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:31"
+    },
+    "4018729451624": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "5:51"
+    },
+    "4018729451649": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "5:09"
+    },
+    "4018729451674": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "4:29"
+    },
+    "4018729451704": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "3:58"
+    },
+    "4018729451727": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "3:50"
+    },
+    "4018729451752": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "3:09"
+    },
+    "4018729451816": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:25"
+    },
+    "4018729451782": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:25"
+    },
+    "4018729451823": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:25"
+    },
+    "4018729451853": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:20"
+    },
+    "4018729451866": {
+      "captured_at": "2026-09-21T01:35:17.907123+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": -116,
+          "book": "Betfair",
+          "liquidity": 1282.0,
+          "line": 56.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "betfair",
+          "price": 102,
+          "book": "Betfair",
+          "liquidity": 2989.0,
+          "line": 56.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 139823.0,
+          "line": null,
+          "side": "home",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:00"
+    }
+  }
+}
