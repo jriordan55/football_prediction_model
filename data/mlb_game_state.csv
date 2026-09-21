@@ -73153,3 +73153,23 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-21T20:23:06.415Z,401817027,Toronto Blue Jays at Baltimore Orioles,pre,Scheduled,Toronto Blue Jays,Baltimore Orioles,0,0,,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
 2026-09-21T20:23:06.415Z,401817028,Washington Nationals at Detroit Tigers,pre,Scheduled,Washington Nationals,Detroit Tigers,0,0,,Comerica Park,,,,,,,,,,,,,,,,0
 2026-09-21T20:23:06.415Z,401817029,Minnesota Twins at San Francisco Giants,pre,Scheduled,Minnesota Twins,San Francisco Giants,0,0,,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:27:55.635Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,0,0,0.498,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:27:55.635Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.784,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:28:29.305Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,0,0,0.498,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:28:29.305Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.784,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:29:00.467Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,0,0,0.444,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:29:00.467Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.784,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:29:31.801Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,0,0,0.444,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:29:31.801Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.784,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:30:02.959Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,1,0,0.351,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:30:02.959Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.784,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:30:34.413Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,2,0,0.351,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:30:34.413Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.789,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:31:05.692Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,2,0,0.248,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:31:05.692Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.789,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:31:36.894Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,3,0,0.25,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:31:36.894Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.789,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:32:08.724Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,3,0,0.25,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:32:08.724Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.789,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-21T23:32:40.527Z,401817027,Toronto Blue Jays at Baltimore Orioles,in,Top 1st,Toronto Blue Jays,Baltimore Orioles,3,0,0.25,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-21T23:32:40.527Z,401817028,Washington Nationals at Detroit Tigers,in,Top 4th,Washington Nationals,Detroit Tigers,0,2,0.789,Comerica Park,,,,,,,,,,,,,,,,0
