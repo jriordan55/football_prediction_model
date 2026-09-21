@@ -1,6 +1,6 @@
 {
-  "capturedAt": "2026-09-21T01:04:22.956Z",
-  "mode": "inplay",
+  "capturedAt": "2026-09-21T01:03:39.518Z",
+  "mode": "prematch",
   "sport": "MLB",
   "markets": [
     "Moneyline",
@@ -51,8 +51,8 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 6,
-  "gameStates": 1,
+  "newPlays": 0,
+  "gameStates": 0,
   "injuries": 0,
   "liveGames": 1,
   "games": [
@@ -567,5 +567,6 @@
       "matchedEvent": null
     }
   ],
-  "odds": []
+  "odds": [],
+  "details": []
 }
