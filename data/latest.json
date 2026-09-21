@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-21T00:26:15.418Z",
+  "capturedAt": "2026-09-21T00:31:45.469Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 2,
+  "newPlays": 4,
   "gameStates": 2,
   "injuries": 0,
   "liveGames": 2,
@@ -267,8 +267,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 8th",
-        "shortDetail": "Top 8th"
+        "detail": "Middle 8th",
+        "shortDetail": "Mid 8th"
       },
       "away": {
         "id": "6",
@@ -277,7 +277,7 @@
         "name": "Detroit Tigers",
         "shortName": "Tigers",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/det.png",
-        "score": "0",
+        "score": "1",
         "record": "",
         "winner": false
       },
@@ -539,8 +539,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 4th",
-        "shortDetail": "Bot 4th"
+        "detail": "Top 5th",
+        "shortDetail": "Top 5th"
       },
       "away": {
         "id": "8",
