@@ -74129,3 +74129,63 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-22T23:24:36.523Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.349,Fenway Park,,,,,,,,,,,,,,,,0
 2026-09-22T23:24:36.523Z,401817034,Tampa Bay Rays at New York Yankees,in,Top 2nd,Tampa Bay Rays,New York Yankees,0,0,0.605,Yankee Stadium,,,,,,,,,,,,,,,,0
 2026-09-22T23:24:36.523Z,401817030,Cincinnati Reds at Atlanta Braves,in,Top 1st,Cincinnati Reds,Atlanta Braves,0,0,0.661,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:00.189Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,2,0.785,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:00.189Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Top 4th,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.54,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:00.189Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.492,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:00.189Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.382,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:00.189Z,401817034,Tampa Bay Rays at New York Yankees,in,Top 2nd,Tampa Bay Rays,New York Yankees,0,0,0.605,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:00.189Z,401817030,Cincinnati Reds at Atlanta Braves,in,Top 1st,Cincinnati Reds,Atlanta Braves,0,0,0.661,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:34.491Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,2,0.785,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:34.491Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Top 4th,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.54,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:34.491Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.492,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:34.491Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.382,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:34.491Z,401817034,Tampa Bay Rays at New York Yankees,in,Top 2nd,Tampa Bay Rays,New York Yankees,0,0,0.623,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:25:34.491Z,401817030,Cincinnati Reds at Atlanta Braves,in,Top 1st,Cincinnati Reds,Atlanta Braves,0,0,0.661,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:05.682Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,2,0.803,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:05.682Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Top 4th,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.569,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:05.682Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.492,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:05.682Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.382,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:05.682Z,401817034,Tampa Bay Rays at New York Yankees,in,Top 2nd,Tampa Bay Rays,New York Yankees,0,0,0.623,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:05.682Z,401817030,Cincinnati Reds at Atlanta Braves,in,Top 1st,Cincinnati Reds,Atlanta Braves,0,0,0.661,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:36.948Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,2,0.803,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:36.948Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Top 4th,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.569,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:36.948Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.492,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:36.948Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.325,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:36.948Z,401817034,Tampa Bay Rays at New York Yankees,in,Top 2nd,Tampa Bay Rays,New York Yankees,0,0,0.633,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:26:36.948Z,401817030,Cincinnati Reds at Atlanta Braves,in,Top 1st,Cincinnati Reds,Atlanta Braves,0,0,0.661,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:07.710Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,2,0.803,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:07.710Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Top 4th,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.569,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:07.710Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.469,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:07.710Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.325,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:07.710Z,401817034,Tampa Bay Rays at New York Yankees,in,Top 2nd,Tampa Bay Rays,New York Yankees,0,0,0.633,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:07.710Z,401817030,Cincinnati Reds at Atlanta Braves,in,Top 1st,Cincinnati Reds,Atlanta Braves,0,0,0.661,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:38.853Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,2,0.78,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:38.853Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Top 4th,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.59,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:38.853Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.469,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:38.853Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.385,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:38.853Z,401817034,Tampa Bay Rays at New York Yankees,in,Top 2nd,Tampa Bay Rays,New York Yankees,0,0,0.633,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:27:38.853Z,401817030,Cincinnati Reds at Atlanta Braves,in,End of 1st Inning,Cincinnati Reds,Atlanta Braves,0,0,0.696,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:09.511Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,2,0.78,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:09.511Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Top 4th,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.59,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:09.511Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.469,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:09.511Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.385,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:09.511Z,401817034,Tampa Bay Rays at New York Yankees,in,Top 2nd,Tampa Bay Rays,New York Yankees,0,0,0.633,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:09.511Z,401817030,Cincinnati Reds at Atlanta Braves,in,End of 1st Inning,Cincinnati Reds,Atlanta Braves,0,0,0.696,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:42.033Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,2,0.794,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:42.033Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,End of 4th Inning,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.59,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:42.033Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.469,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:42.033Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.385,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:42.033Z,401817034,Tampa Bay Rays at New York Yankees,in,End of 2nd Inning,Tampa Bay Rays,New York Yankees,0,0,0.633,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:28:42.033Z,401817030,Cincinnati Reds at Atlanta Braves,in,End of 1st Inning,Cincinnati Reds,Atlanta Braves,0,0,0.696,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:12.631Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,3,0.865,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:12.631Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,End of 4th Inning,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.59,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:12.631Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.487,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:12.631Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 3rd,Cleveland Guardians,Boston Red Sox,2,1,0.385,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:12.631Z,401817034,Tampa Bay Rays at New York Yankees,in,End of 2nd Inning,Tampa Bay Rays,New York Yankees,0,0,0.636,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:12.631Z,401817030,Cincinnati Reds at Atlanta Braves,in,Bottom 1st,Cincinnati Reds,Atlanta Braves,0,0,0.696,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:44.680Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 3rd,Milwaukee Brewers,Philadelphia Phillies,0,3,0.865,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:44.680Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,End of 4th Inning,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.59,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:44.680Z,401817036,Washington Nationals at Detroit Tigers,in,Bottom 3rd,Washington Nationals,Detroit Tigers,1,0,0.487,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:44.680Z,401817031,Cleveland Guardians at Boston Red Sox,in,End of 3rd Inning,Cleveland Guardians,Boston Red Sox,2,1,0.426,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:44.680Z,401817034,Tampa Bay Rays at New York Yankees,in,End of 2nd Inning,Tampa Bay Rays,New York Yankees,0,0,0.636,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T23:29:44.680Z,401817030,Cincinnati Reds at Atlanta Braves,in,Bottom 1st,Cincinnati Reds,Atlanta Braves,0,0,0.696,Truist Park,,,,,,,,,,,,,,,,0
