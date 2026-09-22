@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-22T02:27:44.977Z",
+  "capturedAt": "2026-09-22T02:33:05.041Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,8 +51,8 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 0,
-  "gameStates": 0,
+  "newPlays": 4,
+  "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
   "games": [
@@ -87,7 +87,8 @@
         "score": "4",
         "record": "",
         "winner": true
-      }
+      },
+      "matchedEvent": null
     },
     {
       "id": "401817028",
@@ -120,7 +121,8 @@
         "score": "9",
         "record": "",
         "winner": true
-      }
+      },
+      "matchedEvent": null
     },
     {
       "id": "401817029",
@@ -129,8 +131,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 2nd",
-        "shortDetail": "End 2nd"
+        "detail": "Top 3rd",
+        "shortDetail": "Top 3rd"
       },
       "away": {
         "id": "9",
@@ -153,7 +155,8 @@
         "score": "4",
         "record": "",
         "winner": false
-      }
+      },
+      "matchedEvent": null
     }
   ],
   "odds": []
