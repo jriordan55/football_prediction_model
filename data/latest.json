@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-22T02:43:14.857Z",
+  "capturedAt": "2026-09-22T02:48:20.116Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 1,
+  "newPlays": 0,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -141,7 +141,7 @@
         "name": "Minnesota Twins",
         "shortName": "Twins",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
-        "score": "0",
+        "score": "1",
         "record": "",
         "winner": false
       },
