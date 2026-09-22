@@ -73868,3 +73868,43 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-22T20:10:42.647Z,401817042,Houston Astros at Seattle Mariners,pre,Scheduled,Houston Astros,Seattle Mariners,0,0,,T-Mobile Park,,,,,,,,,,,,,,,,0
 2026-09-22T20:10:42.647Z,401817043,Minnesota Twins at San Francisco Giants,pre,Scheduled,Minnesota Twins,San Francisco Giants,0,0,,Oracle Park,,,,,,,,,,,,,,,,0
 2026-09-22T20:10:42.647Z,401817044,San Diego Padres at Los Angeles Dodgers,pre,Scheduled,San Diego Padres,Los Angeles Dodgers,0,0,,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-22T22:58:36.158Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.575,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:58:36.158Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,End of 2nd Inning,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.588,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:58:36.158Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,0,0,0.581,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:58:36.158Z,401817031,Cleveland Guardians at Boston Red Sox,in,Bottom 1st,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:59:08.309Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.596,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:59:08.309Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,End of 2nd Inning,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.588,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:59:08.309Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,0,0,0.581,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:59:08.309Z,401817031,Cleveland Guardians at Boston Red Sox,in,Bottom 1st,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:59:39.611Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.596,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:59:39.611Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,End of 2nd Inning,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.588,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:59:39.611Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,0,0,0.581,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T22:59:39.611Z,401817031,Cleveland Guardians at Boston Red Sox,in,Bottom 1st,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:00:10.520Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.596,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:00:10.520Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.588,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:00:10.520Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,1,0,0.581,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:00:10.520Z,401817031,Cleveland Guardians at Boston Red Sox,in,End 1st,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:00:41.108Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.596,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:00:41.108Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.588,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:00:41.108Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,1,0,0.479,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:00:41.108Z,401817031,Cleveland Guardians at Boston Red Sox,in,End 1st,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:01:15.661Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.596,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:01:15.661Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.588,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:01:15.661Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,1,0,0.446,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:01:15.661Z,401817031,Cleveland Guardians at Boston Red Sox,in,End 1st,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:01:46.597Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.608,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:01:46.597Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.588,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:01:46.597Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,1,0,0.446,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:01:46.597Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 1st,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:02:17.560Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.608,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:02:17.560Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.588,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:02:17.560Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,1,0,0.446,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:02:17.560Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 2nd,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:02:48.156Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,0,0,0.608,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:02:48.156Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.564,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:02:48.156Z,401817036,Washington Nationals at Detroit Tigers,in,Top 2nd,Washington Nationals,Detroit Tigers,1,0,0.479,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:02:48.156Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 2nd,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:03:19.885Z,401817032,Milwaukee Brewers at Philadelphia Phillies,in,End of 2nd Inning,Milwaukee Brewers,Philadelphia Phillies,0,0,0.614,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:03:19.885Z,401817033,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.547,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:03:19.885Z,401817036,Washington Nationals at Detroit Tigers,in,End of 2nd Inning,Washington Nationals,Detroit Tigers,1,0,0.479,Comerica Park,,,,,,,,,,,,,,,,0
+2026-09-22T23:03:19.885Z,401817031,Cleveland Guardians at Boston Red Sox,in,Top 2nd,Cleveland Guardians,Boston Red Sox,0,0,0.536,Fenway Park,,,,,,,,,,,,,,,,0
