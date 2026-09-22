@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-22T01:57:05.049Z",
+  "capturedAt": "2026-09-22T02:02:09.526Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -152,7 +152,7 @@
         "name": "San Francisco Giants",
         "shortName": "Giants",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sf.png",
-        "score": "0",
+        "score": "2",
         "record": "",
         "winner": false
       },
