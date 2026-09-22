@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-22T03:39:20.529Z",
+  "capturedAt": "2026-09-22T03:44:25.823Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 2,
+  "newPlays": 3,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -131,8 +131,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 7th",
-        "shortDetail": "Top 7th"
+        "detail": "End of 7th Inning",
+        "shortDetail": "End of 7th"
       },
       "away": {
         "id": "9",
