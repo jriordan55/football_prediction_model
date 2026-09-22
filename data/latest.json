@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-22T02:22:32.869Z",
+  "capturedAt": "2026-09-22T02:27:44.977Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -52,7 +52,7 @@
   ],
   "oddsCount": 0,
   "newPlays": 0,
-  "gameStates": 1,
+  "gameStates": 0,
   "injuries": 0,
   "liveGames": 1,
   "games": [
@@ -87,8 +87,7 @@
         "score": "4",
         "record": "",
         "winner": true
-      },
-      "matchedEvent": null
+      }
     },
     {
       "id": "401817028",
@@ -121,8 +120,7 @@
         "score": "9",
         "record": "",
         "winner": true
-      },
-      "matchedEvent": null
+      }
     },
     {
       "id": "401817029",
@@ -131,8 +129,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 2nd",
-        "shortDetail": "Bot 2nd"
+        "detail": "End 2nd",
+        "shortDetail": "End 2nd"
       },
       "away": {
         "id": "9",
@@ -152,11 +150,10 @@
         "name": "San Francisco Giants",
         "shortName": "Giants",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sf.png",
-        "score": "2",
+        "score": "4",
         "record": "",
         "winner": false
-      },
-      "matchedEvent": null
+      }
     }
   ],
   "odds": []
