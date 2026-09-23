@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-23T21:36:06.362Z",
+  "capturedAt": "2026-09-23T21:41:36.452Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -141,7 +141,7 @@
         "name": "Minnesota Twins",
         "shortName": "Twins",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/min.png",
-        "score": "3",
+        "score": "4",
         "record": "",
         "winner": false
       },
