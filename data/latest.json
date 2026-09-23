@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-23T01:51:25.315Z",
+  "capturedAt": "2026-09-23T01:56:33.293Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -277,7 +277,7 @@
         "name": "Tampa Bay Rays",
         "shortName": "Rays",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tb.png",
-        "score": "4",
+        "score": "6",
         "record": "",
         "winner": false
       },
@@ -335,8 +335,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 7th",
-        "shortDetail": "End 7th"
+        "detail": "Top 8th",
+        "shortDetail": "Top 8th"
       },
       "away": {
         "id": "4",
@@ -369,8 +369,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 7th",
-        "shortDetail": "Top 7th"
+        "detail": "End of 7th Inning",
+        "shortDetail": "End of 7th"
       },
       "away": {
         "id": "28",
@@ -403,8 +403,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 6th",
-        "shortDetail": "Top 6th"
+        "detail": "End of 6th Inning",
+        "shortDetail": "End of 6th"
       },
       "away": {
         "id": "21",
@@ -413,7 +413,7 @@
         "name": "New York Mets",
         "shortName": "Mets",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nym.png",
-        "score": "4",
+        "score": "5",
         "record": "",
         "winner": false
       },
@@ -437,8 +437,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 4th",
-        "shortDetail": "Top 4th"
+        "detail": "Bottom 4th",
+        "shortDetail": "Bot 4th"
       },
       "away": {
         "id": "29",
@@ -505,8 +505,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 1st",
-        "shortDetail": "Top 1st"
+        "detail": "End of 1st Inning",
+        "shortDetail": "End of 1st"
       },
       "away": {
         "id": "18",
@@ -539,8 +539,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 1st",
-        "shortDetail": "Top 1st"
+        "detail": "Bottom 1st",
+        "shortDetail": "Bot 1st"
       },
       "away": {
         "id": "9",
