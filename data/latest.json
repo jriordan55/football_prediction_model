@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-23T23:07:21.877Z",
+  "capturedAt": "2026-09-23T23:12:31.944Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 8,
-  "gameStates": 4,
+  "newPlays": 11,
+  "gameStates": 5,
   "injuries": 0,
-  "liveGames": 4,
+  "liveGames": 5,
   "games": [
     {
       "id": "401817051",
@@ -165,8 +165,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 2nd",
-        "shortDetail": "Bot 2nd"
+        "detail": "Top 3rd",
+        "shortDetail": "Top 3rd"
       },
       "away": {
         "id": "14",
@@ -199,8 +199,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 2nd",
-        "shortDetail": "Top 2nd"
+        "detail": "Bottom 2nd",
+        "shortDetail": "Bot 2nd"
       },
       "away": {
         "id": "8",
@@ -209,7 +209,7 @@
         "name": "Milwaukee Brewers",
         "shortName": "Brewers",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
-        "score": "1",
+        "score": "2",
         "record": "",
         "winner": false
       },
@@ -233,8 +233,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Middle 2nd",
-        "shortDetail": "Mid 2nd"
+        "detail": "Bottom 2nd",
+        "shortDetail": "Bot 2nd"
       },
       "away": {
         "id": "24",
@@ -254,7 +254,7 @@
         "name": "Pittsburgh Pirates",
         "shortName": "Pirates",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/pit.png",
-        "score": "0",
+        "score": "1",
         "record": "",
         "winner": false
       },
@@ -264,11 +264,11 @@
       "id": "401817046",
       "name": "Cleveland Guardians at Boston Red Sox",
       "status": {
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "description": "Scheduled",
-        "detail": "Scheduled",
-        "shortDetail": "9/23 - 7:00 PM EDT"
+        "description": "In Progress",
+        "detail": "Top 1st",
+        "shortDetail": "Top 1st"
       },
       "away": {
         "id": "5",

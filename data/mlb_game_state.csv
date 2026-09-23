@@ -77982,3 +77982,36 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-23T23:07:21.877Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,1,0,0.296,Citizens Bank Park,,,,,,,,,,,,,,,,0
 2026-09-23T23:07:21.877Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Middle 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.682,PNC Park,,,,,,,,,,,,,,,,0
 2026-09-23T23:07:21.877Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T23:07:54.575Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 2nd,Toronto Blue Jays,Baltimore Orioles,0,3,0.86,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T23:07:54.575Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,2,0,0.213,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:07:54.575Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.682,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:07:54.575Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T23:08:33.969Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 2nd,Toronto Blue Jays,Baltimore Orioles,0,3,0.848,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T23:08:33.969Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Top 2nd,Milwaukee Brewers,Philadelphia Phillies,2,0,0.213,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:08:33.969Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.682,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:08:33.969Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T23:09:14.075Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,End 2nd,Toronto Blue Jays,Baltimore Orioles,0,3,0.833,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T23:09:14.075Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Middle 2nd,Milwaukee Brewers,Philadelphia Phillies,2,0,0.213,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:09:14.075Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,1,0.77,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:09:14.075Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T23:09:53.648Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,End 2nd,Toronto Blue Jays,Baltimore Orioles,0,3,0.833,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T23:09:53.648Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Middle 2nd,Milwaukee Brewers,Philadelphia Phillies,2,0,0.213,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:09:53.648Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,1,0.77,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:09:53.648Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,0.502,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T23:10:33.298Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,End 2nd,Toronto Blue Jays,Baltimore Orioles,0,3,0.833,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T23:10:33.298Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 2nd,Milwaukee Brewers,Philadelphia Phillies,2,0,0.213,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:10:33.298Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,1,0.754,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:10:33.298Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,0.502,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T23:11:12.817Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Top 3rd,Toronto Blue Jays,Baltimore Orioles,0,3,0.833,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T23:11:12.817Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 2nd,Milwaukee Brewers,Philadelphia Phillies,2,0,0.252,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:11:12.817Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,1,0.742,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:11:12.817Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,0.502,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T23:11:52.583Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Top 3rd,Toronto Blue Jays,Baltimore Orioles,0,3,0.799,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T23:11:52.583Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 2nd,Milwaukee Brewers,Philadelphia Phillies,2,0,0.252,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:11:52.583Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,1,0.742,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:11:52.583Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,0.538,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T23:12:31.944Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Top 3rd,Toronto Blue Jays,Baltimore Orioles,0,3,0.799,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T23:12:31.944Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 2nd,Milwaukee Brewers,Philadelphia Phillies,2,0,0.357,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:12:31.944Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 2nd,St. Louis Cardinals,Pittsburgh Pirates,0,1,0.742,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:12:31.944Z,401817046,Cleveland Guardians at Boston Red Sox,in,Top 1st,Cleveland Guardians,Boston Red Sox,0,0,,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-23T23:12:31.944Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 1st,Tampa Bay Rays,New York Yankees,0,0,0.538,Yankee Stadium,,,,,,,,,,,,,,,,0
