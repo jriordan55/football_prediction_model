@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-23T01:08:45.964Z",
+  "capturedAt": "2026-09-23T01:14:19.361Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 13,
-  "gameStates": 10,
+  "newPlays": 21,
+  "gameStates": 9,
   "injuries": 0,
-  "liveGames": 10,
+  "liveGames": 9,
   "games": [
     {
       "id": "401873648",
@@ -141,7 +141,7 @@
         "name": "Milwaukee Brewers",
         "shortName": "Brewers",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
-        "score": "3",
+        "score": "4",
         "record": "",
         "winner": false
       },
@@ -162,11 +162,11 @@
       "id": "401817033",
       "name": "St. Louis Cardinals at Pittsburgh Pirates",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Top 9th",
-        "shortDetail": "Top 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "24",
@@ -188,7 +188,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/pit.png",
         "score": "2",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "matchedEvent": null
     },
@@ -199,8 +199,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End of 9th Inning",
-        "shortDetail": "End of 9th"
+        "detail": "Bottom 9th",
+        "shortDetail": "Bot 9th"
       },
       "away": {
         "id": "20",
@@ -233,8 +233,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 8th",
-        "shortDetail": "Top 8th"
+        "detail": "Bottom 8th",
+        "shortDetail": "Bot 8th"
       },
       "away": {
         "id": "5",
@@ -254,7 +254,7 @@
         "name": "Boston Red Sox",
         "shortName": "Red Sox",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bos.png",
-        "score": "1",
+        "score": "2",
         "record": "",
         "winner": false
       },
@@ -267,8 +267,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End of 7th Inning",
-        "shortDetail": "End of 7th"
+        "detail": "Bottom 7th",
+        "shortDetail": "Bot 7th"
       },
       "away": {
         "id": "30",
@@ -335,8 +335,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 5th",
-        "shortDetail": "End 5th"
+        "detail": "Top 6th",
+        "shortDetail": "Top 6th"
       },
       "away": {
         "id": "4",
@@ -437,8 +437,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 2nd",
-        "shortDetail": "Top 2nd"
+        "detail": "Bottom 2nd",
+        "shortDetail": "Bot 2nd"
       },
       "away": {
         "id": "29",
