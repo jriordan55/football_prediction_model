@@ -77909,3 +77909,27 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-23T22:28:11.095Z,401817056,Los Angeles Angels at Athletics Athletics,pre,Scheduled,Los Angeles Angels,Athletics,0,0,,Sutter Health Park,,,,,,,,,,,,,,,,0
 2026-09-23T22:28:11.095Z,401817057,Houston Astros at Seattle Mariners,pre,Scheduled,Houston Astros,Seattle Mariners,0,0,,T-Mobile Park,,,,,,,,,,,,,,,,0
 2026-09-23T22:28:11.095Z,401817059,San Diego Padres at Los Angeles Dodgers,pre,Scheduled,San Diego Padres,Los Angeles Dodgers,0,0,,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-23T22:52:17.502Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 1st,Toronto Blue Jays,Baltimore Orioles,0,2,0.757,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T22:52:17.502Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 1st,Milwaukee Brewers,Philadelphia Phillies,1,0,0.305,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:52:17.502Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 1st,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.672,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:53:01.628Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 1st,Toronto Blue Jays,Baltimore Orioles,0,2,0.757,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T22:53:01.628Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 1st,Milwaukee Brewers,Philadelphia Phillies,1,0,0.305,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:53:01.628Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 1st,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.672,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:53:41.772Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 1st,Toronto Blue Jays,Baltimore Orioles,0,3,0.757,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T22:53:41.772Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 1st,Milwaukee Brewers,Philadelphia Phillies,1,0,0.305,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:53:41.772Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 1st,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.672,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:54:20.943Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 1st,Toronto Blue Jays,Baltimore Orioles,0,3,0.832,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T22:54:20.943Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 1st,Milwaukee Brewers,Philadelphia Phillies,1,0,0.305,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:54:20.943Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 1st,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.656,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:55:00.208Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 1st,Toronto Blue Jays,Baltimore Orioles,0,3,0.832,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T22:55:00.208Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 1st,Milwaukee Brewers,Philadelphia Phillies,1,0,0.305,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:55:00.208Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,Bottom 1st,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.656,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:55:39.655Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 1st,Toronto Blue Jays,Baltimore Orioles,0,3,0.832,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T22:55:39.655Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 1st,Milwaukee Brewers,Philadelphia Phillies,1,0,0.286,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:55:39.655Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,End 1st,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.644,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:56:18.794Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 1st,Toronto Blue Jays,Baltimore Orioles,0,3,0.832,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T22:56:18.794Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 1st,Milwaukee Brewers,Philadelphia Phillies,1,0,0.286,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:56:18.794Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,End 1st,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.644,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:56:59.247Z,401817050,Toronto Blue Jays at Baltimore Orioles,in,Bottom 1st,Toronto Blue Jays,Baltimore Orioles,0,3,0.832,Oriole Park at Camden Yards,,,,,,,,,,,,,,,,0
+2026-09-23T22:56:59.247Z,401817047,Milwaukee Brewers at Philadelphia Phillies,in,Bottom 1st,Milwaukee Brewers,Philadelphia Phillies,1,0,0.286,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-23T22:56:59.247Z,401817048,St. Louis Cardinals at Pittsburgh Pirates,in,End 1st,St. Louis Cardinals,Pittsburgh Pirates,0,0,0.644,PNC Park,,,,,,,,,,,,,,,,0
