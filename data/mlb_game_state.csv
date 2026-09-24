@@ -80501,3 +80501,15 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-24T02:53:37.114Z,401817056,Los Angeles Angels at Athletics Athletics,in,Top 4th,Los Angeles Angels,Athletics,2,5,0.811,Sutter Health Park,,,,,,,,,,,,,,,,0
 2026-09-24T02:53:37.114Z,401817057,Houston Astros at Seattle Mariners,in,Top 3rd,Houston Astros,Seattle Mariners,1,0,0.428,T-Mobile Park,,,,,,,,,,,,,,,,0
 2026-09-24T02:53:37.114Z,401817059,San Diego Padres at Los Angeles Dodgers,in,Middle 3rd,San Diego Padres,Los Angeles Dodgers,0,0,0.681,Dodger Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817063,St. Louis Cardinals at Pittsburgh Pirates,pre,Scheduled,St. Louis Cardinals,Pittsburgh Pirates,0,0,,PNC Park,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817065,Chicago White Sox at Kansas City Royals,pre,Scheduled,Chicago White Sox,Kansas City Royals,0,0,,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817066,Miami Marlins at Chicago Cubs,pre,Scheduled,Miami Marlins,Chicago Cubs,0,0,,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817067,New York Mets at Texas Rangers,pre,Scheduled,New York Mets,Texas Rangers,0,0,,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817068,Arizona Diamondbacks at Colorado Rockies,pre,Scheduled,Arizona Diamondbacks,Colorado Rockies,0,0,,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817062,Milwaukee Brewers at Philadelphia Phillies,pre,Scheduled,Milwaukee Brewers,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817061,Cleveland Guardians at Boston Red Sox,pre,Scheduled,Cleveland Guardians,Boston Red Sox,0,0,,Fenway Park,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817064,Tampa Bay Rays at New York Yankees,pre,Scheduled,Tampa Bay Rays,New York Yankees,0,0,,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817060,Cincinnati Reds at Atlanta Braves,pre,Scheduled,Cincinnati Reds,Atlanta Braves,0,0,,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817069,Los Angeles Angels at Seattle Mariners,pre,Scheduled,Los Angeles Angels,Seattle Mariners,0,0,,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817070,Houston Astros at Athletics Athletics,pre,Scheduled,Houston Astros,Athletics,0,0,,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T15:56:29.248Z,401817071,San Diego Padres at Los Angeles Dodgers,pre,Scheduled,San Diego Padres,Los Angeles Dodgers,0,0,,Dodger Stadium,,,,,,,,,,,,,,,,0
