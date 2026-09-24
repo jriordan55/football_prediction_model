@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-24T21:58:22.448Z",
+  "capturedAt": "2026-09-24T22:03:28.634Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 1,
+  "newPlays": 2,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -220,7 +220,7 @@
         "name": "Colorado Rockies",
         "shortName": "Rockies",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/col.png",
-        "score": "7",
+        "score": "8",
         "record": "",
         "winner": false
       },
