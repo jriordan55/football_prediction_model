@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-24T23:06:58.036Z",
+  "capturedAt": "2026-09-24T23:12:01.269Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -52,9 +52,9 @@
   ],
   "oddsCount": 0,
   "newPlays": 4,
-  "gameStates": 2,
+  "gameStates": 3,
   "injuries": 0,
-  "liveGames": 2,
+  "liveGames": 3,
   "games": [
     {
       "id": "401817063",
@@ -233,8 +233,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 3rd",
-        "shortDetail": "Bot 3rd"
+        "detail": "Top 4th",
+        "shortDetail": "Top 4th"
       },
       "away": {
         "id": "8",
@@ -298,11 +298,11 @@
       "id": "401817064",
       "name": "Tampa Bay Rays at New York Yankees",
       "status": {
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "description": "Scheduled",
-        "detail": "Scheduled",
-        "shortDetail": "9/24 - 7:05 PM EDT"
+        "description": "In Progress",
+        "detail": "Top 1st",
+        "shortDetail": "Top 1st"
       },
       "away": {
         "id": "30",
