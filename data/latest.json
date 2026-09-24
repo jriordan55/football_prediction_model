@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-24T00:42:10.281Z",
+  "capturedAt": "2026-09-24T00:47:28.677Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 16,
+  "newPlays": 22,
   "gameStates": 10,
   "injuries": 0,
   "liveGames": 10,
@@ -165,8 +165,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Middle 8th",
-        "shortDetail": "Mid 8th"
+        "detail": "Bottom 8th",
+        "shortDetail": "Bot 8th"
       },
       "away": {
         "id": "14",
@@ -199,8 +199,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 7th",
-        "shortDetail": "Bot 7th"
+        "detail": "Top 8th",
+        "shortDetail": "Top 8th"
       },
       "away": {
         "id": "8",
@@ -267,8 +267,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 6th",
-        "shortDetail": "Top 6th"
+        "detail": "Middle 6th",
+        "shortDetail": "Mid 6th"
       },
       "away": {
         "id": "5",
@@ -301,8 +301,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 5th",
-        "shortDetail": "Top 5th"
+        "detail": "Bottom 5th",
+        "shortDetail": "Bot 5th"
       },
       "away": {
         "id": "30",
@@ -369,8 +369,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 3rd",
-        "shortDetail": "Bot 3rd"
+        "detail": "End 3rd",
+        "shortDetail": "End 3rd"
       },
       "away": {
         "id": "4",
@@ -437,8 +437,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 3rd",
-        "shortDetail": "Top 3rd"
+        "detail": "Bottom 3rd",
+        "shortDetail": "Bot 3rd"
       },
       "away": {
         "id": "21",
