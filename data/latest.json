@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-24T00:58:07.251Z",
+  "capturedAt": "2026-09-24T01:03:24.094Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 21,
-  "gameStates": 10,
+  "newPlays": 12,
+  "gameStates": 9,
   "injuries": 0,
-  "liveGames": 10,
+  "liveGames": 9,
   "games": [
     {
       "id": "401817051",
@@ -162,11 +162,11 @@
       "id": "401817050",
       "name": "Toronto Blue Jays at Baltimore Orioles",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Top 9th",
-        "shortDetail": "Top 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "14",
@@ -188,7 +188,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bal.png",
         "score": "4",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "matchedEvent": null
     },
@@ -199,8 +199,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 8th",
-        "shortDetail": "Bot 8th"
+        "detail": "End 8th",
+        "shortDetail": "End 8th"
       },
       "away": {
         "id": "8",
@@ -233,8 +233,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 7th",
-        "shortDetail": "Bot 7th"
+        "detail": "Top 8th",
+        "shortDetail": "Top 8th"
       },
       "away": {
         "id": "24",
@@ -301,8 +301,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 6th",
-        "shortDetail": "Top 6th"
+        "detail": "Middle 6th",
+        "shortDetail": "Mid 6th"
       },
       "away": {
         "id": "30",
@@ -345,7 +345,7 @@
         "name": "Cincinnati Reds",
         "shortName": "Reds",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/cin.png",
-        "score": "1",
+        "score": "2",
         "record": "",
         "winner": false
       },
@@ -369,8 +369,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 4th",
-        "shortDetail": "Top 4th"
+        "detail": "Bottom 4th",
+        "shortDetail": "Bot 4th"
       },
       "away": {
         "id": "4",
@@ -437,8 +437,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 4th",
-        "shortDetail": "Bot 4th"
+        "detail": "Top 5th",
+        "shortDetail": "Top 5th"
       },
       "away": {
         "id": "21",
@@ -471,8 +471,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Middle 1st",
-        "shortDetail": "Mid 1st"
+        "detail": "End 1st",
+        "shortDetail": "End 1st"
       },
       "away": {
         "id": "29",
