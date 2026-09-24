@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-24T01:29:49.769Z",
+  "capturedAt": "2026-09-24T01:35:10.179Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 20,
-  "gameStates": 8,
+  "newPlays": 15,
+  "gameStates": 7,
   "injuries": 0,
-  "liveGames": 8,
+  "liveGames": 7,
   "games": [
     {
       "id": "401817051",
@@ -230,11 +230,11 @@
       "id": "401817048",
       "name": "St. Louis Cardinals at Pittsburgh Pirates",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Bottom 9th",
-        "shortDetail": "Bot 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "24",
@@ -245,7 +245,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/stl.png",
         "score": "5",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "home": {
         "id": "23",
@@ -267,8 +267,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Middle 8th",
-        "shortDetail": "Mid 8th"
+        "detail": "Bottom 8th",
+        "shortDetail": "Bot 8th"
       },
       "away": {
         "id": "5",
@@ -301,8 +301,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 7th",
-        "shortDetail": "Bot 7th"
+        "detail": "Top 8th",
+        "shortDetail": "Top 8th"
       },
       "away": {
         "id": "30",
@@ -335,8 +335,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 8th",
-        "shortDetail": "End 8th"
+        "detail": "Middle 9th",
+        "shortDetail": "Mid 9th"
       },
       "away": {
         "id": "17",
@@ -369,8 +369,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 6th",
-        "shortDetail": "Bot 6th"
+        "detail": "End 6th",
+        "shortDetail": "End 6th"
       },
       "away": {
         "id": "4",
@@ -403,8 +403,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 6th",
-        "shortDetail": "Bot 6th"
+        "detail": "End 6th",
+        "shortDetail": "End 6th"
       },
       "away": {
         "id": "28",
@@ -424,7 +424,7 @@
         "name": "Chicago Cubs",
         "shortName": "Cubs",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chc.png",
-        "score": "0",
+        "score": "2",
         "record": "",
         "winner": false
       },
@@ -437,8 +437,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 6th",
-        "shortDetail": "Top 6th"
+        "detail": "Top 7th",
+        "shortDetail": "Top 7th"
       },
       "away": {
         "id": "21",
@@ -492,7 +492,7 @@
         "name": "Colorado Rockies",
         "shortName": "Rockies",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/col.png",
-        "score": "1",
+        "score": "2",
         "record": "",
         "winner": false
       },
