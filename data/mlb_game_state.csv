@@ -79973,3 +79973,59 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-24T01:50:58.003Z,401817054,New York Mets at Texas Rangers,in,Bottom 7th,New York Mets,Texas Rangers,2,2,0.505,Globe Life Field,,,,,,,,,,,,,,,,0
 2026-09-24T01:50:58.003Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Top 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.268,Coors Field,,,,,,,,,,,,,,,,0
 2026-09-24T01:50:58.003Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,0,0.54,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:51:31.377Z,401817049,Tampa Bay Rays at New York Yankees,in,Bottom 8th,Tampa Bay Rays,New York Yankees,2,9,0.999,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:51:31.377Z,401817045,Cincinnati Reds at Atlanta Braves,in,Top 10th,Cincinnati Reds,Atlanta Braves,2,2,0.752,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:51:31.377Z,401817052,Chicago White Sox at Kansas City Royals,in,Top 8th,Chicago White Sox,Kansas City Royals,4,5,0.713,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:51:31.377Z,401817053,Miami Marlins at Chicago Cubs,in,Middle 7th,Miami Marlins,Chicago Cubs,3,2,0.419,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:51:31.377Z,401817054,New York Mets at Texas Rangers,in,Bottom 7th,New York Mets,Texas Rangers,2,2,0.505,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:51:31.377Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Middle 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.28,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:51:31.377Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,0,0.54,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:11.359Z,401817049,Tampa Bay Rays at New York Yankees,in,End 8th,Tampa Bay Rays,New York Yankees,2,9,0.999,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:11.359Z,401817045,Cincinnati Reds at Atlanta Braves,in,Middle 10th,Cincinnati Reds,Atlanta Braves,2,2,0.825,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:11.359Z,401817052,Chicago White Sox at Kansas City Royals,in,Top 8th,Chicago White Sox,Kansas City Royals,4,5,0.779,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:11.359Z,401817053,Miami Marlins at Chicago Cubs,in,Middle 7th,Miami Marlins,Chicago Cubs,3,2,0.419,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:11.359Z,401817054,New York Mets at Texas Rangers,in,End 7th,New York Mets,Texas Rangers,2,2,0.505,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:11.359Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Middle 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.28,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:11.359Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,0,0.54,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:51.678Z,401817049,Tampa Bay Rays at New York Yankees,in,End 8th,Tampa Bay Rays,New York Yankees,2,9,0.999,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:51.678Z,401817045,Cincinnati Reds at Atlanta Braves,in,Middle 10th,Cincinnati Reds,Atlanta Braves,2,2,0.825,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:51.678Z,401817052,Chicago White Sox at Kansas City Royals,in,Top 8th,Chicago White Sox,Kansas City Royals,4,5,0.828,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:51.678Z,401817053,Miami Marlins at Chicago Cubs,in,Middle 7th,Miami Marlins,Chicago Cubs,3,2,0.462,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:51.678Z,401817054,New York Mets at Texas Rangers,in,End 7th,New York Mets,Texas Rangers,2,2,0.505,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:51.678Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Middle 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.28,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:52:51.678Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,1,0.638,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:53:31.953Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 9th,Tampa Bay Rays,New York Yankees,2,9,0.999,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:53:31.953Z,401817045,Cincinnati Reds at Atlanta Braves,in,Middle 10th,Cincinnati Reds,Atlanta Braves,2,2,0.825,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:53:31.953Z,401817052,Chicago White Sox at Kansas City Royals,in,Top 8th,Chicago White Sox,Kansas City Royals,4,5,0.828,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:53:31.953Z,401817053,Miami Marlins at Chicago Cubs,in,Middle 7th,Miami Marlins,Chicago Cubs,3,2,0.462,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:53:31.953Z,401817054,New York Mets at Texas Rangers,in,End 7th,New York Mets,Texas Rangers,2,2,0.505,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:53:31.953Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Bottom 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.28,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:53:31.953Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,1,0.638,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:11.801Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 9th,Tampa Bay Rays,New York Yankees,2,9,0.999,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:11.801Z,401817045,Cincinnati Reds at Atlanta Braves,in,Bottom 10th,Cincinnati Reds,Atlanta Braves,2,2,0.825,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:11.801Z,401817052,Chicago White Sox at Kansas City Royals,in,Middle 8th,Chicago White Sox,Kansas City Royals,4,5,0.862,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:11.801Z,401817053,Miami Marlins at Chicago Cubs,in,Middle 7th,Miami Marlins,Chicago Cubs,3,2,0.462,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:11.801Z,401817054,New York Mets at Texas Rangers,in,Top 8th,New York Mets,Texas Rangers,2,2,0.505,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:11.801Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Bottom 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.28,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:11.801Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,1,0.638,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:52.025Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 9th,Tampa Bay Rays,New York Yankees,2,9,0.999,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:52.025Z,401817045,Cincinnati Reds at Atlanta Braves,in,Bottom 10th,Cincinnati Reds,Atlanta Braves,2,2,0.825,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:52.025Z,401817052,Chicago White Sox at Kansas City Royals,in,Bottom 8th,Chicago White Sox,Kansas City Royals,4,5,0.862,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:52.025Z,401817053,Miami Marlins at Chicago Cubs,in,Bottom 7th,Miami Marlins,Chicago Cubs,3,2,0.462,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:52.025Z,401817054,New York Mets at Texas Rangers,in,Top 8th,New York Mets,Texas Rangers,2,2,0.505,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:52.025Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Bottom 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.247,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:54:52.025Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,1,0.638,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:55:31.977Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 9th,Tampa Bay Rays,New York Yankees,2,9,0.999,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:55:31.977Z,401817045,Cincinnati Reds at Atlanta Braves,in,Bottom 10th,Cincinnati Reds,Atlanta Braves,2,2,0.843,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:55:31.977Z,401817052,Chicago White Sox at Kansas City Royals,in,Bottom 8th,Chicago White Sox,Kansas City Royals,4,5,0.862,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:55:31.977Z,401817053,Miami Marlins at Chicago Cubs,in,Bottom 7th,Miami Marlins,Chicago Cubs,3,2,0.462,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:55:31.977Z,401817054,New York Mets at Texas Rangers,in,Top 8th,New York Mets,Texas Rangers,2,2,0.505,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:55:31.977Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Bottom 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.247,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:55:31.977Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,1,0.638,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:56:11.689Z,401817049,Tampa Bay Rays at New York Yankees,in,Top 9th,Tampa Bay Rays,New York Yankees,2,9,0.999,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:56:11.689Z,401817045,Cincinnati Reds at Atlanta Braves,in,Bottom 10th,Cincinnati Reds,Atlanta Braves,2,2,0.841,Truist Park,,,,,,,,,,,,,,,,0
+2026-09-24T01:56:11.689Z,401817052,Chicago White Sox at Kansas City Royals,in,Bottom 8th,Chicago White Sox,Kansas City Royals,4,5,0.862,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-24T01:56:11.689Z,401817053,Miami Marlins at Chicago Cubs,in,Bottom 7th,Miami Marlins,Chicago Cubs,3,2,0.462,Wrigley Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:56:11.689Z,401817054,New York Mets at Texas Rangers,in,Top 8th,New York Mets,Texas Rangers,2,2,0.548,Globe Life Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:56:11.689Z,401817055,Arizona Diamondbacks at Colorado Rockies,in,Bottom 5th,Arizona Diamondbacks,Colorado Rockies,4,2,0.247,Coors Field,,,,,,,,,,,,,,,,0
+2026-09-24T01:56:11.689Z,401817056,Los Angeles Angels at Athletics Athletics,in,Bottom 1st,Los Angeles Angels,Athletics,0,1,0.638,Sutter Health Park,,,,,,,,,,,,,,,,0
