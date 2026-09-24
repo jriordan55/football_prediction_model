@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-24T20:21:29.337Z",
+  "capturedAt": "2026-09-24T20:26:37.716Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 9,
+  "newPlays": 12,
   "gameStates": 4,
   "injuries": 0,
   "liveGames": 4,
@@ -131,8 +131,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 7th",
-        "shortDetail": "Bot 7th"
+        "detail": "Top 8th",
+        "shortDetail": "Top 8th"
       },
       "away": {
         "id": "28",
@@ -165,8 +165,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 6th",
-        "shortDetail": "Bot 6th"
+        "detail": "Top 7th",
+        "shortDetail": "Top 7th"
       },
       "away": {
         "id": "21",
@@ -209,7 +209,7 @@
         "name": "Arizona Diamondbacks",
         "shortName": "Diamondbacks",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ari.png",
-        "score": "9",
+        "score": "10",
         "record": "",
         "winner": false
       },
