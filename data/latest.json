@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T20:37:44.705Z",
+  "capturedAt": "2026-09-25T20:42:59.712Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 4,
+  "newPlays": 2,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -107,7 +107,7 @@
         "name": "Baltimore Orioles",
         "shortName": "Orioles",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bal.png",
-        "score": "0",
+        "score": "2",
         "record": "",
         "winner": false
       },
