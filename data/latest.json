@@ -1,6 +1,6 @@
 {
-  "capturedAt": "2026-09-25T02:31:40.446Z",
-  "mode": "prematch",
+  "capturedAt": "2026-09-25T02:36:49.781Z",
+  "mode": "inplay",
   "sport": "MLB",
   "markets": [
     "Moneyline",
@@ -51,8 +51,8 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 0,
-  "gameStates": 0,
+  "newPlays": 9,
+  "gameStates": 3,
   "injuries": 0,
   "liveGames": 3,
   "games": [
@@ -369,8 +369,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 3rd",
-        "shortDetail": "Bot 3rd"
+        "detail": "End 3rd",
+        "shortDetail": "End 3rd"
       },
       "away": {
         "id": "3",
@@ -403,8 +403,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 3rd",
-        "shortDetail": "Bot 3rd"
+        "detail": "End 3rd",
+        "shortDetail": "End 3rd"
       },
       "away": {
         "id": "18",
@@ -437,8 +437,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Middle 2nd",
-        "shortDetail": "Mid 2nd"
+        "detail": "Bottom 2nd",
+        "shortDetail": "Bot 2nd"
       },
       "away": {
         "id": "25",
@@ -465,6 +465,5 @@
       "matchedEvent": null
     }
   ],
-  "odds": [],
-  "details": []
+  "odds": []
 }
