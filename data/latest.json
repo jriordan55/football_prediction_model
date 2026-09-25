@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T19:45:05.332Z",
+  "capturedAt": "2026-09-25T20:37:44.705Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 0,
-  "gameStates": 0,
+  "newPlays": 4,
+  "gameStates": 1,
   "injuries": 0,
-  "liveGames": 0,
+  "liveGames": 1,
   "games": [
     {
       "id": "401817104",
@@ -94,11 +94,11 @@
       "id": "401817088",
       "name": "Baltimore Orioles at New York Yankees",
       "status": {
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "description": "Scheduled",
-        "detail": "Scheduled",
-        "shortDetail": "9/25 - 4:05 PM EDT"
+        "description": "In Progress",
+        "detail": "Top 3rd",
+        "shortDetail": "Top 3rd"
       },
       "away": {
         "id": "1",
