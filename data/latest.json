@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T21:03:57.680Z",
+  "capturedAt": "2026-09-25T21:09:12.235Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 2,
+  "newPlays": 3,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -97,8 +97,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 4th",
-        "shortDetail": "Top 4th"
+        "detail": "Middle 4th",
+        "shortDetail": "Mid 4th"
       },
       "away": {
         "id": "1",
@@ -107,7 +107,7 @@
         "name": "Baltimore Orioles",
         "shortName": "Orioles",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bal.png",
-        "score": "3",
+        "score": "7",
         "record": "",
         "winner": false
       },
