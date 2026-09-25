@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T04:08:44.300Z",
+  "capturedAt": "2026-09-25T04:13:50.174Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -369,8 +369,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 8th",
-        "shortDetail": "Bot 8th"
+        "detail": "End 8th",
+        "shortDetail": "End 8th"
       },
       "away": {
         "id": "3",
@@ -403,8 +403,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 8th",
-        "shortDetail": "End 8th"
+        "detail": "Top 9th",
+        "shortDetail": "Top 9th"
       },
       "away": {
         "id": "18",
@@ -413,7 +413,7 @@
         "name": "Houston Astros",
         "shortName": "Astros",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
-        "score": "6",
+        "score": "7",
         "record": "",
         "winner": false
       },
