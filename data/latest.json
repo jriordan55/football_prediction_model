@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T01:35:20.111Z",
+  "capturedAt": "2026-09-25T01:40:25.466Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 3,
-  "gameStates": 2,
+  "newPlays": 0,
+  "gameStates": 3,
   "injuries": 0,
-  "liveGames": 2,
+  "liveGames": 3,
   "games": [
     {
       "id": "401817063",
@@ -335,8 +335,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 8th",
-        "shortDetail": "Bot 8th"
+        "detail": "End 8th",
+        "shortDetail": "End 8th"
       },
       "away": {
         "id": "17",
@@ -400,11 +400,11 @@
       "id": "401817070",
       "name": "Houston Astros at Athletics Athletics",
       "status": {
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "description": "Scheduled",
-        "detail": "Scheduled",
-        "shortDetail": "9/24 - 9:40 PM EDT"
+        "description": "In Progress",
+        "detail": "Top 1st",
+        "shortDetail": "Top 1st"
       },
       "away": {
         "id": "18",
