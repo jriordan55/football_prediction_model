@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T01:55:46.643Z",
+  "capturedAt": "2026-09-25T02:00:50.459Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -52,9 +52,9 @@
   ],
   "oddsCount": 0,
   "newPlays": 3,
-  "gameStates": 4,
+  "gameStates": 2,
   "injuries": 0,
-  "liveGames": 4,
+  "liveGames": 2,
   "games": [
     {
       "id": "401817063",
@@ -298,11 +298,11 @@
       "id": "401817064",
       "name": "Tampa Bay Rays at New York Yankees",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Top 9th",
-        "shortDetail": "Top 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "30",
@@ -324,7 +324,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
         "score": "6",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "matchedEvent": null
     },
@@ -332,11 +332,11 @@
       "id": "401817060",
       "name": "Cincinnati Reds at Atlanta Braves",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Bottom 9th",
-        "shortDetail": "Bot 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "17",
@@ -347,7 +347,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/cin.png",
         "score": "7",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "home": {
         "id": "15",
@@ -369,8 +369,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 1st",
-        "shortDetail": "End 1st"
+        "detail": "Top 2nd",
+        "shortDetail": "Top 2nd"
       },
       "away": {
         "id": "3",
