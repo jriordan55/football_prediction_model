@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T21:19:40.410Z",
+  "capturedAt": "2026-09-25T21:24:56.439Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 2,
+  "newPlays": 0,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -97,8 +97,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Top 5th",
-        "shortDetail": "Top 5th"
+        "detail": "Middle 5th",
+        "shortDetail": "Mid 5th"
       },
       "away": {
         "id": "1",
