@@ -85673,3 +85673,43 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-26T04:01:24.974Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.937,Sutter Health Park,,,,,,,,,,,,,,,,0
 2026-09-26T04:01:24.974Z,401817083,Los Angeles Angels at Seattle Mariners,in,Middle 7th,Los Angeles Angels,Seattle Mariners,6,0,0.018,T-Mobile Park,,,,,,,,,,,,,,,,0
 2026-09-26T04:01:24.974Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Middle 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.07,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:01:48.987Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Middle 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.002,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:01:48.987Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.937,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:01:48.987Z,401817083,Los Angeles Angels at Seattle Mariners,in,Middle 7th,Los Angeles Angels,Seattle Mariners,6,0,0.018,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:01:48.987Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Middle 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.083,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:02:19.920Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Middle 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.002,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:02:19.920Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.963,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:02:19.920Z,401817083,Los Angeles Angels at Seattle Mariners,in,Bottom 7th,Los Angeles Angels,Seattle Mariners,6,0,0.018,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:02:19.920Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Middle 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.083,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:02:52.481Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Bottom 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.002,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:02:52.481Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.963,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:02:52.481Z,401817083,Los Angeles Angels at Seattle Mariners,in,Bottom 7th,Los Angeles Angels,Seattle Mariners,6,0,0.018,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:02:52.481Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.083,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:03:23.720Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Bottom 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.002,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:03:23.720Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.933,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:03:23.720Z,401817083,Los Angeles Angels at Seattle Mariners,in,Bottom 7th,Los Angeles Angels,Seattle Mariners,6,0,0.012,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:03:23.720Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.083,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:03:54.067Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Bottom 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.002,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:03:54.067Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.933,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:03:54.067Z,401817083,Los Angeles Angels at Seattle Mariners,in,Bottom 7th,Los Angeles Angels,Seattle Mariners,6,0,0.012,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:03:54.067Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.083,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:04:24.526Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Bottom 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.001,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:04:24.526Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.933,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:04:24.526Z,401817083,Los Angeles Angels at Seattle Mariners,in,Bottom 7th,Los Angeles Angels,Seattle Mariners,6,0,0.009,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:04:24.526Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.083,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:04:56.842Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Bottom 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.001,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:04:56.842Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.933,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:04:56.842Z,401817083,Los Angeles Angels at Seattle Mariners,in,Bottom 7th,Los Angeles Angels,Seattle Mariners,6,0,0.009,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:04:56.842Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.083,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:05:27.098Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Bottom 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.001,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:05:27.098Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.933,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:05:27.098Z,401817083,Los Angeles Angels at Seattle Mariners,in,End 7th,Los Angeles Angels,Seattle Mariners,6,0,0.007,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:05:27.098Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.083,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:05:57.564Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Bottom 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.001,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:05:57.564Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.933,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:05:57.564Z,401817083,Los Angeles Angels at Seattle Mariners,in,End 7th,Los Angeles Angels,Seattle Mariners,6,0,0.007,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:05:57.564Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.045,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:06:27.776Z,401817084,Arizona Diamondbacks at San Diego Padres,in,Bottom 8th,Arizona Diamondbacks,San Diego Padres,11,3,0.002,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:06:27.776Z,401817085,Houston Astros at Athletics Athletics,in,Top 8th,Houston Astros,Athletics,2,6,0.88,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:06:27.776Z,401817083,Los Angeles Angels at Seattle Mariners,in,End 7th,Los Angeles Angels,Seattle Mariners,6,0,0.007,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-26T04:06:27.776Z,401817086,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,2,0,0.045,Oracle Park,,,,,,,,,,,,,,,,0
