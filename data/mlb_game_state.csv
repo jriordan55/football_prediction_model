@@ -87063,3 +87063,31 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-26T22:40:41.808Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Top 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.13,Oracle Park,,,,,,,,,,,,,,,,0
 2026-09-26T22:40:41.808Z,401817087,Atlanta Braves at Miami Marlins,in,Top 9th,Atlanta Braves,Miami Marlins,6,3,0.03,loanDepot park,,,,,,,,,,,,,,,,0
 2026-09-26T22:40:41.808Z,401817097,Texas Rangers at Minnesota Twins,in,Top 2nd,Texas Rangers,Minnesota Twins,4,1,0.224,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:41:10.904Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Top 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.13,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:41:10.904Z,401817087,Atlanta Braves at Miami Marlins,in,Top 9th,Atlanta Braves,Miami Marlins,8,3,0.03,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:41:10.904Z,401817097,Texas Rangers at Minnesota Twins,in,Top 2nd,Texas Rangers,Minnesota Twins,4,1,0.224,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:41:47.265Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Top 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.13,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:41:47.265Z,401817087,Atlanta Braves at Miami Marlins,in,Top 9th,Atlanta Braves,Miami Marlins,8,3,0.007,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:41:47.265Z,401817097,Texas Rangers at Minnesota Twins,in,Top 2nd,Texas Rangers,Minnesota Twins,4,1,0.224,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:42:22.571Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Top 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.143,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:42:22.571Z,401817087,Atlanta Braves at Miami Marlins,in,Top 9th,Atlanta Braves,Miami Marlins,8,3,0.007,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:42:22.571Z,401817097,Texas Rangers at Minnesota Twins,in,Top 2nd,Texas Rangers,Minnesota Twins,4,1,0.224,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:42:57.883Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Top 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.143,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:42:57.883Z,401817087,Atlanta Braves at Miami Marlins,in,Middle 9th,Atlanta Braves,Miami Marlins,8,3,0.007,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:42:57.883Z,401817097,Texas Rangers at Minnesota Twins,in,Middle 2nd,Texas Rangers,Minnesota Twins,4,1,0.242,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:43:33.549Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Top 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.143,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:43:33.549Z,401817087,Atlanta Braves at Miami Marlins,in,Middle 9th,Atlanta Braves,Miami Marlins,8,3,0.007,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:43:33.549Z,401817097,Texas Rangers at Minnesota Twins,in,Middle 2nd,Texas Rangers,Minnesota Twins,4,1,0.242,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:44:08.920Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.174,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:44:08.920Z,401817087,Atlanta Braves at Miami Marlins,in,Middle 9th,Atlanta Braves,Miami Marlins,8,3,0.007,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:44:08.920Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 2nd,Texas Rangers,Minnesota Twins,4,1,0.242,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:44:44.495Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.174,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:44:44.495Z,401817087,Atlanta Braves at Miami Marlins,in,Bottom 9th,Atlanta Braves,Miami Marlins,8,3,0.007,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:44:44.495Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 2nd,Texas Rangers,Minnesota Twins,4,1,0.242,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:45:19.871Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.174,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:45:19.871Z,401817087,Atlanta Braves at Miami Marlins,in,Bottom 9th,Atlanta Braves,Miami Marlins,8,3,0.007,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:45:19.871Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 2nd,Texas Rangers,Minnesota Twins,4,1,0.242,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:45:55.960Z,401817101,Los Angeles Dodgers at San Francisco Giants,in,Bottom 9th,Los Angeles Dodgers,San Francisco Giants,4,3,0.174,Oracle Park,,,,,,,,,,,,,,,,0
+2026-09-26T22:45:55.960Z,401817087,Atlanta Braves at Miami Marlins,in,Bottom 9th,Atlanta Braves,Miami Marlins,8,3,0.017,loanDepot park,,,,,,,,,,,,,,,,0
+2026-09-26T22:45:55.960Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 2nd,Texas Rangers,Minnesota Twins,4,1,0.221,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T22:45:55.960Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
