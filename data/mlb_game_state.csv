@@ -87214,3 +87214,48 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-26T23:12:05.148Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,,Rate Field,,,,,,,,,,,,,,,,0
 2026-09-26T23:12:05.148Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,,American Family Field,,,,,,,,,,,,,,,,0
 2026-09-26T23:12:05.148Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:12:34.573Z,401817097,Texas Rangers at Minnesota Twins,in,Top 4th,Texas Rangers,Minnesota Twins,5,1,0.119,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:12:34.573Z,401817094,Cleveland Guardians at Kansas City Royals,in,Top 1st,Cleveland Guardians,Kansas City Royals,0,0,0.531,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:12:34.573Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:12:34.573Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.681,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:12:34.573Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:10.443Z,401817097,Texas Rangers at Minnesota Twins,in,Top 4th,Texas Rangers,Minnesota Twins,5,1,0.119,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:10.443Z,401817094,Cleveland Guardians at Kansas City Royals,in,Top 1st,Cleveland Guardians,Kansas City Royals,0,0,0.531,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:10.443Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,0.609,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:10.443Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.681,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:10.443Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:46.131Z,401817097,Texas Rangers at Minnesota Twins,in,Top 4th,Texas Rangers,Minnesota Twins,5,1,0.125,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:46.131Z,401817094,Cleveland Guardians at Kansas City Royals,in,Middle 1st,Cleveland Guardians,Kansas City Royals,0,0,0.606,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:46.131Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,0.609,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:46.131Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.681,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:13:46.131Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:23.284Z,401817097,Texas Rangers at Minnesota Twins,in,Top 4th,Texas Rangers,Minnesota Twins,5,1,0.125,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:23.284Z,401817094,Cleveland Guardians at Kansas City Royals,in,Middle 1st,Cleveland Guardians,Kansas City Royals,0,0,0.606,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:23.284Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,0.525,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:23.284Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.697,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:23.284Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:58.849Z,401817097,Texas Rangers at Minnesota Twins,in,Top 4th,Texas Rangers,Minnesota Twins,5,1,0.125,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:58.849Z,401817094,Cleveland Guardians at Kansas City Royals,in,Middle 1st,Cleveland Guardians,Kansas City Royals,0,0,0.606,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:58.849Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,0.525,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:58.849Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.697,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:14:58.849Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:15:34.646Z,401817097,Texas Rangers at Minnesota Twins,in,Top 4th,Texas Rangers,Minnesota Twins,5,1,0.125,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:15:34.646Z,401817094,Cleveland Guardians at Kansas City Royals,in,Middle 1st,Cleveland Guardians,Kansas City Royals,0,0,0.606,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:15:34.646Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,0.589,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:15:34.646Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.697,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:15:34.646Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:10.441Z,401817097,Texas Rangers at Minnesota Twins,in,Middle 4th,Texas Rangers,Minnesota Twins,5,1,0.137,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:10.441Z,401817094,Cleveland Guardians at Kansas City Royals,in,Bottom 1st,Cleveland Guardians,Kansas City Royals,0,0,0.606,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:10.441Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,0.589,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:10.441Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.697,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:10.441Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:46.144Z,401817097,Texas Rangers at Minnesota Twins,in,Middle 4th,Texas Rangers,Minnesota Twins,5,1,0.137,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:46.144Z,401817094,Cleveland Guardians at Kansas City Royals,in,Bottom 1st,Cleveland Guardians,Kansas City Royals,0,0,0.606,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:46.144Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,0,0,0.589,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:46.144Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Middle 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.706,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:16:46.144Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-26T23:17:21.766Z,401817097,Texas Rangers at Minnesota Twins,in,Middle 4th,Texas Rangers,Minnesota Twins,5,1,0.137,Target Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:17:21.766Z,401817094,Cleveland Guardians at Kansas City Royals,in,Bottom 1st,Cleveland Guardians,Kansas City Royals,0,0,0.606,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-26T23:17:21.766Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 1st,Colorado Rockies,Chicago White Sox,1,0,0.496,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:17:21.766Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Middle 1st,St. Louis Cardinals,Milwaukee Brewers,0,0,0.706,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-26T23:17:21.766Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,"Rain Delay, Top 1st",Tampa Bay Rays,Philadelphia Phillies,0,0,,Citizens Bank Park,,,,,,,,,,,,,,,,0
