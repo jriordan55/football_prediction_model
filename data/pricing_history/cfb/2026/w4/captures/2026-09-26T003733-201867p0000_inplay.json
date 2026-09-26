@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "sport": "cfb",
+  "year": 2026,
+  "week": 4,
+  "captured_at": "2026-09-26T00:37:33.201867+00:00",
+  "capture_type": "inplay",
+  "methodology": {
+    "version": 6,
+    "game_sim": "pricing_engine.simulator.run_matchup_simulation",
+    "props": "pricing_engine.ui.props_table.compute_prop_projection",
+    "pit": "pricing_engine.pit",
+    "sims": 3000
+  },
+  "source": "inplay_runner",
+  "games": [
+    {
+      "home": "Indiana Hoosiers",
+      "away": "Northwestern Wildcats",
+      "event_id": "401858461",
+      "pregame_captured_at": null,
+      "pregame_capture_type": null,
+      "new_plays": 32,
+      "rows_written": 0,
+      "last_play": {
+        "id": "401858461122",
+        "text": "(05:00) #19 B.Gowers punt 34 yards to the NW 08 fair catch by #19 D.Wagner at NW 08",
+        "type": "Punt",
+        "period": 1,
+        "clock": "4:55",
+        "scoringPlay": false,
+        "scoreValue": 0,
+        "awayScore": 0,
+        "homeScore": 2,
+        "down": 4,
+        "distance": 6,
+        "yardLine": 58,
+        "possession": "NU 42"
+      },
+      "odds_quotes": [],
+      "sim": {
+        "error": "no_ratings",
+        "home": "Indiana Hoosiers",
+        "away": "Northwestern Wildcats"
+      },
+      "props": []
+    }
+  ]
+}
