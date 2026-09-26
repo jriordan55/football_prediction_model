@@ -1,0 +1,6809 @@
+{
+  "sport": "cfb",
+  "event_id": "401866425",
+  "updated_at": "2026-09-26T17:57:22.200423+00:00",
+  "plays": {
+    "4018664253": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarketus",
+          "price": -147,
+          "book": "Polymarket US",
+          "liquidity": 2732.0,
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "kalshi",
+          "price": 825,
+          "book": "Kalshi",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 809,
+          "book": "Polymarket",
+          "liquidity": 601.0,
+          "line": 51.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 51.5
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -1786,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 2399,
+          "book": "Novig",
+          "liquidity": 80.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.1,
+        "away_mean": 31.0,
+        "total_mean": 66.1,
+        "exp_spread_home": -4.100000000000001,
+        "exp_spread_away": 4.100000000000001,
+        "home_win_pct": 59.64,
+        "away_win_pct": 40.36
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40186642513": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.9,
+        "away_mean": 30.8,
+        "total_mean": 65.7,
+        "exp_spread_home": -4.099999999999998,
+        "exp_spread_away": 4.099999999999998,
+        "home_win_pct": 59.760000000000005,
+        "away_win_pct": 40.239999999999995
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:54"
+    },
+    "40186642517": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.9,
+        "away_mean": 30.7,
+        "total_mean": 65.6,
+        "exp_spread_home": -4.199999999999999,
+        "exp_spread_away": 4.199999999999999,
+        "home_win_pct": 59.9,
+        "away_win_pct": 40.1
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "14:14"
+    },
+    "40186642523": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.8,
+        "away_mean": 30.7,
+        "total_mean": 65.5,
+        "exp_spread_home": -4.099999999999998,
+        "exp_spread_away": 4.099999999999998,
+        "home_win_pct": 59.699999999999996,
+        "away_win_pct": 40.300000000000004
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "13:56"
+    },
+    "40186642521": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.7,
+        "away_mean": 30.6,
+        "total_mean": 65.3,
+        "exp_spread_home": -4.100000000000001,
+        "exp_spread_away": 4.100000000000001,
+        "home_win_pct": 59.79,
+        "away_win_pct": 40.21
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "13:38"
+    },
+    "40186642527": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.4,
+        "away_mean": 30.3,
+        "total_mean": 64.7,
+        "exp_spread_home": -4.099999999999998,
+        "exp_spread_away": 4.099999999999998,
+        "home_win_pct": 59.63,
+        "away_win_pct": 40.37
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "13:04"
+    },
+    "40186642530": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.3,
+        "away_mean": 30.3,
+        "total_mean": 64.6,
+        "exp_spread_home": -3.9999999999999964,
+        "exp_spread_away": 3.9999999999999964,
+        "home_win_pct": 59.53000000000001,
+        "away_win_pct": 40.47
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "12:52"
+    },
+    "40186642535": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.7,
+        "away_mean": 29.7,
+        "total_mean": 63.4,
+        "exp_spread_home": -4.0000000000000036,
+        "exp_spread_away": 4.0000000000000036,
+        "home_win_pct": 59.68,
+        "away_win_pct": 40.32
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "12:17"
+    },
+    "40186642540": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.7,
+        "away_mean": 29.8,
+        "total_mean": 63.5,
+        "exp_spread_home": -3.900000000000002,
+        "exp_spread_away": 3.900000000000002,
+        "home_win_pct": 59.419999999999995,
+        "away_win_pct": 40.58
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "12:05"
+    },
+    "40186642544": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.0,
+        "away_mean": 29.2,
+        "total_mean": 62.2,
+        "exp_spread_home": -3.8000000000000007,
+        "exp_spread_away": 3.8000000000000007,
+        "home_win_pct": 59.230000000000004,
+        "away_win_pct": 40.77
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:48"
+    },
+    "40186642552": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.0,
+        "away_mean": 29.2,
+        "total_mean": 62.2,
+        "exp_spread_home": -3.8000000000000007,
+        "exp_spread_away": 3.8000000000000007,
+        "home_win_pct": 59.230000000000004,
+        "away_win_pct": 40.77
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:48"
+    },
+    "40186642555": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.2,
+        "away_mean": 29.2,
+        "total_mean": 62.4,
+        "exp_spread_home": -4.0000000000000036,
+        "exp_spread_away": 4.0000000000000036,
+        "home_win_pct": 59.4,
+        "away_win_pct": 40.6
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:39"
+    },
+    "40186642561": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.9,
+        "away_mean": 29.0,
+        "total_mean": 61.9,
+        "exp_spread_home": -3.8999999999999986,
+        "exp_spread_away": 3.8999999999999986,
+        "home_win_pct": 59.19,
+        "away_win_pct": 40.81
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:30"
+    },
+    "40186642565": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.6,
+        "away_mean": 28.8,
+        "total_mean": 61.4,
+        "exp_spread_home": -3.8000000000000007,
+        "exp_spread_away": 3.8000000000000007,
+        "home_win_pct": 59.230000000000004,
+        "away_win_pct": 40.77
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:53"
+    },
+    "40186642569": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.2,
+        "away_mean": 28.5,
+        "total_mean": 60.7,
+        "exp_spread_home": -3.700000000000003,
+        "exp_spread_away": 3.700000000000003,
+        "home_win_pct": 59.089999999999996,
+        "away_win_pct": 40.910000000000004
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:18"
+    },
+    "40186642574": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.8,
+        "away_mean": 28.1,
+        "total_mean": 59.9,
+        "exp_spread_home": -3.6999999999999993,
+        "exp_spread_away": 3.6999999999999993,
+        "home_win_pct": 58.98,
+        "away_win_pct": 41.02
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:47"
+    },
+    "40186642578": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.5,
+        "away_mean": 27.8,
+        "total_mean": 59.3,
+        "exp_spread_home": -3.6999999999999993,
+        "exp_spread_away": 3.6999999999999993,
+        "home_win_pct": 59.01,
+        "away_win_pct": 40.99
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:07"
+    },
+    "40186642582": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.8,
+        "away_mean": 27.3,
+        "total_mean": 58.1,
+        "exp_spread_home": -3.5,
+        "exp_spread_away": 3.5,
+        "home_win_pct": 58.77,
+        "away_win_pct": 41.23
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:23"
+    },
+    "40186642586": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.6,
+        "away_mean": 27.0,
+        "total_mean": 57.6,
+        "exp_spread_home": -3.6000000000000014,
+        "exp_spread_away": 3.6000000000000014,
+        "home_win_pct": 58.89,
+        "away_win_pct": 41.11
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:51"
+    },
+    "40186642591": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.5,
+        "away_mean": 26.9,
+        "total_mean": 57.4,
+        "exp_spread_home": -3.6000000000000014,
+        "exp_spread_away": 3.6000000000000014,
+        "home_win_pct": 58.720000000000006,
+        "away_win_pct": 41.28
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:18"
+    },
+    "40186642598": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.0,
+        "away_mean": 26.5,
+        "total_mean": 56.5,
+        "exp_spread_home": -3.5,
+        "exp_spread_away": 3.5,
+        "home_win_pct": 58.660000000000004,
+        "away_win_pct": 41.339999999999996
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:38"
+    },
+    "401866425102": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.7,
+        "away_mean": 26.4,
+        "total_mean": 56.1,
+        "exp_spread_home": -3.3000000000000007,
+        "exp_spread_away": 3.3000000000000007,
+        "home_win_pct": 58.46,
+        "away_win_pct": 41.54
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:56"
+    },
+    "401866425106": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 36.6,
+        "away_mean": 25.5,
+        "total_mean": 62.1,
+        "exp_spread_home": -11.100000000000001,
+        "exp_spread_away": 11.100000000000001,
+        "home_win_pct": 76.03999999999999,
+        "away_win_pct": 23.96
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:15"
+    },
+    "401866425114": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 36.5,
+        "away_mean": 25.3,
+        "total_mean": 61.8,
+        "exp_spread_home": -11.2,
+        "exp_spread_away": 11.2,
+        "home_win_pct": 76.33,
+        "away_win_pct": 23.669999999999998
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:08"
+    },
+    "401866425125": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 36.1,
+        "away_mean": 25.0,
+        "total_mean": 61.1,
+        "exp_spread_home": -11.100000000000001,
+        "exp_spread_away": 11.100000000000001,
+        "home_win_pct": 76.23,
+        "away_win_pct": 23.77
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:27"
+    },
+    "401866425129": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.6,
+        "away_mean": 24.7,
+        "total_mean": 60.3,
+        "exp_spread_home": -10.900000000000002,
+        "exp_spread_away": 10.900000000000002,
+        "home_win_pct": 76.05,
+        "away_win_pct": 23.95
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:53"
+    },
+    "401866425133": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.7,
+        "away_mean": 24.7,
+        "total_mean": 60.4,
+        "exp_spread_home": -11.000000000000004,
+        "exp_spread_away": 11.000000000000004,
+        "home_win_pct": 76.39,
+        "away_win_pct": 23.61
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:44"
+    },
+    "401866425137": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.4,
+        "away_mean": 24.5,
+        "total_mean": 59.9,
+        "exp_spread_home": -10.899999999999999,
+        "exp_spread_away": 10.899999999999999,
+        "home_win_pct": 76.14,
+        "away_win_pct": 23.86
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:24"
+    },
+    "401866425142": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.0,
+        "away_mean": 24.2,
+        "total_mean": 59.2,
+        "exp_spread_home": -10.8,
+        "exp_spread_away": 10.8,
+        "home_win_pct": 76.14,
+        "away_win_pct": 23.86
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:54"
+    },
+    "401866425146": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.7,
+        "away_mean": 23.7,
+        "total_mean": 58.4,
+        "exp_spread_home": -11.000000000000004,
+        "exp_spread_away": 11.000000000000004,
+        "home_win_pct": 76.41,
+        "away_win_pct": 23.59
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:03"
+    },
+    "401866425151": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.4,
+        "away_mean": 23.8,
+        "total_mean": 58.2,
+        "exp_spread_home": -10.599999999999998,
+        "exp_spread_away": 10.599999999999998,
+        "home_win_pct": 76.03999999999999,
+        "away_win_pct": 23.96
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:35"
+    },
+    "401866425157": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 38.6,
+        "away_mean": 27.1,
+        "total_mean": 65.7,
+        "exp_spread_home": -11.5,
+        "exp_spread_away": 11.5,
+        "home_win_pct": 76.14999999999999,
+        "away_win_pct": 23.849999999999998
+      },
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:00"
+    },
+    "401866425161": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.0,
+        "away_mean": 23.2,
+        "total_mean": 57.2,
+        "exp_spread_home": -10.8,
+        "exp_spread_away": 10.8,
+        "home_win_pct": 76.39,
+        "away_win_pct": 23.61
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:50"
+    },
+    "401866425167": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.7,
+        "away_mean": 22.9,
+        "total_mean": 56.6,
+        "exp_spread_home": -10.800000000000004,
+        "exp_spread_away": 10.800000000000004,
+        "home_win_pct": 76.5,
+        "away_win_pct": 23.5
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:56"
+    },
+    "401866425172": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.2,
+        "away_mean": 22.6,
+        "total_mean": 55.8,
+        "exp_spread_home": -10.600000000000001,
+        "exp_spread_away": 10.600000000000001,
+        "home_win_pct": 76.25,
+        "away_win_pct": 23.75
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:29"
+    },
+    "401866425177": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.0,
+        "away_mean": 22.4,
+        "total_mean": 55.4,
+        "exp_spread_home": -10.600000000000001,
+        "exp_spread_away": 10.600000000000001,
+        "home_win_pct": 76.29,
+        "away_win_pct": 23.71
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:12"
+    },
+    "401866425181": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.4,
+        "away_mean": 22.0,
+        "total_mean": 54.4,
+        "exp_spread_home": -10.399999999999999,
+        "exp_spread_away": 10.399999999999999,
+        "home_win_pct": 76.25999999999999,
+        "away_win_pct": 23.74
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:22"
+    },
+    "401866425366": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 42.7,
+        "away_mean": 21.3,
+        "total_mean": 64.0,
+        "exp_spread_home": -21.400000000000002,
+        "exp_spread_away": 21.400000000000002,
+        "home_win_pct": 93.02,
+        "away_win_pct": 6.98
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:47"
+    },
+    "401866425371": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 42.7,
+        "away_mean": 21.3,
+        "total_mean": 64.0,
+        "exp_spread_home": -21.400000000000002,
+        "exp_spread_away": 21.400000000000002,
+        "home_win_pct": 93.02,
+        "away_win_pct": 6.98
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:47"
+    },
+    "401866425204": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.2,
+        "away_mean": 21.0,
+        "total_mean": 52.2,
+        "exp_spread_home": -10.2,
+        "exp_spread_away": 10.2,
+        "home_win_pct": 76.27000000000001,
+        "away_win_pct": 23.73
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:38"
+    },
+    "401866425207": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 31.2,
+        "away_mean": 20.8,
+        "total_mean": 52.0,
+        "exp_spread_home": -10.399999999999999,
+        "exp_spread_away": 10.399999999999999,
+        "home_win_pct": 76.38000000000001,
+        "away_win_pct": 23.62
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:28"
+    },
+    "401866425211": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.8,
+        "away_mean": 20.6,
+        "total_mean": 51.4,
+        "exp_spread_home": -10.2,
+        "exp_spread_away": 10.2,
+        "home_win_pct": 76.31,
+        "away_win_pct": 23.69
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:00"
+    },
+    "401866425215": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.6,
+        "away_mean": 20.4,
+        "total_mean": 51.0,
+        "exp_spread_home": -10.200000000000003,
+        "exp_spread_away": 10.200000000000003,
+        "home_win_pct": 76.24,
+        "away_win_pct": 23.76
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:27"
+    },
+    "401866425221": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 30.1,
+        "away_mean": 19.9,
+        "total_mean": 50.0,
+        "exp_spread_home": -10.200000000000003,
+        "exp_spread_away": 10.200000000000003,
+        "home_win_pct": 76.68,
+        "away_win_pct": 23.32
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "8:45"
+    },
+    "401866425226": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.9,
+        "away_mean": 19.9,
+        "total_mean": 49.8,
+        "exp_spread_home": -10.0,
+        "exp_spread_away": 10.0,
+        "home_win_pct": 76.21,
+        "away_win_pct": 23.79
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "8:14"
+    },
+    "401866425231": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.5,
+        "away_mean": 19.4,
+        "total_mean": 48.9,
+        "exp_spread_home": -10.100000000000001,
+        "exp_spread_away": 10.100000000000001,
+        "home_win_pct": 76.46,
+        "away_win_pct": 23.54
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:44"
+    },
+    "401866425234": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.4,
+        "away_mean": 19.5,
+        "total_mean": 48.9,
+        "exp_spread_home": -9.899999999999999,
+        "exp_spread_away": 9.899999999999999,
+        "home_win_pct": 76.42,
+        "away_win_pct": 23.580000000000002
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:25"
+    },
+    "401866425242": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.4,
+        "away_mean": 19.4,
+        "total_mean": 48.8,
+        "exp_spread_home": -10.0,
+        "exp_spread_away": 10.0,
+        "home_win_pct": 76.71,
+        "away_win_pct": 23.29
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:04"
+    },
+    "401866425250": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 29.0,
+        "away_mean": 19.0,
+        "total_mean": 48.0,
+        "exp_spread_home": -10.0,
+        "exp_spread_away": 10.0,
+        "home_win_pct": 76.63,
+        "away_win_pct": 23.369999999999997
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:42"
+    },
+    "401866425253": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 28.8,
+        "away_mean": 19.0,
+        "total_mean": 47.8,
+        "exp_spread_home": -9.8,
+        "exp_spread_away": 9.8,
+        "home_win_pct": 76.42999999999999,
+        "away_win_pct": 23.57
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:31"
+    },
+    "401866425256": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 28.4,
+        "away_mean": 18.5,
+        "total_mean": 46.9,
+        "exp_spread_home": -9.899999999999999,
+        "exp_spread_away": 9.899999999999999,
+        "home_win_pct": 76.5,
+        "away_win_pct": 23.5
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:09"
+    },
+    "401866425260": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.7,
+        "away_mean": 18.2,
+        "total_mean": 53.9,
+        "exp_spread_home": -17.500000000000004,
+        "exp_spread_away": 17.500000000000004,
+        "home_win_pct": 90.16999999999999,
+        "away_win_pct": 9.83
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "5:34"
+    },
+    "401866425267": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.7,
+        "away_mean": 18.2,
+        "total_mean": 53.9,
+        "exp_spread_home": -17.500000000000004,
+        "exp_spread_away": 17.500000000000004,
+        "home_win_pct": 90.16999999999999,
+        "away_win_pct": 9.83
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "5:34"
+    },
+    "401866425270": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.5,
+        "away_mean": 17.8,
+        "total_mean": 53.3,
+        "exp_spread_home": -17.7,
+        "exp_spread_away": 17.7,
+        "home_win_pct": 90.32,
+        "away_win_pct": 9.68
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "5:20"
+    },
+    "401866425275": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.2,
+        "away_mean": 17.8,
+        "total_mean": 53.0,
+        "exp_spread_home": -17.400000000000002,
+        "exp_spread_away": 17.400000000000002,
+        "home_win_pct": 90.25,
+        "away_win_pct": 9.75
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "4:46"
+    },
+    "401866425279": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.5,
+        "away_mean": 17.3,
+        "total_mean": 51.8,
+        "exp_spread_home": -17.2,
+        "exp_spread_away": 17.2,
+        "home_win_pct": 90.18,
+        "away_win_pct": 9.82
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "3:53"
+    },
+    "401866425284": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.3,
+        "away_mean": 17.1,
+        "total_mean": 51.4,
+        "exp_spread_home": -17.199999999999996,
+        "exp_spread_away": 17.199999999999996,
+        "home_win_pct": 90.34,
+        "away_win_pct": 9.66
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "3:25"
+    },
+    "401866425288": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.0,
+        "away_mean": 16.7,
+        "total_mean": 50.7,
+        "exp_spread_home": -17.3,
+        "exp_spread_away": 17.3,
+        "home_win_pct": 90.53999999999999,
+        "away_win_pct": 9.46
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:50"
+    },
+    "401866425292": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.5,
+        "away_mean": 16.3,
+        "total_mean": 49.8,
+        "exp_spread_home": -17.2,
+        "exp_spread_away": 17.2,
+        "home_win_pct": 90.74,
+        "away_win_pct": 9.26
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:17"
+    },
+    "401866425298": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.5,
+        "away_mean": 16.4,
+        "total_mean": 49.9,
+        "exp_spread_home": -17.1,
+        "exp_spread_away": 17.1,
+        "home_win_pct": 90.52,
+        "away_win_pct": 9.48
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:09"
+    },
+    "401866425307": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.6,
+        "away_mean": 16.3,
+        "total_mean": 49.9,
+        "exp_spread_home": -17.3,
+        "exp_spread_away": 17.3,
+        "home_win_pct": 90.8,
+        "away_win_pct": 9.2
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:05"
+    },
+    "401866425301": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.5,
+        "away_mean": 16.2,
+        "total_mean": 49.7,
+        "exp_spread_home": -17.3,
+        "exp_spread_away": 17.3,
+        "home_win_pct": 90.8,
+        "away_win_pct": 9.2
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "2:02"
+    },
+    "401866425305": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.4,
+        "away_mean": 16.3,
+        "total_mean": 49.7,
+        "exp_spread_home": -17.099999999999998,
+        "exp_spread_away": 17.099999999999998,
+        "home_win_pct": 90.47,
+        "away_win_pct": 9.53
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "1:59"
+    },
+    "401866425309": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.4,
+        "away_mean": 16.1,
+        "total_mean": 49.5,
+        "exp_spread_home": -17.299999999999997,
+        "exp_spread_away": 17.299999999999997,
+        "home_win_pct": 90.83,
+        "away_win_pct": 9.17
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "1:50"
+    },
+    "401866425319": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.3,
+        "away_mean": 16.2,
+        "total_mean": 49.5,
+        "exp_spread_home": -17.099999999999998,
+        "exp_spread_away": 17.099999999999998,
+        "home_win_pct": 90.63,
+        "away_win_pct": 9.370000000000001
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "1:41"
+    },
+    "401866425313": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.3,
+        "away_mean": 16.2,
+        "total_mean": 49.5,
+        "exp_spread_home": -17.099999999999998,
+        "exp_spread_away": 17.099999999999998,
+        "home_win_pct": 90.63,
+        "away_win_pct": 9.370000000000001
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "1:41"
+    },
+    "401866425317": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.2,
+        "away_mean": 16.1,
+        "total_mean": 49.3,
+        "exp_spread_home": -17.1,
+        "exp_spread_away": 17.1,
+        "home_win_pct": 90.77,
+        "away_win_pct": 9.229999999999999
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "1:34"
+    },
+    "401866425322": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.2,
+        "away_mean": 16.1,
+        "total_mean": 49.3,
+        "exp_spread_home": -17.1,
+        "exp_spread_away": 17.1,
+        "home_win_pct": 90.83,
+        "away_win_pct": 9.17
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "1:32"
+    },
+    "401866425327": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.9,
+        "away_mean": 15.9,
+        "total_mean": 48.8,
+        "exp_spread_home": -17.0,
+        "exp_spread_away": 17.0,
+        "home_win_pct": 90.72,
+        "away_win_pct": 9.28
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "1:14"
+    },
+    "401866425331": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.7,
+        "away_mean": 15.5,
+        "total_mean": 48.2,
+        "exp_spread_home": -17.200000000000003,
+        "exp_spread_away": 17.200000000000003,
+        "home_win_pct": 90.97,
+        "away_win_pct": 9.030000000000001
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:37"
+    },
+    "401866425334": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.5,
+        "away_mean": 15.5,
+        "total_mean": 48.0,
+        "exp_spread_home": -17.0,
+        "exp_spread_away": 17.0,
+        "home_win_pct": 90.95,
+        "away_win_pct": 9.049999999999999
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:31"
+    },
+    "401866425339": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.5,
+        "away_mean": 15.5,
+        "total_mean": 48.0,
+        "exp_spread_home": -17.0,
+        "exp_spread_away": 17.0,
+        "home_win_pct": 90.91,
+        "away_win_pct": 9.09
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:26"
+    },
+    "401866425342": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.5,
+        "away_mean": 15.4,
+        "total_mean": 47.9,
+        "exp_spread_home": -17.1,
+        "exp_spread_away": 17.1,
+        "home_win_pct": 90.94,
+        "away_win_pct": 9.06
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:21"
+    },
+    "401866425345": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.5,
+        "away_mean": 15.4,
+        "total_mean": 47.9,
+        "exp_spread_home": -17.1,
+        "exp_spread_away": 17.1,
+        "home_win_pct": 90.94,
+        "away_win_pct": 9.06
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:21"
+    },
+    "401866425348": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.3,
+        "away_mean": 15.3,
+        "total_mean": 47.6,
+        "exp_spread_home": -16.999999999999996,
+        "exp_spread_away": 16.999999999999996,
+        "home_win_pct": 90.94,
+        "away_win_pct": 9.06
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:14"
+    },
+    "401866425354": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.2,
+        "away_mean": 15.3,
+        "total_mean": 47.5,
+        "exp_spread_home": -16.900000000000002,
+        "exp_spread_away": 16.900000000000002,
+        "home_win_pct": 90.91,
+        "away_win_pct": 9.09
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:03"
+    },
+    "401866425355": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.2,
+        "away_mean": 15.3,
+        "total_mean": 47.5,
+        "exp_spread_home": -16.900000000000002,
+        "exp_spread_away": 16.900000000000002,
+        "home_win_pct": 90.91,
+        "away_win_pct": 9.09
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:03"
+    },
+    "401866425352": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.2,
+        "away_mean": 15.3,
+        "total_mean": 47.5,
+        "exp_spread_home": -16.900000000000002,
+        "exp_spread_away": 16.900000000000002,
+        "home_win_pct": 90.91,
+        "away_win_pct": 9.09
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:03"
+    },
+    "401866425357": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.3,
+        "away_mean": 15.1,
+        "total_mean": 50.4,
+        "exp_spread_home": -20.199999999999996,
+        "exp_spread_away": 20.199999999999996,
+        "home_win_pct": 94.47,
+        "away_win_pct": 5.53
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:03"
+    },
+    "401866425362": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 40.1,
+        "away_mean": 19.1,
+        "total_mean": 59.2,
+        "exp_spread_home": -21.0,
+        "exp_spread_away": 21.0,
+        "home_win_pct": 93.51,
+        "away_win_pct": 6.49
+      },
+      "source": "daemon",
+      "period": 2,
+      "clock": "0:00"
+    },
+    "401866425377": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.2,
+        "away_mean": 14.9,
+        "total_mean": 50.1,
+        "exp_spread_home": -20.300000000000004,
+        "exp_spread_away": 20.300000000000004,
+        "home_win_pct": 94.56,
+        "away_win_pct": 5.4399999999999995
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "14:59"
+    },
+    "401866425384": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 35.3,
+        "away_mean": 14.9,
+        "total_mean": 50.2,
+        "exp_spread_home": -20.4,
+        "exp_spread_away": 20.4,
+        "home_win_pct": 94.64,
+        "away_win_pct": 5.36
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "14:48"
+    },
+    "401866425388": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.9,
+        "away_mean": 14.7,
+        "total_mean": 49.6,
+        "exp_spread_home": -20.2,
+        "exp_spread_away": 20.2,
+        "home_win_pct": 94.58,
+        "away_win_pct": 5.42
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "14:18"
+    },
+    "401866425393": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.5,
+        "away_mean": 14.4,
+        "total_mean": 48.9,
+        "exp_spread_home": -20.1,
+        "exp_spread_away": 20.1,
+        "home_win_pct": 94.67999999999999,
+        "away_win_pct": 5.319999999999999
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "13:35"
+    },
+    "401866425397": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.3,
+        "away_mean": 14.3,
+        "total_mean": 48.6,
+        "exp_spread_home": -19.999999999999996,
+        "exp_spread_away": 19.999999999999996,
+        "home_win_pct": 94.72,
+        "away_win_pct": 5.28
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "13:09"
+    },
+    "401866425402": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 34.1,
+        "away_mean": 14.0,
+        "total_mean": 48.1,
+        "exp_spread_home": -20.1,
+        "exp_spread_away": 20.1,
+        "home_win_pct": 94.85,
+        "away_win_pct": 5.1499999999999995
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "12:50"
+    },
+    "401866425406": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.7,
+        "away_mean": 13.8,
+        "total_mean": 47.5,
+        "exp_spread_home": -19.900000000000002,
+        "exp_spread_away": 19.900000000000002,
+        "home_win_pct": 94.89999999999999,
+        "away_win_pct": 5.1
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "12:21"
+    },
+    "401866425413": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.5,
+        "away_mean": 13.5,
+        "total_mean": 47.0,
+        "exp_spread_home": -20.0,
+        "exp_spread_away": 20.0,
+        "home_win_pct": 95.00999999999999,
+        "away_win_pct": 4.99
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "11:54"
+    },
+    "401866425416": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.3,
+        "away_mean": 13.5,
+        "total_mean": 46.8,
+        "exp_spread_home": -19.799999999999997,
+        "exp_spread_away": 19.799999999999997,
+        "home_win_pct": 94.89999999999999,
+        "away_win_pct": 5.1
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "11:46"
+    },
+    "401866425422": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 33.3,
+        "away_mean": 13.5,
+        "total_mean": 46.8,
+        "exp_spread_home": -19.799999999999997,
+        "exp_spread_away": 19.799999999999997,
+        "home_win_pct": 94.97,
+        "away_win_pct": 5.029999999999999
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "11:40"
+    },
+    "401866425426": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.9,
+        "away_mean": 13.2,
+        "total_mean": 46.1,
+        "exp_spread_home": -19.7,
+        "exp_spread_away": 19.7,
+        "home_win_pct": 94.99,
+        "away_win_pct": 5.01
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "11:02"
+    },
+    "401866425431": {
+      "captured_at": "2026-09-26T17:55:02.380137+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 16.5,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -139,
+          "book": "Kalshi",
+          "liquidity": 1071.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -335,
+          "book": "Kalshi",
+          "liquidity": 1171.0,
+          "line": 39.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": -2222,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Kent State",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 1150,
+          "book": "Novig",
+          "liquidity": 66.0,
+          "line": null,
+          "side": "away",
+          "selection": "Ball State",
+          "market": "ML"
+        }
+      },
+      "sim": {
+        "home_mean": 32.5,
+        "away_mean": 12.8,
+        "total_mean": 45.3,
+        "exp_spread_home": -19.7,
+        "exp_spread_away": 19.7,
+        "home_win_pct": 95.15,
+        "away_win_pct": 4.8500000000000005
+      },
+      "source": "daemon",
+      "period": 3,
+      "clock": "10:22"
+    }
+  }
+}
