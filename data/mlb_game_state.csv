@@ -88634,3 +88634,47 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-27T02:47:52.562Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Top 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.95,Petco Park,,,,,,,,,,,,,,,,0
 2026-09-27T02:47:52.562Z,401817098,Los Angeles Angels at Seattle Mariners,in,Top 4th,Los Angeles Angels,Seattle Mariners,0,1,0.688,T-Mobile Park,,,,,,,,,,,,,,,,0
 2026-09-27T02:47:52.562Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.232,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:48:16.740Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,10,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:48:16.740Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Top 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.95,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:48:16.740Z,401817098,Los Angeles Angels at Seattle Mariners,in,Middle 4th,Los Angeles Angels,Seattle Mariners,0,1,0.727,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:48:16.740Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.232,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:48:47.282Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,10,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:48:47.282Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Top 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.95,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:48:47.282Z,401817098,Los Angeles Angels at Seattle Mariners,in,Middle 4th,Los Angeles Angels,Seattle Mariners,0,1,0.727,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:48:47.282Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.232,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:49:17.754Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,10,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:49:17.754Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Top 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.959,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:49:17.754Z,401817098,Los Angeles Angels at Seattle Mariners,in,Middle 4th,Los Angeles Angels,Seattle Mariners,0,1,0.727,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:49:17.754Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.232,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:49:48.103Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,12,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:49:48.103Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Middle 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.959,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:49:48.103Z,401817098,Los Angeles Angels at Seattle Mariners,in,Bottom 4th,Los Angeles Angels,Seattle Mariners,0,1,0.727,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:49:48.103Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.232,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:50:18.427Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,12,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:50:18.427Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Middle 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.959,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:50:18.427Z,401817098,Los Angeles Angels at Seattle Mariners,in,Bottom 4th,Los Angeles Angels,Seattle Mariners,0,1,0.727,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:50:18.427Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.212,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:50:49.343Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,12,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:50:49.343Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Middle 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.959,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:50:49.343Z,401817098,Los Angeles Angels at Seattle Mariners,in,Bottom 4th,Los Angeles Angels,Seattle Mariners,0,1,0.727,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:50:49.343Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.212,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:51:19.985Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,12,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:51:19.985Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.959,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:51:19.985Z,401817098,Los Angeles Angels at Seattle Mariners,in,Bottom 4th,Los Angeles Angels,Seattle Mariners,0,1,0.727,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:51:19.985Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.212,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:51:50.518Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,12,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:51:50.518Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.959,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:51:50.518Z,401817098,Los Angeles Angels at Seattle Mariners,in,Bottom 4th,Los Angeles Angels,Seattle Mariners,0,1,0.727,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:51:50.518Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,3,1,0.212,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:52:20.723Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,12,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:52:20.723Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.959,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:52:20.723Z,401817098,Los Angeles Angels at Seattle Mariners,in,Bottom 4th,Los Angeles Angels,Seattle Mariners,0,1,0.753,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:52:20.723Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,6,1,0.212,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:52:51.195Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 9th,Tampa Bay Rays,Philadelphia Phillies,12,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:52:51.195Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.959,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:52:51.195Z,401817098,Los Angeles Angels at Seattle Mariners,in,Bottom 4th,Los Angeles Angels,Seattle Mariners,0,1,0.794,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:52:51.195Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,6,1,0.055,Sutter Health Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:53:21.498Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Middle 9th,Tampa Bay Rays,Philadelphia Phillies,12,1,0.001,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:53:21.498Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 6th,Arizona Diamondbacks,San Diego Padres,4,8,0.956,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:53:21.498Z,401817098,Los Angeles Angels at Seattle Mariners,in,Bottom 4th,Los Angeles Angels,Seattle Mariners,0,1,0.794,T-Mobile Park,,,,,,,,,,,,,,,,0
+2026-09-27T02:53:21.498Z,401817100,Houston Astros at Athletics Athletics,in,Top 5th,Houston Astros,Athletics,6,1,0.055,Sutter Health Park,,,,,,,,,,,,,,,,0
