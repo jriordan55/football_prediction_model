@@ -87617,3 +87617,61 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-27T00:58:57.392Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,End 6th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.793,American Family Field,,,,,,,,,,,,,,,,0
 2026-09-27T00:58:57.392Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Bottom 4th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.167,Citizens Bank Park,,,,,,,,,,,,,,,,0
 2026-09-27T00:58:57.392Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.699,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:22.212Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 9th,Texas Rangers,Minnesota Twins,6,2,0.004,Target Field,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:22.212Z,401817094,Cleveland Guardians at Kansas City Royals,in,Bottom 7th,Cleveland Guardians,Kansas City Royals,7,3,0.043,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:22.212Z,401817095,Colorado Rockies at Chicago White Sox,in,Bottom 6th,Colorado Rockies,Chicago White Sox,5,2,0.2,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:22.212Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,End 6th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.793,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:22.212Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Bottom 4th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.167,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:22.212Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:52.751Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 9th,Texas Rangers,Minnesota Twins,6,2,0.004,Target Field,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:52.751Z,401817094,Cleveland Guardians at Kansas City Royals,in,Bottom 7th,Cleveland Guardians,Kansas City Royals,7,3,0.043,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:52.751Z,401817095,Colorado Rockies at Chicago White Sox,in,Bottom 6th,Colorado Rockies,Chicago White Sox,5,2,0.2,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:52.751Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.793,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:52.751Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Bottom 4th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.152,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T00:59:52.751Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:23.221Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 9th,Texas Rangers,Minnesota Twins,6,2,0.001,Target Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:23.221Z,401817094,Cleveland Guardians at Kansas City Royals,in,Bottom 7th,Cleveland Guardians,Kansas City Royals,7,3,0.035,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:23.221Z,401817095,Colorado Rockies at Chicago White Sox,in,Bottom 6th,Colorado Rockies,Chicago White Sox,5,2,0.2,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:23.221Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.793,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:23.221Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Bottom 4th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.152,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:23.221Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:54.693Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 9th,Texas Rangers,Minnesota Twins,6,2,0.001,Target Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:54.693Z,401817094,Cleveland Guardians at Kansas City Royals,in,Bottom 7th,Cleveland Guardians,Kansas City Royals,7,3,0.035,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:54.693Z,401817095,Colorado Rockies at Chicago White Sox,in,Bottom 6th,Colorado Rockies,Chicago White Sox,5,2,0.2,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:54.693Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.793,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:54.693Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,End 4th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.152,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:00:54.693Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:25.545Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 9th,Texas Rangers,Minnesota Twins,6,2,0.001,Target Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:25.545Z,401817094,Cleveland Guardians at Kansas City Royals,in,Bottom 7th,Cleveland Guardians,Kansas City Royals,7,3,0.035,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:25.545Z,401817095,Colorado Rockies at Chicago White Sox,in,Bottom 6th,Colorado Rockies,Chicago White Sox,5,2,0.2,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:25.545Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.793,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:25.545Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,End 4th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.144,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:25.545Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:57.124Z,401817097,Texas Rangers at Minnesota Twins,in,Bottom 9th,Texas Rangers,Minnesota Twins,6,2,0.001,Target Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:57.124Z,401817094,Cleveland Guardians at Kansas City Royals,in,End 7th,Cleveland Guardians,Kansas City Royals,7,3,0.031,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:57.124Z,401817095,Colorado Rockies at Chicago White Sox,in,End 6th,Colorado Rockies,Chicago White Sox,5,2,0.138,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:57.124Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.827,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:57.124Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,End 4th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.144,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:01:57.124Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:02:32.848Z,401817097,Texas Rangers at Minnesota Twins,in,End 9th,Texas Rangers,Minnesota Twins,6,2,0,Target Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:02:32.848Z,401817094,Cleveland Guardians at Kansas City Royals,in,End 7th,Cleveland Guardians,Kansas City Royals,7,3,0.031,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T01:02:32.848Z,401817095,Colorado Rockies at Chicago White Sox,in,End 6th,Colorado Rockies,Chicago White Sox,5,2,0.138,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:02:32.848Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.827,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:02:32.848Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,End 4th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.144,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:02:32.848Z,401817099,Arizona Diamondbacks at San Diego Padres,in,Bottom 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:03.392Z,401817097,Texas Rangers at Minnesota Twins,in,End 9th,Texas Rangers,Minnesota Twins,6,2,0,Target Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:03.392Z,401817094,Cleveland Guardians at Kansas City Royals,in,Top 8th,Cleveland Guardians,Kansas City Royals,7,3,0.031,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:03.392Z,401817095,Colorado Rockies at Chicago White Sox,in,End 6th,Colorado Rockies,Chicago White Sox,5,2,0.138,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:03.392Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.827,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:03.392Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 5th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.144,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:03.392Z,401817099,Arizona Diamondbacks at San Diego Padres,in,End 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:33.915Z,401817094,Cleveland Guardians at Kansas City Royals,in,Top 8th,Cleveland Guardians,Kansas City Royals,7,3,0.031,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:33.915Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 7th,Colorado Rockies,Chicago White Sox,5,2,0.138,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:33.915Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.827,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:33.915Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 5th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.144,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:03:33.915Z,401817099,Arizona Diamondbacks at San Diego Padres,in,End 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:04:04.311Z,401817094,Cleveland Guardians at Kansas City Royals,in,Top 8th,Cleveland Guardians,Kansas City Royals,7,3,0.031,Kauffman Stadium,,,,,,,,,,,,,,,,0
+2026-09-27T01:04:04.311Z,401817095,Colorado Rockies at Chicago White Sox,in,Top 7th,Colorado Rockies,Chicago White Sox,5,2,0.138,Rate Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:04:04.311Z,401817096,St. Louis Cardinals at Milwaukee Brewers,in,Top 7th,St. Louis Cardinals,Milwaukee Brewers,2,3,0.85,American Family Field,,,,,,,,,,,,,,,,0
+2026-09-27T01:04:04.311Z,401817093,Tampa Bay Rays at Philadelphia Phillies,in,Top 5th,Tampa Bay Rays,Philadelphia Phillies,3,0,0.144,Citizens Bank Park,,,,,,,,,,,,,,,,0
+2026-09-27T01:04:04.311Z,401817099,Arizona Diamondbacks at San Diego Padres,in,End 1st,Arizona Diamondbacks,San Diego Padres,0,1,0.639,Petco Park,,,,,,,,,,,,,,,,0

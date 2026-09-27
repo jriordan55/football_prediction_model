@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-27T00:58:57.392Z",
+  "capturedAt": "2026-09-27T01:04:04.311Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 12,
-  "gameStates": 6,
+  "newPlays": 4,
+  "gameStates": 5,
   "injuries": 0,
-  "liveGames": 6,
+  "liveGames": 5,
   "games": [
     {
       "id": "401817091",
@@ -230,11 +230,11 @@
       "id": "401817097",
       "name": "Texas Rangers at Minnesota Twins",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Bottom 9th",
-        "shortDetail": "Bot 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "13",
@@ -245,7 +245,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tex.png",
         "score": "6",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "home": {
         "id": "9",
@@ -267,8 +267,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 7th",
-        "shortDetail": "Bot 7th"
+        "detail": "Top 8th",
+        "shortDetail": "Top 8th"
       },
       "away": {
         "id": "5",
@@ -301,8 +301,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 6th",
-        "shortDetail": "Bot 6th"
+        "detail": "Top 7th",
+        "shortDetail": "Top 7th"
       },
       "away": {
         "id": "27",
@@ -335,8 +335,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "End 6th",
-        "shortDetail": "End 6th"
+        "detail": "Top 7th",
+        "shortDetail": "Top 7th"
       },
       "away": {
         "id": "24",
@@ -369,8 +369,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 4th",
-        "shortDetail": "Bot 4th"
+        "detail": "Top 5th",
+        "shortDetail": "Top 5th"
       },
       "away": {
         "id": "30",
@@ -403,8 +403,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 1st",
-        "shortDetail": "Bot 1st"
+        "detail": "End 1st",
+        "shortDetail": "End 1st"
       },
       "away": {
         "id": "29",
