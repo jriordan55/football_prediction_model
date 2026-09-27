@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-27T03:42:57.540Z",
+  "capturedAt": "2026-09-27T03:48:28.997Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 10,
+  "newPlays": 8,
   "gameStates": 3,
   "injuries": 0,
   "liveGames": 3,
@@ -413,7 +413,7 @@
         "name": "Arizona Diamondbacks",
         "shortName": "Diamondbacks",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/ari.png",
-        "score": "4",
+        "score": "7",
         "record": "",
         "winner": false
       },
