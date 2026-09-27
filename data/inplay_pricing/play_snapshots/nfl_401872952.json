@@ -1,0 +1,1027 @@
+{
+  "sport": "nfl",
+  "event_id": "401872952",
+  "updated_at": "2026-09-27T17:16:13.776381+00:00",
+  "plays": {
+    "4018729521": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295240": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295263": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:55"
+    },
+    "40187295288": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:10"
+    },
+    "401872952113": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:34"
+    },
+    "401872952168": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:54"
+    },
+    "401872952135": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:54"
+    },
+    "401872952175": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:54"
+    },
+    "401872952216": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:47"
+    },
+    "401872952238": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:14"
+    },
+    "401872952260": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:28"
+    },
+    "401872952294": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:47"
+    },
+    "401872952317": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:42"
+    },
+    "401872952342": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:12"
+    },
+    "401872952369": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": 14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": -114,
+          "book": "ProphetX",
+          "liquidity": 790.18,
+          "line": -14.5,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "betfair",
+          "price": -114,
+          "book": "Betfair",
+          "liquidity": 1376.0,
+          "line": 47.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 1137,
+          "book": "Kalshi",
+          "line": 47.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarketus",
+          "price": 1076,
+          "book": "Polymarket US",
+          "liquidity": 10900.0,
+          "line": null,
+          "side": "home",
+          "selection": "Miami Dolphins",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "betfair",
+          "price": -935,
+          "book": "Betfair",
+          "liquidity": 7336.0,
+          "line": null,
+          "side": "away",
+          "selection": "Kansas City Chiefs",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:39"
+    }
+  }
+}

@@ -1,0 +1,1042 @@
+{
+  "sport": "nfl",
+  "event_id": "401872951",
+  "updated_at": "2026-09-27T17:16:12.993621+00:00",
+  "plays": {
+    "4018729511": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295140": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295163": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:53"
+    },
+    "40187295190": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:13"
+    },
+    "401872951124": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:10"
+    },
+    "401872951147": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:32"
+    },
+    "401872951173": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:20"
+    },
+    "401872951198": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:37"
+    },
+    "401872951220": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:04"
+    },
+    "401872951242": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:28"
+    },
+    "401872951293": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:17"
+    },
+    "401872951335": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:13"
+    },
+    "401872951359": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:32"
+    },
+    "401872951384": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:47"
+    },
+    "401872951396": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": 1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 6597.0,
+          "line": -1.5,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 156,
+          "book": "Polymarket",
+          "liquidity": 902.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -164,
+          "book": "Polymarket",
+          "liquidity": 1683.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 74378.0,
+          "line": null,
+          "side": "home",
+          "selection": "Indianapolis Colts",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": 110,
+          "book": "Novig",
+          "liquidity": 1801.0,
+          "line": null,
+          "side": "away",
+          "selection": "Houston Texans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:42"
+    }
+  }
+}

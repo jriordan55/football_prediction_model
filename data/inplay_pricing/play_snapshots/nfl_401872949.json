@@ -1,0 +1,995 @@
+{
+  "sport": "nfl",
+  "event_id": "401872949",
+  "updated_at": "2026-09-27T17:16:11.028387+00:00",
+  "plays": {
+    "4018729491": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187294940": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187294963": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:56"
+    },
+    "40187294985": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:27"
+    },
+    "401872949109": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:10"
+    },
+    "401872949134": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:41"
+    },
+    "401872949156": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:03"
+    },
+    "401872949191": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:56"
+    },
+    "401872949213": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:10"
+    },
+    "401872949250": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:00"
+    },
+    "401872949272": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:25"
+    },
+    "401872949299": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:52"
+    },
+    "401872949322": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:34"
+    },
+    "401872949344": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:13"
+    },
+    "401872949366": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:32"
+    },
+    "401872949389": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:26"
+    },
+    "401872949412": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:22"
+    },
+    "401872949442": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:41"
+    },
+    "401872949452": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 5505.0,
+          "line": 2.5,
+          "side": "home",
+          "selection": "Cleveland Browns",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8192.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 392.0,
+          "line": 39.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 39.5
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -113,
+          "book": "Polymarket",
+          "liquidity": 53965.0,
+          "line": null,
+          "side": "away",
+          "selection": "Carolina Panthers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:34"
+    }
+  }
+}

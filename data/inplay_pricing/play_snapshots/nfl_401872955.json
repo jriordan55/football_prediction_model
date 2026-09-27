@@ -1,0 +1,959 @@
+{
+  "sport": "nfl",
+  "event_id": "401872955",
+  "updated_at": "2026-09-27T17:16:16.737564+00:00",
+  "plays": {
+    "4018729551": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295540": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295568": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:55"
+    },
+    "40187295590": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:18"
+    },
+    "401872955118": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:11"
+    },
+    "401872955140": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:30"
+    },
+    "401872955170": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:51"
+    },
+    "401872955194": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:36"
+    },
+    "401872955203": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:28"
+    },
+    "401872955212": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:28"
+    },
+    "401872955244": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:52"
+    },
+    "401872955266": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:20"
+    },
+    "401872955289": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "11:17"
+    },
+    "401872955302": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": 100,
+          "book": "Polymarket",
+          "liquidity": 3739.0,
+          "line": 7.5,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": -109,
+          "book": "Polymarket",
+          "liquidity": 3623.0,
+          "line": -7.5,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": -104,
+          "book": "ProphetX",
+          "liquidity": 1563.42,
+          "line": 37.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 37.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": 354,
+          "book": "Polymarket",
+          "liquidity": 12937.0,
+          "line": null,
+          "side": "home",
+          "selection": "Washington Commanders",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -377,
+          "book": "Polymarket",
+          "liquidity": 1312.0,
+          "line": null,
+          "side": "away",
+          "selection": "Seattle Seahawks",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "11:06"
+    }
+  }
+}

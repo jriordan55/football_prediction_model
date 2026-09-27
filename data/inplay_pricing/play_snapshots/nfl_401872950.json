@@ -1,0 +1,1079 @@
+{
+  "sport": "nfl",
+  "event_id": "401872950",
+  "updated_at": "2026-09-27T17:16:15.931972+00:00",
+  "plays": {
+    "4018729501": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295040": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295063": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:55"
+    },
+    "40187295088": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:08"
+    },
+    "401872950113": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:22"
+    },
+    "401872950125": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:17"
+    },
+    "401872950177": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:10"
+    },
+    "401872950136": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:10"
+    },
+    "401872950184": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:10"
+    },
+    "401872950216": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:02"
+    },
+    "401872950241": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:25"
+    },
+    "401872950263": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:41"
+    },
+    "401872950285": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "11:02"
+    },
+    "401872950298": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:21"
+    },
+    "401872950310": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:21"
+    },
+    "401872950342": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "kalshi",
+          "price": 122,
+          "book": "Kalshi",
+          "liquidity": 3162.0,
+          "line": -1.5,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -120,
+          "book": "bet365",
+          "line": 1.5,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "kalshi",
+          "price": -144,
+          "book": "Kalshi",
+          "liquidity": 5701.0,
+          "line": 46.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": 132,
+          "book": "Kalshi",
+          "liquidity": 6070.0,
+          "line": 46.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "novig",
+          "price": 127,
+          "book": "Novig",
+          "liquidity": 2199.0,
+          "line": null,
+          "side": "home",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Cincinnati Bengals",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:48"
+    }
+  }
+}

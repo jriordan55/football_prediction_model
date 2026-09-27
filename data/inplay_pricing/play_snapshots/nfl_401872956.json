@@ -1,0 +1,735 @@
+{
+  "sport": "nfl",
+  "event_id": "401872956",
+  "updated_at": "2026-09-27T17:16:15.069693+00:00",
+  "plays": {
+    "4018729561": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295640": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295679": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:51"
+    },
+    "401872956101": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:09"
+    },
+    "401872956128": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:33"
+    },
+    "401872956161": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:09"
+    },
+    "401872956184": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:06"
+    },
+    "401872956206": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:26"
+    },
+    "401872956229": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:22"
+    },
+    "401872956239": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:13"
+    },
+    "401872956249": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:13"
+    },
+    "401872956265": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:01"
+    },
+    "401872956281": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 119,
+          "book": "ProphetX",
+          "liquidity": 4367.0,
+          "line": -3.5,
+          "side": "home",
+          "selection": "New York Giants",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "bet365",
+          "price": -135,
+          "book": "bet365",
+          "line": 3.5,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "prophetx",
+          "price": 112,
+          "book": "ProphetX",
+          "liquidity": 3657.0,
+          "line": 36.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 36.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "bet365",
+          "price": 140,
+          "book": "bet365",
+          "line": null,
+          "side": "away",
+          "selection": "Tennessee Titans",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "11:48"
+    }
+  }
+}

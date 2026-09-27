@@ -1,0 +1,938 @@
+{
+  "sport": "nfl",
+  "event_id": "401872954",
+  "updated_at": "2026-09-27T17:16:12.117034+00:00",
+  "plays": {
+    "4018729541": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295440": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295463": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:56"
+    },
+    "40187295488": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:19"
+    },
+    "401872954110": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:35"
+    },
+    "401872954132": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:54"
+    },
+    "401872954152": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:47"
+    },
+    "401872954182": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:21"
+    },
+    "401872954207": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:55"
+    },
+    "401872954230": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:53"
+    },
+    "401872954255": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:13"
+    },
+    "401872954279": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:35"
+    },
+    "401872954309": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:14"
+    },
+    "401872954334": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:30"
+    },
+    "401872954356": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:59"
+    },
+    "401872954384": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:54"
+    },
+    "401872954404": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:21"
+    },
+    "401872954414": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:12"
+    },
+    "401872954424": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "novig",
+          "price": 1060,
+          "book": "Novig",
+          "line": -6.5,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 1098,
+          "book": "Novig",
+          "line": 6.5,
+          "side": "away",
+          "selection": "New York Jets",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 44.5
+        },
+        "total_under": {
+          "book_id": "bet365",
+          "price": -115,
+          "book": "bet365",
+          "line": 44.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -311,
+          "book": "Betfair",
+          "liquidity": 5745.0,
+          "line": null,
+          "side": "home",
+          "selection": "Detroit Lions",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:12"
+    }
+  }
+}
