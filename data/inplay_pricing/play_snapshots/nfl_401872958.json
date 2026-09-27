@@ -1,0 +1,384 @@
+{
+  "sport": "nfl",
+  "event_id": "401872958",
+  "updated_at": "2026-09-27T20:13:30.965261+00:00",
+  "plays": {
+    "4018729581": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295839": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295862": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:55"
+    },
+    "40187295884": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:23"
+    },
+    "401872958107": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:21"
+    },
+    "401872958132": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:42"
+    },
+    "401872958154": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:06"
+    },
+    "401872958176": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:26"
+    },
+    "401872958206": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:47"
+    },
+    "401872958236": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:43"
+    },
+    "401872958269": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:05"
+    },
+    "401872958291": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:29"
+    },
+    "401872958303": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 48.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "betfair",
+          "price": -321,
+          "book": "Betfair",
+          "liquidity": 9252.0,
+          "line": null,
+          "side": "home",
+          "selection": "San Francisco 49ers",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:22"
+    }
+  }
+}

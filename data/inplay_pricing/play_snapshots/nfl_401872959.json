@@ -1,0 +1,359 @@
+{
+  "sport": "nfl",
+  "event_id": "401872959",
+  "updated_at": "2026-09-27T20:13:32.963782+00:00",
+  "plays": {
+    "4018729591": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295939": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295962": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:54"
+    },
+    "40187295987": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:11"
+    },
+    "401872959109": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:30"
+    },
+    "401872959131": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:55"
+    },
+    "401872959153": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:14"
+    },
+    "401872959175": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:33"
+    },
+    "401872959206": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:07"
+    },
+    "401872959241": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:20"
+    },
+    "401872959231": {
+      "captured_at": "2026-09-27T20:12:49.904557+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "betfair",
+          "price": 106,
+          "book": "Betfair",
+          "liquidity": 1862.0,
+          "line": 43.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 43.5
+        },
+        "ml_away": {
+          "book_id": "novig",
+          "price": -118,
+          "book": "Novig",
+          "liquidity": 2700.0,
+          "line": null,
+          "side": "away",
+          "selection": "Minnesota Vikings",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:20"
+    }
+  }
+}
