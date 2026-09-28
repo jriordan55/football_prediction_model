@@ -1,0 +1,5311 @@
+{
+  "sport": "nfl",
+  "event_id": "401872962",
+  "updated_at": "2026-09-28T01:36:13.593335+00:00",
+  "plays": {
+    "4018729621": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187296239": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187296262": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:55"
+    },
+    "40187296292": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:26"
+    },
+    "401872962114": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:49"
+    },
+    "401872962139": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:10"
+    },
+    "401872962161": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:29"
+    },
+    "401872962183": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:50"
+    },
+    "401872962206": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:44"
+    },
+    "401872962226": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:05"
+    },
+    "401872962246": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:58"
+    },
+    "401872962253": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:58"
+    },
+    "401872962275": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:23"
+    },
+    "401872962300": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:43"
+    },
+    "401872962323": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:36"
+    },
+    "401872962342": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:27"
+    },
+    "401872962349": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:27"
+    },
+    "401872962374": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:50"
+    },
+    "401872962396": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:14"
+    },
+    "401872962418": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:35"
+    },
+    "401872962441": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:30"
+    },
+    "401872962466": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:07"
+    },
+    "401872962531": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:32"
+    },
+    "401872962554": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:27"
+    },
+    "401872962587": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:49"
+    },
+    "401872962609": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:05"
+    },
+    "401872962621": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:00"
+    },
+    "401872962684": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:55"
+    },
+    "401872962632": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:55"
+    },
+    "401872962691": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:55"
+    },
+    "401872962715": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:55"
+    },
+    "401872962738": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:50"
+    },
+    "401872962763": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:11"
+    },
+    "401872962785": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:39"
+    },
+    "401872962815": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:57"
+    },
+    "401872962842": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:18"
+    },
+    "401872962876": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:13"
+    },
+    "401872962899": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:04"
+    },
+    "401872962926": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:27"
+    },
+    "401872962949": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:23"
+    },
+    "401872962960": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:19"
+    },
+    "401872962970": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:19"
+    },
+    "401872962999": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:37"
+    },
+    "4018729621021": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:00"
+    },
+    "4018729621041": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "15:00"
+    },
+    "4018729621074": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:26"
+    },
+    "4018729621104": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:46"
+    },
+    "4018729621127": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:43"
+    },
+    "4018729621160": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:24"
+    },
+    "4018729621193": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:17"
+    },
+    "4018729621183": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:17"
+    },
+    "4018729621203": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:17"
+    },
+    "4018729621233": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:12"
+    },
+    "4018729621255": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:36"
+    },
+    "4018729621280": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:55"
+    },
+    "4018729621303": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:51"
+    },
+    "4018729621323": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:45"
+    },
+    "4018729621346": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:40"
+    },
+    "4018729621371": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:03"
+    },
+    "4018729621405": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:59"
+    },
+    "4018729621427": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:21"
+    },
+    "4018729621452": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:36"
+    },
+    "4018729621477": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:05"
+    },
+    "4018729621502": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "8:19"
+    },
+    "4018729621525": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "8:16"
+    },
+    "4018729621540": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:41"
+    },
+    "4018729621555": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:41"
+    },
+    "4018729621585": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:36"
+    },
+    "4018729621615": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:56"
+    },
+    "4018729621639": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:36"
+    },
+    "4018729621662": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:33"
+    },
+    "4018729621703": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:16"
+    },
+    "4018729621725": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "5:35"
+    },
+    "4018729621760": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "4:43"
+    },
+    "4018729621750": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "4:43"
+    },
+    "4018729621770": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "4:43"
+    },
+    "4018729621800": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "4:38"
+    },
+    "4018729621833": {
+      "captured_at": "2026-09-28T01:36:09.975827+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "polymarket",
+          "price": -118,
+          "book": "Polymarket",
+          "liquidity": 7284.0,
+          "line": 9.5,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 3722.0,
+          "line": -9.5,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "novig",
+          "price": 159,
+          "book": "Novig",
+          "liquidity": 651.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "kalshi",
+          "price": -195,
+          "book": "Kalshi",
+          "liquidity": 2267.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 500,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Denver Broncos",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": -335,
+          "book": "Polymarket",
+          "liquidity": 3180.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Rams",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "4:14"
+    }
+  }
+}
