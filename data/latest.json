@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-29T20:32:51.578Z",
+  "capturedAt": "2026-09-29T20:38:18.352Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -63,8 +63,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 8th",
-        "shortDetail": "Bot 8th"
+        "detail": "End 8th",
+        "shortDetail": "End 8th"
       },
       "away": {
         "id": "22",
@@ -84,7 +84,7 @@
         "name": "Atlanta Braves",
         "shortName": "Braves",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
-        "score": "2",
+        "score": "5",
         "record": "",
         "winner": false
       },
