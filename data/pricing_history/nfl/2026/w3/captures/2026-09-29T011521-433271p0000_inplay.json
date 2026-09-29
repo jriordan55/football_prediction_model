@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "sport": "nfl",
+  "year": 2026,
+  "week": 3,
+  "captured_at": "2026-09-29T01:15:21.433271+00:00",
+  "capture_type": "inplay",
+  "methodology": {
+    "version": 6,
+    "game_sim": "pricing_engine.simulator.run_matchup_simulation",
+    "props": "pricing_engine.ui.props_table.compute_prop_projection",
+    "pit": "pricing_engine.pit",
+    "sims": 3000
+  },
+  "source": "inplay_runner",
+  "games": [
+    {
+      "home": "Chicago Bears",
+      "away": "Philadelphia Eagles",
+      "event_id": "401872963",
+      "pregame_captured_at": null,
+      "pregame_capture_type": null,
+      "new_plays": 61,
+      "rows_written": 366,
+      "last_play": {
+        "id": "4018729631527",
+        "text": "Official Timeout at 06:14.",
+        "type": "Official Timeout",
+        "period": 2,
+        "clock": "6:14",
+        "scoringPlay": false,
+        "scoreValue": 0,
+        "awayScore": 0,
+        "homeScore": 7,
+        "down": 1,
+        "distance": 10,
+        "yardLine": 20,
+        "possession": "CHI 20"
+      },
+      "odds_quotes": [
+        {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread",
+          "market_key": "Spread"
+        },
+        {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread",
+          "market_key": "Spread"
+        },
+        {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over",
+          "market_key": "Total"
+        },
+        {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under",
+          "market_key": "Total"
+        },
+        {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML",
+          "market_key": "ML"
+        },
+        {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML",
+          "market_key": "ML"
+        }
+      ],
+      "sim": {
+        "error": "no_ratings",
+        "home": "Chicago Bears",
+        "away": "Philadelphia Eagles"
+      },
+      "props": []
+    }
+  ]
+}

@@ -612,7 +612,19 @@
       "quote_count": 6,
       "prop_count": 0,
       "source": "inplay_runner"
+    },
+    {
+      "sport": "nfl",
+      "year": 2026,
+      "week": 3,
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "capture_type": "inplay",
+      "path": "nfl/2026/w3/captures/2026-09-29T011521-433271p0000_inplay.json",
+      "game_count": 1,
+      "quote_count": 6,
+      "prop_count": 0,
+      "source": "inplay_runner"
     }
   ],
-  "updated_at": "2026-09-28T01:36:13.624035+00:00"
+  "updated_at": "2026-09-29T01:15:25.165832+00:00"
 }
