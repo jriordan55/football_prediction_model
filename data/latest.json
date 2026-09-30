@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-30T02:04:45.300Z",
+  "capturedAt": "2026-09-30T02:09:56.176Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 0,
-  "gameStates": 1,
+  "newPlays": 3,
+  "gameStates": 2,
   "injuries": 0,
-  "liveGames": 1,
+  "liveGames": 2,
   "games": [
     {
       "id": "401907965",
@@ -162,11 +162,11 @@
       "id": "401907974",
       "name": "Chicago Cubs at San Diego Padres",
       "status": {
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "description": "Scheduled",
-        "detail": "Scheduled",
-        "shortDetail": "9/29 - 10:00 PM EDT"
+        "description": "In Progress",
+        "detail": "Top 1st",
+        "shortDetail": "Top 1st"
       },
       "away": {
         "id": "16",
