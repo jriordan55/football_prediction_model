@@ -1,6 +1,6 @@
 {
-  "capturedAt": "2026-09-30T14:03:22.136Z",
-  "mode": "prematch",
+  "capturedAt": "2026-09-30T19:18:04.818Z",
+  "mode": "inplay",
   "sport": "MLB",
   "markets": [
     "Moneyline",
@@ -51,20 +51,20 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 0,
-  "gameStates": 0,
+  "newPlays": 3,
+  "gameStates": 1,
   "injuries": 0,
-  "liveGames": 0,
+  "liveGames": 1,
   "games": [
     {
-      "id": "401907965",
+      "id": "401907972",
       "name": "Philadelphia Phillies at Atlanta Braves",
       "status": {
-        "state": "post",
-        "completed": true,
-        "description": "Final",
-        "detail": "Final",
-        "shortDetail": "Final"
+        "state": "in",
+        "completed": false,
+        "description": "In Progress",
+        "detail": "Middle 4th",
+        "shortDetail": "Mid 4th"
       },
       "away": {
         "id": "22",
@@ -73,7 +73,7 @@
         "name": "Philadelphia Phillies",
         "shortName": "Phillies",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
-        "score": "3",
+        "score": "1",
         "record": "",
         "winner": false
       },
@@ -84,21 +84,21 @@
         "name": "Atlanta Braves",
         "shortName": "Braves",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
-        "score": "5",
+        "score": "1",
         "record": "",
-        "winner": true
+        "winner": false
       },
       "matchedEvent": null
     },
     {
-      "id": "401907896",
+      "id": "401907897",
       "name": "Chicago White Sox at Houston Astros",
       "status": {
-        "state": "post",
-        "completed": true,
-        "description": "Final",
-        "detail": "Final",
-        "shortDetail": "Final"
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "9/30 - 5:00 PM EDT"
       },
       "away": {
         "id": "4",
@@ -107,9 +107,9 @@
         "name": "Chicago White Sox",
         "shortName": "White Sox",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chw.png",
-        "score": "6",
+        "score": "0",
         "record": "",
-        "winner": true
+        "winner": false
       },
       "home": {
         "id": "18",
@@ -118,21 +118,21 @@
         "name": "Houston Astros",
         "shortName": "Astros",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
-        "score": "3",
+        "score": "0",
         "record": "",
         "winner": false
       },
       "matchedEvent": null
     },
     {
-      "id": "401907924",
+      "id": "401907963",
       "name": "Boston Red Sox at New York Yankees",
       "status": {
-        "state": "post",
-        "completed": true,
-        "description": "Final",
-        "detail": "Final",
-        "shortDetail": "Final"
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "9/30 - 8:00 PM EDT"
       },
       "away": {
         "id": "2",
@@ -152,21 +152,21 @@
         "name": "New York Yankees",
         "shortName": "Yankees",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
-        "score": "9",
+        "score": "0",
         "record": "",
-        "winner": true
+        "winner": false
       },
       "matchedEvent": null
     },
     {
-      "id": "401907974",
+      "id": "401907975",
       "name": "Chicago Cubs at San Diego Padres",
       "status": {
-        "state": "post",
-        "completed": true,
-        "description": "Final",
-        "detail": "Final",
-        "shortDetail": "Final"
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "9/30 - 10:00 PM EDT"
       },
       "away": {
         "id": "16",
@@ -186,13 +186,12 @@
         "name": "San Diego Padres",
         "shortName": "Padres",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
-        "score": "8",
+        "score": "0",
         "record": "",
-        "winner": true
+        "winner": false
       },
       "matchedEvent": null
     }
   ],
-  "odds": [],
-  "details": []
+  "odds": []
 }
