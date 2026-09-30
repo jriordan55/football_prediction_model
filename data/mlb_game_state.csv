@@ -91207,3 +91207,19 @@ captured_at,event_id,game,state,status_detail,away_team,home_team,away_score,hom
 2026-09-30T02:14:27.563Z,401907974,Chicago Cubs at San Diego Padres,in,Top 1st,Chicago Cubs,San Diego Padres,0,0,0.56,Petco Park,,,,,,,,,,,,,,,,0
 2026-09-30T02:15:07.121Z,401907924,Boston Red Sox at New York Yankees,in,End 6th,Boston Red Sox,New York Yankees,0,2,0.845,Yankee Stadium,,,,,,,,,,,,,,,,0
 2026-09-30T02:15:07.121Z,401907974,Chicago Cubs at San Diego Padres,in,Middle 1st,Chicago Cubs,San Diego Padres,0,0,0.567,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-30T02:15:40.535Z,401907924,Boston Red Sox at New York Yankees,in,End 6th,Boston Red Sox,New York Yankees,0,2,0.845,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-30T02:15:40.535Z,401907974,Chicago Cubs at San Diego Padres,in,Middle 1st,Chicago Cubs,San Diego Padres,0,0,0.567,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-30T02:16:20.274Z,401907924,Boston Red Sox at New York Yankees,in,Top 7th,Boston Red Sox,New York Yankees,0,2,0.845,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-30T02:16:20.274Z,401907974,Chicago Cubs at San Diego Padres,in,Middle 1st,Chicago Cubs,San Diego Padres,0,0,0.567,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-30T02:16:59.638Z,401907924,Boston Red Sox at New York Yankees,in,Top 7th,Boston Red Sox,New York Yankees,0,2,0.845,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-30T02:16:59.638Z,401907974,Chicago Cubs at San Diego Padres,in,Bottom 1st,Chicago Cubs,San Diego Padres,0,0,0.567,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-30T02:17:40.829Z,401907924,Boston Red Sox at New York Yankees,in,Top 7th,Boston Red Sox,New York Yankees,0,2,0.845,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-30T02:17:40.829Z,401907974,Chicago Cubs at San Diego Padres,in,Bottom 1st,Chicago Cubs,San Diego Padres,0,1,0.674,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-30T02:18:20.452Z,401907924,Boston Red Sox at New York Yankees,in,Top 7th,Boston Red Sox,New York Yankees,0,2,0.878,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-30T02:18:20.452Z,401907974,Chicago Cubs at San Diego Padres,in,Bottom 1st,Chicago Cubs,San Diego Padres,0,1,0.658,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-30T02:18:59.873Z,401907924,Boston Red Sox at New York Yankees,in,Top 7th,Boston Red Sox,New York Yankees,0,2,0.878,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-30T02:18:59.873Z,401907974,Chicago Cubs at San Diego Padres,in,Bottom 1st,Chicago Cubs,San Diego Padres,0,1,0.658,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-30T02:19:39.454Z,401907924,Boston Red Sox at New York Yankees,in,Top 7th,Boston Red Sox,New York Yankees,0,2,0.878,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-30T02:19:39.454Z,401907974,Chicago Cubs at San Diego Padres,in,Bottom 1st,Chicago Cubs,San Diego Padres,0,2,0.658,Petco Park,,,,,,,,,,,,,,,,0
+2026-09-30T02:20:18.982Z,401907924,Boston Red Sox at New York Yankees,in,Top 7th,Boston Red Sox,New York Yankees,0,2,0.878,Yankee Stadium,,,,,,,,,,,,,,,,0
+2026-09-30T02:20:18.982Z,401907974,Chicago Cubs at San Diego Padres,in,Bottom 1st,Chicago Cubs,San Diego Padres,0,2,0.75,Petco Park,,,,,,,,,,,,,,,,0
