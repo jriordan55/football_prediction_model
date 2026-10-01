@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-01T02:37:14.075Z",
+  "capturedAt": "2026-10-01T02:42:42.814Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 4,
+  "newPlays": 1,
   "gameStates": 2,
   "injuries": 0,
   "liveGames": 2,
@@ -152,7 +152,7 @@
         "name": "New York Yankees",
         "shortName": "Yankees",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
-        "score": "8",
+        "score": "9",
         "record": "",
         "winner": false
       },
@@ -186,7 +186,7 @@
         "name": "San Diego Padres",
         "shortName": "Padres",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
-        "score": "0",
+        "score": "2",
         "record": "",
         "winner": false
       },
