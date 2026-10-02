@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-02T02:58:06.639Z",
+  "capturedAt": "2026-10-02T03:01:52.652Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,20 +51,20 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 2,
-  "gameStates": 1,
+  "newPlays": 0,
+  "gameStates": 0,
   "injuries": 0,
-  "liveGames": 1,
+  "liveGames": 0,
   "games": [
     {
       "id": "401907973",
       "name": "Philadelphia Phillies at Atlanta Braves",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Top 9th",
-        "shortDetail": "Top 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "22",
@@ -86,7 +86,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
         "score": "6",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "matchedEvent": null
     }
