@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-03T21:57:04.886Z",
+  "capturedAt": "2026-10-03T22:02:34.642Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 1,
+  "newPlays": 3,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -118,7 +118,7 @@
         "name": "Los Angeles Dodgers",
         "shortName": "Dodgers",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
-        "score": "4",
+        "score": "5",
         "record": "",
         "winner": false
       },
