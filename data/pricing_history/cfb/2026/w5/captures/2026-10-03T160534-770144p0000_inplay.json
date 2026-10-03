@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "sport": "cfb",
+  "year": 2026,
+  "week": 5,
+  "captured_at": "2026-10-03T16:05:34.770144+00:00",
+  "capture_type": "inplay",
+  "methodology": {
+    "version": 6,
+    "game_sim": "pricing_engine.simulator.run_matchup_simulation",
+    "props": "pricing_engine.ui.props_table.compute_prop_projection",
+    "pit": "pricing_engine.pit",
+    "sims": 3000
+  },
+  "source": "inplay_runner",
+  "games": [
+    {
+      "home": "UConn Huskies",
+      "away": "Syracuse Orange",
+      "event_id": "401858252",
+      "pregame_captured_at": null,
+      "pregame_capture_type": null,
+      "new_plays": 5,
+      "rows_written": 0,
+      "last_play": {
+        "id": "40185825222",
+        "text": "(14:27) #49 T.Warner punt 39 yards to the Syr 30 fair catch by #1 D.Samuel Jr. at Syr 30",
+        "type": "Punt",
+        "period": 1,
+        "clock": "14:27",
+        "scoringPlay": false,
+        "scoreValue": 0,
+        "awayScore": 0,
+        "homeScore": 0,
+        "down": 4,
+        "distance": 4,
+        "yardLine": 31,
+        "possession": "CONN 31"
+      },
+      "odds_quotes": [],
+      "sim": {
+        "error": "no_ratings",
+        "home": "UConn Huskies",
+        "away": "Syracuse Orange"
+      },
+      "props": []
+    }
+  ]
+}
