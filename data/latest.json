@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-03T22:51:54.180Z",
+  "capturedAt": "2026-10-03T22:57:20.842Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,10 +51,10 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 5,
-  "gameStates": 2,
+  "newPlays": 0,
+  "gameStates": 1,
   "injuries": 0,
-  "liveGames": 2,
+  "liveGames": 1,
   "games": [
     {
       "id": "401907990",
@@ -94,11 +94,11 @@
       "id": "401908007",
       "name": "Atlanta Braves at Los Angeles Dodgers",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Top 9th",
-        "shortDetail": "Top 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "15",
@@ -120,7 +120,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
         "score": "5",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "matchedEvent": null
     },
@@ -131,8 +131,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Bottom 1st",
-        "shortDetail": "Bot 1st"
+        "detail": "End 1st",
+        "shortDetail": "End 1st"
       },
       "away": {
         "id": "10",
