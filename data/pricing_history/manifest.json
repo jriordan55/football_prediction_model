@@ -648,7 +648,19 @@
       "quote_count": 6,
       "prop_count": 0,
       "source": "inplay_runner"
+    },
+    {
+      "sport": "nfl",
+      "year": 2026,
+      "week": 4,
+      "captured_at": "2026-10-04T23:00:39.811782+00:00",
+      "capture_type": "inplay",
+      "path": "nfl/2026/w4/captures/2026-10-04T230039-811782p0000_inplay.json",
+      "game_count": 1,
+      "quote_count": 6,
+      "prop_count": 0,
+      "source": "inplay_runner"
     }
   ],
-  "updated_at": "2026-10-04T20:03:20.180731+00:00"
+  "updated_at": "2026-10-04T23:01:03.956921+00:00"
 }
