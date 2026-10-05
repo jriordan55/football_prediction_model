@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-05T01:45:36.007Z",
+  "capturedAt": "2026-10-05T01:50:39.963Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -107,7 +107,7 @@
         "name": "Atlanta Braves",
         "shortName": "Braves",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
-        "score": "1",
+        "score": "2",
         "record": "",
         "winner": false
       },
