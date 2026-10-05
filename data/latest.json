@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-05T23:25:53.132Z",
+  "capturedAt": "2026-10-05T23:31:01.289Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 3,
+  "newPlays": 0,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
