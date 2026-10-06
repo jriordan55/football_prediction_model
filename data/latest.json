@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-06T01:46:51.017Z",
+  "capturedAt": "2026-10-06T01:52:32.283Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 0,
+  "newPlays": 3,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -97,8 +97,8 @@
         "state": "in",
         "completed": false,
         "description": "In Progress",
-        "detail": "Middle 5th",
-        "shortDetail": "Mid 5th"
+        "detail": "Bottom 5th",
+        "shortDetail": "Bot 5th"
       },
       "away": {
         "id": "10",
@@ -118,7 +118,7 @@
         "name": "Tampa Bay Rays",
         "shortName": "Rays",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tb.png",
-        "score": "1",
+        "score": "2",
         "record": "",
         "winner": false
       },
