@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-06T00:08:33.998Z",
+  "capturedAt": "2026-10-06T00:13:39.484Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 0,
+  "newPlays": 2,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -60,11 +60,11 @@
       "id": "401907991",
       "name": "Chicago White Sox at Cleveland Guardians",
       "status": {
-        "state": "in",
-        "completed": false,
-        "description": "In Progress",
-        "detail": "Middle 9th",
-        "shortDetail": "Mid 9th"
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
       },
       "away": {
         "id": "4",
@@ -75,7 +75,7 @@
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chw.png",
         "score": "4",
         "record": "",
-        "winner": false
+        "winner": true
       },
       "home": {
         "id": "5",
@@ -94,11 +94,11 @@
       "id": "401907986",
       "name": "New York Yankees at Tampa Bay Rays",
       "status": {
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "description": "Scheduled",
-        "detail": "Scheduled",
-        "shortDetail": "10/5 - 8:00 PM EDT"
+        "description": "In Progress",
+        "detail": "Middle 1st",
+        "shortDetail": "Mid 1st"
       },
       "away": {
         "id": "10",
