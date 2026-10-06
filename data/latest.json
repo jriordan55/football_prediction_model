@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-06T00:18:46.004Z",
+  "capturedAt": "2026-10-06T00:23:50.740Z",
   "mode": "inplay",
   "sport": "MLB",
   "markets": [
@@ -51,7 +51,7 @@
     "consensus"
   ],
   "oddsCount": 0,
-  "newPlays": 1,
+  "newPlays": 3,
   "gameStates": 1,
   "injuries": 0,
   "liveGames": 1,
@@ -118,7 +118,7 @@
         "name": "Tampa Bay Rays",
         "shortName": "Rays",
         "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tb.png",
-        "score": "0",
+        "score": "1",
         "record": "",
         "winner": false
       },
