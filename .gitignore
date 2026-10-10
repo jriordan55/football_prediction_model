@@ -1,4 +1,6 @@
 .env
+__pycache__/
+*.pyc
 data/
 !data/pricing_history/
 !data/pricing_history/**
