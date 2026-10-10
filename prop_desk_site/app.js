@@ -91,11 +91,6 @@
     return "0.0";
   }
 
-  function capProb(prob, fair, room) {
-    if (prob == null || fair == null) return prob;
-    return Math.min(fair + room, Math.max(fair - room, prob));
-  }
-
   function offerOf(sportId, player, stat, line) {
     const quote = player.props[stat] || {};
     const fitted = modelOf(sportData(sportId), player, stat);
@@ -103,13 +98,17 @@
     const fair = dkFair(quote, line);
     const pin = pinFair(quote, line);
     const out = fitted && fitted.availability <= 0.25;
-    const boosted = fitted && fitted.injury > 0 && !fitted.snapped;
-    const shown = raw == null || fair == null || out ? raw : capProb(raw, fair, boosted ? 0.10 : 0.05);
+    let shown = raw;
+    if (raw != null && fair != null && fitted && !out) {
+      const parked = Object.assign({}, fitted, { mean: fitted.line != null ? Number(fitted.line) : line });
+      const baseline = probability(parked, line);
+      shown = baseline == null ? fair : Math.min(0.98, Math.max(0.02, fair + (raw - baseline)));
+    }
     const allowUnder = sportId !== "cfb" && quote.dkUnder != null;
     let edge = null;
     if (shown != null && fair != null) {
       const gap = shown - fair;
-      if (allowUnder || gap > 0.005) edge = gap;
+      if (allowUnder || gap >= -0.005) edge = gap;
     }
     return { fitted, prob: shown, fair, edge, books: pin == null || fair == null ? null : pin - fair };
   }
@@ -713,7 +712,7 @@
         <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no ${sport.season - 1} log shrinks toward the median ${sport.season} rate of players at the same stat. There is no claim that this beats the book.</p>
         <p>That rate is then held on the DraftKings line. When the recent rate and the line are far apart, the mean uses the line, because the market has already changed the role. Opponent defense and the spread and total only nudge it. If a teammate at the same position is out and the line has not moved, part of that player's recent production is added. A player who is out is projected at zero.</p>
         <h2>Odds</h2>
-        <p>The side is the model against DraftKings, in percentage points, and it stays within 5 of that price unless an unpriced injury moves it. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
+        <p>The side is how far the model sits from the DraftKings price. A mean on the DraftKings line is priced at that DraftKings number, so a counting stat does not invent an edge. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
         <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
       </div>`;
   }

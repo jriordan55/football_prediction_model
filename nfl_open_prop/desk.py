@@ -498,17 +498,22 @@ class Desk:
         fair = dk_fair(quote, line)
         pin = pin_fair(quote, line)
         out = fitted is not None and float(fitted.get("availability") or 1) <= 0.25
-        boosted = fitted is not None and float(fitted.get("injury_add") or 0) > 0 and not fitted.get("snapped")
-        if raw is None or fair is None or out:
-            shown = raw
-        else:
-            room = 0.10 if boosted else 0.05
-            shown = min(fair + room, max(fair - room, raw))
+        shown = raw
+        if raw is not None and fair is not None and fitted is not None and not out:
+            # A count whose mean equals the line is not a 50% over. Measure the
+            # move from that line, then add it to the DraftKings price.
+            parked = dict(fitted)
+            parked["mean"] = float(fitted["line"]) if fitted.get("line") is not None else float(line)
+            baseline = self.probability(parked, line)
+            if baseline is None:
+                shown = fair
+            else:
+                shown = min(0.98, max(0.02, fair + (raw - baseline)))
         allow_under = self.sport != "cfb" and quote.get("dk_under") is not None
         edge = None
         if shown is not None and fair is not None:
             gap = shown - fair
-            if allow_under or gap > 0.005:
+            if allow_under or gap >= -0.005:
                 edge = gap
         books = None if pin is None or fair is None else pin - fair
         return {"fitted": fitted, "prob": shown, "fair": fair, "edge": edge, "books": books}
