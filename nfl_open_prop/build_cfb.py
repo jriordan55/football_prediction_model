@@ -284,7 +284,7 @@ def _parse_games(data: dict[str, Any], year: int) -> list[dict[str, Any]]:
     return games
 
 
-def _search_athlete(name: str, home: str, away: str) -> tuple[str, str, str] | None:
+def _search_athlete(name: str, home: str, away: str, league: str = "college-football") -> tuple[str, str, str] | None:
     data = _get(
         "https://site.web.api.espn.com/apis/common/v3/search",
         headers=ESPN_HEADERS,
@@ -293,7 +293,7 @@ def _search_athlete(name: str, home: str, away: str) -> tuple[str, str, str] | N
             "limit": 8,
             "type": "player",
             "sport": "football",
-            "league": "college-football",
+            "league": league,
         },
     )
     want = _norm_name(name)
@@ -316,8 +316,8 @@ def _search_athlete(name: str, home: str, away: str) -> tuple[str, str, str] | N
     return None
 
 
-def _fetch_log(espn_id: str, year: int) -> list[dict[str, Any]]:
-    path = CFB_CACHE / f"gamelog_{espn_id}_{year}.json"
+def _fetch_log(espn_id: str, year: int, cache: Path | None = None, league: str = "college-football") -> list[dict[str, Any]]:
+    path = (cache or CFB_CACHE) / f"gamelog_{espn_id}_{year}.json"
     if path.exists():
         try:
             cached = json.loads(path.read_text(encoding="utf-8"))
@@ -327,7 +327,7 @@ def _fetch_log(espn_id: str, year: int) -> list[dict[str, Any]]:
             pass
     url = (
         "https://site.web.api.espn.com/apis/common/v3/sports/football/"
-        f"college-football/athletes/{espn_id}/gamelog"
+        f"{league}/athletes/{espn_id}/gamelog"
     )
     try:
         data = _get(url, headers=ESPN_HEADERS, params={"season": year})
@@ -339,108 +339,28 @@ def _fetch_log(espn_id: str, year: int) -> list[dict[str, Any]]:
     return games
 
 
-def build() -> dict[str, Any]:
-    year, week = _cfb_week()
-    print(f"college slate {year} week {week}", flush=True)
-    board = _get(f"{FOURC}/board/football/NCAAF", headers=HEADERS)
-    games = _upcoming(board)
-    print(f"{len(games)} games not started", flush=True)
-    cache = CFB_CACHE / "fourc"
-    unknown: Counter[str] = Counter()
+def build(sport: str = "cfb") -> dict[str, Any]:
+    from nfl_open_prop.desk import CACHE, SNAPSHOT
+    from nfl_open_prop.fourc_lines import SPECS, fetch_lines
 
-    def props_for(game: dict[str, Any]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
-        path = cache / f"props_{game['id']}.json"
-        payload = _cache_json(path, lambda: _get(f"{FOURC}/game/{game['id']}/props", headers=HEADERS))
-        return game, list(payload.get("props") or [])
-
-    listed: list[tuple[dict[str, Any], dict[str, Any]]] = []
-    with ThreadPoolExecutor(max_workers=8) as pool:
-        futures = [pool.submit(props_for, game) for game in games]
-        for future in as_completed(futures):
-            game, props = future.result()
-            for prop in props:
-                stat = str(prop.get("stat") or "").strip().upper()
-                key = STAT_MAP.get(stat)
-                if key not in STAT_BY_ID:
-                    if stat and "TEAM" not in stat and "POINTS" not in stat:
-                        unknown[stat] += 1
-                    continue
-                if not str(prop.get("player") or "").strip():
-                    continue
-                listed.append((game, prop))
-    print(f"{len(listed)} player props", flush=True)
-    if unknown:
-        print("unmapped", unknown.most_common(12), flush=True)
-
-    markets: dict[str, dict[str, Any]] = {}
-    done = 0
-    for _, prop in listed:
-        prop_id = str(prop.get("id") or "")
-        path = cache / f"market_{prop_id}.json"
-        done += 1
-        if path.exists():
-            try:
-                markets[prop_id] = json.loads(path.read_text(encoding="utf-8"))
-                continue
-            except (OSError, json.JSONDecodeError):
-                pass
-        try:
-            payload = _get(f"{FOURC}/game/{prop_id}/market/tot", headers=HEADERS, pause=1.35)
-        except RuntimeError as exc:
-            print(f"rate limit, keeping the {len(markets)} books already saved ({exc})", flush=True)
-            break
-        if payload.get("lines"):
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(json.dumps(payload), encoding="utf-8")
-        markets[prop_id] = payload
-        if done % 20 == 0 or done == len(listed):
-            print(f"books {done}/{len(listed)}", flush=True)
-
-    rows: list[dict[str, Any]] = []
-    identities: dict[tuple[str, str, str], None] = {}
-    for game, prop in listed:
-        home = str((game.get("home") or {}).get("name") or "")
-        away = str((game.get("away") or {}).get("name") or "")
-        player = str(prop.get("player") or "").strip()
-        try:
-            main = float((prop.get("main") or {}).get("tot"))
-        except (TypeError, ValueError):
-            continue
-        detail = markets.get(str(prop.get("id"))) or {}
-        lines = detail.get("lines") if isinstance(detail.get("lines"), dict) else {}
-        dk_line, dk_over, dk_under = _book_market(lines, "DRAFTKINGS", main)
-        pin_line, pin_over, pin_under = _book_market(lines, "PINNACLE", main)
-        if dk_over is None and dk_under is None:
-            dk_line, dk_over, dk_under = _cell_book(prop, "DRAFTKINGS")
-        if pin_over is None and pin_under is None:
-            pin_line, pin_over, pin_under = _cell_book(prop, "PINNACLE")
-        if dk_over is not None and dk_under is not None and dk_line is not None:
-            line = dk_line
-        elif pin_over is not None and pin_under is not None and pin_line is not None:
-            line = pin_line
-        else:
-            line = main
-        row = {
-            "player": player.title(),
-            "prop_key": STAT_MAP[str(prop.get("stat") or "").strip().upper()],
-            "line": line,
-            "team": "",
-            "home": home,
-            "away": away,
-            "home_abbr": str((game.get("home") or {}).get("short") or ""),
-            "away_abbr": str((game.get("away") or {}).get("short") or ""),
-            "event": f"{away} @ {home}",
-            "startDate": str(game.get("start") or ""),
-            "dk_line": dk_line,
-            "over": _quote(dk_over),
-            "under": _quote(dk_under),
-            "pin_line": pin_line,
-            "pin_over": _quote(pin_over),
-            "pin_under": _quote(pin_under),
-            "espn_id": "",
-        }
-        rows.append(row)
-        identities[(_norm_name(player), home, away)] = player
+    fresh = fetch_lines(sport, use_cache=True)
+    year, week = int(fresh["season"]), int(fresh["week"])
+    rows = list(fresh["rows"])
+    matchups = list(fresh["matchups"])
+    if sport == "nfl":
+        log_cache = CACHE
+        snapshot = SNAPSHOT
+        league = "nfl"
+        prefix = "nfl"
+    else:
+        log_cache = CFB_CACHE
+        snapshot = CFB_SNAPSHOT
+        league = "college-football"
+        prefix = "cfb"
+    cache = SPECS[sport]["cache"]
+    identities: dict[tuple[str, str, str], str] = {}
+    for row in rows:
+        identities[(_norm_name(row["player"]), row["home"], row["away"])] = row["player"]
 
     resolved: dict[tuple[str, str, str], tuple[str, str, str]] = {}
 
@@ -448,7 +368,7 @@ def build() -> dict[str, Any]:
         norm, home, away = key
         player = identities[key]
         path = cache / f"espn_{norm.replace(' ', '_')}_{_school_key(home)}_{_school_key(away)}.json"
-        found = _cache_json(path, lambda: {"hit": _search_athlete(player, home, away)})
+        found = _cache_json(path, lambda: {"hit": _search_athlete(player, home, away, league)})
         hit = found.get("hit") if isinstance(found, dict) else None
         if not hit or not hit[0]:
             return key, None
@@ -470,7 +390,7 @@ def build() -> dict[str, Any]:
         hit = resolved.get((_norm_name(row["player"]), row["home"], row["away"]))
         if not hit:
             slug = re.sub(r"[^a-z0-9]+", "-", _norm_name(row["player"])).strip("-")
-            row["espn_id"] = f"cfb-{slug}-{_school_key(row['home'])}"
+            row["espn_id"] = f"{prefix}-{slug}-{_school_key(row['home'])}"
             continue
         espn_id, display, team = hit
         row["espn_id"] = espn_id
@@ -483,7 +403,7 @@ def build() -> dict[str, Any]:
         futures = []
         for espn_id in needed:
             for season in (year - 1, year):
-                futures.append(pool.submit(_fetch_log, espn_id, season))
+                futures.append(pool.submit(_fetch_log, espn_id, season, log_cache, league))
         done = 0
         for future in as_completed(futures):
             future.result()
@@ -491,38 +411,21 @@ def build() -> dict[str, Any]:
             if done % 80 == 0:
                 print(f"logs {done}/{len(futures)}", flush=True)
 
-    matchups = []
-    seen_games: set[str] = set()
-    for game in games:
-        gid = str(game.get("id") or "")
-        if gid in seen_games:
-            continue
-        seen_games.add(gid)
-        home = game.get("home") or {}
-        away = game.get("away") or {}
-        matchups.append(
-            {
-                "id": gid,
-                "home": home.get("name"),
-                "away": away.get("name"),
-                "start": game.get("start"),
-            }
-        )
     payload = {
         "version": 1,
-        "sport": "cfb",
+        "sport": sport,
         "year": year,
         "week": week,
         "source": "4codds",
-        "updatedAt": datetime.now(timezone.utc).isoformat(),
+        "updatedAt": fresh["updatedAt"],
         "rowCount": len(rows),
         "gameCount": len(matchups),
         "props": rows,
         "matchups": matchups,
     }
-    CFB_SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
-    CFB_SNAPSHOT.write_text(json.dumps(payload), encoding="utf-8")
-    print(f"wrote {CFB_SNAPSHOT} ({len(rows)} props, {len(matchups)} games)", flush=True)
+    snapshot.parent.mkdir(parents=True, exist_ok=True)
+    snapshot.write_text(json.dumps(payload), encoding="utf-8")
+    print(f"wrote {snapshot} ({len(rows)} props, {len(matchups)} games)", flush=True)
     return payload
 
 

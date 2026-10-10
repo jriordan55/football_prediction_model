@@ -23,7 +23,8 @@ if str(APP) not in sys.path:
 from lib.nfl_l10_stats import game_stat_value  # noqa: E402
 
 DATA = ROOT / "data"
-SNAPSHOT = DATA / "odds_api_cache" / "nfl_props_table" / "nfl_props_table_2026_w5_v1.json"
+SNAPSHOT = DATA / "odds_api_cache" / "nfl_props_table" / "nfl_props_table_current.json"
+SNAPSHOT_PREVIOUS = DATA / "odds_api_cache" / "nfl_props_table" / "nfl_props_table_2026_w5_v1.json"
 CACHE = DATA / "espn_cache"
 CFB_SNAPSHOT = DATA / "odds_api_cache" / "cfb_props_table" / "cfb_props_table_current.json"
 CFB_CACHE = DATA / "espn_cache" / "cfb"
@@ -145,6 +146,8 @@ class Desk:
         self._logs: dict[str, list[dict[str, Any]]] = {}
         self._role: dict[str, float] = {}
         path = snapshot or SNAPSHOT
+        if not path.exists() and snapshot is None and SNAPSHOT_PREVIOUS.exists():
+            path = SNAPSHOT_PREVIOUS
         if not path.exists():
             return
         payload = json.loads(path.read_text(encoding="utf-8"))

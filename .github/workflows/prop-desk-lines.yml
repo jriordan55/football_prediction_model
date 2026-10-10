@@ -1,0 +1,53 @@
+# Republish DraftKings and Pinnacle lines for the prop desk.
+# The phone page cannot call the odds board directly, so this job fetches
+# the board and updates the static slate. Each sport can be run on its own.
+
+name: Prop desk lines
+
+on:
+  workflow_dispatch:
+    inputs:
+      sport:
+        description: Which slate to refresh
+        required: true
+        default: both
+        type: choice
+        options:
+          - both
+          - nfl
+          - cfb
+  schedule:
+    - cron: "15 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prop-desk-lines
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Refresh lines
+        run: python -m nfl_open_prop.refresh_site "${{ github.event.inputs.sport || 'both' }}"
+
+      - name: Publish updated lines
+        run: |
+          git add prop_desk_site/desk.json prop_desk_site/index.html
+          git diff --cached --quiet && echo "No line changes" && exit 0
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Refresh prop desk lines."
+          git push

@@ -121,6 +121,9 @@ a.split strong { font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 650; letter-
 .book { padding: .55rem .6rem; background: var(--bg); border-radius: 10px; }
 .book b { display: block; font-size: 1.05rem; }
 .note { color: var(--muted); font-size: .82rem; }
+.refresh { display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; padding: .7rem 0 0; }
+.refresh .status { color: var(--muted); font-size: .8rem; }
+button:disabled { opacity: .55; cursor: progress; }
 footer { display: flex; flex-wrap: wrap; gap: .35rem 1rem; padding: .8rem 0 1.2rem; border-top: 1px solid var(--rule); color: var(--muted); font-family: var(--mono); font-size: .68rem; }
 .method { max-width: 42rem; }
 .method h2 { margin: 1.3rem 0 .3rem; font-size: 1.15rem; letter-spacing: -.03em; }
@@ -595,7 +598,7 @@ def method(qs: dict[str, list[str]]) -> bytes:
 <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no {slate.season - 1} log shrinks toward the median {slate.season} rate of players at the same stat. There is no claim that this beats the book. The holdout on the original app is not rerun here.</p>
 <h2>Odds</h2>
 <p>Prices are the week-{slate.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. Edge is the model probability minus that fair over, in percentage points. It is only shown when the number being checked is the book's line.</p>
-<p>The snapshot does not move while this page is open. Refreshing the browser does not spend an odds credit.</p>
+<p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
 </div>
 """
     return page("Method", body, "method", sport)

@@ -574,8 +574,43 @@
         <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no ${sport.season - 1} log shrinks toward the median ${sport.season} rate of players at the same stat. There is no claim that this beats the book.</p>
         <h2>Odds</h2>
         <p>Prices are the week-${sport.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. Edge is the model probability minus that fair over, in percentage points. It is only shown when the number being checked is the book's line.</p>
-        <p>The snapshot does not move while this page is open.</p>
+        <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
       </div>`;
+  }
+
+  async function refreshSport(sportId) {
+    const button = $("refresh-" + sportId);
+    const status = $("refresh-status");
+    const label = sportId === "nfl" ? "NFL" : "College";
+    if (!button || !DATA) return;
+    button.disabled = true;
+    if (status) status.textContent = "Loading the latest " + label + " lines…";
+    try {
+      const response = await fetch("./desk.json?v=" + Date.now());
+      if (!response.ok) throw new Error(String(response.status));
+      const payload = await response.json();
+      const next = payload.sports && payload.sports[sportId];
+      if (!next || !Array.isArray(next.players)) throw new Error("missing slate");
+      DATA.sports[sportId] = next;
+      prepare();
+      draw();
+      const stamp = (next.updatedAt || "").slice(0, 16).replace("T", " ");
+      if (status) status.textContent = label + " lines loaded · " + (stamp || "just now") + " UTC";
+    } catch (error) {
+      if (status) status.textContent = "Couldn't load the latest " + label + " lines.";
+    } finally {
+      button.disabled = false;
+    }
+  }
+
+  function bindRefresh() {
+    for (const sportId of ["nfl", "cfb"]) {
+      const button = $("refresh-" + sportId);
+      if (!button || button.dataset.bound) continue;
+      button.dataset.bound = "1";
+      button.disabled = false;
+      button.addEventListener("click", () => refreshSport(sportId));
+    }
   }
 
   function draw() {
@@ -609,6 +644,7 @@
     .then((payload) => {
       DATA = payload;
       prepare();
+      bindRefresh();
       draw();
     })
     .catch(() => {

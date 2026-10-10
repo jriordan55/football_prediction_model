@@ -109,6 +109,11 @@ window.DESK_URL = "./desk.json?v={stamp}";
 <body>
 <div class="app">
 <header class="mast" id="mast"></header>
+<div class="refresh" id="refresh">
+  <button type="button" class="ghost" id="refresh-nfl" disabled>Refresh NFL lines</button>
+  <button type="button" class="ghost" id="refresh-cfb" disabled>Refresh college lines</button>
+  <span class="status" id="refresh-status"></span>
+</div>
 <main id="main"><p class="lede">Loading the slate…</p></main>
 <footer id="foot"></footer>
 </div>

@@ -100,6 +100,9 @@ a.split strong { font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 650; letter-
 .book { padding: .55rem .6rem; background: var(--bg); border-radius: 10px; }
 .book b { display: block; font-size: 1.05rem; }
 .note { color: var(--muted); font-size: .82rem; }
+.refresh { display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; padding: .7rem 0 0; }
+.refresh .status { color: var(--muted); font-size: .8rem; }
+button:disabled { opacity: .55; cursor: progress; }
 footer { display: flex; flex-wrap: wrap; gap: .35rem 1rem; padding: .8rem 0 1.2rem; border-top: 1px solid var(--rule); color: var(--muted); font-family: var(--mono); font-size: .68rem; }
 .method { max-width: 42rem; }
 .method h2 { margin: 1.3rem 0 .3rem; font-size: 1.15rem; letter-spacing: -.03em; }
@@ -119,15 +122,20 @@ function toggleTheme() {
   document.documentElement.dataset.theme = next;
   localStorage.setItem("nfl-desk-theme", next);
 }
-window.DESK_URL = "./desk.json?v=20261010034123";
+window.DESK_URL = "./desk.json?v=20261010043622";
 </script>
 </head>
 <body>
 <div class="app">
 <header class="mast" id="mast"></header>
+<div class="refresh" id="refresh">
+  <button type="button" class="ghost" id="refresh-nfl" disabled>Refresh NFL lines</button>
+  <button type="button" class="ghost" id="refresh-cfb" disabled>Refresh college lines</button>
+  <span class="status" id="refresh-status"></span>
+</div>
 <main id="main"><p class="lede">Loading the slate…</p></main>
 <footer id="foot"></footer>
 </div>
-<script src="./app.js?v=20261010034500"></script>
+<script src="./app.js?v=20261010043622"></script>
 </body>
 </html>
