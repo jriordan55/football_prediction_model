@@ -382,22 +382,20 @@ def _model_note(fitted: dict | None, spec: dict, season: int) -> str:
     if not fitted:
         return "The model needs games before it will give a probability."
     absent = ", ".join(fitted.get("absent") or [])
+    took = str(fitted.get("took_over") or "")
     if float(fitted.get("availability") or 1) <= 0.25:
         role = "He is out, so the mean is zero."
+    elif took:
+        role = f"{took} is out, so this is his work share."
     elif float(fitted.get("injury_add") or 0) > 0 and absent:
         role = f"Added {fmt_num(fitted['injury_add'])} because {absent} is out."
-    elif absent:
-        role = f"{absent} is out."
     else:
         role = ""
-    env = (
-        f"Opponent defense {fmt_num(fitted['defense'])} and the spread and total {fmt_num(fitted['market'])}."
-    )
     extra = f" {role}" if role else ""
     return (
-        f"Per-game {spec['kind']}. Mean {fmt_num(fitted['mean'])}, from a recent rate of {fmt_num(fitted['base_mean'])}. "
-        f"Games fade with a {fmt_num(fitted['half_life'])}-game half-life, so the last few count the most. "
-        f"{env}{extra} {fitted['n_season']} games in {season}."
+        f"Per-game {spec['kind']}. Mean {fmt_num(fitted['mean'])}, from a per-game rate of {fmt_num(fitted['base_mean'])}. "
+        f"Opponent defense {fmt_num(fitted['defense'])} and the spread and total {fmt_num(fitted['market'])}."
+        f"{extra} {fitted['n_season']} games in {season}."
     )
 
 
@@ -613,7 +611,7 @@ def method(qs: dict[str, list[str]]) -> bytes:
 <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
 <h2>The model</h2>
 <p>{league[0].upper() + league[1:]} props are per game, so this is a per-game model rather than a rate per minute. Yards use a normal. Counting stats use a negative binomial: wider when the expected total is higher, and never below zero. The percent at a line is that distribution from the line up. The usual range is the middle 80%.</p>
-<p>The mean is a time-decayed average of the log. Weight falls by half every three games, so last week counts twice what a game three back counts, and last season fades behind this season. A player with no log uses the median rate at that stat. Opponent defense and this game's spread and total scale that rate. If a teammate at the same position is out and we have his recent production, part of it is added. A player who is out is projected at zero. The DraftKings number is not an input.</p>
+<p>The mean is the player's per-game rate this season, or the last eight games when this season is still two games short. Every game in that window counts the same. Opponent defense and this game's spread and total scale that rate. When the starter at that spot is out, the teammate with the next share takes the starter's per-game rate. Receiving vacated by an injury is split across the remaining pass catchers. A player who is out is projected at zero.</p>
 <h2>Odds</h2>
 <p>The side is how far that model sits from the DraftKings price. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
 <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>

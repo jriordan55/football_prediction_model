@@ -105,34 +105,12 @@ def _fmt_american(price: int | None) -> str:
     return f"+{price}" if price > 0 else str(price)
 
 
-# The game three back counts half as much as the last one.
-DECAY_HALF_LIFE = 3.0
-
-
-def _decay_weights(count: int) -> list[float]:
-    return [math.exp(-(count - 1 - index) / DECAY_HALF_LIFE) for index in range(count)]
-
-
-def _decay_mean(values: list[float]) -> float:
-    weights = _decay_weights(len(values))
-    return sum(weight * value for weight, value in zip(weights, values)) / sum(weights)
-
-
 def _sample_sd(values: list[float]) -> float:
     n = len(values)
     if n < 2:
         return 0.0
     mean = sum(values) / n
     return math.sqrt(sum((v - mean) ** 2 for v in values) / (n - 1))
-
-
-def _weighted_sd(values: list[float], weights: list[float]) -> float:
-    total = sum(weights)
-    if len(values) < 2 or total <= 0:
-        return 0.0
-    mean = sum(weight * value for weight, value in zip(weights, values)) / total
-    variance = sum(weight * (value - mean) ** 2 for weight, value in zip(weights, values)) / total
-    return math.sqrt(variance)
 
 
 def _clears(value: float, line: float) -> bool:
@@ -325,19 +303,62 @@ class Desk:
             return team_key(name)
         return normalize_team_key(name)
 
-    def _recent_mean(self, espn_id: str, stat: str) -> float | None:
-        values = [row["value"] for row in self.values(espn_id, stat)]
-        if not values:
+    def _same_role(self, member: dict[str, Any], stat: str) -> bool:
+        """A quarterback's rush line is not the backup running back's work."""
+        props = member.get("props") or {}
+        if stat in {"rush_yds", "rush_attempts", "rr_yds"}:
+            return "pass_yds" not in props and "pass_attempts" not in props
+        if stat.startswith("pass"):
+            return "pass_yds" in props or "pass_attempts" in props
+        return True
+
+    def _rate(self, espn_id: str, stat: str) -> float | None:
+        """Plain per-game rate. This season when there are two games, otherwise the last eight."""
+        rows = self.values(espn_id, stat)
+        this = [row["value"] for row in rows if row["season"] == self.season]
+        use = this if len(this) >= 2 else [row["value"] for row in rows[-8:]]
+        if not use:
             return None
-        return _decay_mean(values)
+        return sum(use) / len(use)
+
+    def _load_outside_log(self, espn_id: str) -> None:
+        if not espn_id or espn_id in self._logs:
+            return
+        from nfl_open_prop.build_cfb import _fetch_log
+
+        league = "nfl" if self.sport == "nfl" else "college-football"
+        games: list[dict[str, Any]] = []
+        for year in (self.season - 1, self.season):
+            try:
+                fetched = _fetch_log(str(espn_id), year, self.cache, league)
+            except Exception:
+                fetched = []
+            for game in fetched:
+                try:
+                    game_season = int(game.get("season") or 0)
+                    week = int(game.get("week") or 0)
+                except (TypeError, ValueError):
+                    continue
+                if game_season > self.season or (game_season == self.season and week >= self.week):
+                    continue
+                games.append(game)
+        games.sort(key=lambda game: (str(game.get("game_date") or ""), int(game.get("week") or 0)))
+        self._logs[str(espn_id)] = games
 
     def _attach_injuries(self) -> None:
         from nfl_open_prop.injuries import USAGE, load_injuries, norm_name
 
+        # One player inherits the starter's rate. Receiving is split across the rest.
+        replace = {
+            "pass_yds", "pass_tds", "pass_attempts", "pass_completions", "pass_rush_yds",
+            "rush_yds", "rush_attempts", "rr_yds",
+        }
         by_team: dict[str, list[dict[str, Any]]] = {}
         for row in load_injuries(self.sport):
             by_team.setdefault(self._team_token(row["team"]), []).append(row)
         groups: dict[str, list[dict[str, Any]]] = {}
+        slate_names = {norm_name(player["name"]) for player in self.players.values()}
+        needed: list[str] = []
         for player in self.players.values():
             token = self._team_token(player["team"])
             groups.setdefault(token, []).append(player)
@@ -357,37 +378,65 @@ class Desk:
                     absent[stat] = names
             player["absent"] = absent
             player["injury_add"] = {}
+            player["takeover"] = {}
+        for listings in by_team.values():
+            for row in listings:
+                if float(row["availability"]) > 0.25 or not row.get("id"):
+                    continue
+                if norm_name(row["name"]) in slate_names:
+                    continue
+                if row["position"] not in {"QB", "RB", "FB", "WR", "TE"}:
+                    continue
+                needed.append(str(row["id"]))
+        from concurrent.futures import ThreadPoolExecutor
+
+        pending = sorted(set(needed))
+        if pending:
+            with ThreadPoolExecutor(max_workers=8) as pool:
+                list(pool.map(self._load_outside_log, pending))
         for token, members in groups.items():
             listings = [row for row in (by_team.get(token) or []) if float(row["availability"]) <= 0.25]
             for stat, positions in USAGE.items():
-                vacated = 0.0
-                out_ids: set[str] = set()
+                outs = []
                 for row in listings:
                     if row["position"] not in positions:
                         continue
                     holder = next((member for member in members if norm_name(member["name"]) == norm_name(row["name"])), None)
-                    if holder is None:
+                    espn_id = holder["espn_id"] if holder else str(row.get("id") or "")
+                    if not espn_id:
                         continue
-                    out_ids.add(holder["espn_id"])
-                    recent = self._recent_mean(holder["espn_id"], stat)
-                    if recent:
-                        vacated += recent * (1.0 - float(row["availability"]))
-                if vacated <= 0:
+                    rate = self._rate(espn_id, stat)
+                    if rate is None or rate <= 0:
+                        continue
+                    outs.append((row["name"], rate, espn_id))
+                if not outs:
                     continue
-                recipients = []
+                starter_name, starter_rate, starter_id = max(outs, key=lambda item: item[1])
+                actives = []
                 for member in members:
-                    if member["espn_id"] in out_ids or stat not in member["props"]:
+                    if member["espn_id"] == starter_id or stat not in member["props"]:
                         continue
                     if float(member.get("availability") or 1) <= 0.25:
                         continue
-                    weight = self._recent_mean(member["espn_id"], stat) or 0.0
-                    if weight <= 0:
+                    if norm_name(member["name"]) == norm_name(starter_name):
                         continue
-                    recipients.append((member, weight))
-                total = sum(weight for _, weight in recipients)
-                if total <= 0:
+                    actives.append(member)
+                if not actives:
                     continue
-                for member, weight in recipients:
+                if stat in replace:
+                    same_role = [member for member in actives if self._same_role(member, stat)] or actives
+                    lead = max(same_role, key=lambda member: self._rate(member["espn_id"], stat) or 0.0)
+                    own = self._rate(lead["espn_id"], stat) or 0.0
+                    if starter_rate > own * 1.15:
+                        lead["takeover"][stat] = {"rate": round(starter_rate, 2), "from": starter_name}
+                    continue
+                vacated = sum(rate for _, rate, _ in outs)
+                weights = [(member, self._rate(member["espn_id"], stat) or 0.0) for member in actives]
+                weights = [(member, weight) for member, weight in weights if weight > 0]
+                total = sum(weight for _, weight in weights)
+                if total <= 0 or vacated <= 0:
+                    continue
+                for member, weight in weights:
                     member["injury_add"][stat] = float(member["injury_add"].get(stat) or 0) + vacated * 0.75 * weight / total
 
     def _stat(self, game: dict[str, Any], stat: str) -> float | None:
@@ -440,20 +489,22 @@ class Desk:
     def model(self, espn_id: str, stat: str) -> dict[str, Any] | None:
         spec = STAT_BY_ID[stat]
         rows = self.values(espn_id, stat)
-        values = [row["value"] for row in rows]
         this = [row["value"] for row in rows if row["season"] == self.season]
         last = [row["value"] for row in rows if row["season"] == self.season - 1]
         role = self._role.get(stat)
-        if not values and role is None:
+        own = self._rate(espn_id, stat)
+        if own is None and role is None:
             return None
-        if values:
-            base_mean = _decay_mean(values)
-            weights = _decay_weights(len(values))
-            sd = _weighted_sd(values, weights)
+        pool = this if len(this) >= 2 else [row["value"] for row in rows[-8:]]
+        sd = _sample_sd(pool) if len(pool) >= 2 else 0.0
+        player = self.players.get(str(espn_id)) or {}
+        takeover = (player.get("takeover") or {}).get(stat) or {}
+        if takeover.get("rate") is not None:
+            base_mean = float(takeover["rate"])
+        elif own is not None:
+            base_mean = own
         else:
             base_mean = float(role)
-            sd = 0.0
-        player = self.players.get(str(espn_id)) or {}
         from nfl_open_prop.environment import market_factor
 
         defense = float((player.get("defense") or {}).get(stat) or 1.0)
@@ -486,14 +537,14 @@ class Desk:
             "sd": sd,
             "n_season": len(this),
             "n_last": len(last),
-            "half_life": DECAY_HALF_LIFE,
             "injury_add": extra,
             "absent": absent,
             "availability": availability,
+            "took_over": str(takeover.get("from") or ""),
         }
 
     def offer(self, player: dict[str, Any], stat: str, line: float) -> dict[str, Any]:
-        """Model probability from the decayed log. DraftKings is only the price compared against."""
+        """Model probability from the player's rate, or the starter's share when that starter is out."""
         fitted = self.model(player["espn_id"], stat)
         shown = self.probability(fitted, line)
         quote = player["props"].get(stat) or {}

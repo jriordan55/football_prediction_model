@@ -56,8 +56,10 @@ def availability_of(status: str) -> float | None:
 def load_injuries(sport: str) -> list[dict]:
     path = CACHE / f"injuries_{sport}.json"
     cached = _read(path)
-    if cached and time.time() - float(cached.get("fetchedAt") or 0) < _FRESH_SECONDS:
-        return list(cached.get("rows") or [])
+    rows = list((cached or {}).get("rows") or [])
+    fresh = cached and time.time() - float(cached.get("fetchedAt") or 0) < _FRESH_SECONDS
+    if fresh and rows and any(row.get("id") for row in rows[:30]):
+        return rows
     try:
         response = requests.get(URLS[sport], timeout=30, headers={"User-Agent": "Mozilla/5.0"})
         response.raise_for_status()
@@ -67,6 +69,19 @@ def load_injuries(sport: str) -> list[dict]:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({"fetchedAt": time.time(), "rows": rows}), encoding="utf-8")
     return rows
+
+
+def _athlete_id(athlete: dict) -> str:
+    href = str((athlete.get("headshot") or {}).get("href") or "")
+    match = re.search(r"/(\d+)\.png", href)
+    if match:
+        return match.group(1)
+    for note in (athlete.get("notes") or {}).get("items") or []:
+        ref = str((note.get("injury") or {}).get("$ref") or "")
+        found = re.search(r"/athletes/(\d+)/", ref)
+        if found:
+            return found.group(1)
+    return str(athlete.get("id") or "")
 
 
 def _parse(payload: dict) -> list[dict]:
@@ -87,6 +102,7 @@ def _parse(payload: dict) -> list[dict]:
                 continue
             rows.append(
                 {
+                    "id": _athlete_id(athlete),
                     "name": name,
                     "team": team,
                     "position": position,

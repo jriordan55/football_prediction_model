@@ -220,41 +220,30 @@
     return [hits, rows.length];
   }
 
-  const DECAY_HALF_LIFE = 3;
-
-  function decayMean(values) {
-    let total = 0;
-    let weight = 0;
-    values.forEach((value, index) => {
-      const w = Math.exp(-(values.length - 1 - index) / DECAY_HALF_LIFE);
-      total += w * value;
-      weight += w;
-    });
-    return weight ? total / weight : 0;
+  function plainRate(rows, season) {
+    const thisYear = rows.filter((row) => row[0] === season).map((row) => row[3]);
+    const use = thisYear.length >= 2 ? thisYear : rows.slice(-8).map((row) => row[3]);
+    if (!use.length) return null;
+    return use.reduce((sum, value) => sum + value, 0) / use.length;
   }
 
-  function weightedSd(values) {
+  function sampleSd(values) {
     if (values.length < 2) return 0;
-    const mean = decayMean(values);
-    let total = 0;
-    let weight = 0;
-    values.forEach((value, index) => {
-      const w = Math.exp(-(values.length - 1 - index) / DECAY_HALF_LIFE);
-      total += w * (value - mean) ** 2;
-      weight += w;
-    });
-    return weight ? Math.sqrt(total / weight) : 0;
+    const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+    return Math.sqrt(values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / (values.length - 1));
   }
 
   function modelOf(sport, player, stat) {
     const spec = sport.stats.find((item) => item.id === stat);
     const rows = logs(player, stat);
-    const values = rows.map((row) => row[3]);
     const thisSeason = seasonRows(rows, sport.season);
     const role = roles[sport.id] && roles[sport.id][stat];
-    if (!values.length && role == null) return null;
-    const base = values.length ? decayMean(values) : role;
-    let sd = values.length ? weightedSd(values) : 0;
+    const own = plainRate(rows, sport.season);
+    const takeover = player.takeover && player.takeover[stat];
+    if (own == null && role == null && !takeover) return null;
+    const pool = thisSeason.length >= 2 ? thisSeason.map((row) => row[3]) : rows.slice(-8).map((row) => row[3]);
+    let sd = sampleSd(pool);
+    const base = takeover ? Number(takeover.rate) : own != null ? own : role;
     const defense = player.defense && player.defense[stat] != null ? Number(player.defense[stat]) : 1;
     const market = marketFactor(sport.id, player, stat);
     const extra = player.injury && player.injury[stat] != null ? Number(player.injury[stat]) : 0;
@@ -272,18 +261,17 @@
     else sd = Math.max(sd, Math.sqrt(Math.max(mean, 0.05)));
     return {
       kind: spec.kind, mean, base, defense, market, factor: defense * market, sd,
-      nSeason: thisSeason.length, halfLife: DECAY_HALF_LIFE, injury, absent, availability,
+      nSeason: thisSeason.length, injury, absent, availability, tookOver: takeover ? takeover.from : "",
     };
   }
 
   function describeModel(fitted, spec, sport) {
     if (!fitted) return "The model needs games before it will give a probability.";
-    const absent = (fitted.absent || []).join(", ");
     let role = "";
     if (fitted.availability <= 0.25) role = " He is out, so the mean is zero.";
-    else if (fitted.injury > 0 && absent) role = ` Added ${fmtNum(fitted.injury)} because ${absent} is out.`;
-    else if (absent) role = ` ${absent} is out.`;
-    return `Per-game ${spec.kind}. Mean ${fmtNum(fitted.mean)}, from a recent rate of ${fmtNum(fitted.base)}. Games fade with a ${fmtNum(fitted.halfLife)}-game half-life, so the last few count the most. Opponent defense ${fmtNum(fitted.defense)} and the spread and total ${fmtNum(fitted.market)}.${role} ${fitted.nSeason} games in ${sport.season}.`;
+    else if (fitted.tookOver) role = ` ${fitted.tookOver} is out, so this is his work share.`;
+    else if (fitted.injury > 0 && (fitted.absent || []).length) role = ` Added ${fmtNum(fitted.injury)} because ${(fitted.absent || []).join(", ")} is out.`;
+    return `Per-game ${spec.kind}. Mean ${fmtNum(fitted.mean)}, from a per-game rate of ${fmtNum(fitted.base)}. Opponent defense ${fmtNum(fitted.defense)} and the spread and total ${fmtNum(fitted.market)}.${role} ${fitted.nSeason} games in ${sport.season}.`;
   }
 
   function marketFactor(sportId, player, stat) {
@@ -696,7 +684,7 @@
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
         <p>${league[0].toUpperCase() + league.slice(1)} props are per game, so this is a per-game model rather than a rate per minute. Yards use a normal. Counting stats use a negative binomial: wider when the expected total is higher, and never below zero. The percent at a line is that distribution from the line up. The usual range is the middle 80%.</p>
-        <p>The mean is a time-decayed average of the log. Weight falls by half every three games, so last week counts twice what a game three back counts, and last season fades behind this season. A player with no log uses the median rate at that stat. Opponent defense and this game's spread and total scale that rate. If a teammate at the same position is out and we have his recent production, part of it is added. A player who is out is projected at zero. The DraftKings number is not an input.</p>
+        <p>The mean is the player's per-game rate this season, or the last eight games when this season is still two games short. Every game in that window counts the same. Opponent defense and this game's spread and total scale that rate. When the starter at that spot is out, the teammate with the next share takes the starter's per-game rate. Receiving vacated by an injury is split across the remaining pass catchers. A player who is out is projected at zero.</p>
         <h2>Odds</h2>
         <p>The side is how far that model sits from the DraftKings price. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
         <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>

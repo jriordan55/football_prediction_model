@@ -122,6 +122,7 @@ def _players(rows: list[dict]) -> list[dict]:
                 "availability": 1,
                 "injury": {},
                 "absent": {},
+                "takeover": {},
                 "props": {},
                 "logs": {},
             }
@@ -171,6 +172,7 @@ def apply_sport(desk: dict, sport_id: str, fresh: dict) -> bool:
             player["availability"] = old.get("availability") if old.get("availability") is not None else 1
             player["injury"] = old.get("injury") or {}
             player["absent"] = old.get("absent") or {}
+            player["takeover"] = old.get("takeover") or {}
             if player.get("spread") is None:
                 player["spread"] = old.get("spread")
             if player.get("total") is None:
