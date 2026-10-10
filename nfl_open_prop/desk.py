@@ -145,6 +145,9 @@ class Desk:
         self.players: dict[str, dict[str, Any]] = {}
         self.game_rows = 0
         self._logs: dict[str, list[dict[str, Any]]] = {}
+        self._names: dict[str, str] = {}
+        self._roles: dict[str, dict[str, tuple[bool, bool]]] = {}
+        self._snaps: dict[tuple[int, int, str], list[dict[str, Any]]] = {}
         self._role: dict[str, float] = {}
         path = snapshot or SNAPSHOT
         if not path.exists() and snapshot is None and SNAPSHOT_PREVIOUS.exists():
@@ -205,6 +208,8 @@ class Desk:
         self._fill_game_lines()
         self._attach_matchup()
         self._load_logs()
+        self._index_usage()
+        self._role_rates()
         self._attach_injuries()
 
     def _fill_game_lines(self) -> None:
@@ -260,8 +265,8 @@ class Desk:
             player["defense"] = factors
 
     def _load_logs(self) -> None:
-        series: dict[str, list[float]] = {s["id"]: [] for s in STATS}
         for espn_id, player in self.players.items():
+            self._names[str(espn_id)] = player["name"]
             games: list[dict[str, Any]] = []
             for year in (self.season - 1, self.season):
                 for game in _read_games(self.cache, espn_id, year):
@@ -275,19 +280,54 @@ class Desk:
                     games.append(game)
             games.sort(key=lambda g: (str(g.get("game_date") or ""), int(g.get("week") or 0)))
             self._logs[espn_id] = games
-            self.game_rows += len(games)
+
+    def _index_usage(self) -> None:
+        from concurrent.futures import ThreadPoolExecutor
+
+        from nfl_open_prop.played import fetch_role, load_role, load_snaps
+
+        if self.sport == "nfl" and not self._snaps:
+            self._snaps = load_snaps((self.season - 1, self.season))
+        league = "nfl" if self.sport == "nfl" else "college-football"
+        pending: list[str] = []
+        seen: set[str] = set()
+        for games in self._logs.values():
+            for game in games:
+                event_id = str(game.get("event_id") or "")
+                if not event_id or event_id in self._roles or event_id in seen:
+                    continue
+                seen.add(event_id)
+                cached = load_role(event_id)
+                if cached is not None:
+                    self._roles[event_id] = cached
+                else:
+                    pending.append(event_id)
+
+        def pull(event_id: str) -> tuple[str, dict[str, tuple[bool, bool]] | None]:
+            return event_id, fetch_role(event_id, league)
+
+        if pending:
+            with ThreadPoolExecutor(max_workers=8) as pool:
+                for event_id, roles in pool.map(pull, pending):
+                    if roles is not None:
+                        self._roles[event_id] = roles
+        self.game_rows = sum(
+            1
+            for espn_id, games in self._logs.items()
+            if espn_id in self.players
+            for game in games
+            if self._counts(espn_id, game)
+        )
+
+    def _role_rates(self) -> None:
+        series: dict[str, list[float]] = {spec["id"]: [] for spec in STATS}
+        for player in self.players.values():
             for stat in player["props"]:
-                values = []
-                season_vals = []
-                for game in games:
-                    value = self._stat(game, stat)
-                    if value is None or not _played(game, stat, value):
-                        continue
-                    values.append(value)
-                    if int(game.get("season") or 0) == self.season:
-                        season_vals.append(value)
-                if len(season_vals) >= 3:
-                    series[stat].append(sum(season_vals) / len(season_vals))
+                rows = self.values(player["espn_id"], stat)
+                this = [row["value"] for row in rows if row["season"] == self.season]
+                values = [row["value"] for row in rows]
+                if len(this) >= 3:
+                    series[stat].append(sum(this) / len(this))
                 elif len(values) >= 5:
                     series[stat].append(sum(values) / len(values))
         for stat, means in series.items():
@@ -312,8 +352,36 @@ class Desk:
             return "pass_yds" in props or "pass_attempts" in props
         return True
 
+    def _counts(self, espn_id: str, game: dict[str, Any]) -> bool:
+        """Started, and in the NFL at least 10 offensive snaps. A game he sat out is left out."""
+        from nfl_open_prop.played import MIN_SNAPS, offense_snaps, team_abbr
+
+        event_id = str(game.get("event_id") or "")
+        role = (self._roles.get(event_id) or {}).get(str(espn_id))
+        if role is None:
+            return False
+        started, did_not_play = role
+        if did_not_play or not started:
+            return False
+        if self.sport != "nfl":
+            return True
+        try:
+            week = int(game.get("week") or 0)
+            season = int(game.get("season") or 0)
+        except (TypeError, ValueError):
+            return False
+        snaps = offense_snaps(
+            self._snaps,
+            self._names.get(str(espn_id)) or "",
+            season,
+            week,
+            team_abbr(str((self.players.get(str(espn_id)) or {}).get("team") or "")),
+            str(game.get("opponent_abbr") or ""),
+        )
+        return snaps is not None and snaps >= MIN_SNAPS
+
     def _rate(self, espn_id: str, stat: str) -> float | None:
-        """Plain per-game rate. This season when there are two games, otherwise the last eight."""
+        """Plain per-game rate. This season when there are two starts, otherwise the last eight."""
         rows = self.values(espn_id, stat)
         this = [row["value"] for row in rows if row["season"] == self.season]
         use = this if len(this) >= 2 else [row["value"] for row in rows[-8:]]
@@ -387,6 +455,7 @@ class Desk:
                     continue
                 if row["position"] not in {"QB", "RB", "FB", "WR", "TE"}:
                     continue
+                self._names[str(row["id"])] = row["name"]
                 needed.append(str(row["id"]))
         from concurrent.futures import ThreadPoolExecutor
 
@@ -394,6 +463,7 @@ class Desk:
         if pending:
             with ThreadPoolExecutor(max_workers=8) as pool:
                 list(pool.map(self._load_outside_log, pending))
+            self._index_usage()
         for token, members in groups.items():
             listings = [row for row in (by_team.get(token) or []) if float(row["availability"]) <= 0.25]
             for stat, positions in USAGE.items():
@@ -446,7 +516,7 @@ class Desk:
         rows = []
         for game in self._logs.get(espn_id) or []:
             value = self._stat(game, stat)
-            if value is None or not _played(game, stat, value):
+            if value is None or not self._counts(espn_id, game):
                 continue
             rows.append(
                 {
@@ -689,12 +759,6 @@ def pin_fair(quote: dict[str, Any], line: float) -> float | None:
     if over is None:
         return None
     return american_to_implied(over)
-
-
-def _played(game: dict[str, Any], stat: str, value: float) -> bool:
-    """A game already in the log counts. A missing stat is left out upstream."""
-    del game, stat, value
-    return True
 
 
 def fmt_pct(value: float | None) -> str:
