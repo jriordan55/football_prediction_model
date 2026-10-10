@@ -86,6 +86,11 @@ jobs:
           fi
           curl -fsS --max-time 30 "${LIVE_API_BASE%/}/api/health" || echo "health ping failed (service may be cold-starting)"
 
+      - name: Include prop desk
+        run: |
+          mkdir -p site/prop-desk
+          cp -a prop_desk_site/. site/prop-desk/
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
