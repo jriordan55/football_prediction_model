@@ -206,12 +206,62 @@
       priorFrom = "role";
     }
     const n = thisSeason.length;
-    const mean = n === 0 ? priorMean : (thisSeason.reduce((a, b) => a + b, 0) + priorMean * priorN) / (n + priorN);
+    const base = n === 0 ? priorMean : (thisSeason.reduce((a, b) => a + b, 0) + priorMean * priorN) / (n + priorN);
     const pool = thisSeason.length >= 4 ? thisSeason : thisSeason.concat(last);
     let sd = sampleSd(pool);
+    const defense = player.defense && player.defense[stat] != null ? Number(player.defense[stat]) : 1;
+    const market = marketFactor(sport.id, player, stat);
+    const mean = base * defense * market;
     if (spec.kind === "yards") sd = Math.max(sd, 0.22 * Math.max(mean, 1));
     else sd = Math.max(sd, Math.sqrt(Math.max(mean, 0.05)));
-    return { kind: spec.kind, mean, sd, nSeason: n, priorFrom, priorGames: priorN };
+    return { kind: spec.kind, mean, base, defense, market, factor: defense * market, sd, nSeason: n, priorFrom, priorGames: priorN };
+  }
+
+  function marketFactor(sportId, player, stat) {
+    const spread = player.spread;
+    const total = player.total;
+    const side = player.side === "home" || player.side === "away" ? player.side : "";
+    if (spread == null && total == null) return 1;
+    const vol = volumeFactor(sportId, stat, side, spread, total);
+    let margin = null;
+    if (side === "home" && spread != null) margin = -spread;
+    else if (side === "away" && spread != null) margin = spread;
+    return vol * scriptFactor(stat, margin);
+  }
+
+  function volumeFactor(sportId, stat, side, spread, total) {
+    const volume = ["pass_yds", "pass_attempts", "pass_completions", "pass_rush_yds", "rec_yds", "receptions", "rr_yds", "rush_yds", "rush_attempts"];
+    const td = ["pass_tds", "tds"];
+    if (!volume.includes(stat) && !td.includes(stat)) return 1;
+    const baseline = sportId === "nfl" ? 45 : 54;
+    let vol = 1;
+    if (spread != null && total != null && side) {
+      const teamPts = side === "home" ? (total - spread) / 2 : (total + spread) / 2;
+      const raw = teamPts / Math.max(baseline / 2, 1);
+      vol = Math.max(0.84, Math.min(1.16, 0.86 + (raw - 1) * 0.72));
+    } else if (total != null) {
+      vol = Math.max(0.88, Math.min(1.12, 1 + ((total - baseline) / baseline) * 0.48));
+    }
+    if (td.includes(stat)) return 0.55 + 0.45 * vol;
+    return vol;
+  }
+
+  function scriptFactor(stat, margin) {
+    if (margin == null) return 1;
+    let key = stat;
+    if (stat === "rr_yds") key = "rush_yds";
+    else if (stat === "pass_rush_yds" || stat === "rec_yds" || stat === "receptions") key = "pass_yds";
+    if (key === "pass_yds" || key === "pass_attempts" || key === "pass_completions") {
+      if (margin > 7) return Math.max(0.78, 1 - (Math.min(28, margin) - 7) * 0.016);
+      if (margin < -7) return Math.min(1.08, 1 + Math.min(21, Math.abs(margin)) * 0.006);
+    }
+    if (key === "pass_tds" && margin > 10) return Math.max(0.85, 1 - (Math.min(28, margin) - 10) * 0.012);
+    if (key === "rush_yds" || key === "rush_attempts") {
+      if (margin > 10) return Math.min(1.12, 1 + (Math.min(28, margin) - 10) * 0.008);
+      if (margin < -10) return Math.max(0.82, 1 - (Math.min(28, Math.abs(margin)) - 10) * 0.012);
+    }
+    if (key === "tds" && margin > 10) return Math.max(0.88, 1 - (Math.min(28, margin) - 10) * 0.006);
+    return 1;
   }
 
   function probability(model, line) {
@@ -501,7 +551,7 @@
     const edgeCls = (edge || 0) > 0.005 ? "pos" : (edge || 0) < -0.005 ? "neg" : "";
     const range = band80(fitted);
     const modelNote = fitted
-      ? `Per-game ${spec.kind}. Mean ${fmtNum(fitted.mean)}, pulled toward ${fitted.priorFrom} (${fmtNum(fitted.priorGames)} pseudo-games). ${fitted.nSeason} games in ${sport.season}.`
+      ? `Per-game ${spec.kind}. Mean ${fmtNum(fitted.mean)}, from a base of ${fmtNum(fitted.base)} after opponent defense ${fmtNum(fitted.defense)} and the spread and total ${fmtNum(fitted.market)}. Pulled toward ${fitted.priorFrom} (${fmtNum(fitted.priorGames)} pseudo-games). ${fitted.nSeason} games in ${sport.season}.`
       : "The model needs games before it will give a probability.";
     document.title = player.name;
     $("main").innerHTML = `
@@ -572,6 +622,7 @@
         <h2>The model</h2>
         <p>${league[0].toUpperCase() + league.slice(1)} props are per game, so this is a per-game model rather than a rate per minute. Yards use a normal. Counting stats use a negative binomial: wider when the expected total is higher, and never below zero. The percent at a line is that distribution from the line up. The usual range is the middle 80%.</p>
         <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no ${sport.season - 1} log shrinks toward the median ${sport.season} rate of players at the same stat. There is no claim that this beats the book.</p>
+        <p>That base mean is then scaled for the opponent's defensive rating and for this game's spread and total. A softer defense, a higher team total, and a pass-heavier script raise it. The log already contains the player's own offense, so that rating is not applied again.</p>
         <h2>Odds</h2>
         <p>Prices are the week-${sport.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. Edge is the model probability minus that fair over, in percentage points. It is only shown when the number being checked is the book's line.</p>
         <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>

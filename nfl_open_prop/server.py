@@ -455,8 +455,10 @@ def player_page(qs: dict[str, list[str]]) -> bytes:
     edge_cls = "pos" if (edge or 0) > 0.005 else "neg" if (edge or 0) < -0.005 else ""
     fair_american = implied_to_american(fair) if fair is not None else None
     model_note = "The model needs games before it will give a probability." if fitted is None else (
-        f"Per-game {spec['kind']}. Mean {fmt_num(fitted['mean'])}, pulled toward {fitted['prior_from']} "
-        f"({fmt_num(fitted['prior_games'])} pseudo-games). {fitted['n_season']} games in {slate.season}."
+        f"Per-game {spec['kind']}. Mean {fmt_num(fitted['mean'])}, from a base of {fmt_num(fitted['base_mean'])} "
+        f"after opponent defense {fmt_num(fitted['defense'])} and the spread and total {fmt_num(fitted['market'])}. "
+        f"Pulled toward {fitted['prior_from']} ({fmt_num(fitted['prior_games'])} pseudo-games). "
+        f"{fitted['n_season']} games in {slate.season}."
     )
     range_text = "—" if not band else f"{fmt_num(band[0])}–{fmt_num(band[1])}"
     use_book = href("/player", sport, id=espn_id, stat=stat, line=quote["line"], window=window)
@@ -596,6 +598,7 @@ def method(qs: dict[str, list[str]]) -> bytes:
 <h2>The model</h2>
 <p>{league[0].upper() + league[1:]} props are per game, so this is a per-game model rather than a rate per minute. Yards use a normal. Counting stats use a negative binomial: wider when the expected total is higher, and never below zero. The percent at a line is that distribution from the line up. The usual range is the middle 80%.</p>
 <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no {slate.season - 1} log shrinks toward the median {slate.season} rate of players at the same stat. There is no claim that this beats the book. The holdout on the original app is not rerun here.</p>
+<p>That base mean is then scaled for the opponent's defensive rating and for this game's spread and total. A softer defense, a higher team total, and a pass-heavier script raise it. The log already contains the player's own offense, so that rating is not applied again.</p>
 <h2>Odds</h2>
 <p>Prices are the week-{slate.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. Edge is the model probability minus that fair over, in percentage points. It is only shown when the number being checked is the book's line.</p>
 <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>

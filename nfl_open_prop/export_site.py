@@ -53,6 +53,10 @@ def _pack(sport_id: str, brand: str) -> dict:
                 "away": player["away"],
                 "opp": _opp_abbr(player, opp_name),
                 "start": player["start"],
+                "side": player.get("side") or "",
+                "spread": _clean(player.get("spread")),
+                "total": _clean(player.get("total")),
+                "defense": {stat: _clean(round(float(value), 4)) for stat, value in (player.get("defense") or {}).items()},
                 "props": quotes,
                 "logs": logs,
             }

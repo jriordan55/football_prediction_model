@@ -192,6 +192,33 @@ def _upcoming(board: dict[str, Any]) -> list[dict[str, Any]]:
     return games
 
 
+def _main_number(main: dict[str, Any], key: str) -> float | None:
+    raw = main.get(key)
+    if raw is None or raw == "":
+        return None
+    try:
+        number = float(raw)
+    except (TypeError, ValueError):
+        return None
+    return number
+
+
+def game_lines(sport: str) -> dict[tuple[str, str], tuple[float | None, float | None]]:
+    """Home spread and game total from the board. Spread is the home number."""
+    spec = SPECS[sport]
+    headers = {"Accept": "application/json", "User-Agent": UA, "Referer": spec["referer"]}
+    board = _get(f"{FOURC}/board/football/{spec['board']}", headers=headers)
+    found: dict[tuple[str, str], tuple[float | None, float | None]] = {}
+    for game in board.get("games") or []:
+        home = str((game.get("home") or {}).get("name") or "")
+        away = str((game.get("away") or {}).get("name") or "")
+        if not home or not away:
+            continue
+        main = game.get("main") if isinstance(game.get("main"), dict) else {}
+        found[(home, away)] = (_main_number(main, "sp"), _main_number(main, "tot"))
+    return found
+
+
 def _quote(price: int | None) -> dict[str, int] | None:
     if price is None:
         return None
@@ -277,6 +304,7 @@ def fetch_lines(sport: str, *, use_cache: bool = True) -> dict[str, Any]:
     for game, prop in listed:
         home = str((game.get("home") or {}).get("name") or "")
         away = str((game.get("away") or {}).get("name") or "")
+        main_game = game.get("main") if isinstance(game.get("main"), dict) else {}
         player = str(prop.get("player") or "").strip().title()
         try:
             main = float((prop.get("main") or {}).get("tot"))
@@ -301,6 +329,8 @@ def fetch_lines(sport: str, *, use_cache: bool = True) -> dict[str, Any]:
             "away_abbr": str((game.get("away") or {}).get("short") or ""),
             "event": f"{away} @ {home}",
             "startDate": str(game.get("start") or ""),
+            "spread": _main_number(main_game, "sp"),
+            "total": _main_number(main_game, "tot"),
             "dk_line": dk_line,
             "over": _quote(dk_over),
             "under": _quote(dk_under),

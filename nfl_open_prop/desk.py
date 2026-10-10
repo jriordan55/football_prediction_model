@@ -139,6 +139,7 @@ class Desk:
         self.cache = cache or CACHE
         self.season = SEASON if season is None else int(season)
         self.week = WEEK if week is None else int(week)
+        self.sport = "nfl"
         self.updated_at = ""
         self.matchups: list[Any] = []
         self.players: dict[str, dict[str, Any]] = {}
@@ -155,6 +156,7 @@ class Desk:
             self.season = int(payload["year"])
         if week is None and payload.get("week"):
             self.week = int(payload["week"])
+        self.sport = "cfb" if str(payload.get("sport") or "") == "cfb" else "nfl"
         self.updated_at = str(payload.get("updatedAt") or "")
         self.matchups = list(payload.get("matchups") or [])
         for raw in payload.get("props") or []:
@@ -176,9 +178,20 @@ class Desk:
                     "start": str(raw.get("startDate") or ""),
                     "home_abbr": str(raw.get("home_abbr") or ""),
                     "away_abbr": str(raw.get("away_abbr") or ""),
+                    "spread": _num(raw.get("spread")),
+                    "total": _num(raw.get("total")),
+                    "side": "",
+                    "opponent": "",
+                    "defense": {},
                     "props": {},
                 },
             )
+            spread = _num(raw.get("spread"))
+            total = _num(raw.get("total"))
+            if spread is not None:
+                player["spread"] = spread
+            if total is not None:
+                player["total"] = total
             quote = {
                 "line": _num(raw.get("line")),
                 "dk_line": _num(raw.get("dk_line")) if raw.get("dk_line") is not None else _num(raw.get("line")),
@@ -190,7 +203,61 @@ class Desk:
             }
             quote["fair"] = _fair(quote)
             player["props"][stat] = quote
+        self._fill_game_lines()
+        self._attach_matchup()
         self._load_logs()
+
+    def _fill_game_lines(self) -> None:
+        if not any(player.get("spread") is None or player.get("total") is None for player in self.players.values()):
+            return
+        try:
+            from nfl_open_prop.fourc_lines import game_lines
+
+            lines = game_lines(self.sport)
+        except Exception:
+            return
+        for player in self.players.values():
+            found = lines.get((player["home"], player["away"]))
+            if not found:
+                continue
+            spread, total = found
+            if player.get("spread") is None:
+                player["spread"] = spread
+            if player.get("total") is None:
+                player["total"] = total
+
+    def _attach_matchup(self) -> None:
+        from lib.nfl_team_registry import teams_match as nfl_match
+        from lib.team_registry import normalize_team_key
+
+        from nfl_open_prop.environment import defense_multiplier
+
+        def same(left: str, right: str) -> bool:
+            if not left or not right:
+                return False
+            if left == right or nfl_match(left, right):
+                return True
+            a, b = normalize_team_key(left), normalize_team_key(right)
+            return bool(a and b and a == b)
+
+        cached: dict[str, dict[str, float]] = {}
+        for player in self.players.values():
+            team, home, away = player["team"], player["home"], player["away"]
+            if same(team, home):
+                player["side"] = "home"
+                player["opponent"] = away
+            elif same(team, away):
+                player["side"] = "away"
+                player["opponent"] = home
+            opponent = str(player.get("opponent") or "")
+            factors = cached.get(opponent)
+            if factors is None:
+                factors = {
+                    spec["id"]: defense_multiplier(self.sport, opponent, spec["id"], self.season, self.week)
+                    for spec in STATS
+                }
+                cached[opponent] = factors
+            player["defense"] = factors
 
     def _load_logs(self) -> None:
         series: dict[str, list[float]] = {s["id"]: [] for s in STATS}
@@ -298,6 +365,19 @@ class Desk:
             mean = (sum(this) + prior_mean * prior_n) / (n + prior_n)
         pool = this if len(this) >= 4 else (this + last)
         sd = _sample_sd(pool) if len(pool) >= 2 else 0.0
+        player = self.players.get(str(espn_id)) or {}
+        from nfl_open_prop.environment import market_factor
+
+        defense = float((player.get("defense") or {}).get(stat) or 1.0)
+        market = market_factor(
+            stat,
+            side=player.get("side") or None,
+            spread=player.get("spread"),
+            total=player.get("total"),
+            sport=self.sport,
+        )
+        base_mean = mean
+        mean = base_mean * defense * market
         if spec["kind"] == "yards":
             sd = max(sd, 0.22 * max(mean, 1.0))
         else:
@@ -305,6 +385,10 @@ class Desk:
         return {
             "kind": spec["kind"],
             "mean": mean,
+            "base_mean": base_mean,
+            "defense": defense,
+            "market": market,
+            "factor": defense * market,
             "sd": sd,
             "n_season": len(this),
             "n_last": len(last),

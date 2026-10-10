@@ -115,16 +115,34 @@ def _players(rows: list[dict]) -> list[dict]:
                 "away": row["away"],
                 "opp": opp or opp_name,
                 "start": row.get("startDate") or "",
+                "side": "",
+                "spread": _num(row.get("spread")),
+                "total": _num(row.get("total")),
+                "defense": {},
                 "props": {},
                 "logs": {},
             }
             grouped[key] = player
-        player["props"][row["prop_key"]] = _quote(row)
+            player["props"][row["prop_key"]] = _quote(row)
+            spread = _num(row.get("spread"))
+            total = _num(row.get("total"))
+            if spread is not None:
+                player["spread"] = spread
+            if total is not None:
+                player["total"] = total
     return list(grouped.values())
 
 
 def _changed(before: dict, after: dict) -> bool:
     if before.get("week") != after.get("week") or before.get("matchups") != after.get("matchups"):
+        return True
+    def lines_of(players: list[dict]) -> dict:
+        return {
+            (_norm(p["name"]), p.get("home"), p.get("away")): (p.get("spread"), p.get("total"))
+            for p in players
+        }
+
+    if lines_of(before.get("players") or []) != lines_of(after.get("players") or []):
         return True
     old = {(_norm(p["name"]), p.get("home"), p.get("away")): p.get("props") for p in before.get("players") or []}
     new = {(_norm(p["name"]), p.get("home"), p.get("away")): p.get("props") for p in after.get("players") or []}
@@ -145,6 +163,12 @@ def apply_sport(desk: dict, sport_id: str, fresh: dict) -> bool:
             player["id"] = old.get("id") or player["id"]
             player["logs"] = old.get("logs") or {}
             player["team"] = player["team"] or old.get("team") or ""
+            player["side"] = old.get("side") or ""
+            player["defense"] = old.get("defense") or {}
+            if player.get("spread") is None:
+                player["spread"] = old.get("spread")
+            if player.get("total") is None:
+                player["total"] = old.get("total")
             if old.get("opp"):
                 player["opp"] = old["opp"]
             props = {}
