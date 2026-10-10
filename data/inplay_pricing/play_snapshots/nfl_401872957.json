@@ -1,0 +1,919 @@
+{
+  "sport": "nfl",
+  "event_id": "401872957",
+  "updated_at": "2026-09-27T17:16:17.588540+00:00",
+  "plays": {
+    "4018729571": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295740": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187295774": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:55"
+    },
+    "401872957107": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:51"
+    },
+    "401872957132": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:06"
+    },
+    "401872957158": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:02"
+    },
+    "401872957180": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:14"
+    },
+    "401872957199": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:06"
+    },
+    "401872957224": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:29"
+    },
+    "401872957235": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:44"
+    },
+    "401872957246": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:44"
+    },
+    "401872957294": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:13"
+    },
+    "401872957316": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:33"
+    },
+    "401872957339": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:25"
+    },
+    "401872957362": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:20"
+    },
+    "401872957372": {
+      "captured_at": "2026-09-27T17:16:08.602614+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": -2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "prophetx",
+          "price": 5098,
+          "book": "ProphetX",
+          "line": 2.5,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "Spread"
+        },
+        "total_over": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "line": 42.5,
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "polymarket",
+          "price": -133,
+          "book": "Polymarket",
+          "liquidity": 8039.0,
+          "line": null,
+          "side": "home",
+          "selection": "Jacksonville Jaguars",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 127,
+          "book": "Polymarket",
+          "liquidity": 32033.0,
+          "line": null,
+          "side": "away",
+          "selection": "New England Patriots",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:10"
+    }
+  }
+}

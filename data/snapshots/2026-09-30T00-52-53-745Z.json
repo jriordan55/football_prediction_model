@@ -1,0 +1,594 @@
+{
+  "capturedAt": "2026-09-30T00:52:53.745Z",
+  "mode": "prematch",
+  "sport": "MLB",
+  "markets": [
+    "Moneyline",
+    "Spread",
+    "Total",
+    "1st Inning Moneyline",
+    "1st Inning Spread",
+    "1st Inning Total",
+    "2nd Inning Moneyline",
+    "2nd Inning Spread",
+    "2nd Inning Total",
+    "3rd Inning Moneyline",
+    "3rd Inning Spread",
+    "3rd Inning Total",
+    "4th Inning Moneyline",
+    "4th Inning Spread",
+    "4th Inning Total",
+    "5th Inning Moneyline",
+    "5th Inning Spread",
+    "5th Inning Total",
+    "6th Inning Moneyline",
+    "6th Inning Spread",
+    "6th Inning Total",
+    "7th Inning Moneyline",
+    "7th Inning Spread",
+    "7th Inning Total",
+    "8th Inning Moneyline",
+    "8th Inning Spread",
+    "8th Inning Total",
+    "9th Inning Moneyline",
+    "9th Inning Spread",
+    "9th Inning Total",
+    "Hits",
+    "Home Runs",
+    "RBIs",
+    "Runs",
+    "Bases",
+    "Hits + Runs + RBIs",
+    "Strikeouts Thrown",
+    "Outs"
+  ],
+  "sportsbooks": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "betonline",
+    "thescore",
+    "consensus"
+  ],
+  "oddsCount": 0,
+  "newPlays": 0,
+  "gameStates": 1,
+  "injuries": 10,
+  "liveGames": 1,
+  "games": [
+    {
+      "id": "401907965",
+      "name": "Philadelphia Phillies at Atlanta Braves",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "22",
+        "homeAway": "away",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Phillies",
+        "shortName": "Phillies",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "15",
+        "homeAway": "home",
+        "abbreviation": "ATL",
+        "name": "Atlanta Braves",
+        "shortName": "Braves",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+        "score": "5",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401907896",
+      "name": "Chicago White Sox at Houston Astros",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "4",
+        "homeAway": "away",
+        "abbreviation": "CHW",
+        "name": "Chicago White Sox",
+        "shortName": "White Sox",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chw.png",
+        "score": "6",
+        "record": "",
+        "winner": true
+      },
+      "home": {
+        "id": "18",
+        "homeAway": "home",
+        "abbreviation": "HOU",
+        "name": "Houston Astros",
+        "shortName": "Astros",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401907924",
+      "name": "Boston Red Sox at New York Yankees",
+      "status": {
+        "state": "in",
+        "completed": false,
+        "description": "In Progress",
+        "detail": "Bottom 2nd",
+        "shortDetail": "Bot 2nd"
+      },
+      "away": {
+        "id": "2",
+        "homeAway": "away",
+        "abbreviation": "BOS",
+        "name": "Boston Red Sox",
+        "shortName": "Red Sox",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bos.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "10",
+        "homeAway": "home",
+        "abbreviation": "NYY",
+        "name": "New York Yankees",
+        "shortName": "Yankees",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401907974",
+      "name": "Chicago Cubs at San Diego Padres",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "9/29 - 10:00 PM EDT"
+      },
+      "away": {
+        "id": "16",
+        "homeAway": "away",
+        "abbreviation": "CHC",
+        "name": "Chicago Cubs",
+        "shortName": "Cubs",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chc.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "25",
+        "homeAway": "home",
+        "abbreviation": "SD",
+        "name": "San Diego Padres",
+        "shortName": "Padres",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    }
+  ],
+  "odds": [],
+  "details": [
+    {
+      "fetchedAt": "2026-09-30T00:53:23.074Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401907974",
+        "name": "Chicago Cubs at San Diego Padres",
+        "shortName": "CHC @ SD",
+        "date": "2026-09-30T02:00Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "9/29 - 10:00 PM EDT"
+        },
+        "venue": "Petco Park",
+        "away": {
+          "id": "16",
+          "homeAway": "away",
+          "abbreviation": "CHC",
+          "name": "Chicago Cubs",
+          "shortName": "Cubs",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chc.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "25",
+          "homeAway": "home",
+          "abbreviation": "SD",
+          "name": "San Diego Padres",
+          "shortName": "Padres",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "16",
+            "homeAway": "away",
+            "abbreviation": "CHC",
+            "name": "Chicago Cubs",
+            "shortName": "Cubs",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chc.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "25",
+            "homeAway": "home",
+            "abbreviation": "SD",
+            "name": "San Diego Padres",
+            "shortName": "Padres",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Fernando Tatis Jr.",
+              "value": ".289",
+              "team": "SD"
+            },
+            {
+              "athlete": "Pete Crow-Armstrong",
+              "value": ".280",
+              "team": "CHC"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Manny Machado",
+              "value": "30",
+              "team": "SD"
+            },
+            {
+              "athlete": "Pete Crow-Armstrong",
+              "value": "45",
+              "team": "CHC"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Manny Machado",
+              "value": "91",
+              "team": "SD"
+            },
+            {
+              "athlete": "Pete Crow-Armstrong",
+              "value": "107",
+              "team": "CHC"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Michael King",
+              "value": "3.21",
+              "team": "SD"
+            },
+            {
+              "athlete": "Shota Imanaga",
+              "value": "3.77",
+              "team": "CHC"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Michael King",
+              "value": "12",
+              "team": "SD"
+            },
+            {
+              "athlete": "Shota Imanaga",
+              "value": "11",
+              "team": "CHC"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Michael King",
+              "value": "159",
+              "team": "SD"
+            },
+            {
+              "athlete": "Shota Imanaga",
+              "value": "174",
+              "team": "CHC"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Chicago Cubs",
+          "abbreviation": "CHC",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/chc.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "162"
+            },
+            {
+              "label": "Batting G",
+              "value": "162"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "87"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1699"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1345"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "804"
+            },
+            {
+              "label": "Batting SH",
+              "value": "10"
+            },
+            {
+              "label": "Batting H",
+              "value": "1398"
+            },
+            {
+              "label": "Batting SB",
+              "value": "114"
+            },
+            {
+              "label": "Batting BB",
+              "value": "674"
+            },
+            {
+              "label": "Batting CI",
+              "value": "1"
+            },
+            {
+              "label": "Batting R",
+              "value": "850"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "162"
+            },
+            {
+              "label": "Pitching G",
+              "value": "162"
+            }
+          ]
+        },
+        {
+          "team": "San Diego Padres",
+          "abbreviation": "SD",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "162"
+            },
+            {
+              "label": "Batting G",
+              "value": "162"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "62"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1860"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1310"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "696"
+            },
+            {
+              "label": "Batting SH",
+              "value": "25"
+            },
+            {
+              "label": "Batting H",
+              "value": "1314"
+            },
+            {
+              "label": "Batting SB",
+              "value": "164"
+            },
+            {
+              "label": "Batting BB",
+              "value": "554"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "722"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "162"
+            },
+            {
+              "label": "Pitching G",
+              "value": "162"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Miguel Andujar",
+          "position": "DH",
+          "team": "SD",
+          "status": "10-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-09-29",
+          "note": null
+        },
+        {
+          "player": "Jeremiah Estrada",
+          "position": "RP",
+          "team": "SD",
+          "status": "15-Day-IL",
+          "injury": "Pinched Nerve",
+          "returnDate": "2026-09-29",
+          "note": null
+        },
+        {
+          "player": "Lucas Giolito",
+          "position": "SP",
+          "team": "SD",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-10-01",
+          "note": null
+        },
+        {
+          "player": "Casey Mize",
+          "position": "SP",
+          "team": "SD",
+          "status": "15-Day-IL",
+          "injury": "Sprain",
+          "returnDate": "2026-10-11",
+          "note": null
+        },
+        {
+          "player": "Rodolfo Duran",
+          "position": "C",
+          "team": "SD",
+          "status": "60-Day-IL",
+          "injury": "Strain",
+          "returnDate": "2027-02-01",
+          "note": null
+        },
+        {
+          "player": "Edward Cabrera",
+          "position": "SP",
+          "team": "CHC",
+          "status": "Bereavement",
+          "injury": "Personal",
+          "returnDate": "2026-09-29",
+          "note": null
+        },
+        {
+          "player": "Trent Thornton",
+          "position": "RP",
+          "team": "CHC",
+          "status": "15-Day-IL",
+          "injury": "Soreness",
+          "returnDate": "2026-09-29",
+          "note": null
+        },
+        {
+          "player": "Phil Maton",
+          "position": "RP",
+          "team": "CHC",
+          "status": "60-Day-IL",
+          "injury": "Sprain",
+          "returnDate": "2026-09-29",
+          "note": null
+        },
+        {
+          "player": "Hunter Harvey",
+          "position": "RP",
+          "team": "CHC",
+          "status": "60-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-09-29",
+          "note": null
+        },
+        {
+          "player": "Tyler Austin",
+          "position": "1B",
+          "team": "CHC",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-09-29",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    }
+  ]
+}

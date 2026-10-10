@@ -1,0 +1,921 @@
+{
+  "capturedAt": "2026-10-04T16:00:00.352Z",
+  "mode": "prematch",
+  "sport": "MLB",
+  "markets": [
+    "Moneyline",
+    "Spread",
+    "Total",
+    "1st Inning Moneyline",
+    "1st Inning Spread",
+    "1st Inning Total",
+    "2nd Inning Moneyline",
+    "2nd Inning Spread",
+    "2nd Inning Total",
+    "3rd Inning Moneyline",
+    "3rd Inning Spread",
+    "3rd Inning Total",
+    "4th Inning Moneyline",
+    "4th Inning Spread",
+    "4th Inning Total",
+    "5th Inning Moneyline",
+    "5th Inning Spread",
+    "5th Inning Total",
+    "6th Inning Moneyline",
+    "6th Inning Spread",
+    "6th Inning Total",
+    "7th Inning Moneyline",
+    "7th Inning Spread",
+    "7th Inning Total",
+    "8th Inning Moneyline",
+    "8th Inning Spread",
+    "8th Inning Total",
+    "9th Inning Moneyline",
+    "9th Inning Spread",
+    "9th Inning Total",
+    "Hits",
+    "Home Runs",
+    "RBIs",
+    "Runs",
+    "Bases",
+    "Hits + Runs + RBIs",
+    "Strikeouts Thrown",
+    "Outs"
+  ],
+  "sportsbooks": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "betonline",
+    "thescore",
+    "consensus"
+  ],
+  "oddsCount": 0,
+  "newPlays": 0,
+  "gameStates": 2,
+  "injuries": 20,
+  "liveGames": 0,
+  "games": [
+    {
+      "id": "401908003",
+      "name": "San Diego Padres at Milwaukee Brewers",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "10/4 - 4:00 PM EDT"
+      },
+      "away": {
+        "id": "25",
+        "homeAway": "away",
+        "abbreviation": "SD",
+        "name": "San Diego Padres",
+        "shortName": "Padres",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "8",
+        "homeAway": "home",
+        "abbreviation": "MIL",
+        "name": "Milwaukee Brewers",
+        "shortName": "Brewers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401908014",
+      "name": "Atlanta Braves at Los Angeles Dodgers",
+      "status": {
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "10/4 - 8:00 PM EDT"
+      },
+      "away": {
+        "id": "15",
+        "homeAway": "away",
+        "abbreviation": "ATL",
+        "name": "Atlanta Braves",
+        "shortName": "Braves",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "19",
+        "homeAway": "home",
+        "abbreviation": "LAD",
+        "name": "Los Angeles Dodgers",
+        "shortName": "Dodgers",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    }
+  ],
+  "odds": [],
+  "details": [
+    {
+      "fetchedAt": "2026-10-04T16:00:24.589Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401908003",
+        "name": "San Diego Padres at Milwaukee Brewers",
+        "shortName": "SD @ MIL",
+        "date": "2026-10-04T20:00Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "10/4 - 4:00 PM EDT"
+        },
+        "venue": "American Family Field",
+        "away": {
+          "id": "25",
+          "homeAway": "away",
+          "abbreviation": "SD",
+          "name": "San Diego Padres",
+          "shortName": "Padres",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "8",
+          "homeAway": "home",
+          "abbreviation": "MIL",
+          "name": "Milwaukee Brewers",
+          "shortName": "Brewers",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "25",
+            "homeAway": "away",
+            "abbreviation": "SD",
+            "name": "San Diego Padres",
+            "shortName": "Padres",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "8",
+            "homeAway": "home",
+            "abbreviation": "MIL",
+            "name": "Milwaukee Brewers",
+            "shortName": "Brewers",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Jackson Chourio",
+              "value": ".291",
+              "team": "MIL"
+            },
+            {
+              "athlete": "Fernando Tatis Jr.",
+              "value": ".289",
+              "team": "SD"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Jake Bauers",
+              "value": "26",
+              "team": "MIL"
+            },
+            {
+              "athlete": "Manny Machado",
+              "value": "30",
+              "team": "SD"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Brice Turang",
+              "value": "100",
+              "team": "MIL"
+            },
+            {
+              "athlete": "Manny Machado",
+              "value": "91",
+              "team": "SD"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Jacob Misiorowski",
+              "value": "1.80",
+              "team": "MIL"
+            },
+            {
+              "athlete": "Michael King",
+              "value": "3.21",
+              "team": "SD"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Jacob Misiorowski",
+              "value": "16",
+              "team": "MIL"
+            },
+            {
+              "athlete": "Michael King",
+              "value": "12",
+              "team": "SD"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Jacob Misiorowski",
+              "value": "252",
+              "team": "MIL"
+            },
+            {
+              "athlete": "Michael King",
+              "value": "159",
+              "team": "SD"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "San Diego Padres",
+          "abbreviation": "SD",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "162"
+            },
+            {
+              "label": "Batting G",
+              "value": "162"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "62"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1860"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1310"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "696"
+            },
+            {
+              "label": "Batting SH",
+              "value": "25"
+            },
+            {
+              "label": "Batting H",
+              "value": "1314"
+            },
+            {
+              "label": "Batting SB",
+              "value": "164"
+            },
+            {
+              "label": "Batting BB",
+              "value": "554"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "722"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "162"
+            },
+            {
+              "label": "Pitching G",
+              "value": "162"
+            }
+          ]
+        },
+        {
+          "team": "Milwaukee Brewers",
+          "abbreviation": "MIL",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "162"
+            },
+            {
+              "label": "Batting G",
+              "value": "162"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "40"
+            },
+            {
+              "label": "Batting GO",
+              "value": "2022"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1383"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "788"
+            },
+            {
+              "label": "Batting SH",
+              "value": "37"
+            },
+            {
+              "label": "Batting H",
+              "value": "1422"
+            },
+            {
+              "label": "Batting SB",
+              "value": "162"
+            },
+            {
+              "label": "Batting BB",
+              "value": "668"
+            },
+            {
+              "label": "Batting CI",
+              "value": "7"
+            },
+            {
+              "label": "Batting R",
+              "value": "832"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "162"
+            },
+            {
+              "label": "Pitching G",
+              "value": "162"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Grant Anderson",
+          "position": "RP",
+          "team": "MIL",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Brandon Woodruff",
+          "position": "SP",
+          "team": "MIL",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-10-11",
+          "note": null
+        },
+        {
+          "player": "Quinn Priester",
+          "position": "SP",
+          "team": "MIL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2027-02-01",
+          "note": null
+        },
+        {
+          "player": "Angel Zerpa",
+          "position": "RP",
+          "team": "MIL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2027-07-01",
+          "note": null
+        },
+        {
+          "player": "Brian Fitzpatrick",
+          "position": "RP",
+          "team": "MIL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2027-08-01",
+          "note": null
+        },
+        {
+          "player": "Miguel Andujar",
+          "position": "DH",
+          "team": "SD",
+          "status": "10-Day-IL",
+          "injury": "Fracture",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Jeremiah Estrada",
+          "position": "RP",
+          "team": "SD",
+          "status": "15-Day-IL",
+          "injury": "Pinched Nerve",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Lucas Giolito",
+          "position": "SP",
+          "team": "SD",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Walker Buehler",
+          "position": "SP",
+          "team": "SD",
+          "status": "paternity",
+          "injury": "Personal",
+          "returnDate": "2026-10-06",
+          "note": null
+        },
+        {
+          "player": "Casey Mize",
+          "position": "SP",
+          "team": "SD",
+          "status": "15-Day-IL",
+          "injury": "Sprain",
+          "returnDate": "2026-10-11",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    },
+    {
+      "fetchedAt": "2026-10-04T16:00:24.637Z",
+      "source": "ESPN (sports-leader-mcp endpoints)",
+      "game": {
+        "id": "401908014",
+        "name": "Atlanta Braves at Los Angeles Dodgers",
+        "shortName": "ATL @ LAD",
+        "date": "2026-10-05T00:00Z",
+        "status": {
+          "state": "pre",
+          "completed": false,
+          "description": "Scheduled",
+          "detail": "Scheduled",
+          "shortDetail": "10/4 - 8:00 PM EDT"
+        },
+        "venue": "Dodger Stadium",
+        "away": {
+          "id": "15",
+          "homeAway": "away",
+          "abbreviation": "ATL",
+          "name": "Atlanta Braves",
+          "shortName": "Braves",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "home": {
+          "id": "19",
+          "homeAway": "home",
+          "abbreviation": "LAD",
+          "name": "Los Angeles Dodgers",
+          "shortName": "Dodgers",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
+          "score": "0",
+          "record": "",
+          "winner": false
+        },
+        "competitors": [
+          {
+            "id": "15",
+            "homeAway": "away",
+            "abbreviation": "ATL",
+            "name": "Atlanta Braves",
+            "shortName": "Braves",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          },
+          {
+            "id": "19",
+            "homeAway": "home",
+            "abbreviation": "LAD",
+            "name": "Los Angeles Dodgers",
+            "shortName": "Dodgers",
+            "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
+            "score": "0",
+            "record": "",
+            "winner": false
+          }
+        ],
+        "matchedEvent": null
+      },
+      "plays": [],
+      "playCount": 0,
+      "latestPlay": null,
+      "leaders": [
+        {
+          "category": "Batting Average",
+          "leaders": [
+            {
+              "athlete": "Freddie Freeman",
+              "value": ".288",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Michael Harris II",
+              "value": ".294",
+              "team": "ATL"
+            }
+          ]
+        },
+        {
+          "category": "Home Runs",
+          "leaders": [
+            {
+              "athlete": "Shohei Ohtani",
+              "value": "30",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Matt Olson",
+              "value": "41",
+              "team": "ATL"
+            }
+          ]
+        },
+        {
+          "category": "Runs Batted In",
+          "leaders": [
+            {
+              "athlete": "Andy Pages",
+              "value": "85",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Matt Olson",
+              "value": "93",
+              "team": "ATL"
+            }
+          ]
+        },
+        {
+          "category": "Earned Run Average",
+          "leaders": [
+            {
+              "athlete": "Yoshinobu Yamamoto",
+              "value": "2.53",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Chris Sale",
+              "value": "2.16",
+              "team": "ATL"
+            }
+          ]
+        },
+        {
+          "category": "Wins",
+          "leaders": [
+            {
+              "athlete": "Yoshinobu Yamamoto",
+              "value": "14",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Chris Sale",
+              "value": "14",
+              "team": "ATL"
+            }
+          ]
+        },
+        {
+          "category": "Strikeouts",
+          "leaders": [
+            {
+              "athlete": "Yoshinobu Yamamoto",
+              "value": "182",
+              "team": "LAD"
+            },
+            {
+              "athlete": "Chris Sale",
+              "value": "200",
+              "team": "ATL"
+            }
+          ]
+        }
+      ],
+      "teamStats": [
+        {
+          "team": "Atlanta Braves",
+          "abbreviation": "ATL",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/atl.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "162"
+            },
+            {
+              "label": "Batting G",
+              "value": "162"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "56"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1734"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1310"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "711"
+            },
+            {
+              "label": "Batting SH",
+              "value": "11"
+            },
+            {
+              "label": "Batting H",
+              "value": "1348"
+            },
+            {
+              "label": "Batting SB",
+              "value": "83"
+            },
+            {
+              "label": "Batting BB",
+              "value": "465"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "742"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "162"
+            },
+            {
+              "label": "Pitching G",
+              "value": "162"
+            }
+          ]
+        },
+        {
+          "team": "Los Angeles Dodgers",
+          "abbreviation": "LAD",
+          "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+          "stats": [
+            {
+              "label": "Batting GP",
+              "value": "162"
+            },
+            {
+              "label": "Batting G",
+              "value": "162"
+            },
+            {
+              "label": "Batting HBP",
+              "value": "68"
+            },
+            {
+              "label": "Batting GO",
+              "value": "1684"
+            },
+            {
+              "label": "Batting SO",
+              "value": "1267"
+            },
+            {
+              "label": "Batting RBI",
+              "value": "756"
+            },
+            {
+              "label": "Batting SH",
+              "value": "15"
+            },
+            {
+              "label": "Batting H",
+              "value": "1399"
+            },
+            {
+              "label": "Batting SB",
+              "value": "72"
+            },
+            {
+              "label": "Batting BB",
+              "value": "628"
+            },
+            {
+              "label": "Batting CI",
+              "value": "3"
+            },
+            {
+              "label": "Batting R",
+              "value": "801"
+            },
+            {
+              "label": "Pitching GP",
+              "value": "162"
+            },
+            {
+              "label": "Pitching G",
+              "value": "162"
+            }
+          ]
+        }
+      ],
+      "injuries": [
+        {
+          "player": "Will Klein",
+          "position": "RP",
+          "team": "LAD",
+          "status": "60-Day-IL",
+          "injury": "Soreness",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Gavin Stone",
+          "position": "SP",
+          "team": "LAD",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Jake Cousins",
+          "position": "RP",
+          "team": "LAD",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Ben Casparius",
+          "position": "RP",
+          "team": "LAD",
+          "status": "60-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Brusdar Graterol",
+          "position": "RP",
+          "team": "LAD",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Reynaldo Lopez",
+          "position": "RP",
+          "team": "ATL",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Joe Jimenez",
+          "position": "RP",
+          "team": "ATL",
+          "status": "60-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-10-03",
+          "note": null
+        },
+        {
+          "player": "Tyler Mahle",
+          "position": "SP",
+          "team": "ATL",
+          "status": "Day-To-Day",
+          "injury": "Soreness",
+          "returnDate": "2026-10-06",
+          "note": null
+        },
+        {
+          "player": "Martin Perez",
+          "position": "SP",
+          "team": "ATL",
+          "status": "15-Day-IL",
+          "injury": "Inflammation",
+          "returnDate": "2026-10-11",
+          "note": null
+        },
+        {
+          "player": "Bryce Elder",
+          "position": "SP",
+          "team": "ATL",
+          "status": "15-Day-IL",
+          "injury": "Surgery",
+          "returnDate": "2026-10-11",
+          "note": null
+        }
+      ],
+      "winProbability": null,
+      "situation": {
+        "activeInning": 1,
+        "inning": 1,
+        "half": "Pre",
+        "outs": 0,
+        "onFirst": false,
+        "onSecond": false,
+        "onThird": false,
+        "awayRunsThisInning": 0,
+        "homeRunsThisInning": 0,
+        "awayScore": "0",
+        "homeScore": "0"
+      },
+      "notes": []
+    }
+  ]
+}

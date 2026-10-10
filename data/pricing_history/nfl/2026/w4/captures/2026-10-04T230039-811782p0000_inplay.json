@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "sport": "nfl",
+  "year": 2026,
+  "week": 4,
+  "captured_at": "2026-10-04T23:00:39.811782+00:00",
+  "capture_type": "inplay",
+  "methodology": {
+    "version": 6,
+    "game_sim": "pricing_engine.simulator.run_matchup_simulation",
+    "props": "pricing_engine.ui.props_table.compute_prop_projection",
+    "pit": "pricing_engine.pit",
+    "sims": 3000
+  },
+  "source": "inplay_runner",
+  "games": [
+    {
+      "home": "Seattle Seahawks",
+      "away": "Los Angeles Chargers",
+      "event_id": "401872977",
+      "pregame_captured_at": null,
+      "pregame_capture_type": null,
+      "new_plays": 148,
+      "rows_written": 888,
+      "last_play": {
+        "id": "4018729773579",
+        "text": " K.Mitchell left tackle to LAC 47 for 9 yards (J.Love).",
+        "type": "Rush",
+        "period": 4,
+        "clock": "14:02",
+        "scoringPlay": false,
+        "scoreValue": 0,
+        "awayScore": 13,
+        "homeScore": 30,
+        "down": 1,
+        "distance": 10,
+        "yardLine": 62,
+        "possession": "LAC 38"
+      },
+      "odds_quotes": [
+        {
+          "book_id": "stn",
+          "price": -122,
+          "book": "Stn",
+          "line": -16.5,
+          "side": "home",
+          "selection": "Seattle Seahawks",
+          "market": "Spread",
+          "market_key": "Spread"
+        },
+        {
+          "book_id": "polymarket",
+          "price": 132,
+          "book": "Polymarket",
+          "liquidity": 963.0,
+          "line": 16.5,
+          "side": "away",
+          "selection": "Los Angeles Chargers",
+          "market": "Spread",
+          "market_key": "Spread"
+        },
+        {
+          "book_id": "novig",
+          "price": -1151,
+          "book": "Novig",
+          "liquidity": 1338.0,
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over",
+          "market_key": "Total"
+        },
+        {
+          "book_id": "novig",
+          "price": 700,
+          "book": "Novig",
+          "liquidity": 568.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under",
+          "market_key": "Total"
+        },
+        {
+          "book_id": "kalshi",
+          "price": -9900,
+          "book": "Kalshi",
+          "liquidity": 113652.0,
+          "line": null,
+          "side": "home",
+          "selection": "Seattle Seahawks",
+          "market": "ML",
+          "market_key": "ML"
+        },
+        {
+          "book_id": "kalshi",
+          "price": 4900,
+          "book": "Kalshi",
+          "liquidity": 2826.0,
+          "line": null,
+          "side": "away",
+          "selection": "Los Angeles Chargers",
+          "market": "ML",
+          "market_key": "ML"
+        }
+      ],
+      "sim": {
+        "error": "no_ratings",
+        "home": "Seattle Seahawks",
+        "away": "Los Angeles Chargers"
+      },
+      "props": []
+    }
+  ]
+}

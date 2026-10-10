@@ -1,0 +1,2173 @@
+{
+  "sport": "nfl",
+  "event_id": "401872947",
+  "updated_at": "2026-09-22T01:10:27.237554+00:00",
+  "plays": {
+    "4018729471": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187294740": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187294768": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:54"
+    },
+    "40187294790": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:09"
+    },
+    "401872947112": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:27"
+    },
+    "401872947137": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:42"
+    },
+    "401872947162": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:08"
+    },
+    "401872947185": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:05"
+    },
+    "401872947215": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:28"
+    },
+    "401872947228": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:20"
+    },
+    "401872947241": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:20"
+    },
+    "401872947268": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:12"
+    },
+    "401872947290": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:40"
+    },
+    "401872947315": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "10:02"
+    },
+    "401872947338": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:58"
+    },
+    "401872947348": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:51"
+    },
+    "401872947358": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:51"
+    },
+    "401872947387": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "9:10"
+    },
+    "401872947409": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:33"
+    },
+    "401872947431": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:50"
+    },
+    "401872947466": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:46"
+    },
+    "401872947493": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:06"
+    },
+    "401872947527": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:02"
+    },
+    "401872947565": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:37"
+    },
+    "401872947591": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:50"
+    },
+    "401872947614": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:46"
+    },
+    "401872947637": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:43"
+    },
+    "401872947646": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:35"
+    },
+    "401872947655": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:35"
+    },
+    "401872947684": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:54"
+    },
+    "401872947719": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:23"
+    },
+    "401872947741": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:42"
+    },
+    "401872947766": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:59"
+    },
+    "401872947791": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:14"
+    },
+    "401872947813": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:33"
+    },
+    "401872947846": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:58"
+    },
+    "401872947871": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:11"
+    },
+    "401872947912": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:11"
+    },
+    "401872947935": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:06"
+    },
+    "401872947958": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:01"
+    },
+    "401872947983": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:00"
+    },
+    "4018729471003": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "15:00"
+    },
+    "4018729471026": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:48"
+    },
+    "4018729471039": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:35"
+    },
+    "4018729471052": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:35"
+    },
+    "4018729471092": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:18"
+    },
+    "4018729471117": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:36"
+    },
+    "4018729471147": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:50"
+    },
+    "4018729471160": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:01"
+    },
+    "4018729471172": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:01"
+    },
+    "4018729471201": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:18"
+    },
+    "4018729471258": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:07"
+    },
+    "4018729471224": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:07"
+    },
+    "4018729471265": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:07"
+    },
+    "4018729471295": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:01"
+    },
+    "4018729471317": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:20"
+    },
+    "4018729471350": {
+      "captured_at": "2026-09-22T01:10:21.935204+00:00",
+      "quotes": {
+        "total_over": {
+          "book_id": "bet365",
+          "price": -110,
+          "book": "bet365",
+          "line": 45.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": 108,
+          "book": "Polymarket",
+          "liquidity": 8246.0,
+          "line": 45.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_away": {
+          "book_id": "polymarketus",
+          "price": 1438,
+          "book": "Polymarket US",
+          "liquidity": 12287.0,
+          "line": null,
+          "side": "away",
+          "selection": "New York Giants",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:40"
+    }
+  }
+}

@@ -1,0 +1,1439 @@
+{
+  "schema_version": 1,
+  "sport": "nfl",
+  "year": 2026,
+  "week": 2,
+  "captured_at": "2026-09-20T17:02:51.908990+00:00",
+  "capture_type": "inplay",
+  "methodology": {
+    "version": 6,
+    "game_sim": "pricing_engine.simulator.run_matchup_simulation",
+    "props": "pricing_engine.ui.props_table.compute_prop_projection",
+    "pit": "pricing_engine.pit",
+    "sims": 3000
+  },
+  "source": "inplay_runner",
+  "games": [
+    {
+      "home": "New England Patriots",
+      "away": "Pittsburgh Steelers",
+      "event_id": "401872946",
+      "pregame_captured_at": null,
+      "pregame_capture_type": null,
+      "new_plays": 2,
+      "rows_written": 192,
+      "last_play": {
+        "id": "40187294640",
+        "text": "A.Borregales kicks 61 yards from NE 35 to PIT 4. K.Wetjen to PIT 30 for 26 yards (N.Obiazor; C.Latu).",
+        "type": "Kickoff",
+        "period": 1,
+        "clock": "15:00",
+        "scoringPlay": false,
+        "scoreValue": 0,
+        "awayScore": 0,
+        "homeScore": 0,
+        "down": null,
+        "distance": null,
+        "yardLine": 35,
+        "possession": ""
+      },
+      "odds_quotes": [
+        {
+          "book_id": "4cx",
+          "price": 101,
+          "book": "4Cx",
+          "liquidity": 1980.2,
+          "line": -4.5,
+          "side": "home",
+          "selection": "New England Patriots",
+          "market": "Spread",
+          "market_key": "Spread"
+        },
+        {
+          "book_id": "lowvig",
+          "price": -101,
+          "book": "LowVig",
+          "line": 4.5,
+          "side": "away",
+          "selection": "Pittsburgh Steelers",
+          "market": "Spread",
+          "market_key": "Spread"
+        },
+        {
+          "book_id": "4cx",
+          "price": 106,
+          "book": "4Cx",
+          "liquidity": 1143.4,
+          "line": 41.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over",
+          "market_key": "Total"
+        },
+        {
+          "book_id": "novig",
+          "price": 3227,
+          "book": "Novig",
+          "line": 41.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under",
+          "market_key": "Total"
+        },
+        {
+          "book_id": "apex",
+          "price": -208,
+          "book": "Apex",
+          "liquidity": 7000.0,
+          "line": null,
+          "side": "home",
+          "selection": "New England Patriots",
+          "market": "ML",
+          "market_key": "ML"
+        },
+        {
+          "book_id": "novig",
+          "price": 6156,
+          "book": "Novig",
+          "line": null,
+          "side": "away",
+          "selection": "Pittsburgh Steelers",
+          "market": "ML",
+          "market_key": "ML"
+        }
+      ],
+      "sim": {
+        "error": "no_ratings",
+        "home": "New England Patriots",
+        "away": "Pittsburgh Steelers"
+      },
+      "props": [
+        {
+          "prop_id": "6aaadb437161c0d4f0712a76",
+          "player": "Aaron Rodgers",
+          "stat": "TOTAL PASSING YARDS",
+          "prop_key": "pass_yds",
+          "line": 213.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 213.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 213.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aaadb437161c0d4f0712a7c",
+          "player": "Aaron Rodgers",
+          "stat": "TOTAL TOUCHDOWN PASSES",
+          "prop_key": "pass_tds",
+          "line": 1.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": 197,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 1.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -246,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 1.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f43417",
+          "player": "Aaron Rodgers",
+          "stat": "TOTAL RUSHING YARDS",
+          "prop_key": "rush_yds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "fanduel",
+            "price": -108,
+            "book": "FanDuel",
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -105,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433c3",
+          "player": "Darnell Washington",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 1.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "fanduel",
+            "price": -146,
+            "book": "FanDuel",
+            "line": 1.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": 122,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 1.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433c9",
+          "player": "Darnell Washington",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 14.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -111,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 14.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -109,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 14.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433db",
+          "player": "Demario Douglas",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 34.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -111,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 34.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -109,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 34.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433e1",
+          "player": "Demario Douglas",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 3.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": 127,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 3.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "amapola",
+            "price": -140,
+            "book": "Amapola",
+            "liquidity": 1500.0,
+            "line": 3.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f433f9",
+          "player": "Dk Metcalf",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 4.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "draftkings",
+            "price": -104,
+            "book": "DraftKings",
+            "line": 4.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -105,
+            "book": "Pinnacle",
+            "liquidity": 2500.0,
+            "line": 4.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f433ff",
+          "player": "Dk Metcalf",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 59.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": 101,
+            "book": "Pinnacle",
+            "liquidity": 2500.0,
+            "line": 59.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "fanduel",
+            "price": -113,
+            "book": "FanDuel",
+            "line": 59.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d56d",
+          "player": "Dk Metcalf",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": 241,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -307,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aaadb3d7161c0d4f0712a67",
+          "player": "Drake Maye",
+          "stat": "TOTAL PASSING YARDS",
+          "prop_key": "pass_yds",
+          "line": 224.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": 103,
+            "book": "Pinnacle",
+            "liquidity": 2500.0,
+            "line": 224.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "fanduel",
+            "price": -113,
+            "book": "FanDuel",
+            "line": 224.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aaadb3d7161c0d4f0712a6d",
+          "player": "Drake Maye",
+          "stat": "TOTAL TOUCHDOWN PASSES",
+          "prop_key": "pass_tds",
+          "line": 1.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "draftkings",
+            "price": 121,
+            "book": "DraftKings",
+            "line": 1.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -142,
+            "book": "Pinnacle",
+            "liquidity": 2500.0,
+            "line": 1.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433a5",
+          "player": "Drake Maye",
+          "stat": "TOTAL RUSHING YARDS",
+          "prop_key": "rush_yds",
+          "line": 27.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -106,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 27.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "fanduel",
+            "price": -113,
+            "book": "FanDuel",
+            "line": 27.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d561",
+          "player": "Drake Maye",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "betonline",
+            "price": 275,
+            "book": "BetOnline",
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -337,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aae8cca94eb037752a38d2d",
+          "player": "Germie Bernard",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 15.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "draftkings",
+            "price": -108,
+            "book": "DraftKings",
+            "line": 15.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -104,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 15.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aae8cca94eb037752a38d33",
+          "player": "Germie Bernard",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 1.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "fanduel",
+            "price": 106,
+            "book": "FanDuel",
+            "line": 1.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 1.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f4339f",
+          "player": "Hunter Henry",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 39.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "draftkings",
+            "price": -103,
+            "book": "DraftKings",
+            "line": 39.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 39.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f4341d",
+          "player": "Hunter Henry",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 3.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "draftkings",
+            "price": 118,
+            "book": "DraftKings",
+            "line": 3.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -133,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 3.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d55b",
+          "player": "Hunter Henry",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "draftkings",
+            "price": 260,
+            "book": "DraftKings",
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -287,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433b7",
+          "player": "Jaylen Warren",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 19.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "fanduel",
+            "price": -102,
+            "book": "FanDuel",
+            "line": 19.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "draftkings",
+            "price": -115,
+            "book": "DraftKings",
+            "line": 19.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433ed",
+          "player": "Jaylen Warren",
+          "stat": "TOTAL RUSHING YARDS",
+          "prop_key": "rush_yds",
+          "line": 41.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -109,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 41.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -111,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 41.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f43405",
+          "player": "Jaylen Warren",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 3.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": 145,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 3.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "amapola",
+            "price": -172,
+            "book": "Amapola",
+            "liquidity": 1500.0,
+            "line": 3.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d58b",
+          "player": "Jaylen Warren",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "fanduel",
+            "price": 210,
+            "book": "FanDuel",
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "vertex",
+            "price": -190,
+            "book": "Vertex",
+            "liquidity": 5000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433d5",
+          "player": "Mack Hollins",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 3.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": 129,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 3.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -157,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 3.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f4342f",
+          "player": "Mack Hollins",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 35.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "fanduel",
+            "price": -113,
+            "book": "FanDuel",
+            "line": 35.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -101,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 35.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d573",
+          "player": "Mack Hollins",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "vertex",
+            "price": 310,
+            "book": "Vertex",
+            "liquidity": 5000.0,
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -346,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433ab",
+          "player": "Pat Freiermuth",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 3.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "fanduel",
+            "price": 106,
+            "book": "FanDuel",
+            "line": 3.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -123,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 3.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f4340b",
+          "player": "Pat Freiermuth",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 31.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -104,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 31.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "fanduel",
+            "price": -113,
+            "book": "FanDuel",
+            "line": 31.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433b1",
+          "player": "Rhamondre Stevenson",
+          "stat": "TOTAL RUSHING YARDS",
+          "prop_key": "rush_yds",
+          "line": 48.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 48.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 48.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433bd",
+          "player": "Rhamondre Stevenson",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 2.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -138,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 2.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "draftkings",
+            "price": 123,
+            "book": "DraftKings",
+            "line": 2.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433cf",
+          "player": "Rhamondre Stevenson",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 17.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -118,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 17.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -102,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 17.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d585",
+          "player": "Rhamondre Stevenson",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "novig",
+            "price": 115,
+            "book": "Novig",
+            "liquidity": 9555.0,
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "vertex",
+            "price": -117,
+            "book": "Vertex",
+            "liquidity": 5000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f433e7",
+          "player": "Rico Dowdle",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 14.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 14.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 14.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f43411",
+          "player": "Rico Dowdle",
+          "stat": "TOTAL RUSHING YARDS",
+          "prop_key": "rush_yds",
+          "line": 39.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "draftkings",
+            "price": 141,
+            "book": "DraftKings",
+            "line": 39.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "novig",
+            "price": -228,
+            "book": "Novig",
+            "liquidity": 1017.0,
+            "line": 39.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f43423",
+          "player": "Rico Dowdle",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 2.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "amapola",
+            "price": -112,
+            "book": "Amapola",
+            "liquidity": 1500.0,
+            "line": 2.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": 102,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 2.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d567",
+          "player": "Rico Dowdle",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "fanduel",
+            "price": 220,
+            "book": "FanDuel",
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -262,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f4338d",
+          "player": "Roman Wilson",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 33.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 33.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 33.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f43429",
+          "player": "Roman Wilson",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 2.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -134,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 2.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "draftkings",
+            "price": 115,
+            "book": "DraftKings",
+            "line": 2.5,
+            "side": "under"
+          },
+          "team": "Pittsburgh Steelers",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62d758d38a8a9f43393",
+          "player": "Romeo Doubs",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 37.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -124,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 37.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": 102,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 37.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f43435",
+          "player": "Romeo Doubs",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 3.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "draftkings",
+            "price": 106,
+            "book": "DraftKings",
+            "line": 3.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -119,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 3.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d579",
+          "player": "Romeo Doubs",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": 284,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "vertex",
+            "price": -338,
+            "book": "Vertex",
+            "liquidity": 5000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aabf62e758d38a8a9f4343b",
+          "player": "Treveyon Henderson",
+          "stat": "TOTAL RUSHING YARDS",
+          "prop_key": "rush_yds",
+          "line": 33.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -114,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 33.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -106,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 33.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aad97aca09eff3671c581b4",
+          "player": "Treveyon Henderson",
+          "stat": "TOTAL RECEPTIONS",
+          "prop_key": "receptions",
+          "line": 1.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -124,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 1.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "4cx",
+            "price": 114,
+            "book": "4Cx",
+            "liquidity": 1311.02,
+            "line": 1.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aad97aca09eff3671c581ba",
+          "player": "Treveyon Henderson",
+          "stat": "TOTAL RECEIVING YARDS",
+          "prop_key": "rec_yds",
+          "line": 10.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 10.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -110,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 10.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        },
+        {
+          "prop_id": "6aadb608a09eff3671c5d57f",
+          "player": "Treveyon Henderson",
+          "stat": "TOTAL TOUCHDOWNS",
+          "prop_key": "tds",
+          "line": 0.5,
+          "home": "New England Patriots",
+          "away": "Pittsburgh Steelers",
+          "event": "Pittsburgh Steelers @ New England Patriots",
+          "over": {
+            "book_id": "betonline",
+            "price": 275,
+            "book": "BetOnline",
+            "line": 0.5,
+            "side": "over"
+          },
+          "under": {
+            "book_id": "pinnacle",
+            "price": -344,
+            "book": "Pinnacle",
+            "liquidity": 1000.0,
+            "line": 0.5,
+            "side": "under"
+          },
+          "team": "New England Patriots",
+          "actual_stat": null,
+          "live_projection": null,
+          "pregame_projection": null
+        }
+      ]
+    }
+  ]
+}

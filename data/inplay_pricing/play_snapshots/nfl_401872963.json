@@ -1,0 +1,4094 @@
+{
+  "sport": "nfl",
+  "event_id": "401872963",
+  "updated_at": "2026-09-29T01:15:25.140170+00:00",
+  "plays": {
+    "4018729631": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187296340": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "15:00"
+    },
+    "40187296363": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:52"
+    },
+    "40187296393": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "14:22"
+    },
+    "401872963118": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:43"
+    },
+    "401872963140": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "13:08"
+    },
+    "401872963165": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "12:38"
+    },
+    "401872963187": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:53"
+    },
+    "401872963224": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "11:33"
+    },
+    "401872963246": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:52"
+    },
+    "401872963271": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "10:13"
+    },
+    "401872963293": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "backfill",
+      "period": 1,
+      "clock": "9:33"
+    },
+    "401872963349": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:47"
+    },
+    "401872963315": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:47"
+    },
+    "401872963356": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:47"
+    },
+    "401872963386": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:42"
+    },
+    "401872963411": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "8:02"
+    },
+    "401872963438": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:32"
+    },
+    "401872963460": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "7:01"
+    },
+    "401872963494": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:57"
+    },
+    "401872963519": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:15"
+    },
+    "401872963529": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:09"
+    },
+    "401872963538": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "6:09"
+    },
+    "401872963567": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "5:27"
+    },
+    "401872963589": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:48"
+    },
+    "401872963614": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "4:15"
+    },
+    "401872963639": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:31"
+    },
+    "401872963673": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "3:25"
+    },
+    "401872963695": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:48"
+    },
+    "401872963720": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:08"
+    },
+    "401872963743": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "2:02"
+    },
+    "401872963753": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:51"
+    },
+    "401872963763": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:51"
+    },
+    "401872963799": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:46"
+    },
+    "401872963837": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:15"
+    },
+    "401872963878": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "1:04"
+    },
+    "401872963900": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:26"
+    },
+    "401872963924": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:09"
+    },
+    "401872963949": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 1,
+      "clock": "0:00"
+    },
+    "401872963969": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "15:00"
+    },
+    "4018729631003": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:55"
+    },
+    "4018729631064": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:40"
+    },
+    "4018729631086": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:08"
+    },
+    "4018729631109": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "14:02"
+    },
+    "4018729631121": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:59"
+    },
+    "4018729631132": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:59"
+    },
+    "4018729631163": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:59"
+    },
+    "4018729631185": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "13:17"
+    },
+    "4018729631212": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:39"
+    },
+    "4018729631242": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "12:00"
+    },
+    "4018729631276": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:55"
+    },
+    "4018729631298": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "11:14"
+    },
+    "4018729631320": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "10:34"
+    },
+    "4018729631345": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:49"
+    },
+    "4018729631372": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "9:17"
+    },
+    "4018729631394": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "8:37"
+    },
+    "4018729631432": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "8:15"
+    },
+    "4018729631467": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:41"
+    },
+    "4018729631491": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "7:04"
+    },
+    "4018729631513": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:21"
+    },
+    "4018729631527": {
+      "captured_at": "2026-09-29T01:15:21.433271+00:00",
+      "quotes": {
+        "spread_home": {
+          "book_id": "bet365",
+          "price": 100,
+          "book": "bet365",
+          "line": 2.5,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "Spread"
+        },
+        "spread_away": {
+          "book_id": "novig",
+          "price": 124,
+          "book": "Novig",
+          "liquidity": 611.0,
+          "line": -2.5,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "Spread"
+        },
+        "total_over": {
+          "book_id": "polymarket",
+          "price": 257,
+          "book": "Polymarket",
+          "liquidity": 2288.0,
+          "line": 42.5,
+          "side": "over",
+          "market": "Total",
+          "selection": "Over"
+        },
+        "total_under": {
+          "book_id": "polymarket",
+          "price": -301,
+          "book": "Polymarket",
+          "liquidity": 1773.0,
+          "line": 42.5,
+          "side": "under",
+          "market": "Total",
+          "selection": "Under"
+        },
+        "ml_home": {
+          "book_id": "bet365",
+          "price": 120,
+          "book": "bet365",
+          "line": null,
+          "side": "home",
+          "selection": "Chicago Bears",
+          "market": "ML"
+        },
+        "ml_away": {
+          "book_id": "polymarket",
+          "price": 143,
+          "book": "Polymarket",
+          "liquidity": 6497.0,
+          "line": null,
+          "side": "away",
+          "selection": "Philadelphia Eagles",
+          "market": "ML"
+        }
+      },
+      "sim": null,
+      "source": "daemon",
+      "period": 2,
+      "clock": "6:14"
+    }
+  }
+}

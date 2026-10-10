@@ -1,0 +1,198 @@
+{
+  "capturedAt": "2026-09-30T14:03:22.136Z",
+  "mode": "prematch",
+  "sport": "MLB",
+  "markets": [
+    "Moneyline",
+    "Spread",
+    "Total",
+    "1st Inning Moneyline",
+    "1st Inning Spread",
+    "1st Inning Total",
+    "2nd Inning Moneyline",
+    "2nd Inning Spread",
+    "2nd Inning Total",
+    "3rd Inning Moneyline",
+    "3rd Inning Spread",
+    "3rd Inning Total",
+    "4th Inning Moneyline",
+    "4th Inning Spread",
+    "4th Inning Total",
+    "5th Inning Moneyline",
+    "5th Inning Spread",
+    "5th Inning Total",
+    "6th Inning Moneyline",
+    "6th Inning Spread",
+    "6th Inning Total",
+    "7th Inning Moneyline",
+    "7th Inning Spread",
+    "7th Inning Total",
+    "8th Inning Moneyline",
+    "8th Inning Spread",
+    "8th Inning Total",
+    "9th Inning Moneyline",
+    "9th Inning Spread",
+    "9th Inning Total",
+    "Hits",
+    "Home Runs",
+    "RBIs",
+    "Runs",
+    "Bases",
+    "Hits + Runs + RBIs",
+    "Strikeouts Thrown",
+    "Outs"
+  ],
+  "sportsbooks": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "betonline",
+    "thescore",
+    "consensus"
+  ],
+  "oddsCount": 0,
+  "newPlays": 0,
+  "gameStates": 0,
+  "injuries": 0,
+  "liveGames": 0,
+  "games": [
+    {
+      "id": "401907965",
+      "name": "Philadelphia Phillies at Atlanta Braves",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "22",
+        "homeAway": "away",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Phillies",
+        "shortName": "Phillies",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/phi.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "15",
+        "homeAway": "home",
+        "abbreviation": "ATL",
+        "name": "Atlanta Braves",
+        "shortName": "Braves",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/atl.png",
+        "score": "5",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401907896",
+      "name": "Chicago White Sox at Houston Astros",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "4",
+        "homeAway": "away",
+        "abbreviation": "CHW",
+        "name": "Chicago White Sox",
+        "shortName": "White Sox",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chw.png",
+        "score": "6",
+        "record": "",
+        "winner": true
+      },
+      "home": {
+        "id": "18",
+        "homeAway": "home",
+        "abbreviation": "HOU",
+        "name": "Houston Astros",
+        "shortName": "Astros",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/hou.png",
+        "score": "3",
+        "record": "",
+        "winner": false
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401907924",
+      "name": "Boston Red Sox at New York Yankees",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "2",
+        "homeAway": "away",
+        "abbreviation": "BOS",
+        "name": "Boston Red Sox",
+        "shortName": "Red Sox",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/bos.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "10",
+        "homeAway": "home",
+        "abbreviation": "NYY",
+        "name": "New York Yankees",
+        "shortName": "Yankees",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
+        "score": "9",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    },
+    {
+      "id": "401907974",
+      "name": "Chicago Cubs at San Diego Padres",
+      "status": {
+        "state": "post",
+        "completed": true,
+        "description": "Final",
+        "detail": "Final",
+        "shortDetail": "Final"
+      },
+      "away": {
+        "id": "16",
+        "homeAway": "away",
+        "abbreviation": "CHC",
+        "name": "Chicago Cubs",
+        "shortName": "Cubs",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/chc.png",
+        "score": "0",
+        "record": "",
+        "winner": false
+      },
+      "home": {
+        "id": "25",
+        "homeAway": "home",
+        "abbreviation": "SD",
+        "name": "San Diego Padres",
+        "shortName": "Padres",
+        "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/sd.png",
+        "score": "8",
+        "record": "",
+        "winner": true
+      },
+      "matchedEvent": null
+    }
+  ],
+  "odds": [],
+  "details": []
+}
