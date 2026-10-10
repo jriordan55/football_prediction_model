@@ -7,7 +7,6 @@ The spread and total piece follows the board's game-environment factors.
 from __future__ import annotations
 
 import json
-import math
 from functools import lru_cache
 from pathlib import Path
 
@@ -212,31 +211,3 @@ def defense_multiplier(sport: str, opponent: str, prop_key: str, season: int, we
         raw = (delta / EPA_DEF_STD) * 100.0 * sense * 0.35
     pct = max(-DEF_CAP, min(DEF_CAP, raw))
     return 1.0 + pct / 100.0
-
-
-def anchor_mean(
-    raw: float,
-    line: float | None,
-    extra: float,
-    defense: float,
-    market: float,
-) -> tuple[float, bool]:
-    """Keep the mean on the DraftKings line unless the player's own rate is already close.
-
-    A line far from the recent rate means the market has already changed the role.
-    Defense and the spread only nudge that line. `extra` is volume from an
-    injured teammate, and it is not stacked on a line that already moved.
-    """
-    raw = max(0.0, float(raw))
-    extra = max(0.0, float(extra))
-    factor = _clamp(float(defense) * float(market), 0.7, 1.3)
-    if line is None or not math.isfinite(line) or line <= 0:
-        return raw * factor + extra, False
-    line = float(line)
-    repriced = raw <= 0 or line >= raw * 1.22 or raw >= line * 1.22
-    if repriced:
-        # The market already changed the role. Do not fade that line.
-        return line, True
-    blended = 0.9 * line + 0.1 * (raw * factor) + extra
-    band = 0.05 * line + extra
-    return _clamp(blended, max(0.0, line - band), line + band), False

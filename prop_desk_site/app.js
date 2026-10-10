@@ -97,13 +97,7 @@
     const raw = probability(fitted, line);
     const fair = dkFair(quote, line);
     const pin = pinFair(quote, line);
-    const out = fitted && fitted.availability <= 0.25;
-    let shown = raw;
-    if (raw != null && fair != null && fitted && !out) {
-      const parked = Object.assign({}, fitted, { mean: fitted.line != null ? Number(fitted.line) : line });
-      const baseline = probability(parked, line);
-      shown = baseline == null ? fair : Math.min(0.98, Math.max(0.02, fair + (raw - baseline)));
-    }
+    const shown = raw;
     const allowUnder = sportId !== "cfb" && quote.dkUnder != null;
     let edge = null;
     if (shown != null && fair != null) {
@@ -201,12 +195,6 @@
     return 0.5 * (1 + erf((x - mean) / (sd * Math.SQRT2)));
   }
 
-  function sampleSd(values) {
-    if (values.length < 2) return 0;
-    const mean = values.reduce((a, b) => a + b, 0) / values.length;
-    return Math.sqrt(values.reduce((a, v) => a + (v - mean) ** 2, 0) / (values.length - 1));
-  }
-
   function median(values) {
     const ordered = values.slice().sort((a, b) => a - b);
     return ordered[Math.floor(ordered.length / 2)];
@@ -232,78 +220,70 @@
     return [hits, rows.length];
   }
 
+  const DECAY_HALF_LIFE = 3;
+
+  function decayMean(values) {
+    let total = 0;
+    let weight = 0;
+    values.forEach((value, index) => {
+      const w = Math.exp(-(values.length - 1 - index) / DECAY_HALF_LIFE);
+      total += w * value;
+      weight += w;
+    });
+    return weight ? total / weight : 0;
+  }
+
+  function weightedSd(values) {
+    if (values.length < 2) return 0;
+    const mean = decayMean(values);
+    let total = 0;
+    let weight = 0;
+    values.forEach((value, index) => {
+      const w = Math.exp(-(values.length - 1 - index) / DECAY_HALF_LIFE);
+      total += w * (value - mean) ** 2;
+      weight += w;
+    });
+    return weight ? Math.sqrt(total / weight) : 0;
+  }
+
   function modelOf(sport, player, stat) {
     const spec = sport.stats.find((item) => item.id === stat);
     const rows = logs(player, stat);
-    const thisSeason = seasonRows(rows, sport.season).map((row) => row[3]);
-    const last = rows.filter((row) => row[0] === sport.season - 1).map((row) => row[3]);
+    const values = rows.map((row) => row[3]);
+    const thisSeason = seasonRows(rows, sport.season);
     const role = roles[sport.id] && roles[sport.id][stat];
-    if (!thisSeason.length && !last.length && role == null) return null;
-    const decay = Math.exp(-thisSeason.length / 6);
-    const priorN = last.length ? Math.min(8, last.length) * decay : role != null ? 3 : 0;
-    let priorMean;
-    let priorFrom;
-    if (last.length) {
-      priorMean = last.reduce((a, b) => a + b, 0) / last.length;
-      priorFrom = String(sport.season - 1);
-    } else {
-      priorMean = role != null ? role : thisSeason.reduce((a, b) => a + b, 0) / thisSeason.length;
-      priorFrom = "role";
-    }
-    const n = thisSeason.length;
-    const base = n === 0 ? priorMean : (thisSeason.reduce((a, b) => a + b, 0) + priorMean * priorN) / (n + priorN);
-    const pool = thisSeason.length >= 4 ? thisSeason : thisSeason.concat(last);
-    let sd = sampleSd(pool);
+    if (!values.length && role == null) return null;
+    const base = values.length ? decayMean(values) : role;
+    let sd = values.length ? weightedSd(values) : 0;
     const defense = player.defense && player.defense[stat] != null ? Number(player.defense[stat]) : 1;
     const market = marketFactor(sport.id, player, stat);
-    const quote = (player.props && player.props[stat]) || {};
-    const bookLine = quote.dkLine != null ? Number(quote.dkLine) : quote.line != null ? Number(quote.line) : null;
     const extra = player.injury && player.injury[stat] != null ? Number(player.injury[stat]) : 0;
     const absent = (player.absent && player.absent[stat]) || [];
     const availability = player.availability == null ? 1 : Number(player.availability);
     let mean;
-    let snapped = false;
     let injury = extra;
     if (availability <= 0.25) {
       mean = 0;
       injury = 0;
     } else {
-      const anchored = anchorMean(base, bookLine, extra, defense, market);
-      mean = anchored.mean;
-      snapped = anchored.snapped;
-      if (snapped) injury = 0;
+      mean = Math.max(0, base * defense * market + injury);
     }
     if (spec.kind === "yards") sd = Math.max(sd, 0.22 * Math.max(mean, 1));
     else sd = Math.max(sd, Math.sqrt(Math.max(mean, 0.05)));
     return {
-      kind: spec.kind, mean, base, line: bookLine, defense, market, factor: defense * market, sd,
-      nSeason: n, priorFrom, priorGames: priorN, snapped, injury, absent, availability,
+      kind: spec.kind, mean, base, defense, market, factor: defense * market, sd,
+      nSeason: thisSeason.length, halfLife: DECAY_HALF_LIFE, injury, absent, availability,
     };
-  }
-
-  function anchorMean(raw, line, extra, defense, market) {
-    const factor = Math.max(0.7, Math.min(1.3, defense * market));
-    const clean = Math.max(0, raw);
-    const add = Math.max(0, extra || 0);
-    if (line == null || !(line > 0)) return { mean: clean * factor + add, snapped: false };
-    const repriced = clean <= 0 || line >= clean * 1.22 || clean >= line * 1.22;
-    if (repriced) return { mean: line, snapped: true };
-    const blended = 0.9 * line + 0.1 * (clean * factor) + add;
-    const band = 0.05 * line + add;
-    const lo = Math.max(0, line - band);
-    return { mean: Math.min(line + band, Math.max(lo, blended)), snapped: false };
   }
 
   function describeModel(fitted, spec, sport) {
     if (!fitted) return "The model needs games before it will give a probability.";
     const absent = (fitted.absent || []).join(", ");
-    let role;
-    if (fitted.availability <= 0.25) role = "He is out, so the mean is zero instead of the posted line.";
-    else if (fitted.snapped && absent) role = `${absent} is out, so the mean uses the DraftKings line ${fmtNum(fitted.line)} instead of the recent rate ${fmtNum(fitted.base)}.`;
-    else if (fitted.snapped) role = `The recent rate ${fmtNum(fitted.base)} is far from DraftKings at ${fmtNum(fitted.line)}, so the mean uses that line.`;
-    else if (fitted.injury > 0 && absent) role = `Added ${fmtNum(fitted.injury)} because ${absent} is out, then kept the mean near the DraftKings line ${fmtNum(fitted.line)}.`;
-    else role = `Held near the DraftKings line ${fmtNum(fitted.line)}. Opponent defense ${fmtNum(fitted.defense)} and the spread and total ${fmtNum(fitted.market)}.`;
-    return `Per-game ${spec.kind}. Mean ${fmtNum(fitted.mean)}, from a base of ${fmtNum(fitted.base)}. ${role} Pulled toward ${fitted.priorFrom} (${fmtNum(fitted.priorGames)} pseudo-games). ${fitted.nSeason} games in ${sport.season}.`;
+    let role = "";
+    if (fitted.availability <= 0.25) role = " He is out, so the mean is zero.";
+    else if (fitted.injury > 0 && absent) role = ` Added ${fmtNum(fitted.injury)} because ${absent} is out.`;
+    else if (absent) role = ` ${absent} is out.`;
+    return `Per-game ${spec.kind}. Mean ${fmtNum(fitted.mean)}, from a recent rate of ${fmtNum(fitted.base)}. Games fade with a ${fmtNum(fitted.halfLife)}-game half-life, so the last few count the most. Opponent defense ${fmtNum(fitted.defense)} and the spread and total ${fmtNum(fitted.market)}.${role} ${fitted.nSeason} games in ${sport.season}.`;
   }
 
   function marketFactor(sportId, player, stat) {
@@ -355,11 +335,16 @@
 
   function probability(model, line) {
     if (!model || !(model.sd > 0) || !Number.isFinite(model.mean)) return null;
+    if (model.mean <= 1e-8) {
+      if (model.kind === "yards") return 1 - normCdf(line, 0, Math.max(model.sd, 1));
+      return line > 0 ? 0 : 1;
+    }
     if (model.kind === "yards") return 1 - normCdf(line, model.mean, model.sd);
     const variance = model.sd * model.sd;
     const threshold = Math.ceil(line - 1e-9);
     if (variance <= model.mean + 1e-9) return 1 - poissonCdf(threshold - 1, Math.max(model.mean, 1e-6));
     const k = (model.mean * model.mean) / (variance - model.mean);
+    if (!(k + model.mean > 0)) return line > 0 ? 0 : 1;
     const p = k / (k + model.mean);
     return 1 - nbinomCdf(threshold - 1, k, p);
   }
@@ -370,10 +355,12 @@
       const z = 1.2815515655446004;
       return [Math.max(0, model.mean - z * model.sd), model.mean + z * model.sd];
     }
+    if (model.mean <= 1e-8) return [0, 0];
     const variance = model.sd * model.sd;
     const distCdf = (k) => {
       if (variance <= model.mean + 1e-9) return poissonCdf(k, Math.max(model.mean, 1e-6));
       const n = (model.mean * model.mean) / (variance - model.mean);
+      if (!(n + model.mean > 0)) return 1;
       const p = n / (n + model.mean);
       return nbinomCdf(k, n, p);
     };
@@ -709,10 +696,9 @@
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
         <p>${league[0].toUpperCase() + league.slice(1)} props are per game, so this is a per-game model rather than a rate per minute. Yards use a normal. Counting stats use a negative binomial: wider when the expected total is higher, and never below zero. The percent at a line is that distribution from the line up. The usual range is the middle 80%.</p>
-        <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no ${sport.season - 1} log shrinks toward the median ${sport.season} rate of players at the same stat. There is no claim that this beats the book.</p>
-        <p>That rate is then held on the DraftKings line. When the recent rate and the line are far apart, the mean uses the line, because the market has already changed the role. Opponent defense and the spread and total only nudge it. If a teammate at the same position is out and the line has not moved, part of that player's recent production is added. A player who is out is projected at zero.</p>
+        <p>The mean is a time-decayed average of the log. Weight falls by half every three games, so last week counts twice what a game three back counts, and last season fades behind this season. A player with no log uses the median rate at that stat. Opponent defense and this game's spread and total scale that rate. If a teammate at the same position is out and we have his recent production, part of it is added. A player who is out is projected at zero. The DraftKings number is not an input.</p>
         <h2>Odds</h2>
-        <p>The side is how far the model sits from the DraftKings price. A mean on the DraftKings line is priced at that DraftKings number, so a counting stat does not invent an edge. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
+        <p>The side is how far that model sits from the DraftKings price. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
         <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
       </div>`;
   }

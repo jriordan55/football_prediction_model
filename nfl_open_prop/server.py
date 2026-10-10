@@ -383,31 +383,21 @@ def _model_note(fitted: dict | None, spec: dict, season: int) -> str:
         return "The model needs games before it will give a probability."
     absent = ", ".join(fitted.get("absent") or [])
     if float(fitted.get("availability") or 1) <= 0.25:
-        role = "He is out, so the mean is zero instead of the posted line."
-    elif fitted.get("snapped") and absent:
-        role = (
-            f"{absent} is out, so the mean uses the DraftKings line {fmt_num(fitted.get('line'))} "
-            f"instead of the recent rate {fmt_num(fitted['base_mean'])}."
-        )
-    elif fitted.get("snapped"):
-        role = (
-            f"The recent rate {fmt_num(fitted['base_mean'])} is far from DraftKings at {fmt_num(fitted.get('line'))}, "
-            "so the mean uses that line."
-        )
+        role = "He is out, so the mean is zero."
     elif float(fitted.get("injury_add") or 0) > 0 and absent:
-        role = (
-            f"Added {fmt_num(fitted['injury_add'])} because {absent} is out, then kept the mean near "
-            f"the DraftKings line {fmt_num(fitted.get('line'))}."
-        )
+        role = f"Added {fmt_num(fitted['injury_add'])} because {absent} is out."
+    elif absent:
+        role = f"{absent} is out."
     else:
-        role = (
-            f"Held near the DraftKings line {fmt_num(fitted.get('line'))}. "
-            f"Opponent defense {fmt_num(fitted['defense'])} and the spread and total {fmt_num(fitted['market'])}."
-        )
+        role = ""
+    env = (
+        f"Opponent defense {fmt_num(fitted['defense'])} and the spread and total {fmt_num(fitted['market'])}."
+    )
+    extra = f" {role}" if role else ""
     return (
-        f"Per-game {spec['kind']}. Mean {fmt_num(fitted['mean'])}, from a base of {fmt_num(fitted['base_mean'])}. "
-        f"{role} Pulled toward {fitted['prior_from']} ({fmt_num(fitted['prior_games'])} pseudo-games). "
-        f"{fitted['n_season']} games in {season}."
+        f"Per-game {spec['kind']}. Mean {fmt_num(fitted['mean'])}, from a recent rate of {fmt_num(fitted['base_mean'])}. "
+        f"Games fade with a {fmt_num(fitted['half_life'])}-game half-life, so the last few count the most. "
+        f"{env}{extra} {fitted['n_season']} games in {season}."
     )
 
 
@@ -623,10 +613,9 @@ def method(qs: dict[str, list[str]]) -> bytes:
 <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
 <h2>The model</h2>
 <p>{league[0].upper() + league[1:]} props are per game, so this is a per-game model rather than a rate per minute. Yards use a normal. Counting stats use a negative binomial: wider when the expected total is higher, and never below zero. The percent at a line is that distribution from the line up. The usual range is the middle 80%.</p>
-<p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no {slate.season - 1} log shrinks toward the median {slate.season} rate of players at the same stat. There is no claim that this beats the book. The holdout on the original app is not rerun here.</p>
-<p>That rate is then held on the DraftKings line. When the recent rate and the line are far apart, the mean uses the line, because the market has already changed the role. Opponent defense and the spread and total only nudge it. If a teammate at the same position is out and the line has not moved, part of that player's recent production is added. A player who is out is projected at zero.</p>
+<p>The mean is a time-decayed average of the log. Weight falls by half every three games, so last week counts twice what a game three back counts, and last season fades behind this season. A player with no log uses the median rate at that stat. Opponent defense and this game's spread and total scale that rate. If a teammate at the same position is out and we have his recent production, part of it is added. A player who is out is projected at zero. The DraftKings number is not an input.</p>
 <h2>Odds</h2>
-<p>The side is how far the model sits from the DraftKings price. A mean on the DraftKings line is priced at that DraftKings number, so a counting stat does not invent an edge. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
+<p>The side is how far that model sits from the DraftKings price. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
 <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
 </div>
 """

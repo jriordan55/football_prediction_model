@@ -105,12 +105,34 @@ def _fmt_american(price: int | None) -> str:
     return f"+{price}" if price > 0 else str(price)
 
 
+# The game three back counts half as much as the last one.
+DECAY_HALF_LIFE = 3.0
+
+
+def _decay_weights(count: int) -> list[float]:
+    return [math.exp(-(count - 1 - index) / DECAY_HALF_LIFE) for index in range(count)]
+
+
+def _decay_mean(values: list[float]) -> float:
+    weights = _decay_weights(len(values))
+    return sum(weight * value for weight, value in zip(weights, values)) / sum(weights)
+
+
 def _sample_sd(values: list[float]) -> float:
     n = len(values)
     if n < 2:
         return 0.0
     mean = sum(values) / n
     return math.sqrt(sum((v - mean) ** 2 for v in values) / (n - 1))
+
+
+def _weighted_sd(values: list[float], weights: list[float]) -> float:
+    total = sum(weights)
+    if len(values) < 2 or total <= 0:
+        return 0.0
+    mean = sum(weight * value for weight, value in zip(weights, values)) / total
+    variance = sum(weight * (value - mean) ** 2 for weight, value in zip(weights, values)) / total
+    return math.sqrt(variance)
 
 
 def _clears(value: float, line: float) -> bool:
@@ -304,12 +326,10 @@ class Desk:
         return normalize_team_key(name)
 
     def _recent_mean(self, espn_id: str, stat: str) -> float | None:
-        rows = self.values(espn_id, stat)
-        this = [row["value"] for row in rows if row["season"] == self.season]
-        use = this or [row["value"] for row in rows[-6:]]
-        if not use:
+        values = [row["value"] for row in self.values(espn_id, stat)]
+        if not values:
             return None
-        return sum(use) / len(use)
+        return _decay_mean(values)
 
     def _attach_injuries(self) -> None:
         from nfl_open_prop.injuries import USAGE, load_injuries, norm_name
@@ -420,28 +440,21 @@ class Desk:
     def model(self, espn_id: str, stat: str) -> dict[str, Any] | None:
         spec = STAT_BY_ID[stat]
         rows = self.values(espn_id, stat)
-        this = [r["value"] for r in rows if r["season"] == self.season]
-        last = [r["value"] for r in rows if r["season"] == self.season - 1]
+        values = [row["value"] for row in rows]
+        this = [row["value"] for row in rows if row["season"] == self.season]
+        last = [row["value"] for row in rows if row["season"] == self.season - 1]
         role = self._role.get(stat)
-        if not this and not last and role is None:
+        if not values and role is None:
             return None
-        decay = math.exp(-len(this) / 6.0)
-        prior_n = (min(8, len(last)) * decay) if last else (3.0 if role is not None else 0.0)
-        if last:
-            prior_mean = sum(last) / len(last)
-            prior_from = f"{self.season - 1}"
+        if values:
+            base_mean = _decay_mean(values)
+            weights = _decay_weights(len(values))
+            sd = _weighted_sd(values, weights)
         else:
-            prior_mean = role if role is not None else (sum(this) / len(this))
-            prior_from = "role"
-        n = float(len(this))
-        if n == 0:
-            mean = prior_mean
-        else:
-            mean = (sum(this) + prior_mean * prior_n) / (n + prior_n)
-        pool = this if len(this) >= 4 else (this + last)
-        sd = _sample_sd(pool) if len(pool) >= 2 else 0.0
+            base_mean = float(role)
+            sd = 0.0
         player = self.players.get(str(espn_id)) or {}
-        from nfl_open_prop.environment import anchor_mean, market_factor
+        from nfl_open_prop.environment import market_factor
 
         defense = float((player.get("defense") or {}).get(stat) or 1.0)
         market = market_factor(
@@ -451,22 +464,14 @@ class Desk:
             total=player.get("total"),
             sport=self.sport,
         )
-        quote = (player.get("props") or {}).get(stat) or {}
-        line = quote.get("dk_line")
-        if line is None:
-            line = quote.get("line")
-        base_mean = mean
         extra = float((player.get("injury_add") or {}).get(stat) or 0.0)
         absent = list((player.get("absent") or {}).get(stat) or [])
         availability = float(player.get("availability") or 1.0)
         if availability <= 0.25:
             mean = 0.0
-            snapped = False
             extra = 0.0
         else:
-            mean, snapped = anchor_mean(base_mean, line, extra, defense, market)
-            if snapped:
-                extra = 0.0
+            mean = max(0.0, base_mean * defense * market + extra)
         if spec["kind"] == "yards":
             sd = max(sd, 0.22 * max(mean, 1.0))
         else:
@@ -475,40 +480,25 @@ class Desk:
             "kind": spec["kind"],
             "mean": mean,
             "base_mean": base_mean,
-            "line": line,
             "defense": defense,
             "market": market,
             "factor": defense * market,
             "sd": sd,
             "n_season": len(this),
             "n_last": len(last),
-            "prior_from": prior_from,
-            "prior_games": prior_n,
-            "snapped": snapped,
+            "half_life": DECAY_HALF_LIFE,
             "injury_add": extra,
             "absent": absent,
             "availability": availability,
         }
 
     def offer(self, player: dict[str, Any], stat: str, line: float) -> dict[str, Any]:
-        """Model probability held near the DraftKings price, and the Pinnacle gap."""
+        """Model probability from the decayed log. DraftKings is only the price compared against."""
         fitted = self.model(player["espn_id"], stat)
-        raw = self.probability(fitted, line)
+        shown = self.probability(fitted, line)
         quote = player["props"].get(stat) or {}
         fair = dk_fair(quote, line)
         pin = pin_fair(quote, line)
-        out = fitted is not None and float(fitted.get("availability") or 1) <= 0.25
-        shown = raw
-        if raw is not None and fair is not None and fitted is not None and not out:
-            # A count whose mean equals the line is not a 50% over. Measure the
-            # move from that line, then add it to the DraftKings price.
-            parked = dict(fitted)
-            parked["mean"] = float(fitted["line"]) if fitted.get("line") is not None else float(line)
-            baseline = self.probability(parked, line)
-            if baseline is None:
-                shown = fair
-            else:
-                shown = min(0.98, max(0.02, fair + (raw - baseline)))
         allow_under = self.sport != "cfb" and quote.get("dk_under") is not None
         edge = None
         if shown is not None and fair is not None:
@@ -525,6 +515,10 @@ class Desk:
         sd = float(model["sd"])
         if sd <= 0 or not math.isfinite(mean):
             return None
+        if mean <= 1e-8:
+            if model["kind"] == "yards":
+                return float(1.0 - scipy.stats.norm.cdf(line, loc=0.0, scale=max(sd, 1.0)))
+            return 0.0 if line > 0 else 1.0
         if model["kind"] == "yards":
             return float(1.0 - scipy.stats.norm.cdf(line, loc=mean, scale=sd))
         var = sd * sd
@@ -532,6 +526,8 @@ class Desk:
         if var <= mean + 1e-9:
             return float(1.0 - scipy.stats.poisson.cdf(threshold - 1, mu=max(mean, 1e-6)))
         k = (mean * mean) / (var - mean)
+        if k + mean <= 0 or not math.isfinite(k):
+            return 0.0 if line > 0 else 1.0
         p = k / (k + mean)
         return float(1.0 - scipy.stats.nbinom.cdf(threshold - 1, k, p))
 
@@ -543,11 +539,15 @@ class Desk:
         if model["kind"] == "yards":
             z = float(scipy.stats.norm.ppf(0.9))
             return max(0.0, mean - z * sd), mean + z * sd
+        if mean <= 1e-8:
+            return 0.0, 0.0
         var = sd * sd
         if var <= mean + 1e-9:
             dist = scipy.stats.poisson(mu=max(mean, 1e-6))
         else:
             k = (mean * mean) / (var - mean)
+            if k + mean <= 0 or not math.isfinite(k):
+                return 0.0, 0.0
             p = k / (k + mean)
             dist = scipy.stats.nbinom(k, p)
         return float(dist.ppf(0.1)), float(dist.ppf(0.9))
