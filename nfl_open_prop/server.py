@@ -320,9 +320,9 @@ def board(qs: dict[str, list[str]]) -> bytes:
 </label>
 <button type="submit">Score</button>"""
     caption = (
-        "Each row is scored against that player's posted line. Edge is the model minus the devigged fair over."
+        "Each row is scored against that player's posted line. Side is the over or the under where the model has the edge."
         if mode == "book"
-        else f"Every player is scored against {fmt_num(line)} {spec['unit']}. Edge shows only when that number is the book's line."
+        else f"Every player is scored against {fmt_num(line)} {spec['unit']}. The side shows only when that number is the book's line."
     )
     body = f"""
 <h1>Board</h1>
@@ -341,7 +341,7 @@ def board(qs: dict[str, list[str]]) -> bytes:
 <table>
 <thead><tr>
 <th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>{slate.season}</th>
-<th>DK o/u</th><th>Pin o/u</th><th>Fair</th><th>Model</th><th>Edge</th>
+<th>DK o/u</th><th>Pin o/u</th><th>Fair</th><th>Model</th><th>Side</th>
 </tr></thead>
 <tbody>{''.join(body_rows) or '<tr><td class="left" colspan="10">Nobody cleared that floor.</td></tr>'}</tbody>
 </table>
@@ -500,9 +500,9 @@ def player_page(qs: dict[str, list[str]]) -> bytes:
     <dl class="facts" style="margin-top:.7rem">
       <div><dt>Fair over</dt><dd>{fmt_pct(fair)}</dd></div>
       <div><dt>Fair price</dt><dd>{american(fair_american)}</dd></div>
-      <div><dt>Edge</dt><dd class="{edge_cls}">{fmt_edge(edge)}</dd></div>
+      <div><dt>Side</dt><dd class="{edge_cls}">{fmt_edge(edge)}</dd></div>
     </dl>
-    <p class="note">Fair is the two-way price with the vig divided out. Pinnacle is used when both sides are up at this number, otherwise DraftKings. Edge is model minus fair, in percentage points. It is blank when the number you typed is not the book's line.</p>
+    <p class="note">Fair is the two-way price with the vig divided out. Pinnacle is used when both sides are up at this number, otherwise DraftKings. Side names the over or the under with the edge, and the number is how far the model sits from the fair price on that side. It is blank when the number you typed is not the book's line.</p>
   </section>
   <section class="room model">
     <p class="kicker">Model</p>
@@ -600,7 +600,7 @@ def method(qs: dict[str, list[str]]) -> bytes:
 <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no {slate.season - 1} log shrinks toward the median {slate.season} rate of players at the same stat. There is no claim that this beats the book. The holdout on the original app is not rerun here.</p>
 <p>That base mean is then scaled for the opponent's defensive rating and for this game's spread and total. A softer defense, a higher team total, and a pass-heavier script raise it. The log already contains the player's own offense, so that rating is not applied again.</p>
 <h2>Odds</h2>
-<p>Prices are the week-{slate.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. Edge is the model probability minus that fair over, in percentage points. It is only shown when the number being checked is the book's line.</p>
+<p>Prices are the week-{slate.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. The side is the over or the under with the edge. The number is how far the model sits from the fair price on that side, in percentage points. It is only shown when the number being checked is the book's line.</p>
 <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
 </div>
 """

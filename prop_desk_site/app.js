@@ -29,8 +29,9 @@
   function fmtEdge(value) {
     if (value == null || !Number.isFinite(value)) return "—";
     const points = 100 * value;
-    const sign = points > 0.05 ? "+" : "";
-    return sign + points.toFixed(1);
+    if (points > 0.05) return "Over +" + points.toFixed(1);
+    if (points < -0.05) return "Under +" + (-points).toFixed(1);
+    return "0.0";
   }
 
   function american(price) {
@@ -417,8 +418,8 @@
       rows.push({ player, quote, check, hits, n, seasonN: seasonRows(played, sport.season).length, prob, fair: bookFair, edge });
     }
     rows.sort((a, b) => {
-      const ae = a.edge == null ? -9 : a.edge;
-      const be = b.edge == null ? -9 : b.edge;
+      const ae = a.edge == null ? -9 : Math.abs(a.edge);
+      const be = b.edge == null ? -9 : Math.abs(b.edge);
       if (be !== ae) return be - ae;
       const ar = a.n ? a.hits / a.n : 0;
       const br = b.n ? b.hits / b.n : 0;
@@ -437,8 +438,8 @@
       return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${american(row.quote.dkOver)} / ${american(row.quote.dkUnder)}</td><td>${american(row.quote.pinOver)} / ${american(row.quote.pinUnder)}</td><td>${fmtPct(row.fair)}</td><td>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td></tr>`;
     }).join("");
     const caption = mode === "book"
-      ? "Each row is scored against that player's posted line. Edge is the model minus the devigged fair over."
-      : `Every player is scored against ${fmtNum(line)} ${spec.unit}. Edge shows only when that number is the book's line.`;
+      ? "Each row is scored against that player's posted line. Side is the over or the under where the model has the edge."
+      : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is the book's line.`;
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
     $("main").innerHTML = `
       <h1>Board</h1>
@@ -447,7 +448,7 @@
       <form class="tools" id="board-form">${numberField}</form>
       <div class="chips">${modeChips}<span style="width:.4rem"></span>${floors}</div>
       <p class="note">${rows.length} players · ${esc(spec.label)}</p>
-      <div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>${sport.season}</th><th>DK o/u</th><th>Pin o/u</th><th>Fair</th><th>Model</th><th>Edge</th></tr></thead><tbody>${body || '<tr><td class="left" colspan="10">Nobody cleared that floor.</td></tr>'}</tbody></table></div>`;
+      <div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>${sport.season}</th><th>DK o/u</th><th>Pin o/u</th><th>Fair</th><th>Model</th><th>Side</th></tr></thead><tbody>${body || '<tr><td class="left" colspan="10">Nobody cleared that floor.</td></tr>'}</tbody></table></div>`;
     const form = $("board-form");
     if (form) form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -574,8 +575,8 @@
             <div class="book"><span class="note">DraftKings · ${fmtNum(quote.dkLine != null ? quote.dkLine : quote.line)}</span><b>${american(quote.dkOver)} / ${american(quote.dkUnder)}</b></div>
             <div class="book"><span class="note">Pinnacle · ${fmtNum(quote.pinLine)}</span><b>${american(quote.pinOver)} / ${american(quote.pinUnder)}</b></div>
           </div>
-          <dl class="facts" style="margin-top:.7rem"><div><dt>Fair over</dt><dd>${fmtPct(bookFair)}</dd></div><div><dt>Fair price</dt><dd>${american(toAmerican(bookFair))}</dd></div><div><dt>Edge</dt><dd class="${edgeCls}">${fmtEdge(edge)}</dd></div></dl>
-          <p class="note">Fair is the two-way price with the vig divided out. Pinnacle is used when both sides are up at this number, otherwise DraftKings. Edge is model minus fair, in percentage points. It is blank when the number you typed is not the book's line.</p>
+          <dl class="facts" style="margin-top:.7rem"><div><dt>Fair over</dt><dd>${fmtPct(bookFair)}</dd></div><div><dt>Fair price</dt><dd>${american(toAmerican(bookFair))}</dd></div><div><dt>Side</dt><dd class="${edgeCls}">${fmtEdge(edge)}</dd></div></dl>
+          <p class="note">Fair is the two-way price with the vig divided out. Pinnacle is used when both sides are up at this number, otherwise DraftKings. Side names the over or the under with the edge, and the number is how far the model sits from the fair price on that side. It is blank when the number you typed is not the book's line.</p>
         </section>
         <section class="room model"><p class="kicker">Model</p><h2>Chance of ${fmtNum(line)} or more</h2>
           <p class="chance">${fmtPct(prob)}</p>
@@ -624,7 +625,7 @@
         <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no ${sport.season - 1} log shrinks toward the median ${sport.season} rate of players at the same stat. There is no claim that this beats the book.</p>
         <p>That base mean is then scaled for the opponent's defensive rating and for this game's spread and total. A softer defense, a higher team total, and a pass-heavier script raise it. The log already contains the player's own offense, so that rating is not applied again.</p>
         <h2>Odds</h2>
-        <p>Prices are the week-${sport.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. Edge is the model probability minus that fair over, in percentage points. It is only shown when the number being checked is the book's line.</p>
+        <p>Prices are the week-${sport.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. The side is the over or the under with the edge. The number is how far the model sits from the fair price on that side, in percentage points. It is only shown when the number being checked is the book's line.</p>
         <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
       </div>`;
   }

@@ -477,7 +477,7 @@ class Desk:
                     "mean": None if not fitted else fitted["mean"],
                 }
             )
-        out.sort(key=lambda row: (-(row["edge"] if row["edge"] is not None else -9), -(row["hits"] / row["n"] if row["n"] else 0), row["player"]["name"]))
+        out.sort(key=lambda row: (-(abs(row["edge"]) if row["edge"] is not None else -9), -(row["hits"] / row["n"] if row["n"] else 0), row["player"]["name"]))
         return out
 
 
@@ -525,11 +525,15 @@ def fmt_num(value: float | None, digits: int = 1) -> str:
 
 
 def fmt_edge(value: float | None) -> str:
+    """Name the side that has the edge, and show that edge as a positive number."""
     if value is None or not math.isfinite(value):
         return "—"
     points = 100.0 * value
-    sign = "+" if points > 0.05 else ""
-    return f"{sign}{points:.1f}"
+    if points > 0.05:
+        return f"Over +{points:.1f}"
+    if points < -0.05:
+        return f"Under +{-points:.1f}"
+    return "0.0"
 
 
 def fmt_when(iso: str) -> str:
