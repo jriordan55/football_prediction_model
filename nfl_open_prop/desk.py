@@ -201,11 +201,11 @@ class Desk:
                 "pin_over": _price(raw.get("pin_over")),
                 "pin_under": _price(raw.get("pin_under")),
             }
-            quote["fair"] = _fair(quote)
             player["props"][stat] = quote
         self._fill_game_lines()
         self._attach_matchup()
         self._load_logs()
+        self._attach_injuries()
 
     def _fill_game_lines(self) -> None:
         if not any(player.get("spread") is None or player.get("total") is None for player in self.players.values()):
@@ -295,6 +295,81 @@ class Desk:
                 ordered = sorted(means)
                 self._role[stat] = ordered[len(ordered) // 2]
 
+    def _team_token(self, name: str) -> str:
+        from lib.nfl_team_registry import team_key
+        from lib.team_registry import normalize_team_key
+
+        if self.sport == "nfl":
+            return team_key(name)
+        return normalize_team_key(name)
+
+    def _recent_mean(self, espn_id: str, stat: str) -> float | None:
+        rows = self.values(espn_id, stat)
+        this = [row["value"] for row in rows if row["season"] == self.season]
+        use = this or [row["value"] for row in rows[-6:]]
+        if not use:
+            return None
+        return sum(use) / len(use)
+
+    def _attach_injuries(self) -> None:
+        from nfl_open_prop.injuries import USAGE, load_injuries, norm_name
+
+        by_team: dict[str, list[dict[str, Any]]] = {}
+        for row in load_injuries(self.sport):
+            by_team.setdefault(self._team_token(row["team"]), []).append(row)
+        groups: dict[str, list[dict[str, Any]]] = {}
+        for player in self.players.values():
+            token = self._team_token(player["team"])
+            groups.setdefault(token, []).append(player)
+            listings = by_team.get(token) or []
+            own = next((row for row in listings if norm_name(row["name"]) == norm_name(player["name"])), None)
+            player["availability"] = 1.0 if own is None else float(own["availability"])
+            absent: dict[str, list[str]] = {}
+            for stat, positions in USAGE.items():
+                names = [
+                    row["name"]
+                    for row in listings
+                    if float(row["availability"]) <= 0.25
+                    and row["position"] in positions
+                    and norm_name(row["name"]) != norm_name(player["name"])
+                ]
+                if names:
+                    absent[stat] = names
+            player["absent"] = absent
+            player["injury_add"] = {}
+        for token, members in groups.items():
+            listings = [row for row in (by_team.get(token) or []) if float(row["availability"]) <= 0.25]
+            for stat, positions in USAGE.items():
+                vacated = 0.0
+                out_ids: set[str] = set()
+                for row in listings:
+                    if row["position"] not in positions:
+                        continue
+                    holder = next((member for member in members if norm_name(member["name"]) == norm_name(row["name"])), None)
+                    if holder is None:
+                        continue
+                    out_ids.add(holder["espn_id"])
+                    recent = self._recent_mean(holder["espn_id"], stat)
+                    if recent:
+                        vacated += recent * (1.0 - float(row["availability"]))
+                if vacated <= 0:
+                    continue
+                recipients = []
+                for member in members:
+                    if member["espn_id"] in out_ids or stat not in member["props"]:
+                        continue
+                    if float(member.get("availability") or 1) <= 0.25:
+                        continue
+                    weight = self._recent_mean(member["espn_id"], stat) or 0.0
+                    if weight <= 0:
+                        continue
+                    recipients.append((member, weight))
+                total = sum(weight for _, weight in recipients)
+                if total <= 0:
+                    continue
+                for member, weight in recipients:
+                    member["injury_add"][stat] = float(member["injury_add"].get(stat) or 0) + vacated * 0.75 * weight / total
+
     def _stat(self, game: dict[str, Any], stat: str) -> float | None:
         return game_stat_value(game, stat)
 
@@ -366,7 +441,7 @@ class Desk:
         pool = this if len(this) >= 4 else (this + last)
         sd = _sample_sd(pool) if len(pool) >= 2 else 0.0
         player = self.players.get(str(espn_id)) or {}
-        from nfl_open_prop.environment import market_factor
+        from nfl_open_prop.environment import anchor_mean, market_factor
 
         defense = float((player.get("defense") or {}).get(stat) or 1.0)
         market = market_factor(
@@ -376,8 +451,22 @@ class Desk:
             total=player.get("total"),
             sport=self.sport,
         )
+        quote = (player.get("props") or {}).get(stat) or {}
+        line = quote.get("dk_line")
+        if line is None:
+            line = quote.get("line")
         base_mean = mean
-        mean = base_mean * defense * market
+        extra = float((player.get("injury_add") or {}).get(stat) or 0.0)
+        absent = list((player.get("absent") or {}).get(stat) or [])
+        availability = float(player.get("availability") or 1.0)
+        if availability <= 0.25:
+            mean = 0.0
+            snapped = False
+            extra = 0.0
+        else:
+            mean, snapped = anchor_mean(base_mean, line, extra, defense, market)
+            if snapped:
+                extra = 0.0
         if spec["kind"] == "yards":
             sd = max(sd, 0.22 * max(mean, 1.0))
         else:
@@ -386,6 +475,7 @@ class Desk:
             "kind": spec["kind"],
             "mean": mean,
             "base_mean": base_mean,
+            "line": line,
             "defense": defense,
             "market": market,
             "factor": defense * market,
@@ -394,7 +484,34 @@ class Desk:
             "n_last": len(last),
             "prior_from": prior_from,
             "prior_games": prior_n,
+            "snapped": snapped,
+            "injury_add": extra,
+            "absent": absent,
+            "availability": availability,
         }
+
+    def offer(self, player: dict[str, Any], stat: str, line: float) -> dict[str, Any]:
+        """Model probability held near the DraftKings price, and the Pinnacle gap."""
+        fitted = self.model(player["espn_id"], stat)
+        raw = self.probability(fitted, line)
+        quote = player["props"].get(stat) or {}
+        fair = dk_fair(quote, line)
+        pin = pin_fair(quote, line)
+        out = fitted is not None and float(fitted.get("availability") or 1) <= 0.25
+        boosted = fitted is not None and float(fitted.get("injury_add") or 0) > 0 and not fitted.get("snapped")
+        if raw is None or fair is None or out:
+            shown = raw
+        else:
+            room = 0.10 if boosted else 0.05
+            shown = min(fair + room, max(fair - room, raw))
+        allow_under = self.sport != "cfb" and quote.get("dk_under") is not None
+        edge = None
+        if shown is not None and fair is not None:
+            gap = shown - fair
+            if allow_under or gap > 0.005:
+                edge = gap
+        books = None if pin is None or fair is None else pin - fair
+        return {"fitted": fitted, "prob": shown, "fair": fair, "edge": edge, "books": books}
 
     def probability(self, model: dict[str, Any] | None, line: float) -> float | None:
         if not model:
@@ -458,11 +575,8 @@ class Desk:
                     continue
                 if n == 0 or hits / n < floor:
                     continue
-            fitted = self.model(player["espn_id"], stat)
-            prob = self.probability(fitted, check)
-            book_line = quote.get("line")
-            fair = quote["fair"] if book_line is not None and abs(float(book_line) - check) < 0.05 else None
-            edge = (prob - fair) if prob is not None and fair is not None else None
+            priced = self.offer(player, stat, check)
+            fitted = priced["fitted"]
             out.append(
                 {
                     "player": player,
@@ -471,9 +585,10 @@ class Desk:
                     "hits": hits,
                     "n": n,
                     "season_n": len(season_rows),
-                    "prob": prob,
-                    "fair": fair,
-                    "edge": edge,
+                    "prob": priced["prob"],
+                    "fair": priced["fair"],
+                    "edge": priced["edge"],
+                    "books": priced["books"],
                     "mean": None if not fitted else fitted["mean"],
                 }
             )
@@ -488,19 +603,36 @@ def _num(value: Any) -> float | None:
         return None
 
 
-def _fair(quote: dict[str, Any]) -> float | None:
-    """Pinnacle when it is posted at the same number as the row, else DraftKings."""
-    pin = devig(quote.get("pin_over"), quote.get("pin_under"))
-    pin_line = quote.get("pin_line")
-    line = quote.get("line")
-    if pin is not None and pin_line is not None and line is not None and abs(float(pin_line) - float(line)) < 0.05:
-        return pin
-    dk_line = quote.get("dk_line")
-    if dk_line is None:
-        dk_line = line
-    if dk_line is not None and line is not None and abs(float(dk_line) - float(line)) < 0.05:
-        return devig(quote.get("dk_over"), quote.get("dk_under"))
-    return None
+def _posted_line(quote: dict[str, Any], key: str, line: float) -> bool:
+    posted = quote.get(key)
+    if posted is None:
+        posted = quote.get("line") if key == "dk_line" else None
+    return posted is not None and abs(float(posted) - float(line)) < 0.05
+
+
+def dk_fair(quote: dict[str, Any], line: float) -> float | None:
+    """DraftKings only. Two-way markets are devigged. An over with no under uses that price."""
+    if not _posted_line(quote, "dk_line", line):
+        return None
+    both = devig(quote.get("dk_over"), quote.get("dk_under"))
+    if both is not None:
+        return both
+    over = quote.get("dk_over")
+    if over is None:
+        return None
+    return american_to_implied(over)
+
+
+def pin_fair(quote: dict[str, Any], line: float) -> float | None:
+    if not _posted_line(quote, "pin_line", line):
+        return None
+    both = devig(quote.get("pin_over"), quote.get("pin_under"))
+    if both is not None:
+        return both
+    over = quote.get("pin_over")
+    if over is None:
+        return None
+    return american_to_implied(over)
 
 
 def _played(game: dict[str, Any], stat: str, value: float) -> bool:
@@ -533,6 +665,18 @@ def fmt_edge(value: float | None) -> str:
         return f"Over +{points:.1f}"
     if points < -0.05:
         return f"Under +{-points:.1f}"
+    return "0.0"
+
+
+def fmt_books(value: float | None) -> str:
+    """Which book is cheaper on the over. Positive means DraftKings."""
+    if value is None or not math.isfinite(value):
+        return "—"
+    points = 100.0 * value
+    if points > 0.5:
+        return f"DK +{points:.1f}"
+    if points < -0.5:
+        return f"Pin +{-points:.1f}"
     return "0.0"
 
 

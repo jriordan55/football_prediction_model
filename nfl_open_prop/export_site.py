@@ -57,6 +57,9 @@ def _pack(sport_id: str, brand: str) -> dict:
                 "spread": _clean(player.get("spread")),
                 "total": _clean(player.get("total")),
                 "defense": {stat: _clean(round(float(value), 4)) for stat, value in (player.get("defense") or {}).items()},
+                "availability": _clean(player.get("availability") if player.get("availability") is not None else 1),
+                "injury": {stat: _clean(round(float(value), 2)) for stat, value in (player.get("injury_add") or {}).items()},
+                "absent": {stat: list(names) for stat, names in (player.get("absent") or {}).items()},
                 "props": quotes,
                 "logs": logs,
             }

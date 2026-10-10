@@ -59,14 +59,59 @@
     return a / (a + b);
   }
 
-  function fairOf(quote, line) {
-    if (quote.pinLine != null && Math.abs(quote.pinLine - line) < 0.05) {
-      const pin = devig(quote.pinOver, quote.pinUnder);
-      if (pin != null) return pin;
+  function posted(quote, key, line) {
+    let value = quote[key];
+    if (value == null && key === "dkLine") value = quote.line;
+    return value != null && Math.abs(value - line) < 0.05;
+  }
+
+  function dkFair(quote, line) {
+    if (!posted(quote, "dkLine", line)) return null;
+    if (quote.dkOver != null && quote.dkUnder != null) {
+      const both = devig(quote.dkOver, quote.dkUnder);
+      if (both != null) return both;
     }
-    const dkLine = quote.dkLine != null ? quote.dkLine : quote.line;
-    if (dkLine != null && Math.abs(dkLine - line) < 0.05) return devig(quote.dkOver, quote.dkUnder);
-    return null;
+    return quote.dkOver != null ? implied(quote.dkOver) : null;
+  }
+
+  function pinFair(quote, line) {
+    if (!posted(quote, "pinLine", line)) return null;
+    if (quote.pinOver != null && quote.pinUnder != null) {
+      const both = devig(quote.pinOver, quote.pinUnder);
+      if (both != null) return both;
+    }
+    return quote.pinOver != null ? implied(quote.pinOver) : null;
+  }
+
+  function fmtGap(gap) {
+    if (gap == null || !Number.isFinite(gap)) return "—";
+    const points = 100 * gap;
+    if (points > 0.5) return "DK +" + points.toFixed(1);
+    if (points < -0.5) return "Pin +" + (-points).toFixed(1);
+    return "0.0";
+  }
+
+  function capProb(prob, fair, room) {
+    if (prob == null || fair == null) return prob;
+    return Math.min(fair + room, Math.max(fair - room, prob));
+  }
+
+  function offerOf(sportId, player, stat, line) {
+    const quote = player.props[stat] || {};
+    const fitted = modelOf(sportData(sportId), player, stat);
+    const raw = probability(fitted, line);
+    const fair = dkFair(quote, line);
+    const pin = pinFair(quote, line);
+    const out = fitted && fitted.availability <= 0.25;
+    const boosted = fitted && fitted.injury > 0 && !fitted.snapped;
+    const shown = raw == null || fair == null || out ? raw : capProb(raw, fair, boosted ? 0.10 : 0.05);
+    const allowUnder = sportId !== "cfb" && quote.dkUnder != null;
+    let edge = null;
+    if (shown != null && fair != null) {
+      const gap = shown - fair;
+      if (allowUnder || gap > 0.005) edge = gap;
+    }
+    return { fitted, prob: shown, fair, edge, books: pin == null || fair == null ? null : pin - fair };
   }
 
   function fmtWhen(iso) {
@@ -212,10 +257,54 @@
     let sd = sampleSd(pool);
     const defense = player.defense && player.defense[stat] != null ? Number(player.defense[stat]) : 1;
     const market = marketFactor(sport.id, player, stat);
-    const mean = base * defense * market;
+    const quote = (player.props && player.props[stat]) || {};
+    const bookLine = quote.dkLine != null ? Number(quote.dkLine) : quote.line != null ? Number(quote.line) : null;
+    const extra = player.injury && player.injury[stat] != null ? Number(player.injury[stat]) : 0;
+    const absent = (player.absent && player.absent[stat]) || [];
+    const availability = player.availability == null ? 1 : Number(player.availability);
+    let mean;
+    let snapped = false;
+    let injury = extra;
+    if (availability <= 0.25) {
+      mean = 0;
+      injury = 0;
+    } else {
+      const anchored = anchorMean(base, bookLine, extra, defense, market);
+      mean = anchored.mean;
+      snapped = anchored.snapped;
+      if (snapped) injury = 0;
+    }
     if (spec.kind === "yards") sd = Math.max(sd, 0.22 * Math.max(mean, 1));
     else sd = Math.max(sd, Math.sqrt(Math.max(mean, 0.05)));
-    return { kind: spec.kind, mean, base, defense, market, factor: defense * market, sd, nSeason: n, priorFrom, priorGames: priorN };
+    return {
+      kind: spec.kind, mean, base, line: bookLine, defense, market, factor: defense * market, sd,
+      nSeason: n, priorFrom, priorGames: priorN, snapped, injury, absent, availability,
+    };
+  }
+
+  function anchorMean(raw, line, extra, defense, market) {
+    const factor = Math.max(0.7, Math.min(1.3, defense * market));
+    const clean = Math.max(0, raw);
+    const add = Math.max(0, extra || 0);
+    if (line == null || !(line > 0)) return { mean: clean * factor + add, snapped: false };
+    const repriced = clean <= 0 || line >= clean * 1.22 || clean >= line * 1.22;
+    if (repriced) return { mean: line, snapped: true };
+    const blended = 0.9 * line + 0.1 * (clean * factor) + add;
+    const band = 0.05 * line + add;
+    const lo = Math.max(0, line - band);
+    return { mean: Math.min(line + band, Math.max(lo, blended)), snapped: false };
+  }
+
+  function describeModel(fitted, spec, sport) {
+    if (!fitted) return "The model needs games before it will give a probability.";
+    const absent = (fitted.absent || []).join(", ");
+    let role;
+    if (fitted.availability <= 0.25) role = "He is out, so the mean is zero instead of the posted line.";
+    else if (fitted.snapped && absent) role = `${absent} is out, so the mean uses the DraftKings line ${fmtNum(fitted.line)} instead of the recent rate ${fmtNum(fitted.base)}.`;
+    else if (fitted.snapped) role = `The recent rate ${fmtNum(fitted.base)} is far from DraftKings at ${fmtNum(fitted.line)}, so the mean uses that line.`;
+    else if (fitted.injury > 0 && absent) role = `Added ${fmtNum(fitted.injury)} because ${absent} is out, then kept the mean near the DraftKings line ${fmtNum(fitted.line)}.`;
+    else role = `Held near the DraftKings line ${fmtNum(fitted.line)}. Opponent defense ${fmtNum(fitted.defense)} and the spread and total ${fmtNum(fitted.market)}.`;
+    return `Per-game ${spec.kind}. Mean ${fmtNum(fitted.mean)}, from a base of ${fmtNum(fitted.base)}. ${role} Pulled toward ${fitted.priorFrom} (${fmtNum(fitted.priorGames)} pseudo-games). ${fitted.nSeason} games in ${sport.season}.`;
   }
 
   function marketFactor(sportId, player, stat) {
@@ -411,11 +500,11 @@
       const last10 = played.slice(-10);
       const [hits, n] = hitRate(last10, check);
       if (floor != null && (n < 5 || hits / n < floor)) continue;
-      const fitted = modelOf(sport, player, stat);
-      const prob = probability(fitted, check);
-      const bookFair = fairOf(quote, check);
-      const edge = prob != null && bookFair != null ? prob - bookFair : null;
-      rows.push({ player, quote, check, hits, n, seasonN: seasonRows(played, sport.season).length, prob, fair: bookFair, edge });
+      const priced = offerOf(sportId, player, stat, check);
+      rows.push({
+        player, quote, check, hits, n, seasonN: seasonRows(played, sport.season).length,
+        prob: priced.prob, fair: priced.fair, edge: priced.edge, books: priced.books,
+      });
     }
     rows.sort((a, b) => {
       const ae = a.edge == null ? -9 : Math.abs(a.edge);
@@ -435,11 +524,11 @@
       const rate = row.n ? `${row.hits}/${row.n}` : "—";
       const edgeCls = (row.edge || 0) > 0.005 ? "pos" : (row.edge || 0) < -0.005 ? "neg" : "";
       const href = link(sportId, "player", { id: row.player.id, stat, line: row.check, window: "l10" });
-      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${american(row.quote.dkOver)} / ${american(row.quote.dkUnder)}</td><td>${american(row.quote.pinOver)} / ${american(row.quote.pinUnder)}</td><td>${fmtPct(row.fair)}</td><td>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td></tr>`;
+      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${american(row.quote.dkOver)} / ${american(row.quote.dkUnder)}</td><td>${american(row.quote.pinOver)} / ${american(row.quote.pinUnder)}</td><td>${fmtPct(row.fair)}</td><td>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td><td>${fmtGap(row.books)}</td></tr>`;
     }).join("");
     const caption = mode === "book"
-      ? "Each row is scored against that player's posted line. Side is the over or the under where the model has the edge."
-      : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is the book's line.`;
+      ? "Each row is scored against that player's posted line. Side is the over or the under against DraftKings. College rows are overs only."
+      : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is the DraftKings line.`;
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
     $("main").innerHTML = `
       <h1>Board</h1>
@@ -448,7 +537,7 @@
       <form class="tools" id="board-form">${numberField}</form>
       <div class="chips">${modeChips}<span style="width:.4rem"></span>${floors}</div>
       <p class="note">${rows.length} players · ${esc(spec.label)}</p>
-      <div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>${sport.season}</th><th>DK o/u</th><th>Pin o/u</th><th>Fair</th><th>Model</th><th>Side</th></tr></thead><tbody>${body || '<tr><td class="left" colspan="10">Nobody cleared that floor.</td></tr>'}</tbody></table></div>`;
+      <div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>${sport.season}</th><th>DK o/u</th><th>Pin o/u</th><th>DK</th><th>Model</th><th>Side</th><th>vs Pin</th></tr></thead><tbody>${body || '<tr><td class="left" colspan="11">Nobody cleared that floor.</td></tr>'}</tbody></table></div>`;
     const form = $("board-form");
     if (form) form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -528,10 +617,11 @@
     if (line == null) line = quote.line != null ? Number(quote.line) : spec.default;
     const rows = logs(player, stat);
     const shown = windowRows(rows, windowKey, sport.season);
-    const fitted = modelOf(sport, player, stat);
-    const prob = probability(fitted, line);
-    const bookFair = fairOf(quote, line);
-    const edge = prob != null && bookFair != null ? prob - bookFair : null;
+    const priced = offerOf(sportId, player, stat, line);
+    const fitted = priced.fitted;
+    const prob = priced.prob;
+    const bookFair = priced.fair;
+    const edge = priced.edge;
     const [hits, n] = hitRate(shown, line);
     const interval = wilson(hits, n);
     const bandText = interval
@@ -551,9 +641,7 @@
     const opp = site === "home" ? player.away : player.home;
     const edgeCls = (edge || 0) > 0.005 ? "pos" : (edge || 0) < -0.005 ? "neg" : "";
     const range = band80(fitted);
-    const modelNote = fitted
-      ? `Per-game ${spec.kind}. Mean ${fmtNum(fitted.mean)}, from a base of ${fmtNum(fitted.base)} after opponent defense ${fmtNum(fitted.defense)} and the spread and total ${fmtNum(fitted.market)}. Pulled toward ${fitted.priorFrom} (${fmtNum(fitted.priorGames)} pseudo-games). ${fitted.nSeason} games in ${sport.season}.`
-      : "The model needs games before it will give a probability.";
+    const modelNote = describeModel(fitted, spec, sport);
     document.title = player.name;
     $("main").innerHTML = `
       <p class="back"><a href="${link(sportId, "board", { stat, mode: "book" })}">Board</a></p>
@@ -575,8 +663,8 @@
             <div class="book"><span class="note">DraftKings · ${fmtNum(quote.dkLine != null ? quote.dkLine : quote.line)}</span><b>${american(quote.dkOver)} / ${american(quote.dkUnder)}</b></div>
             <div class="book"><span class="note">Pinnacle · ${fmtNum(quote.pinLine)}</span><b>${american(quote.pinOver)} / ${american(quote.pinUnder)}</b></div>
           </div>
-          <dl class="facts" style="margin-top:.7rem"><div><dt>Fair over</dt><dd>${fmtPct(bookFair)}</dd></div><div><dt>Fair price</dt><dd>${american(toAmerican(bookFair))}</dd></div><div><dt>Side</dt><dd class="${edgeCls}">${fmtEdge(edge)}</dd></div></dl>
-          <p class="note">Fair is the two-way price with the vig divided out. Pinnacle is used when both sides are up at this number, otherwise DraftKings. Side names the over or the under with the edge, and the number is how far the model sits from the fair price on that side. It is blank when the number you typed is not the book's line.</p>
+          <dl class="facts" style="margin-top:.7rem"><div><dt>DK fair</dt><dd>${fmtPct(bookFair)}</dd></div><div><dt>DK price</dt><dd>${american(toAmerican(bookFair))}</dd></div><div><dt>Side</dt><dd class="${edgeCls}">${fmtEdge(edge)}</dd></div><div><dt>vs Pin</dt><dd>${fmtGap(priced.books)}</dd></div></dl>
+          <p class="note">The side is the model against DraftKings only. A two-way DraftKings price is devigged. College sides are overs only, because DraftKings is not posting the under. vs Pin names the book with the cheaper over. It is blank when the number you typed is not the book's line.</p>
         </section>
         <section class="room model"><p class="kicker">Model</p><h2>Chance of ${fmtNum(line)} or more</h2>
           <p class="chance">${fmtPct(prob)}</p>
@@ -623,9 +711,9 @@
         <h2>The model</h2>
         <p>${league[0].toUpperCase() + league.slice(1)} props are per game, so this is a per-game model rather than a rate per minute. Yards use a normal. Counting stats use a negative binomial: wider when the expected total is higher, and never below zero. The percent at a line is that distribution from the line up. The usual range is the middle 80%.</p>
         <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no ${sport.season - 1} log shrinks toward the median ${sport.season} rate of players at the same stat. There is no claim that this beats the book.</p>
-        <p>That base mean is then scaled for the opponent's defensive rating and for this game's spread and total. A softer defense, a higher team total, and a pass-heavier script raise it. The log already contains the player's own offense, so that rating is not applied again.</p>
+        <p>That rate is then held on the DraftKings line. When the recent rate and the line are far apart, the mean uses the line, because the market has already changed the role. Opponent defense and the spread and total only nudge it. If a teammate at the same position is out and the line has not moved, part of that player's recent production is added. A player who is out is projected at zero.</p>
         <h2>Odds</h2>
-        <p>Prices are the week-${sport.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. The side is the over or the under with the edge. The number is how far the model sits from the fair price on that side, in percentage points. It is only shown when the number being checked is the book's line.</p>
+        <p>The side is the model against DraftKings, in percentage points, and it stays within 5 of that price unless an unpriced injury moves it. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
         <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
       </div>`;
   }

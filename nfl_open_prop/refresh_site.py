@@ -119,6 +119,9 @@ def _players(rows: list[dict]) -> list[dict]:
                 "spread": _num(row.get("spread")),
                 "total": _num(row.get("total")),
                 "defense": {},
+                "availability": 1,
+                "injury": {},
+                "absent": {},
                 "props": {},
                 "logs": {},
             }
@@ -165,6 +168,9 @@ def apply_sport(desk: dict, sport_id: str, fresh: dict) -> bool:
             player["team"] = player["team"] or old.get("team") or ""
             player["side"] = old.get("side") or ""
             player["defense"] = old.get("defense") or {}
+            player["availability"] = old.get("availability") if old.get("availability") is not None else 1
+            player["injury"] = old.get("injury") or {}
+            player["absent"] = old.get("absent") or {}
             if player.get("spread") is None:
                 player["spread"] = old.get("spread")
             if player.get("total") is None:

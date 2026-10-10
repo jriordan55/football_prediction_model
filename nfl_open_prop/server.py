@@ -12,7 +12,7 @@ from nfl_open_prop.desk import (
     STAT_BY_ID,
     Desk,
     american,
-    devig,
+    fmt_books,
     fmt_edge,
     fmt_num,
     fmt_pct,
@@ -310,6 +310,7 @@ def board(qs: dict[str, list[str]]) -> bytes:
             f'<td>{fmt_pct(row["fair"])}</td>'
             f'<td>{fmt_pct(row["prob"])}</td>'
             f'<td class="{edge_cls}">{fmt_edge(row["edge"])}</td>'
+            f'<td>{fmt_books(row["books"])}</td>'
             "</tr>"
         )
     number_field = ""
@@ -320,9 +321,9 @@ def board(qs: dict[str, list[str]]) -> bytes:
 </label>
 <button type="submit">Score</button>"""
     caption = (
-        "Each row is scored against that player's posted line. Side is the over or the under where the model has the edge."
+        "Each row is scored against that player's posted line. Side is the over or the under against DraftKings. College rows are overs only."
         if mode == "book"
-        else f"Every player is scored against {fmt_num(line)} {spec['unit']}. The side shows only when that number is the book's line."
+        else f"Every player is scored against {fmt_num(line)} {spec['unit']}. The side shows only when that number is the DraftKings line."
     )
     body = f"""
 <h1>Board</h1>
@@ -341,9 +342,9 @@ def board(qs: dict[str, list[str]]) -> bytes:
 <table>
 <thead><tr>
 <th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>{slate.season}</th>
-<th>DK o/u</th><th>Pin o/u</th><th>Fair</th><th>Model</th><th>Side</th>
+<th>DK o/u</th><th>Pin o/u</th><th>DK</th><th>Model</th><th>Side</th><th>vs Pin</th>
 </tr></thead>
-<tbody>{''.join(body_rows) or '<tr><td class="left" colspan="10">Nobody cleared that floor.</td></tr>'}</tbody>
+<tbody>{''.join(body_rows) or '<tr><td class="left" colspan="11">Nobody cleared that floor.</td></tr>'}</tbody>
 </table>
 </div>
 """
@@ -375,6 +376,39 @@ def _opp_abbr(player: dict, opp: str) -> str:
     if opp == player.get("away") and player.get("away_abbr"):
         return str(player["away_abbr"])
     return _abbr_team(opp)
+
+
+def _model_note(fitted: dict | None, spec: dict, season: int) -> str:
+    if not fitted:
+        return "The model needs games before it will give a probability."
+    absent = ", ".join(fitted.get("absent") or [])
+    if float(fitted.get("availability") or 1) <= 0.25:
+        role = "He is out, so the mean is zero instead of the posted line."
+    elif fitted.get("snapped") and absent:
+        role = (
+            f"{absent} is out, so the mean uses the DraftKings line {fmt_num(fitted.get('line'))} "
+            f"instead of the recent rate {fmt_num(fitted['base_mean'])}."
+        )
+    elif fitted.get("snapped"):
+        role = (
+            f"The recent rate {fmt_num(fitted['base_mean'])} is far from DraftKings at {fmt_num(fitted.get('line'))}, "
+            "so the mean uses that line."
+        )
+    elif float(fitted.get("injury_add") or 0) > 0 and absent:
+        role = (
+            f"Added {fmt_num(fitted['injury_add'])} because {absent} is out, then kept the mean near "
+            f"the DraftKings line {fmt_num(fitted.get('line'))}."
+        )
+    else:
+        role = (
+            f"Held near the DraftKings line {fmt_num(fitted.get('line'))}. "
+            f"Opponent defense {fmt_num(fitted['defense'])} and the spread and total {fmt_num(fitted['market'])}."
+        )
+    return (
+        f"Per-game {spec['kind']}. Mean {fmt_num(fitted['mean'])}, from a base of {fmt_num(fitted['base_mean'])}. "
+        f"{role} Pulled toward {fitted['prior_from']} ({fmt_num(fitted['prior_games'])} pseudo-games). "
+        f"{fitted['n_season']} games in {season}."
+    )
 
 
 def player_page(qs: dict[str, list[str]]) -> bytes:
@@ -412,16 +446,12 @@ def player_page(qs: dict[str, list[str]]) -> bytes:
         line = float(quote["line"] or spec["default"])
     rows = slate.values(espn_id, stat)
     shown = slate.window_values(rows, window)
-    fitted = slate.model(espn_id, stat)
-    prob = slate.probability(fitted, line)
+    priced = slate.offer(player, stat, line)
+    fitted = priced["fitted"]
+    prob = priced["prob"]
+    fair = priced["fair"]
+    edge = priced["edge"]
     band = slate.band80(fitted)
-    fair = None
-    if quote.get("pin_line") is not None and abs(float(quote["pin_line"]) - line) < 0.05:
-        fair = devig(quote.get("pin_over"), quote.get("pin_under"))
-    dk_line = quote.get("dk_line") if quote.get("dk_line") is not None else quote.get("line")
-    if fair is None and dk_line is not None and abs(float(dk_line) - line) < 0.05:
-        fair = devig(quote.get("dk_over"), quote.get("dk_under"))
-    edge = (prob - fair) if prob is not None and fair is not None else None
     chips = []
     for key in player["props"]:
         item = STAT_BY_ID[key]
@@ -454,12 +484,7 @@ def player_page(qs: dict[str, list[str]]) -> bytes:
     opp = player["away"] if site == "home" else player["home"]
     edge_cls = "pos" if (edge or 0) > 0.005 else "neg" if (edge or 0) < -0.005 else ""
     fair_american = implied_to_american(fair) if fair is not None else None
-    model_note = "The model needs games before it will give a probability." if fitted is None else (
-        f"Per-game {spec['kind']}. Mean {fmt_num(fitted['mean'])}, from a base of {fmt_num(fitted['base_mean'])} "
-        f"after opponent defense {fmt_num(fitted['defense'])} and the spread and total {fmt_num(fitted['market'])}. "
-        f"Pulled toward {fitted['prior_from']} ({fmt_num(fitted['prior_games'])} pseudo-games). "
-        f"{fitted['n_season']} games in {slate.season}."
-    )
+    model_note = _model_note(fitted, spec, slate.season)
     range_text = "—" if not band else f"{fmt_num(band[0])}–{fmt_num(band[1])}"
     use_book = href("/player", sport, id=espn_id, stat=stat, line=quote["line"], window=window)
     csv_href = href("/player.csv", sport, id=espn_id, stat=stat, window=window)
@@ -498,11 +523,12 @@ def player_page(qs: dict[str, list[str]]) -> bytes:
       <div class="book"><span class="note">Pinnacle · {fmt_num(quote["pin_line"])}</span><b>{american(quote["pin_over"])} / {american(quote["pin_under"])}</b></div>
     </div>
     <dl class="facts" style="margin-top:.7rem">
-      <div><dt>Fair over</dt><dd>{fmt_pct(fair)}</dd></div>
-      <div><dt>Fair price</dt><dd>{american(fair_american)}</dd></div>
+      <div><dt>DK fair</dt><dd>{fmt_pct(fair)}</dd></div>
+      <div><dt>DK price</dt><dd>{american(fair_american)}</dd></div>
       <div><dt>Side</dt><dd class="{edge_cls}">{fmt_edge(edge)}</dd></div>
+      <div><dt>vs Pin</dt><dd>{fmt_books(priced["books"])}</dd></div>
     </dl>
-    <p class="note">Fair is the two-way price with the vig divided out. Pinnacle is used when both sides are up at this number, otherwise DraftKings. Side names the over or the under with the edge, and the number is how far the model sits from the fair price on that side. It is blank when the number you typed is not the book's line.</p>
+    <p class="note">The side is the model against DraftKings only. A two-way DraftKings price is devigged. College sides are overs only, because DraftKings is not posting the under. vs Pin names the book with the cheaper over. It is blank when the number you typed is not the book's line.</p>
   </section>
   <section class="room model">
     <p class="kicker">Model</p>
@@ -598,9 +624,9 @@ def method(qs: dict[str, list[str]]) -> bytes:
 <h2>The model</h2>
 <p>{league[0].upper() + league[1:]} props are per game, so this is a per-game model rather than a rate per minute. Yards use a normal. Counting stats use a negative binomial: wider when the expected total is higher, and never below zero. The percent at a line is that distribution from the line up. The usual range is the middle 80%.</p>
 <p>Last season is the prior. It enters as at most eight pseudo-games, then decays as <span class="mono">exp(−n / 6)</span> once this season's games arrive. A player with no {slate.season - 1} log shrinks toward the median {slate.season} rate of players at the same stat. There is no claim that this beats the book. The holdout on the original app is not rerun here.</p>
-<p>That base mean is then scaled for the opponent's defensive rating and for this game's spread and total. A softer defense, a higher team total, and a pass-heavier script raise it. The log already contains the player's own offense, so that rating is not applied again.</p>
+<p>That rate is then held on the DraftKings line. When the recent rate and the line are far apart, the mean uses the line, because the market has already changed the role. Opponent defense and the spread and total only nudge it. If a teammate at the same position is out and the line has not moved, part of that player's recent production is added. A player who is out is projected at zero.</p>
 <h2>Odds</h2>
-<p>Prices are the week-{slate.week} pregame snapshot: DraftKings and Pinnacle, American odds. A two-way market is devigged by dividing each raw implied probability by the sum of the two. Pinnacle is the fair price when both sides are posted. DraftKings is the fallback. The side is the over or the under with the edge. The number is how far the model sits from the fair price on that side, in percentage points. It is only shown when the number being checked is the book's line.</p>
+<p>The side is the model against DraftKings, in percentage points, and it stays within 5 of that price unless an unpriced injury moves it. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under. The side is blank when the number being checked is not the DraftKings line.</p>
 <p>Refresh NFL lines and Refresh college lines each reload that league's latest DraftKings and Pinnacle prices. A scheduled job pulls those prices off the board and republishes them. Hit rates stay on the saved game logs.</p>
 </div>
 """
