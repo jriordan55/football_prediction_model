@@ -40,14 +40,25 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests numpy pandas pyarrow scipy
+
+      - name: Cache play-by-play and game logs
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/fastr_player_cache
+            data/espn_cache
+          key: prop-desk-cache-${{ runner.os }}
 
       - name: Refresh lines
         run: python -m nfl_open_prop.refresh_site "${{ github.event.inputs.sport || 'both' }}"
 
+      - name: Attach the sim and last week's games
+        run: python -m nfl_open_prop.publish_desk
+
       - name: Publish updated lines
         run: |
-          git add prop_desk_site/desk.json prop_desk_site/index.html
+          git add prop_desk_site/desk.json prop_desk_site/index.html prop_desk_site/app.js
           git diff --cached --quiet && echo "No line changes" && exit 0
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Refresh prop desk lines."
           git push

@@ -27,6 +27,19 @@ RUSH_YPG_TIERS = [
     (0, 0.63),
 ]
 
+TOUCHDOWN_PROP_KEYS = frozenset({"tds", "pass_tds", "first_td", "last_td"})
+# Player total-TD over/under (distinct from anytime TD yes/no and pass TDs).
+TOTAL_TOUCHDOWN_PROP_KEYS = frozenset({"tds_over"})
+# Anytime / 1st / last TD and INT yes-no markets posted at 0.5 (Over = Yes).
+YES_NO_HALF_POINT_PROP_KEYS = frozenset({"tds", "first_td", "last_td", "pass_ints"})
+# DraftKings / 4C duplicate labels (same lines as Odds API prop markets).
+FOURC_LEGACY_TOTAL_STAT_LABELS = frozenset({
+    "TOTAL RUSHING YARDS",
+    "TOTAL RECEIVING YARDS",
+    "TOTAL RECEPTIONS",
+    "TOTAL PASSING YARDS",
+})
+
 PROP_KEYS = frozenset({
     "pass_yds",
     "pass_yds_q1",
@@ -141,6 +154,64 @@ def normalize_onyx_player(name: Any) -> str:
     s = str(name or "").strip()
     s = re.sub(r"\s+(over|under)\s+[\d.]+$", "", s, flags=re.IGNORECASE)
     return s.strip()
+
+
+def is_fourc_legacy_total_stat_prop(row: dict[str, Any] | None = None) -> bool:
+    """4C/DK stat strings that duplicate standard player prop markets."""
+    if not row:
+        return False
+    for field in ("stat", "market"):
+        label = str(row.get(field) or "").strip().upper()
+        if label in FOURC_LEGACY_TOTAL_STAT_LABELS:
+            return True
+    return False
+
+
+def is_yes_no_half_point_prop(
+    prop_key: str | None = None,
+    line: Any = None,
+    *,
+    row: dict[str, Any] | None = None,
+) -> bool:
+    """True for Yes/No props always listed at 0.5 (anytime TD, throw INT, etc.)."""
+    if row is not None:
+        prop_key = prop_key or row.get("prop_key") or row.get("propKey") or prop_key_from_row(row)
+        if line is None:
+            line = row.get("line")
+    pk = str(prop_key or "").lower().strip()
+    if pk not in YES_NO_HALF_POINT_PROP_KEYS:
+        return False
+    try:
+        return abs(float(line) - 0.5) < 1e-9
+    except (TypeError, ValueError):
+        return pk in {"tds", "first_td", "last_td"}
+
+
+def is_skipped_prop_row(row: dict[str, Any] | None = None) -> bool:
+    return is_total_touchdowns_prop(row) or is_fourc_legacy_total_stat_prop(row)
+
+
+def is_total_touchdowns_prop(row: dict[str, Any] | None = None) -> bool:
+    """True for total-TD O/U markets (not pass TDs, not anytime TD scorer)."""
+    if not row:
+        return False
+    pk = str(row.get("prop_key") or row.get("propKey") or "").lower().strip()
+    if pk in TOTAL_TOUCHDOWN_PROP_KEYS:
+        return True
+    mk = str(row.get("market_key") or "").lower().strip()
+    if mk == "player_tds_over":
+        return True
+    stat_u = str(row.get("stat") or "").strip().upper()
+    if stat_u == "TOTAL TOUCHDOWNS":
+        return True
+    blob = " ".join(
+        str(row.get(k) or "") for k in ("market", "stat", "prop", "propKey", "prop_key")
+    ).lower()
+    if "total touchdown" in blob and "pass" not in blob:
+        return True
+    if re.search(r"\btds?\s+over\b", blob):
+        return True
+    return False
 
 
 def is_combo_prop_market(row: dict[str, Any] | str) -> bool:
@@ -461,9 +532,21 @@ def line_plausible_for_prop(prop_key: str, line: Any, *, position: str = "") -> 
 
 
 def prop_key_from_row(row: dict[str, Any]) -> str | None:
-    pk = row.get("propKey") or row.get("prop_key")
+    if is_skipped_prop_row(row):
+        return None
+    from lib.fourc_odds_client import fourc_stat_to_prop_key
+
+    stat_pk = fourc_stat_to_prop_key(str(row.get("stat") or ""))
+    pk = row.get("propKey") or row.get("prop_key") or stat_pk
     if pk:
-        return str(pk).lower()
+        pk_s = str(pk).lower()
+        pos = str(row.get("position") or "").upper()
+        line = row.get("line")
+        if not line_plausible_for_prop(pk_s, line, position=pos):
+            for alt in ("pass_yds", "rec_yds", "rush_yds", "receptions", "pass_tds"):
+                if alt != pk_s and line_plausible_for_prop(alt, line, position=pos):
+                    return alt
+        return pk_s
     mk = str(row.get("market_key") or "").lower().strip()
     if mk in MARKET_KEY_TO_PROP:
         return MARKET_KEY_TO_PROP[mk]

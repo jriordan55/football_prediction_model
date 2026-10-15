@@ -7,6 +7,7 @@ on your machine, and in the scheduled refresh that republishes the site.
 from __future__ import annotations
 
 import json
+import os
 import threading
 import time
 from collections import Counter
@@ -67,6 +68,33 @@ STAT_MAP = {
     "ANYTIME TOUCHDOWN SCORER": "tds",
     "TO SCORE A TOUCHDOWN": "tds",
     "TOTAL TOUCHDOWNS": "tds",
+    "TOUCHDOWNS": "tds",
+    "TOUCHDOWN PASSES": "pass_tds",
+    "TOTAL INTERCEPTIONS": "pass_ints",
+    "INTERCEPTIONS": "pass_ints",
+    "INTERCEPTIONS THROWN": "pass_ints",
+    "TOTAL PASSING INTERCEPTIONS": "pass_ints",
+    "LONGEST PASS": "pass_long",
+    "LONGEST COMPLETION": "pass_long",
+    "LONGEST PASSING COMPLETION": "pass_long",
+    "LONGEST RUSH": "rush_long",
+    "LONGEST RUSHING ATTEMPT": "rush_long",
+    "LONGEST RECEPTION": "rec_long",
+    "RUSHING TOUCHDOWNS": "rush_tds",
+    "TOTAL RUSHING TOUCHDOWNS": "rush_tds",
+    "RECEIVING TOUCHDOWNS": "rec_tds",
+    "TOTAL RECEIVING TOUCHDOWNS": "rec_tds",
+    "RUSHING + RECEIVING TOUCHDOWNS": "rr_tds",
+    "TOTAL RUSHING + RECEIVING TOUCHDOWNS": "rr_tds",
+    "FIRST TOUCHDOWN": "first_td",
+    "FIRST TOUCHDOWN SCORER": "first_td",
+    "TO SCORE FIRST TOUCHDOWN": "first_td",
+    "LAST TOUCHDOWN": "last_td",
+    "LAST TOUCHDOWN SCORER": "last_td",
+    "TO SCORE LAST TOUCHDOWN": "last_td",
+    "1ST QUARTER PASSING YARDS": "pass_yds_q1",
+    "FIRST QUARTER PASSING YARDS": "pass_yds_q1",
+    "PASSING YARDS 1ST QUARTER": "pass_yds_q1",
 }
 _LOCAL = threading.local()
 _LOCK = threading.Lock()
@@ -238,11 +266,25 @@ def week_of(sport: str) -> tuple[int, int]:
     data = _get(spec["scoreboard"], headers={"User-Agent": UA, "Accept": "application/json"})
     year = int((data.get("season") or {}).get("year") or 2026)
     week = int((data.get("week") or {}).get("number") or 1)
+    if sport == "nfl":
+        import sys
+
+        app = Path(__file__).resolve().parents[1] / "streamlit_app"
+        if str(app) not in sys.path:
+            sys.path.insert(0, str(app))
+        from lib.nfl_props_week import slate_week_from_schedule
+
+        slate = slate_week_from_schedule(year)
+        if slate and int(slate) > week:
+            week = int(slate)
     return year, week
 
 
 def fetch_lines(sport: str, *, use_cache: bool = True) -> dict[str, Any]:
     """Pregame props with DraftKings and Pinnacle filled in when the book posts them."""
+    import socket
+
+    socket.setdefaulttimeout(20)
     spec = SPECS[sport]
     headers = {"Accept": "application/json", "User-Agent": UA, "Referer": spec["referer"]}
     year, week = week_of(sport)
@@ -281,6 +323,7 @@ def fetch_lines(sport: str, *, use_cache: bool = True) -> dict[str, Any]:
         print("unmapped", unknown.most_common(8), flush=True)
 
     markets: dict[str, dict[str, Any]] = {}
+    live = not os.environ.get("PROP_DESK_CACHED_ONLY")
     for index, (_, prop) in enumerate(listed, start=1):
         prop_id = str(prop.get("id") or "")
         path = cache / f"market_{prop_id}.json"
@@ -288,12 +331,17 @@ def fetch_lines(sport: str, *, use_cache: bool = True) -> dict[str, Any]:
             cached = _read(path)
             if isinstance(cached, dict):
                 markets[prop_id] = cached
+                if index % 100 == 0 or index == len(listed):
+                    print(f"books {index}/{len(listed)}", flush=True)
                 continue
+        if not live:
+            continue
         try:
             payload = _get(f"{FOURC}/game/{prop_id}/market/tot", headers=headers, pause=1.35)
         except RuntimeError as exc:
-            print(f"rate limit, keeping the {len(markets)} books already saved ({exc})", flush=True)
-            break
+            print(f"rate limit, using the {len(markets)} books already saved ({exc})", flush=True)
+            live = False
+            continue
         if payload.get("lines"):
             _write(path, payload)
         markets[prop_id] = payload

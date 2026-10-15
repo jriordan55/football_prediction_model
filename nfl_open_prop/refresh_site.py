@@ -78,6 +78,9 @@ def _merge_quote(old: dict | None, new: dict) -> dict:
         for key in ("pinLine", "pinOver", "pinUnder"):
             if old.get(key) is not None:
                 merged[key] = old[key]
+    for key in ("ppLine", "ppOver", "udLine", "udOver"):
+        if merged.get(key) is None and old.get(key) is not None:
+            merged[key] = old[key]
     return merged
 
 
@@ -179,14 +182,32 @@ def apply_sport(desk: dict, sport_id: str, fresh: dict) -> bool:
                 player["total"] = old.get("total")
             if old.get("opp"):
                 player["opp"] = old["opp"]
+            old_props = old.get("props") or {}
             props = {}
             for stat, quote in player["props"].items():
-                props[stat] = _merge_quote((old.get("props") or {}).get(stat), quote)
+                props[stat] = _merge_quote(old_props.get(stat), quote)
+            for stat, quote in old_props.items():
+                if stat in props:
+                    continue
+                if quote.get("ppLine") is not None or quote.get("udLine") is not None:
+                    props[stat] = quote
             player["props"] = props
+            if old.get("sim"):
+                player["sim"] = old["sim"]
         else:
             slug = re.sub(r"[^a-z0-9]+", "-", _norm(player["name"])).strip("-")
             player["id"] = f"{sport_id}-{slug}"
         merged.append(player)
+    seen = {_norm(player["name"]) for player in merged}
+    for old in sport.get("players") or []:
+        name = _norm(str(old.get("name") or ""))
+        if name in seen or not old.get("props"):
+            continue
+        if any(
+            (quote or {}).get("ppLine") is not None or (quote or {}).get("udLine") is not None
+            for quote in (old.get("props") or {}).values()
+        ):
+            merged.append(old)
     merged.sort(key=lambda row: row["name"])
     sport["players"] = merged
     sport["season"] = fresh["season"]
@@ -220,17 +241,19 @@ def main(argv: list[str]) -> int:
         return 1
     desk = json.loads(DESK.read_text(encoding="utf-8"))
     changed = False
+    use_cache = "--cache" in argv
     for sport in sports:
-        fresh = fetch_lines(sport, use_cache=False)
+        fresh = fetch_lines(sport, use_cache=use_cache)
         changed = apply_sport(desk, sport, fresh) or changed
+        if changed:
+            desk["generatedAt"] = max(desk["sports"][item]["updatedAt"] for item in desk["sports"])
+            DESK.write_text(json.dumps(desk, separators=(",", ":"), allow_nan=False), encoding="utf-8")
+            stamp = re.sub(r"\D", "", desk["generatedAt"])[:14]
+            bump_index(stamp)
+            print(f"wrote {DESK}", flush=True)
     if not changed:
         print("desk.json left as published", flush=True)
         return 0
-    desk["generatedAt"] = max(desk["sports"][sport]["updatedAt"] for sport in desk["sports"])
-    DESK.write_text(json.dumps(desk, separators=(",", ":"), allow_nan=False), encoding="utf-8")
-    stamp = re.sub(r"\D", "", desk["generatedAt"])[:14]
-    bump_index(stamp)
-    print(f"wrote {DESK}", flush=True)
     return 0
 
 
