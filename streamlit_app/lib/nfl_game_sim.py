@@ -1,9 +1,9 @@
-"""NFL prop projection from each player's own games.
+"""NFL prop projection from a play-by-play simulation of the game.
 
-The number on the desk is the median of that player's last 10 games with at
-least 10 offensive snaps. The window reaches back across seasons until it
-has those games. It is not the team's last 10 games, and a game he sat out
-is not in the sample.
+Each game is simulated play by play. A situation model samples pass or run,
+then the result of that play, and the clock and score carry forward. The
+number on the desk is the median of those simulated games. A player who is
+ruled out is set to zero.
 """
 from __future__ import annotations
 
@@ -20,8 +20,8 @@ from .config import DATA_DIR
 CACHE = DATA_DIR / "fastr_player_cache" / "nfl"
 PBP_URL = "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.parquet"
 PLAYERS_URL = "https://github.com/nflverse/nflverse-data/releases/download/players/players.parquet"
-N_SIMS = 1200
-MODEL_VERSION = 3
+N_SIMS = 400
+MODEL_VERSION = 4
 KEEP_DRAWS = 400
 MIN_SNAPS = 10
 LAST_GAMES = 10
@@ -245,27 +245,57 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
         }
         # Weeks before he joined this team are not games he sat. Zeros start
         # at his first snap, so a new starter is not treated as a nine-week backup.
-        slots = [slot for slot in calendar.get(team, []) if not own or slot >= min(own)][-12:]
+        slots = [slot for slot in calendar.get(team, []) if not own or slot >= min(own)][-6:]
         pass_att_cal = []
         rush_att_cal = []
         targets_cal = []
+        pass_yds_cal = []
+        rush_yds_cal = []
+        rec_yds_cal = []
         team_p_cal = []
         team_r_cal = []
         for season, week in slots:
             row = own.get((season, week))
-            pass_att_cal.append(0.0 if row is None else float(row.pass_att))
-            rush_att_cal.append(0.0 if row is None else float(row.rush_att))
-            targets_cal.append(0.0 if row is None else float(row.targets))
+            if row is None:
+                # A missed game is a zero share of that offense. It is not a
+                # zero in his yards-per-play rate, because the rate only uses
+                # games where he had the chances.
+                pass_att_cal.append(0.0)
+                rush_att_cal.append(0.0)
+                targets_cal.append(0.0)
+                pass_yds_cal.append(0.0)
+                rush_yds_cal.append(0.0)
+                rec_yds_cal.append(0.0)
+                team_p_cal.append(float(team_pass.get((season, week, team), 0) or 0))
+                team_r_cal.append(float(team_rush.get((season, week, team), 0) or 0))
+                continue
+            pass_att_cal.append(float(row.pass_att))
+            rush_att_cal.append(float(row.rush_att))
+            targets_cal.append(float(row.targets))
+            pass_yds_cal.append(float(row.pass_yds))
+            rush_yds_cal.append(float(row.rush_yds))
+            rec_yds_cal.append(float(row.rec_yds))
             team_p_cal.append(float(team_pass.get((season, week, team), 0) or 0))
             team_r_cal.append(float(team_rush.get((season, week, team), 0) or 0))
         pass_att_cal = np.array(pass_att_cal)
         rush_att_cal = np.array(rush_att_cal)
         targets_cal = np.array(targets_cal)
+        pass_yds_cal = np.array(pass_yds_cal)
+        rush_yds_cal = np.array(rush_yds_cal)
+        rec_yds_cal = np.array(rec_yds_cal)
         team_p = np.array(team_p_cal)
         team_r = np.array(team_r_cal)
-        pass_share = _share(pass_att_cal, team_p)
-        rush_share = _share(rush_att_cal, team_r)
-        tgt_share = _share(targets_cal, team_p)
+        # Recent games count more. A role he held last year should not
+        # drown the share he has had this season.
+        if len(pass_att_cal):
+            age = np.arange(len(pass_att_cal), dtype=float)[::-1]
+            weight = np.exp(-age / 4.0)
+            weight *= len(weight) / weight.sum()
+            pass_share = _share(pass_att_cal * weight, team_p * weight)
+            rush_share = _share(rush_att_cal * weight, team_r * weight)
+            tgt_share = _share(targets_cal * weight, team_p * weight)
+        else:
+            pass_share = rush_share = tgt_share = 0.02
         pass_att = group["pass_att"].to_numpy(dtype=float)
         rush_att = group["rush_att"].to_numpy(dtype=float)
         targets = group["targets"].to_numpy(dtype=float)
@@ -278,6 +308,20 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
         catch, _ = _kalman(np.divide(group["receptions"], np.maximum(targets, 1)), targets, start=league_catch, q=0.002, r_scale=6)
         ypt, _ = _kalman(np.divide(group["rec_yds"], np.maximum(targets, 1)), targets, start=league_ypt, q=0.05, r_scale=12)
         ctd, _ = _kalman(np.divide(group["rec_tds"], np.maximum(targets, 1)), targets, start=0.04, q=0.0004, r_scale=2)
+        if len(pass_att_cal):
+            def _recent(num: np.ndarray, den: np.ndarray, fallback: float, minimum: float) -> float:
+                denom = float(np.sum(den * weight))
+                if denom < minimum:
+                    return fallback
+                return float(np.sum(num * weight) / denom)
+
+            ypa = 0.6 * _recent(pass_yds_cal, pass_att_cal, ypa, 40) + 0.4 * ypa
+            ypc = 0.6 * _recent(rush_yds_cal, rush_att_cal, ypc, 15) + 0.4 * ypc
+            ypt = 0.6 * _recent(rec_yds_cal, targets_cal, ypt, 12) + 0.4 * ypt
+            active_qb = pass_att_cal >= 8
+            pass_when_in = _share(pass_att_cal[active_qb], team_p[active_qb]) if active_qb.any() else pass_share
+        else:
+            pass_when_in = pass_share
         played_game = (pass_att_cal >= 5) | (rush_att_cal >= 3) | (targets_cal >= 2)
         recent = played_game[-4:] if len(played_game) else np.array([])
         played = float(np.mean(recent)) if len(recent) else 0.0
@@ -295,6 +339,7 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
             "team": team,
             "play": float(np.clip(played, 0.02, 0.98)),
             "pass_share": float(np.clip(pass_share, 0, 1)),
+            "pass_when_in": float(np.clip(pass_when_in, 0, 1)),
             "rush_share": float(np.clip(rush_share, 0, 1)),
             "target_share": float(np.clip(tgt_share, 0, 1)),
             "ypa": float(np.clip(ypa, 3, 12)),
@@ -334,17 +379,25 @@ def _apply_injuries(players: dict[str, dict[str, Any]]) -> None:
         rows = json.loads(path.read_text(encoding="utf-8")).get("rows") or []
     except (OSError, json.JSONDecodeError):
         return
+    listed: dict[tuple[str, str], float] = {}
     out = {}
     for row in rows:
         raw = row.get("availability")
-        availability = 1.0 if raw is None else float(raw)
-        if availability > 0.25:
+        if raw is None:
             continue
-        out[(norm_name(str(row.get("name") or "")), abbr(team_abbr(str(row.get("team") or ""))))] = True
+        availability = float(raw)
+        key = (norm_name(str(row.get("name") or "")), abbr(team_abbr(str(row.get("team") or ""))))
+        if availability <= 0.25:
+            out[key] = True
+        else:
+            listed[key] = availability
     for player in players.values():
-        if out.get((norm_name(player["name"]), player["team"])):
+        key = (norm_name(player["name"]), player["team"])
+        if out.get(key):
             player["play"] = 0.0
             player["out"] = True
+        elif key in listed:
+            player["play"] = float(np.clip(listed[key], 0.0, 0.98))
 
 
 def fit(year: int, week: int) -> dict[str, Any]:
@@ -790,7 +843,7 @@ def _zero_out(players: dict[str, dict[str, Any]]) -> None:
 
 
 def simulate_week(year: int, week: int, *, n_sims: int = N_SIMS, refresh: bool = False) -> dict[str, Any]:
-    """Cache a distribution centered on each player's own median."""
+    """Cache one week of play-by-play simulations."""
     meta_path = _meta_path(year, week)
     data_path = _cache_path(year, week)
     if meta_path.exists() and data_path.exists() and not refresh:
@@ -799,51 +852,9 @@ def simulate_week(year: int, week: int, *, n_sims: int = N_SIMS, refresh: bool =
             draws = np.load(data_path)["draws"]
             return {"meta": meta, "draws": draws}
 
-    from .nfl_games import load_nfl_games
+    from .nfl_play_engine import project_week
 
-    centers = player_centers(year, week)
-    playing = set()
-    for game in load_nfl_games(year):
-        if int(game.get("week") or 0) != int(week):
-            continue
-        for side in ("homeTeam", "home", "awayTeam", "away"):
-            name = str(game.get(side) or "")
-            if name:
-                playing.add(team_abbr(name))
-    if not playing:
-        playing = {player["team"] for player in centers.values()}
-    rng = np.random.default_rng(year * 100 + week)
-    z = 1.2815515655446004
-    series: list[np.ndarray] = []
-    index: list[dict[str, Any]] = []
-    seen: set[tuple[str, str]] = set()
-    for player in centers.values():
-        if player["team"] not in playing:
-            continue
-        key_name = norm_name(player["name"])
-        for stat, (center, sd) in player["stats"].items():
-            if (key_name, stat) in seen:
-                continue
-            seen.add((key_name, stat))
-            if player["out"] or sd <= 0:
-                sample = np.zeros(KEEP_DRAWS, dtype=np.float32)
-            else:
-                sample = np.clip(rng.normal(center, sd, KEEP_DRAWS), 0, None).astype(np.float32)
-            series.append(sample)
-            index.append({
-                "player": player["name"],
-                "name": key_name,
-                "team": player["team"],
-                "stat": stat,
-                "mean": round(float(center), 2),
-                "median": round(float(center), 2),
-                "center": round(float(center), 2),
-                "sd": round(float(sd), 2),
-                "p10": round(float(max(0.0, center - z * sd)), 2),
-                "p90": round(float(center + z * sd), 2),
-                "play": round(float(player["play"]), 3),
-            })
-    draws = np.vstack(series) if series else np.zeros((0, KEEP_DRAWS), dtype=np.float32)
+    index, draws = project_week(year, week, n_sims=int(n_sims), n_keep=KEEP_DRAWS)
     meta = {"year": year, "week": week, "n_sims": int(n_sims), "model": MODEL_VERSION, "rows": index}
     CACHE.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(data_path, draws=draws)

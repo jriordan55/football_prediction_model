@@ -436,7 +436,7 @@
     const empty = sportId === "cfb" && !sport.players.length ? "<p class='lede'>The college slate has not been built yet.</p>" : "";
     $("main").innerHTML = `
       <h1>This week's slate</h1>
-      <p class="lede">How often a player cleared a number, and the median of the last 10 games he actually played. Every posted prop carries DraftKings, PrizePicks, and Underdog.</p>
+      <p class="lede">How often a player cleared a number, and a play-by-play simulation of the game. Every posted prop carries DraftKings, PrizePicks, and Underdog.</p>
       <dl class="strip">
         <div><dt>Players</dt><dd>${sport.players.length}</dd></div>
         <div><dt>Games cached</dt><dd>${sport.gameRows}</dd></div>
@@ -510,7 +510,9 @@
       return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${bookCell(row.quote.dkLine, row.quote.dkOver, row.quote.dkUnder)}</td><td>${bookCell(row.quote.ppLine, row.quote.ppOver, null)}</td><td>${bookCell(row.quote.udLine, row.quote.udOver, null)}</td><td>${fmtPct(row.fair)}</td><td>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td><td>${fmtGap(row.books)}</td></tr>`;
     }).join("");
     const caption = mode === "book"
-      ? "Each row is scored against the posted line. The sim is the median of his own last 10 games. Side is the over or the under against DraftKings, or against PrizePicks or Underdog when DraftKings has no price. College rows are overs only."
+      ? (sportId === "nfl"
+        ? "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. Side is the over or the under against DraftKings, or against PrizePicks or Underdog when DraftKings has no price."
+        : "Each row is scored against the posted line. The sim is the median of his last 10 starts. College rows are overs only.")
       : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is a posted line.`;
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
     $("main").innerHTML = `
@@ -694,8 +696,8 @@
         <p>The log is the player's ESPN ${league} game log. Games in week ${sport.week}, and anything later, are left out. ${sportId === "nfl" ? "An NFL game counts when he played at least 10 offensive snaps, whether or not he started." : "A college game counts when he started."} Last 5, last 10, and last 20 are the last that many of those games, reaching back across seasons until there are enough. The season window is ${sport.season} only.</p>
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
-        <p>${sportId === "nfl" ? "The number is the median of that player's own last 10 games with at least 10 offensive snaps. The window goes back across seasons until it has 10 such games. A week the team played without him is not one of those games." : "The number is the median of that player's own last 10 games he started, going back across seasons until it has 10."} A player who is ruled out is set to zero.</p>
-        <p>The percent is how often a game drawn around that median clears the line. The usual range is the middle 80% of those games.</p>
+        <p>${sportId === "nfl" ? "The NFL number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games." : "The number is the median of that player's own last 10 games he started, going back across seasons until it has 10."} A player who is ruled out is set to zero.</p>
+        <p>${sportId === "nfl" ? "The percent is how often the simulated games cleared the line." : "The percent is how often a game drawn around that median clears the line."} The usual range is the middle 80% of those games.</p>
         <h2>Odds</h2>
         <p>The side is how far that sim sits from the price. DraftKings is used when it posts the number. Otherwise the side uses PrizePicks or Underdog. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under.</p>
         <p>Refresh NFL lines and Refresh college lines load the latest published slate. That slate already includes the completed week's games and the current DraftKings, PrizePicks, Underdog, and Pinnacle prices. The refresh job pulls a new week of games and a new set of odds, then republishes the sim.</p>
