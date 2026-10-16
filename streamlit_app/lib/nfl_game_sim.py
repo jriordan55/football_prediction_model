@@ -21,6 +21,7 @@ CACHE = DATA_DIR / "fastr_player_cache" / "nfl"
 PBP_URL = "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.parquet"
 PLAYERS_URL = "https://github.com/nflverse/nflverse-data/releases/download/players/players.parquet"
 N_SIMS = 1200
+MODEL_VERSION = 2
 KEEP_DRAWS = 400
 
 STATS = (
@@ -182,6 +183,15 @@ def _player_weeks(pbp: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def _share(counts: np.ndarray, team: np.ndarray) -> float:
+    """Fraction of the team's plays over the window, shrunk a little when the sample is short."""
+    num = float(np.sum(counts))
+    den = float(np.sum(team))
+    if den <= 0:
+        return 0.02
+    return float(np.clip((num + 0.4) / (den + 10.0), 0.0, 0.98))
+
+
 def _kalman(values: np.ndarray, weights: np.ndarray, *, start: float, q: float, r_scale: float) -> tuple[float, float]:
     """One rating. Weight is how many plays that game was worth."""
     x = float(start)
@@ -224,7 +234,9 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
             for row in group.itertuples(index=False)
             if str(row.posteam) == team
         }
-        slots = calendar.get(team, [])[-12:]
+        # Weeks before he joined this team are not games he sat. Zeros start
+        # at his first snap, so a new starter is not treated as a nine-week backup.
+        slots = [slot for slot in calendar.get(team, []) if not own or slot >= min(own)][-12:]
         pass_att_cal = []
         rush_att_cal = []
         targets_cal = []
@@ -242,9 +254,9 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
         targets_cal = np.array(targets_cal)
         team_p = np.array(team_p_cal)
         team_r = np.array(team_r_cal)
-        pass_share, _ = _kalman(np.divide(pass_att_cal, np.maximum(team_p, 1)), np.maximum(team_p, 1), start=0.02, q=0.01, r_scale=10)
-        rush_share, _ = _kalman(np.divide(rush_att_cal, np.maximum(team_r, 1)), np.maximum(team_r, 1), start=0.02, q=0.01, r_scale=8)
-        tgt_share, _ = _kalman(np.divide(targets_cal, np.maximum(team_p, 1)), np.maximum(team_p, 1), start=0.02, q=0.01, r_scale=8)
+        pass_share = _share(pass_att_cal, team_p)
+        rush_share = _share(rush_att_cal, team_r)
+        tgt_share = _share(targets_cal, team_p)
         pass_att = group["pass_att"].to_numpy(dtype=float)
         rush_att = group["rush_att"].to_numpy(dtype=float)
         targets = group["targets"].to_numpy(dtype=float)
@@ -323,6 +335,7 @@ def _apply_injuries(players: dict[str, dict[str, Any]]) -> None:
     for player in players.values():
         if out.get((norm_name(player["name"]), player["team"])):
             player["play"] = 0.0
+            player["out"] = True
 
 
 def fit(year: int, week: int) -> dict[str, Any]:
@@ -344,28 +357,31 @@ def fit(year: int, week: int) -> dict[str, Any]:
     return {"players": players, "teams": _team_env(weeks), "year": year, "week": week}
 
 
-def _drop_crumbs(roster: list[dict[str, Any]], key: str, floor: float) -> None:
-    """A one-play sample should not steal carries from the starter."""
-    if not roster:
-        return
-    best = max(float(player[key]) for player in roster)
-    for player in roster:
-        share = float(player[key])
-        if share < floor and share < best - 1e-9:
-            player[key] = 0.0
+def _use_shares(roster: list[dict[str, Any]], key: str, n: int, rng: np.random.Generator) -> np.ndarray:
+    """Each player keeps his own share of the offense.
 
-
-def _renorm(shares: np.ndarray, active: np.ndarray) -> np.ndarray:
-    weighted = shares * active
-    total = weighted.sum(axis=0)
-    total = np.where(total <= 1e-6, 1.0, total)
-    return weighted / total
+    Shares are not scaled up to 100%. The carries of someone who merely might
+    sit stay his. Only a player ruled out hands his share to teammates who
+    still have a role, in proportion to the share they already had.
+    """
+    raw = np.array([float(player[key]) for player in roster], dtype=float)
+    out = np.array([bool(player.get("out")) for player in roster])
+    ghost = np.array([player.get("name") == "__other__" for player in roster])
+    eligible = ~out & ~ghost & (raw > 0)
+    if out.any() and eligible.any() and float(raw[eligible].sum()) > 1e-6:
+        vacated = float(raw[out].sum())
+        raw = raw.copy()
+        raw[out] = 0.0
+        raw[eligible] = raw[eligible] + vacated * raw[eligible] / float(raw[eligible].sum())
+    play = np.array([max(float(player["play"]), 0.0) for player in roster])
+    active = rng.random((len(roster), n)) < play[:, None]
+    return raw[:, None] * active
 
 
 def _gamma(rng: np.random.Generator, count: np.ndarray, mean: float) -> np.ndarray:
     scale = max(float(mean), 0.5)
     draws = rng.gamma(np.maximum(count, 1e-3), scale)
-    return np.where(count >= 0.5, draws, 0.0)
+    return np.where(count >= 0.05, draws, 0.0)
 
 
 def _longest(rng: np.random.Generator, count: np.ndarray, mean: float) -> np.ndarray:
@@ -390,13 +406,10 @@ def _simulate_side(
     n_rush = np.maximum(plays - n_pass, 0)
     if not roster:
         return {}
-    active = np.vstack([rng.random(n) < max(player["play"], 0) for player in roster])
-    pass_share = _renorm(np.vstack([np.full(n, player["pass_share"]) for player in roster]), active)
-    rush_share = _renorm(np.vstack([np.full(n, player["rush_share"]) for player in roster]), active)
-    tgt_share = _renorm(np.vstack([np.full(n, player["target_share"]) for player in roster]), active)
+    pass_share = _use_shares(roster, "pass_share", n, rng)
+    rush_share = _use_shares(roster, "rush_share", n, rng)
+    tgt_share = _use_shares(roster, "target_share", n, rng)
     out: dict[str, dict[str, np.ndarray]] = {}
-    rec_yards_team = np.zeros(n)
-    rec_td_team = np.zeros(n)
     for i, player in enumerate(roster):
         att = n_pass * pass_share[i]
         rushes = n_rush * rush_share[i]
@@ -410,8 +423,6 @@ def _simulate_side(
         rush_tds = rng.poisson(np.maximum(rushes, 0) * player["rtd"]).astype(float)
         rec_tds = rng.poisson(np.maximum(targets, 0) * player["ctd"]).astype(float)
         ints = rng.binomial(np.maximum(att.round().astype(int), 0), player["int"]).astype(float)
-        rec_yards_team += rec_yds
-        rec_td_team += rec_tds
         out[player["name"]] = {
             "pass_yds": pass_yds,
             "pass_attempts": att,
@@ -429,13 +440,6 @@ def _simulate_side(
             "rec_long": _longest(rng, receptions, player["ypt"] / max(player["catch"], 0.5)),
             "score_tds": rush_tds + rec_tds,
         }
-    # Passing production has to agree with the catches in the same simulated game.
-    for player in roster:
-        share = pass_share[roster.index(player)]
-        row = out[player["name"]]
-        row["pass_yds"] = rec_yards_team * share
-        row["pass_tds"] = rec_td_team * share
-        row["pass_completions"] = sum(out[mate["name"]]["receptions"] * share for mate in roster)
     return out
 
 
@@ -519,9 +523,17 @@ def simulate_game(
             continue
         by_team.setdefault(player["team"], []).append(dict(player))
     for roster in by_team.values():
-        _drop_crumbs(roster, "pass_share", 0.2)
-        _drop_crumbs(roster, "rush_share", 0.05)
-        _drop_crumbs(roster, "target_share", 0.04)
+        ghost = {
+            "name": "__other__",
+            "play": 1.0,
+            "pass_share": max(0.0, 1.0 - sum(player["pass_share"] for player in roster)),
+            "rush_share": max(0.0, 1.0 - sum(player["rush_share"] for player in roster)),
+            "target_share": max(0.0, 1.0 - sum(player["target_share"] for player in roster)),
+            "ypa": 7.0, "cmp": 0.64, "ptd": 0.045, "int": 0.022,
+            "ypc": 4.3, "rtd": 0.025, "catch": 0.65, "ypt": 7.5, "ctd": 0.035,
+        }
+        if ghost["pass_share"] + ghost["rush_share"] + ghost["target_share"] > 0.02:
+            roster.append(ghost)
     env = model["teams"]
     home_env = env.get(home_abbr) or {"plays": 62.0, "pass_rate": 0.56}
     away_env = env.get(away_abbr) or {"plays": 62.0, "pass_rate": 0.56}
@@ -560,7 +572,7 @@ def simulate_week(year: int, week: int, *, n_sims: int = N_SIMS, refresh: bool =
     data_path = _cache_path(year, week)
     if meta_path.exists() and data_path.exists() and not refresh:
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
-        if int(meta.get("n_sims") or 0) == int(n_sims):
+        if int(meta.get("n_sims") or 0) == int(n_sims) and int(meta.get("model") or 0) == MODEL_VERSION:
             draws = np.load(data_path)["draws"]
             return {"meta": meta, "draws": draws}
 
@@ -582,6 +594,8 @@ def simulate_week(year: int, week: int, *, n_sims: int = N_SIMS, refresh: bool =
         seed = abs(hash((year, week, home, away))) % (2**31)
         box = simulate_game(model, team_abbr(home), team_abbr(away), spread=spread, n_sims=n_sims, seed=seed)
         for name, stats in box.items():
+            if name == "__other__":
+                continue
             for stat, values in stats.items():
                 sample = np.asarray(values[::step][:KEEP_DRAWS], dtype=np.float32)
                 if sample.size < 20:
@@ -599,7 +613,7 @@ def simulate_week(year: int, week: int, *, n_sims: int = N_SIMS, refresh: bool =
                     "play": round(float(_play_of(model, name)), 3),
                 })
     draws = np.vstack(series) if series else np.zeros((0, KEEP_DRAWS), dtype=np.float32)
-    meta = {"year": year, "week": week, "n_sims": int(n_sims), "rows": index}
+    meta = {"year": year, "week": week, "n_sims": int(n_sims), "model": MODEL_VERSION, "rows": index}
     CACHE.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(data_path, draws=draws)
     meta_path.write_text(json.dumps(meta), encoding="utf-8")

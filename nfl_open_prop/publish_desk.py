@@ -498,6 +498,7 @@ def attach_cfb_sim(sport: dict) -> int:
             roster.append({
                 "name": row["name"],
                 "play": row["play"],
+                "out": row["play"] <= 0,
                 "pass_share": min(row["pass_att"] / 34.0, 0.98),
                 "rush_share": min(row["rush_att"] / 38.0, 0.85),
                 "target_share": min(row["targets"] / 32.0, 0.45),
