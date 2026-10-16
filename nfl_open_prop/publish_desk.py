@@ -537,37 +537,50 @@ def _cfb_center(values: list[float], stat: str) -> tuple[float, float] | None:
 
 
 def attach_cfb_sim(sport: dict) -> int:
-    """Median of the player's own last 10 games he started."""
+    """Median of a play-by-play simulation of each college game."""
     import sys
 
     app = str(APP)
     if app not in sys.path:
         sys.path.insert(0, app)
-    z = 1.2815515655446004
+    from lib.cfb_game_sim import norm_name, simulate_week
+
+    year = int(sport.get("season") or 2026)
+    week = int(sport.get("week") or 1)
+    bundle = simulate_week(year, week)
+    packed: dict[str, dict[str, dict]] = {}
+    rows = bundle["meta"]["rows"]
+    draws = bundle["draws"]
+    for index, row in enumerate(rows):
+        stat = row["stat"]
+        if stat not in STAT_BY_ID:
+            continue
+        center = row.get("center")
+        if center is not None:
+            packed.setdefault(row["name"], {})[stat] = {
+                "mean": round(float(center), 2),
+                "median": round(float(center), 2),
+                "p10": round(float(row.get("p10") or 0), 2),
+                "p90": round(float(row.get("p90") or 0), 2),
+                "sd": round(float(row.get("sd") or 0), 2),
+                "play": round(float(row.get("play") or 0), 3),
+            }
+        else:
+            packed.setdefault(row["name"], {})[stat] = _pack_draws(draws[index], row.get("play") or 0)
     matched = 0
     for player in sport.get("players") or []:
-        logs = player.get("logs") or {}
+        sim = packed.get(norm_name(str(player.get("name") or "")))
+        if not sim:
+            player["sim"] = {}
+            continue
         availability = 1.0 if player.get("availability") is None else float(player.get("availability") or 0)
-        out = availability <= 0.25
-        sim = {}
-        for stat in STAT_BY_ID:
-            rows = logs.get(stat) or []
-            values = [float(row[3]) for row in rows]
-            fitted = _cfb_center(values, stat)
-            if fitted is None:
-                continue
-            center, sd = (0.0, 0.0) if out else fitted
-            sim[stat] = {
-                "mean": round(center, 2),
-                "median": round(center, 2),
-                "sd": round(sd, 2),
-                "p10": round(max(0.0, center - z * sd), 2),
-                "p90": round(center + z * sd, 2),
-                "play": 0.0 if out else 1.0,
+        if availability <= 0.25:
+            sim = {
+                stat: {**row, "mean": 0.0, "median": 0.0, "p10": 0.0, "p90": 0.0, "sd": 0.0, "play": 0.0}
+                for stat, row in sim.items()
             }
         player["sim"] = sim
-        if sim:
-            matched += 1
+        matched += 1
     return matched
 
 

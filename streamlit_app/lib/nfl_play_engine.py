@@ -148,9 +148,13 @@ class PlayEngine:
 
 
 def fit_engine(year: int, week: int) -> PlayEngine:
-    plays = _load_plays(year, week)
+    return fit_plays(_load_plays(year, week), year=year)
+
+
+def fit_plays(plays: pd.DataFrame, *, year: int | None = None) -> PlayEngine:
+    """Fit the situation model. `plays` already uses this module's column names."""
     empty = _empty_engine()
-    if plays.empty:
+    if plays is None or plays.empty:
         return empty
     scrimmage = plays[plays["play_type"].isin(["pass", "run"]) & plays["down"].between(1, 3)]
     if scrimmage.empty:
@@ -174,6 +178,9 @@ def fit_engine(year: int, week: int) -> PlayEngine:
     pass_p = np.clip(pass_p, 0.08, 0.92)
 
     league_pass = float(is_pass.mean())
+    if year is None and "season" in plays.columns:
+        year = int(pd.to_numeric(plays["season"], errors="coerce").max() or 0)
+    year = int(year or 0)
     team_delta: dict[str, float] = {}
     from .nfl_game_sim import abbr
 
@@ -398,6 +405,7 @@ def simulate_game(
     *,
     n: int,
     rng: np.random.Generator,
+    max_steps: int = 170,
 ) -> dict[str, dict[str, np.ndarray]]:
     """Simulate `n` copies of one game. Returns norm-name -> stat -> draws."""
     sides = [home, away]
@@ -464,7 +472,7 @@ def simulate_game(
             if take.any():
                 box[side][stat][i, take] += amount[take]
 
-    for _step in range(170):
+    for _step in range(int(max_steps)):
         if not alive.any():
             break
         active = alive.copy()

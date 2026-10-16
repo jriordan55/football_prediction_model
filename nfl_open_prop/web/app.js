@@ -512,7 +512,7 @@
     const caption = mode === "book"
       ? (sportId === "nfl"
         ? "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. Side is the over or the under against DraftKings, or against PrizePicks or Underdog when DraftKings has no price."
-        : "Each row is scored against the posted line. The sim is the median of his last 10 starts. College rows are overs only.")
+        : "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. College rows are overs only.")
       : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is a posted line.`;
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
     $("main").innerHTML = `
@@ -696,7 +696,7 @@
         <p>The log is the player's ESPN ${league} game log. Games in week ${sport.week}, and anything later, are left out. ${sportId === "nfl" ? "An NFL game counts when he played at least 10 offensive snaps, whether or not he started." : "A college game counts when he started."} Last 5, last 10, and last 20 are the last that many of those games, reaching back across seasons until there are enough. The season window is ${sport.season} only.</p>
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
-        <p>${sportId === "nfl" ? "The NFL number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games." : "The number is the median of that player's own last 10 games he started, going back across seasons until it has 10."} A player who is ruled out is set to zero.</p>
+        <p>The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero.</p>
         <p>${sportId === "nfl" ? "The percent is how often the simulated games cleared the line." : "The percent is how often a game drawn around that median clears the line."} The usual range is the middle 80% of those games.</p>
         <h2>Odds</h2>
         <p>The side is how far that sim sits from the price. DraftKings is used when it posts the number. Otherwise the side uses PrizePicks or Underdog. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under.</p>
