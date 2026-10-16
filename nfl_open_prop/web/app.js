@@ -515,7 +515,7 @@
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
     $("main").innerHTML = `
       <h1>Board</h1>
-      <p class="lede">${esc(caption)} The 60/70/80 chips are the short list: last 10 at that rate, with at least five played games. Last 10 reaches into ${sport.season - 1} when this season is still short.</p>
+      <p class="lede">${esc(caption)} The 60/70/80 chips are the short list: last 10 at that rate, with at least five played games. Last 10 reaches back through ${sport.season - 2} when this season is still short.</p>
       <div class="chips" style="margin-top:.8rem">${chips}</div>
       <form class="tools" id="board-form">${numberField}</form>
       <div class="chips">${modeChips}<span style="width:.4rem"></span>${floors}</div>

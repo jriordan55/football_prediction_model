@@ -288,16 +288,75 @@ def fill_empty_logs(sport: dict, sport_id: str) -> int:
 
     with ThreadPoolExecutor(max_workers=8) as pool:
         list(pool.map(identify, missing))
-    snaps = load_snaps((season - 1, season)) if sport_id == "nfl" else {}
+    snaps = load_snaps(tuple(range(season - 2, season + 1))) if sport_id == "nfl" else {}
     histories: dict[str, list[dict]] = {}
     wanted = [player for player in missing if str(player.get("id") or "").isdigit()]
 
     def history(player: dict) -> tuple[str, list[dict]]:
         games = []
-        for year in (season - 1, season):
-            games.extend(_fetch_games(str(player["id"]), year, cache, league, week - 1))
+        for year in range(season - 2, season + 1):
+            games.extend(_fetch_games(str(player["id"]), year, cache, league, 18 if year < season else week - 1))
         return str(player["id"]), games
 
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for espn_id, games in pool.map(history, wanted):
+            histories[espn_id] = games
+    event_ids: list[str] = []
+    seen: set[str] = set()
+    for games in histories.values():
+        for game in games:
+            event_id = str(game.get("event_id") or "")
+            if event_id and event_id not in seen:
+                seen.add(event_id)
+                event_ids.append(event_id)
+    roles: dict[str, dict] = {}
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        fetched = pool.map(lambda event_id: fetch_role(event_id, league) or {}, event_ids)
+        for event_id, role in zip(event_ids, fetched):
+            roles[event_id] = role
+    added = 0
+    for player in wanted:
+        added += _log_rows(player, histories.get(str(player["id"])) or [], sport_id, season, week, roles, snaps)
+    return added
+
+
+def extend_short_logs(sport: dict, sport_id: str) -> int:
+    """Fill a short log with 2024 and 2025, the two seasons before this one."""
+    import sys
+
+    app = str(APP)
+    if app not in sys.path:
+        sys.path.insert(0, app)
+    from nfl_open_prop.played import fetch_role, load_snaps
+
+    season = int(sport.get("season") or 2026)
+    week = int(sport.get("week") or 1)
+    cache = NFL_CACHE if sport_id == "nfl" else CFB_CACHE
+    league = "nfl" if sport_id == "nfl" else "college-football"
+    prior = (season - 2, season - 1)
+    snaps = load_snaps(prior + (season,)) if sport_id == "nfl" else {}
+    wanted = []
+    for player in sport.get("players") or []:
+        if not str(player.get("id") or "").isdigit():
+            continue
+        logs = player.get("logs") or {}
+        longest = max((len(rows) for rows in logs.values()), default=0)
+        seasons = {int(row[0]) for rows in logs.values() for row in rows}
+        if longest >= 10 and prior[0] in seasons:
+            continue
+        if any(year not in seasons for year in prior) or longest < 10:
+            wanted.append(player)
+    if not wanted:
+        return 0
+    print(f"{sport_id} filling {len(wanted)} short logs from {prior[0]} and {prior[1]}", flush=True)
+
+    def history(player: dict) -> tuple[str, list[dict]]:
+        games = []
+        for year in prior:
+            games.extend(_fetch_games(str(player["id"]), year, cache, league, 18))
+        return str(player["id"]), games
+
+    histories: dict[str, list[dict]] = {}
     with ThreadPoolExecutor(max_workers=8) as pool:
         for espn_id, games in pool.map(history, wanted):
             histories[espn_id] = games
@@ -527,6 +586,8 @@ def publish() -> None:
     print("refreshing completed games…", flush=True)
     print(f"nfl backfill {fill_empty_logs(nfl, 'nfl')}", flush=True)
     print(f"cfb backfill {fill_empty_logs(cfb, 'cfb')}", flush=True)
+    print(f"nfl prior seasons {extend_short_logs(nfl, 'nfl')}", flush=True)
+    print(f"cfb prior seasons {extend_short_logs(cfb, 'cfb')}", flush=True)
     print(f"nfl log rows added {refresh_completed_week(nfl, 'nfl')}", flush=True)
     print(f"cfb log rows added {refresh_completed_week(cfb, 'cfb')}", flush=True)
     print("attaching the sim…", flush=True)

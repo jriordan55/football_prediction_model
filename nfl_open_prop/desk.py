@@ -276,7 +276,7 @@ class Desk:
         for espn_id, player in self.players.items():
             self._names[str(espn_id)] = player["name"]
             games: list[dict[str, Any]] = []
-            for year in (self.season - 1, self.season):
+            for year in (self.season - 2, self.season - 1, self.season):
                 for game in _read_games(self.cache, espn_id, year):
                     try:
                         game_season = int(game.get("season") or 0)
@@ -295,7 +295,7 @@ class Desk:
         from nfl_open_prop.played import fetch_role, load_role, load_snaps
 
         if self.sport == "nfl" and not self._snaps:
-            self._snaps = load_snaps((self.season - 1, self.season))
+            self._snaps = load_snaps((self.season - 2, self.season - 1, self.season))
         league = "nfl" if self.sport == "nfl" else "college-football"
         pending: list[str] = []
         seen: set[str] = set()
@@ -404,7 +404,7 @@ class Desk:
 
         league = "nfl" if self.sport == "nfl" else "college-football"
         games: list[dict[str, Any]] = []
-        for year in (self.season - 1, self.season):
+        for year in (self.season - 2, self.season - 1, self.season):
             try:
                 fetched = _fetch_log(str(espn_id), year, self.cache, league)
             except Exception:
