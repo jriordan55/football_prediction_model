@@ -267,11 +267,11 @@
   }
 
   function describeModel(fitted, spec) {
-    if (!fitted) return "The full-game sim does not have this player.";
-    const plays = fitted.play == null ? "" : ` Chance he plays: ${fmtPct(fitted.play)}.`;
-    if (spec.kind === "binary") return `Full-game sim. Chance this happens: ${fmtPct(fitted.mean)}.${plays}`;
+    if (!fitted) return "No recent games for this player.";
+    const plays = fitted.play != null && fitted.play < 0.99 ? ` Chance he plays: ${fmtPct(fitted.play)}.` : "";
+    if (spec.kind === "binary") return `Median ${fmtPct(fitted.mean)}.${plays}`;
     const band = fitted.p10 != null && fitted.p90 != null ? ` Middle 80% is ${fmtNum(fitted.p10)}–${fmtNum(fitted.p90)}.` : "";
-    return `Full-game sim. Mean ${fmtNum(fitted.mean)}.${band}${plays}`;
+    return `Median ${fmtNum(fitted.mean)}.${band}${plays}`;
   }
 
   function marketFactor(sportId, player, stat) {
@@ -436,7 +436,7 @@
     const empty = sportId === "cfb" && !sport.players.length ? "<p class='lede'>The college slate has not been built yet.</p>" : "";
     $("main").innerHTML = `
       <h1>This week's slate</h1>
-      <p class="lede">How often a player cleared a number, and the chance he does it again from a full-game sim. Every posted prop carries DraftKings, PrizePicks, and Underdog.</p>
+      <p class="lede">How often a player cleared a number, and the median of the last 10 games he actually played. Every posted prop carries DraftKings, PrizePicks, and Underdog.</p>
       <dl class="strip">
         <div><dt>Players</dt><dd>${sport.players.length}</dd></div>
         <div><dt>Games cached</dt><dd>${sport.gameRows}</dd></div>
@@ -510,7 +510,7 @@
       return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${bookCell(row.quote.dkLine, row.quote.dkOver, row.quote.dkUnder)}</td><td>${bookCell(row.quote.ppLine, row.quote.ppOver, null)}</td><td>${bookCell(row.quote.udLine, row.quote.udOver, null)}</td><td>${fmtPct(row.fair)}</td><td>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td><td>${fmtGap(row.books)}</td></tr>`;
     }).join("");
     const caption = mode === "book"
-      ? "Each row is scored against the posted line. The model is the full-game sim. Side is the over or the under against DraftKings, or against PrizePicks or Underdog when DraftKings has no price. College rows are overs only."
+      ? "Each row is scored against the posted line. The sim is the median of his own last 10 games. Side is the over or the under against DraftKings, or against PrizePicks or Underdog when DraftKings has no price. College rows are overs only."
       : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is a posted line.`;
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
     $("main").innerHTML = `
@@ -691,11 +691,11 @@
         <p class="lede">The counting rules are the Open Prop rules, moved to a football week. The odds are the part that app leaves out.</p>
         <h2>What a game counts as</h2>
         <p>A game clears the number when the stat is greater than or equal to it. 26 against 26 counts. A line of 64.5 means 65 or more on a counting stat, because the predictive is a count. Yards stay continuous, so 64.5 yards means more than 64.5.</p>
-        <p>The log is the player's ESPN ${league} game log. Games in week ${sport.week}, and anything later, are left out. ${sportId === "nfl" ? "An NFL game counts when he started and played at least 10 offensive snaps." : "A college game counts when he started."} Last 5, last 10, and last 20 are the last that many of those games, reaching into ${sport.season - 1} when ${sport.season} does not have enough. The season window is ${sport.season} only.</p>
+        <p>The log is the player's ESPN ${league} game log. Games in week ${sport.week}, and anything later, are left out. ${sportId === "nfl" ? "An NFL game counts when he started and played at least 10 offensive snaps." : "A college game counts when he started."} Last 5, last 10, and last 20 are the last that many of those games, reaching back across seasons until there are enough. The season window is ${sport.season} only.</p>
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
-        <p>The number on the board is a full game, simulated. NFL games are dealt from nflverse play-by-play. Each player's share of passes, rushes, and targets, and how efficient he is with them, is a Kalman rating that moves after every game, including the games he sat. College uses the same play allocation, with those shares taken from the games he started. A player who is out is given none of the plays, so the teammate who is active picks up the work.</p>
-        <p>The percent is how often the simulated games cleared the line. The usual range is the middle 80% of those games. Yes/no markets, such as anytime touchdown, use the share of simulated games where it happened.</p>
+        <p>${sportId === "nfl" ? "The number is the median of that player's own last 10 games with at least 10 offensive snaps. The window goes back across seasons until it has 10 such games. A week the team played without him is not one of those games." : "The number is the median of that player's own last 10 games he started, going back across seasons until it has 10."} A player who is ruled out is set to zero.</p>
+        <p>The percent is how often a game drawn around that median clears the line. The usual range is the middle 80% of those games.</p>
         <h2>Odds</h2>
         <p>The side is how far that sim sits from the price. DraftKings is used when it posts the number. Otherwise the side uses PrizePicks or Underdog. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under.</p>
         <p>Refresh NFL lines and Refresh college lines load the latest published slate. That slate already includes the completed week's games and the current DraftKings, PrizePicks, Underdog, and Pinnacle prices. The refresh job pulls a new week of games and a new set of odds, then republishes the sim.</p>

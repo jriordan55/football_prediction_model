@@ -39,7 +39,6 @@ STATS: list[dict[str, Any]] = [
     {"id": "rush_yds", "label": "Rushing yards", "unit": "yards", "default": 49.5, "kind": "yards"},
     {"id": "rec_yds", "label": "Receiving yards", "unit": "yards", "default": 49.5, "kind": "yards"},
     {"id": "receptions", "label": "Receptions", "unit": "receptions", "default": 4.5, "kind": "count"},
-    {"id": "tds", "label": "Anytime TD", "unit": "TDs", "default": 0.5, "kind": "binary"},
     {"id": "pass_attempts", "label": "Pass attempts", "unit": "attempts", "default": 33.5, "kind": "count"},
     {"id": "pass_completions", "label": "Completions", "unit": "completions", "default": 22.5, "kind": "count"},
     {"id": "pass_ints", "label": "Interceptions", "unit": "INTs", "default": 0.5, "kind": "count"},
@@ -52,11 +51,8 @@ STATS: list[dict[str, Any]] = [
     {"id": "rec_tds", "label": "Receiving TDs", "unit": "TDs", "default": 0.5, "kind": "count"},
     {"id": "rec_long", "label": "Longest reception", "unit": "yards", "default": 19.5, "kind": "yards"},
     {"id": "rr_yds", "label": "Rush + rec yards", "unit": "yards", "default": 64.5, "kind": "yards"},
-    {"id": "rr_tds", "label": "Rush + rec TDs", "unit": "TDs", "default": 0.5, "kind": "count"},
     {"id": "prd_yds", "label": "Pass + rush + rec yards", "unit": "yards", "default": 289.5, "kind": "yards"},
     {"id": "prd_tds", "label": "Pass + rush + rec TDs", "unit": "TDs", "default": 1.5, "kind": "count"},
-    {"id": "first_td", "label": "First TD", "unit": "TDs", "default": 0.5, "kind": "binary"},
-    {"id": "last_td", "label": "Last TD", "unit": "TDs", "default": 0.5, "kind": "binary"},
 ]
 STAT_BY_ID = {s["id"]: s for s in STATS}
 WINDOWS = (("l5", 5), ("l10", 10), ("l20", 20), ("season", None))

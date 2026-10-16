@@ -1,9 +1,9 @@
-"""Full-game NFL prop sim from nflfastR play-by-play.
+"""NFL prop projection from each player's own games.
 
-Play volume and play-call rates come from the play-by-play. Each player's
-share and efficiency is a Kalman rating updated after every game, the same
-idea as a rating that moves only as far as the snaps support. A game is then
-a Monte Carlo draw of plays, play type, and who is on the field.
+The number on the desk is the median of that player's last 10 games with at
+least 10 offensive snaps. The window reaches back across seasons until it
+has those games. It is not the team's last 10 games, and a game he sat out
+is not in the sample.
 """
 from __future__ import annotations
 
@@ -21,8 +21,17 @@ CACHE = DATA_DIR / "fastr_player_cache" / "nfl"
 PBP_URL = "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.parquet"
 PLAYERS_URL = "https://github.com/nflverse/nflverse-data/releases/download/players/players.parquet"
 N_SIMS = 1200
-MODEL_VERSION = 2
+MODEL_VERSION = 3
 KEEP_DRAWS = 400
+MIN_SNAPS = 10
+LAST_GAMES = 10
+HISTORY_FROM = 2016
+_SNAP_URL = "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_{year}.csv"
+_SKILL = {"QB", "RB", "FB", "WR", "TE"}
+_YARD_STATS = {
+    "pass_yds", "pass_yds_q1", "pass_rush_yds", "rush_yds", "rec_yds", "rr_yds", "prd_yds",
+    "pass_long", "rush_long", "rec_long",
+}
 
 STATS = (
     "pass_yds",
@@ -566,8 +575,222 @@ def _meta_path(year: int, week: int) -> Path:
     return CACHE / f"sim_{year}_w{week}.json"
 
 
+def _spread(stat: str, center: float, sample: np.ndarray) -> float:
+    """Width of the distribution. The sample's own spread, with a floor so one quiet streak is not a certainty."""
+    sd = float(np.std(sample, ddof=1)) if len(sample) > 1 else 0.0
+    if not np.isfinite(sd):
+        sd = 0.0
+    if stat in _YARD_STATS:
+        floor = max(8.0, 0.18 * max(center, 1.0))
+    elif stat in {"pass_attempts", "pass_completions", "rush_attempts", "receptions"}:
+        floor = max(1.2, 0.22 * max(center, 1.0))
+    else:
+        floor = max(0.4, 0.35 * max(center, 0.5))
+    return float(max(sd, floor))
+
+
+def _snap_table(seasons: range) -> pd.DataFrame:
+    """offensive snaps joined to the nflverse player id."""
+    players_path = CACHE / "players.parquet"
+    if not players_path.exists():
+        return pd.DataFrame(columns=["gsis_id", "season", "week", "snaps"])
+    ids = pd.read_parquet(players_path, columns=["gsis_id", "pfr_id"])
+    ids = ids.dropna(subset=["gsis_id", "pfr_id"])
+    ids["pfr_id"] = ids["pfr_id"].astype(str).str.upper()
+    ids = ids.drop_duplicates("pfr_id")
+    frames = []
+    snap_dir = DATA_DIR / "espn_cache"
+    snap_dir.mkdir(parents=True, exist_ok=True)
+    for season in seasons:
+        path = snap_dir / f"snap_counts_{season}.csv"
+        if not path.exists() or path.stat().st_size < 1000:
+            try:
+                import requests
+
+                response = requests.get(_SNAP_URL.format(year=season), timeout=90, headers={"User-Agent": "Mozilla/5.0"})
+                response.raise_for_status()
+                path.write_bytes(response.content)
+            except Exception:
+                if not path.exists():
+                    continue
+        try:
+            snaps = pd.read_csv(path, usecols=["season", "game_type", "week", "pfr_player_id", "offense_snaps"])
+        except Exception:
+            continue
+        snaps = snaps[snaps["game_type"].astype(str).str.upper() != "PRE"]
+        snaps["pfr_id"] = snaps["pfr_player_id"].astype(str).str.upper()
+        snaps["snaps"] = pd.to_numeric(snaps["offense_snaps"], errors="coerce").fillna(0)
+        snaps["season"] = pd.to_numeric(snaps["season"], errors="coerce")
+        snaps["week"] = pd.to_numeric(snaps["week"], errors="coerce")
+        snaps = snaps.dropna(subset=["season", "week"])
+        snaps = snaps.groupby(["pfr_id", "season", "week"], as_index=False)["snaps"].max()
+        frames.append(snaps)
+    if not frames:
+        return pd.DataFrame(columns=["gsis_id", "season", "week", "snaps"])
+    snaps = pd.concat(frames, ignore_index=True)
+    joined = snaps.merge(ids, on="pfr_id", how="inner")
+    return joined[["gsis_id", "season", "week", "snaps"]]
+
+
+def _ensure_player_week(season: int, through_week: int) -> None:
+    """Refresh the current season when the cached file is behind the weeks already played."""
+    path = CACHE / f"player_week_{season}.parquet"
+    if path.exists() and season < 2026:
+        return
+    have = 0
+    if path.exists():
+        try:
+            have = int(pd.to_numeric(pd.read_parquet(path, columns=["week"])["week"], errors="coerce").max() or 0)
+        except Exception:
+            have = 0
+    if have >= int(through_week):
+        return
+    url = (
+        "https://github.com/nflverse/nflverse-data/releases/download/stats_player/"
+        f"stats_player_week_{season}.parquet"
+    )
+    try:
+        import requests
+
+        response = requests.get(url, timeout=120, headers={"User-Agent": "Mozilla/5.0"})
+        response.raise_for_status()
+        fresh = pd.read_parquet(io_bytes(response.content))
+    except Exception:
+        return
+    if fresh.empty:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fresh.to_parquet(path, index=False)
+
+
+def io_bytes(payload: bytes):
+    import io
+
+    return io.BytesIO(payload)
+
+
+def _player_games(year: int, week: int) -> pd.DataFrame:
+    """One row per player-game he actually played, before this week."""
+    _ensure_player_week(int(year), max(int(week) - 1, 1))
+    columns = [
+        "player_id", "player_display_name", "position", "season", "week", "season_type", "team",
+        "completions", "attempts", "passing_yards", "passing_tds", "passing_interceptions",
+        "carries", "rushing_yards", "rushing_tds", "receptions", "receiving_yards", "receiving_tds",
+    ]
+    frames = []
+    for season in range(HISTORY_FROM, int(year) + 1):
+        path = CACHE / f"player_week_{season}.parquet"
+        if not path.exists():
+            continue
+        frame = pd.read_parquet(path, columns=columns)
+        if "season_type" in frame.columns:
+            frame = frame[frame["season_type"].isin(["REG", "POST"])]
+        frame["season"] = pd.to_numeric(frame["season"], errors="coerce")
+        frame["week"] = pd.to_numeric(frame["week"], errors="coerce")
+        if season == int(year):
+            frame = frame[frame["week"] < int(week)]
+        if not frame.empty:
+            frames.append(frame)
+    if not frames:
+        return pd.DataFrame()
+    games = pd.concat(frames, ignore_index=True)
+    games = games[games["position"].isin(_SKILL)]
+    snaps = _snap_table(range(HISTORY_FROM, int(year) + 1))
+    games = games.merge(
+        snaps,
+        left_on=["player_id", "season", "week"],
+        right_on=["gsis_id", "season", "week"],
+        how="inner",
+    )
+    games = games[games["snaps"] >= MIN_SNAPS]
+    for col in (
+        "completions", "attempts", "passing_yards", "passing_tds", "passing_interceptions",
+        "carries", "rushing_yards", "rushing_tds", "receptions", "receiving_yards", "receiving_tds",
+    ):
+        games[col] = pd.to_numeric(games[col], errors="coerce").fillna(0.0)
+    return games
+
+
+def _stat_frame(games: pd.DataFrame) -> pd.DataFrame:
+    out = pd.DataFrame({
+        "player_id": games["player_id"].astype(str),
+        "name": games["player_display_name"].astype(str),
+        "team": games["team"].map(abbr),
+        "season": games["season"].astype(int),
+        "week": games["week"].astype(int),
+        "pass_yds": games["passing_yards"],
+        "pass_tds": games["passing_tds"],
+        "pass_attempts": games["attempts"],
+        "pass_completions": games["completions"],
+        "pass_ints": games["passing_interceptions"],
+        "pass_yds_q1": games["passing_yards"] * 0.24,
+        "rush_yds": games["rushing_yards"],
+        "rush_attempts": games["carries"],
+        "rush_tds": games["rushing_tds"],
+        "rec_yds": games["receiving_yards"],
+        "receptions": games["receptions"],
+        "rec_tds": games["receiving_tds"],
+    })
+    out["pass_rush_yds"] = out["pass_yds"] + out["rush_yds"]
+    out["rr_yds"] = out["rush_yds"] + out["rec_yds"]
+    out["prd_yds"] = out["pass_yds"] + out["rush_yds"] + out["rec_yds"]
+    out["prd_tds"] = out["pass_tds"] + out["rush_tds"] + out["rec_tds"]
+    return out
+
+
+def player_centers(year: int, week: int) -> dict[str, dict[str, Any]]:
+    """name -> {team, play, out, stats: {stat: (median, sd)}} from his own last 10 snap games."""
+    games = _player_games(year, week)
+    if games.empty:
+        return {}
+    table = _stat_frame(games).sort_values(["season", "week"])
+    stat_cols = [col for col in table.columns if col not in {"player_id", "name", "team", "season", "week"}]
+    centers: dict[str, dict[str, Any]] = {}
+    for pid, group in table.groupby("player_id", sort=False):
+        recent = group.tail(LAST_GAMES)
+        name = str(recent["name"].iloc[-1] or "")
+        if not name or name == "None":
+            continue
+        stats = {}
+        for stat in stat_cols:
+            values = recent[stat].to_numpy(dtype=float)
+            center = float(np.median(values))
+            stats[stat] = (center, _spread(stat, center, values))
+        centers[str(pid)] = {
+            "name": name,
+            "team": str(recent["team"].iloc[-1]),
+            "play": 1.0,
+            "out": False,
+            "stats": stats,
+        }
+    _zero_out(centers)
+    return centers
+
+
+def _zero_out(players: dict[str, dict[str, Any]]) -> None:
+    path = DATA_DIR / "espn_cache" / "injuries_nfl.json"
+    if not path.exists():
+        return
+    try:
+        rows = json.loads(path.read_text(encoding="utf-8")).get("rows") or []
+    except (OSError, json.JSONDecodeError):
+        return
+    out = set()
+    for row in rows:
+        raw = row.get("availability")
+        availability = 1.0 if raw is None else float(raw)
+        if availability > 0.25:
+            continue
+        out.add((norm_name(str(row.get("name") or "")), abbr(team_abbr(str(row.get("team") or "")))))
+    for player in players.values():
+        if (norm_name(player["name"]), player["team"]) in out:
+            player["play"] = 0.0
+            player["out"] = True
+            player["stats"] = {stat: (0.0, 0.0) for stat in player["stats"]}
+
+
 def simulate_week(year: int, week: int, *, n_sims: int = N_SIMS, refresh: bool = False) -> dict[str, Any]:
-    """Draw the week and cache a short sample of every player's distribution."""
+    """Cache a distribution centered on each player's own median."""
     meta_path = _meta_path(year, week)
     data_path = _cache_path(year, week)
     if meta_path.exists() and data_path.exists() and not refresh:
@@ -578,40 +801,48 @@ def simulate_week(year: int, week: int, *, n_sims: int = N_SIMS, refresh: bool =
 
     from .nfl_games import load_nfl_games
 
-    model = fit(year, week)
-    games = [game for game in load_nfl_games(year) if int(game.get("week") or 0) == int(week)]
-    if not games:
-        games = [{"homeTeam": home, "awayTeam": away, "spread": 0} for home, away in _fallback_games(model)]
+    centers = player_centers(year, week)
+    playing = set()
+    for game in load_nfl_games(year):
+        if int(game.get("week") or 0) != int(week):
+            continue
+        for side in ("homeTeam", "home", "awayTeam", "away"):
+            name = str(game.get(side) or "")
+            if name:
+                playing.add(team_abbr(name))
+    if not playing:
+        playing = {player["team"] for player in centers.values()}
+    rng = np.random.default_rng(year * 100 + week)
+    z = 1.2815515655446004
     series: list[np.ndarray] = []
     index: list[dict[str, Any]] = []
-    step = max(n_sims // KEEP_DRAWS, 1)
-    for game in games:
-        home = str(game.get("homeTeam") or game.get("home") or "")
-        away = str(game.get("awayTeam") or game.get("away") or "")
-        if not home or not away:
+    seen: set[tuple[str, str]] = set()
+    for player in centers.values():
+        if player["team"] not in playing:
             continue
-        spread = float(game.get("spread") or 0)
-        seed = abs(hash((year, week, home, away))) % (2**31)
-        box = simulate_game(model, team_abbr(home), team_abbr(away), spread=spread, n_sims=n_sims, seed=seed)
-        for name, stats in box.items():
-            if name == "__other__":
+        key_name = norm_name(player["name"])
+        for stat, (center, sd) in player["stats"].items():
+            if (key_name, stat) in seen:
                 continue
-            for stat, values in stats.items():
-                sample = np.asarray(values[::step][:KEEP_DRAWS], dtype=np.float32)
-                if sample.size < 20:
-                    continue
-                series.append(sample)
-                index.append({
-                    "player": name,
-                    "name": norm_name(name),
-                    "team": team_abbr(home) if _on_team(model, name, team_abbr(home)) else team_abbr(away),
-                    "stat": stat,
-                    "mean": round(float(np.mean(values)), 2),
-                    "median": round(float(np.median(values)), 2),
-                    "p10": round(float(np.quantile(values, 0.1)), 2),
-                    "p90": round(float(np.quantile(values, 0.9)), 2),
-                    "play": round(float(_play_of(model, name)), 3),
-                })
+            seen.add((key_name, stat))
+            if player["out"] or sd <= 0:
+                sample = np.zeros(KEEP_DRAWS, dtype=np.float32)
+            else:
+                sample = np.clip(rng.normal(center, sd, KEEP_DRAWS), 0, None).astype(np.float32)
+            series.append(sample)
+            index.append({
+                "player": player["name"],
+                "name": key_name,
+                "team": player["team"],
+                "stat": stat,
+                "mean": round(float(center), 2),
+                "median": round(float(center), 2),
+                "center": round(float(center), 2),
+                "sd": round(float(sd), 2),
+                "p10": round(float(max(0.0, center - z * sd)), 2),
+                "p90": round(float(center + z * sd), 2),
+                "play": round(float(player["play"]), 3),
+            })
     draws = np.vstack(series) if series else np.zeros((0, KEEP_DRAWS), dtype=np.float32)
     meta = {"year": year, "week": week, "n_sims": int(n_sims), "model": MODEL_VERSION, "rows": index}
     CACHE.mkdir(parents=True, exist_ok=True)

@@ -424,7 +424,18 @@ def attach_nfl_sim(sport: dict) -> int:
         stat = row["stat"]
         if stat not in STAT_BY_ID:
             continue
-        packed.setdefault(row["name"], {})[stat] = _pack_draws(draws[index], row.get("play") or 0)
+        center = row.get("center")
+        if center is not None:
+            packed.setdefault(row["name"], {})[stat] = {
+                "mean": round(float(center), 2),
+                "median": round(float(center), 2),
+                "p10": round(float(row.get("p10") or 0), 2),
+                "p90": round(float(row.get("p90") or 0), 2),
+                "sd": round(float(row.get("sd") or 0), 2),
+                "play": round(float(row.get("play") or 0), 3),
+            }
+        else:
+            packed.setdefault(row["name"], {})[stat] = _pack_draws(draws[index], row.get("play") or 0)
     matched = 0
     for player in sport.get("players") or []:
         sim = packed.get(norm_name(str(player.get("name") or "")))
@@ -448,107 +459,47 @@ def _mean(values: list[float]) -> float | None:
     return sum(values) / len(values)
 
 
+def _cfb_center(values: list[float], stat: str) -> tuple[float, float] | None:
+    from lib.nfl_game_sim import _spread
+
+    if not values:
+        return None
+    sample = np.asarray(values[-10:], dtype=float)
+    center = float(np.median(sample))
+    return center, _spread(stat, center, sample)
+
+
 def attach_cfb_sim(sport: dict) -> int:
-    """Same play allocation as the NFL sim, with shares taken from games he started."""
+    """Median of the player's own last 10 games he started."""
     import sys
 
     app = str(APP)
     if app not in sys.path:
         sys.path.insert(0, app)
-    from lib.nfl_game_sim import _finish, _simulate_side
-
-    season = int(sport.get("season") or 2026)
-    groups: dict[str, list[dict]] = {}
-    for player in sport.get("players") or []:
-        groups.setdefault(str(player.get("team") or player.get("id") or ""), []).append(player)
+    z = 1.2815515655446004
     matched = 0
-    for roster_players in groups.values():
-        ratings = []
-        for player in roster_players:
-            logs = player.get("logs") or {}
-            availability = 1.0 if player.get("availability") is None else float(player.get("availability") or 0)
-            play = 0.0 if availability <= 0.25 else 0.98
-            pass_att = _mean(_recent(logs.get("pass_attempts") or [], season))
-            rush_att = _mean(_recent(logs.get("rush_attempts") or [], season))
-            receptions = _mean(_recent(logs.get("receptions") or [], season))
-            pass_yds = _mean(_recent(logs.get("pass_yds") or [], season))
-            rush_yds = _mean(_recent(logs.get("rush_yds") or [], season))
-            rec_yds = _mean(_recent(logs.get("rec_yds") or [], season))
-            if pass_att is None and pass_yds:
-                pass_att = pass_yds / 7.2
-            if rush_att is None and rush_yds:
-                rush_att = rush_yds / 4.4
-            targets = None if receptions is None and rec_yds is None else (receptions or 0) / 0.66 or ((rec_yds or 0) / 8.0)
-            ratings.append({
-                "player": player,
-                "name": str(player.get("name") or ""),
-                "play": play,
-                "pass_att": pass_att or 0.0,
-                "rush_att": rush_att or 0.0,
-                "targets": targets or 0.0,
-                "pass_yds": pass_yds or 0.0,
-                "rush_yds": rush_yds or 0.0,
-                "rec_yds": rec_yds or 0.0,
-                "pass_tds": _mean(_recent(logs.get("pass_tds") or [], season)) or 0.0,
-                "ints": _mean(_recent(logs.get("pass_ints") or [], season)) or 0.0,
-            })
-        roster = []
-        for row in ratings:
-            att = max(row["pass_att"], 1.0)
-            roster.append({
-                "name": row["name"],
-                "play": row["play"],
-                "out": row["play"] <= 0,
-                "pass_share": min(row["pass_att"] / 34.0, 0.98),
-                "rush_share": min(row["rush_att"] / 38.0, 0.85),
-                "target_share": min(row["targets"] / 32.0, 0.45),
-                "ypa": float(np.clip((row["pass_yds"] / att) if row["pass_att"] else 7.1, 4.5, 9.5)),
-                "cmp": 0.65,
-                "ptd": float(np.clip((row["pass_tds"] / att) if row["pass_att"] else 0.045, 0.01, 0.09)),
-                "int": float(np.clip((row["ints"] / att) if row["pass_att"] else 0.022, 0.008, 0.06)),
-                "ypc": float(np.clip((row["rush_yds"] / row["rush_att"]) if row["rush_att"] else 4.4, 2.5, 6.5)),
-                "rtd": 0.03,
-                "catch": 0.66,
-                "ypt": float(np.clip((row["rec_yds"] / row["targets"]) if row["targets"] else 8.0, 4.0, 14.0)),
-                "ctd": 0.04,
-            })
-        ghost = {
-            "name": "__other__",
-            "play": 1.0,
-            "pass_share": max(0.0, 1.0 - sum(player["pass_share"] for player in roster)),
-            "rush_share": max(0.0, 1.0 - sum(player["rush_share"] for player in roster)),
-            "target_share": max(0.0, 1.0 - sum(player["target_share"] for player in roster)),
-            "ypa": 7.1, "cmp": 0.64, "ptd": 0.04, "int": 0.02,
-            "ypc": 4.2, "rtd": 0.02, "catch": 0.64, "ypt": 7.5, "ctd": 0.03,
-        }
-        if ghost["pass_share"] + ghost["rush_share"] + ghost["target_share"] > 0.02:
-            roster.append(ghost)
-        pass_total = sum(row["pass_att"] for row in ratings) or 34.0
-        rush_total = sum(row["rush_att"] for row in ratings) or 38.0
-        plays = float(np.clip(max(pass_total + rush_total, 68.0), 60, 84))
-        rate = float(np.clip(pass_total / max(pass_total + rush_total, 1.0), 0.42, 0.68))
-        rng = np.random.default_rng(abs(hash(roster_players[0].get("team") or "")) % (2**31))
-        n = 500
-        kickoff = np.clip(rng.normal(plays, 4.0, n), 50, 90)
-        box = _simulate_side(
-            rng,
-            roster,
-            plays=kickoff,
-            pass_rate=np.full(n, rate),
-            margin=0.0,
-        )
-        finished = _finish(box, n, rng, kickoff)
-        by_name = {row["name"]: row for row in ratings}
-        for name, stats in finished.items():
-            if name not in by_name:
+    for player in sport.get("players") or []:
+        logs = player.get("logs") or {}
+        availability = 1.0 if player.get("availability") is None else float(player.get("availability") or 0)
+        out = availability <= 0.25
+        sim = {}
+        for stat in STAT_BY_ID:
+            rows = logs.get(stat) or []
+            values = [float(row[3]) for row in rows]
+            fitted = _cfb_center(values, stat)
+            if fitted is None:
                 continue
-            player = by_name[name]["player"]
-            play = by_name[name]["play"]
-            player["sim"] = {
-                stat: _pack_draws(values, play)
-                for stat, values in stats.items()
-                if stat in STAT_BY_ID
+            center, sd = (0.0, 0.0) if out else fitted
+            sim[stat] = {
+                "mean": round(center, 2),
+                "median": round(center, 2),
+                "sd": round(sd, 2),
+                "p10": round(max(0.0, center - z * sd), 2),
+                "p90": round(center + z * sd, 2),
+                "play": 0.0 if out else 1.0,
             }
+        player["sim"] = sim
+        if sim:
             matched += 1
     return matched
 
