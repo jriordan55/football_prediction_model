@@ -361,32 +361,34 @@ class Desk:
         return True
 
     def _counts(self, espn_id: str, game: dict[str, Any]) -> bool:
-        """Started, and in the NFL at least 10 offensive snaps. A game he sat out is left out."""
+        """NFL: at least 10 offensive snaps, starter or not. College: he started."""
         from nfl_open_prop.played import MIN_SNAPS, offense_snaps, team_abbr
 
         event_id = str(game.get("event_id") or "")
         role = (self._roles.get(event_id) or {}).get(str(espn_id))
+        if self.sport == "nfl":
+            try:
+                week = int(game.get("week") or 0)
+                season = int(game.get("season") or 0)
+            except (TypeError, ValueError):
+                return False
+            if not hasattr(self, "_snap_weeks"):
+                self._snap_weeks = {(key[0], key[1]) for key in self._snaps}
+            week_has_snaps = (season, week) in self._snap_weeks
+            snaps = offense_snaps(
+                self._snaps,
+                self._names.get(str(espn_id)) or "",
+                season,
+                week,
+                team_abbr(str((self.players.get(str(espn_id)) or {}).get("team") or "")),
+                str(game.get("opponent_abbr") or ""),
+            )
+            if week_has_snaps:
+                return snaps is not None and snaps >= MIN_SNAPS
         if role is None:
             return False
         started, did_not_play = role
-        if did_not_play or not started:
-            return False
-        if self.sport != "nfl":
-            return True
-        try:
-            week = int(game.get("week") or 0)
-            season = int(game.get("season") or 0)
-        except (TypeError, ValueError):
-            return False
-        snaps = offense_snaps(
-            self._snaps,
-            self._names.get(str(espn_id)) or "",
-            season,
-            week,
-            team_abbr(str((self.players.get(str(espn_id)) or {}).get("team") or "")),
-            str(game.get("opponent_abbr") or ""),
-        )
-        return snaps is not None and snaps >= MIN_SNAPS
+        return bool(started) and not did_not_play
 
     def _rate(self, espn_id: str, stat: str) -> float | None:
         """Plain per-game rate. This season when there are two starts, otherwise the last eight."""

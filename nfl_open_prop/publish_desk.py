@@ -207,6 +207,7 @@ def _log_rows(player: dict, games: list[dict], sport_id: str, season: int, week_
 
     added = 0
     bucket = player.setdefault("logs", {})
+    snap_weeks = {(key[0], key[1]) for key in snaps}
     for game in games:
         try:
             game_season = int(game.get("season") or 0)
@@ -217,10 +218,8 @@ def _log_rows(player: dict, games: list[dict], sport_id: str, season: int, week_
             continue
         event_id = str(game.get("event_id") or "")
         role = (roles.get(event_id) or {}).get(str(player["id"]))
-        if not role or role[1] or not role[0]:
-            continue
         if sport_id == "nfl":
-            week_has_snaps = any(key[0] == game_season and key[1] == game_week for key in snaps)
+            week_has_snaps = (game_season, game_week) in snap_weeks
             count = offense_snaps(
                 snaps,
                 str(player.get("name") or ""),
@@ -229,8 +228,13 @@ def _log_rows(player: dict, games: list[dict], sport_id: str, season: int, week_
                 team_abbr(str(player.get("team") or player.get("home") or "")),
                 str(game.get("opponent_abbr") or ""),
             )
-            if week_has_snaps and (count is None or count < 10):
+            if week_has_snaps:
+                if count is None or count < 10:
+                    continue
+            elif not role or role[1] or not role[0]:
                 continue
+        elif not role or role[1] or not role[0]:
+            continue
         opp = str(game.get("opponent_abbr") or game.get("opponent") or "")
         for stat in STAT_BY_ID:
             value = game_stat_value(game, stat)
@@ -412,6 +416,7 @@ def refresh_completed_week(sport: dict, sport_id: str) -> int:
                 logs[str(player["id"])] = []
     roles: dict[str, dict] = {}
     added = 0
+    snap_weeks = {(key[0], key[1]) for key in snaps}
     for player in players:
         games = [game for game in logs.get(str(player["id"])) or [] if _played(game, season, week)]
         for game in games:
@@ -424,10 +429,8 @@ def refresh_completed_week(sport: dict, sport_id: str) -> int:
             if event_id and event_id not in roles:
                 roles[event_id] = fetch_role(event_id, league) or {}
             role = (roles.get(event_id) or {}).get(str(player["id"]))
-            if not role or role[1] or not role[0]:
-                continue
             if sport_id == "nfl":
-                week_has_snaps = any(key[0] == game_season and key[1] == game_week for key in snaps)
+                week_has_snaps = (game_season, game_week) in snap_weeks
                 count = offense_snaps(
                     snaps,
                     str(player.get("name") or ""),
@@ -436,8 +439,13 @@ def refresh_completed_week(sport: dict, sport_id: str) -> int:
                     team_abbr(str(player.get("team") or "")),
                     str(game.get("opponent_abbr") or ""),
                 )
-                if week_has_snaps and (count is None or count < 10):
+                if week_has_snaps:
+                    if count is None or count < 10:
+                        continue
+                elif not role or role[1] or not role[0]:
                     continue
+            elif not role or role[1] or not role[0]:
+                continue
             opp = str(game.get("opponent_abbr") or game.get("opponent") or "")
             bucket = player.setdefault("logs", {})
             for stat in STAT_BY_ID:

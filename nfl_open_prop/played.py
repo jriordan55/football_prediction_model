@@ -1,6 +1,6 @@
 """Which games belong in a player's rate.
 
-A game counts when he started. NFL games also need 10 offensive snaps.
+An NFL game counts at 10 offensive snaps, whether or not he started. A college game counts when he started.
 Snap counts are the nflverse table. The start comes from the ESPN game roster.
 """
 from __future__ import annotations
