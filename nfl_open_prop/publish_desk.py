@@ -617,6 +617,9 @@ def publish() -> None:
     from nfl_open_prop.close_signal import attach_signals
 
     print(f"nfl close signals {attach_signals(nfl)}", flush=True)
+    from nfl_open_prop.prizepicks_lines import attach_prizepicks
+
+    print(f"nfl prizepicks lines {attach_prizepicks(nfl)}", flush=True)
     nfl["stats"] = _stats_payload()
     cfb["stats"] = _stats_payload()
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")

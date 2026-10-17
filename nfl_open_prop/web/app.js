@@ -457,7 +457,9 @@
     const pages = pageList.map(([id, label, href]) => `<a href="${href}"${id === active ? ' aria-current="page"' : ""}>${label}</a>`).join("");
     $("mast").innerHTML = `<a class="brand" href="${link(sportId, "home")}"><span class="word">${esc(sport.brand)}</span><em>with odds</em></a><nav>${nav}${pages}</nav><button class="ghost" type="button" onclick="toggleTheme()">Theme</button>`;
     const stamp = (sport.updatedAt || "").slice(0, 16).replace("T", " ") || "—";
-    $("foot").innerHTML = `<span>${sport.season} week ${sport.week}</span><span>Hit rates through week ${Math.max(sport.week - 1, 0)}</span><span>Sim and odds ${esc(stamp)} UTC</span><span>DraftKings, PrizePicks, Underdog, Pinnacle</span>`;
+    $("foot").innerHTML = sportId === "nfl"
+      ? `<span>${sport.season} week ${sport.week}</span><span>PrizePicks totals</span><span>Lines ${esc((sport.ppUpdatedAt || sport.updatedAt || "").slice(0, 16).replace("T", " ") || "—")} UTC</span>`
+      : `<span>${sport.season} week ${sport.week}</span><span>Hit rates through week ${Math.max(sport.week - 1, 0)}</span><span>Sim and odds ${esc(stamp)} UTC</span><span>DraftKings, PrizePicks, Underdog, Pinnacle</span>`;
   }
 
   function postedStats(sport) {
@@ -498,6 +500,190 @@
       <h1>${bets.length} bets</h1>
       <p class="lede">Green is the over. Red is the under. Proj is his usual DraftKings close, and that is the number used for these bets. Today's line has to be at least 0.6 standard deviations off it.</p>
       ${signalTable(sportId, sport)}`;
+  }
+
+  const TEAM_ABBR = {
+    "arizona cardinals": "ARI", "atlanta falcons": "ATL", "baltimore ravens": "BAL", "buffalo bills": "BUF",
+    "carolina panthers": "CAR", "chicago bears": "CHI", "cincinnati bengals": "CIN", "cleveland browns": "CLE",
+    "dallas cowboys": "DAL", "denver broncos": "DEN", "detroit lions": "DET", "green bay packers": "GB",
+    "houston texans": "HOU", "indianapolis colts": "IND", "jacksonville jaguars": "JAX", "kansas city chiefs": "KC",
+    "las vegas raiders": "LV", "los angeles chargers": "LAC", "los angeles rams": "LAR", "miami dolphins": "MIA",
+    "minnesota vikings": "MIN", "new england patriots": "NE", "new orleans saints": "NO", "new york giants": "NYG",
+    "new york jets": "NYJ", "philadelphia eagles": "PHI", "pittsburgh steelers": "PIT", "san francisco 49ers": "SF",
+    "seattle seahawks": "SEA", "tampa bay buccaneers": "TB", "tennessee titans": "TEN", "washington commanders": "WAS",
+  };
+  const PP_MARKETS = [
+    ["pass_yds", "Passing Yards"],
+    ["pass_attempts", "Pass Attempts"],
+    ["rush_yds", "Rushing Yards"],
+    ["rush_attempts", "Rush Attempts"],
+    ["rec_yds", "Receiving Yards"],
+    ["receptions", "Receptions"],
+  ];
+
+  function teamAbbr(name) {
+    const key = String(name || "").trim().toLowerCase();
+    if (TEAM_ABBR[key]) return TEAM_ABBR[key];
+    if (/^[a-z]{2,3}$/i.test(key)) return key.toUpperCase();
+    return "";
+  }
+
+  function playerSide(player) {
+    const team = String(player.team || "").trim().toLowerCase();
+    const home = String(player.home || "").trim().toLowerCase();
+    const away = String(player.away || "").trim().toLowerCase();
+    if (team && team === home) return "home";
+    if (team && team === away) return "away";
+    return "";
+  }
+
+  function kickoff(iso) {
+    if (!iso) return "";
+    const stamp = new Date(iso);
+    if (Number.isNaN(stamp.getTime())) return "";
+    return stamp.toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Chicago" }) + " CT";
+  }
+
+  function prizeRows(sport, stat) {
+    const rows = [];
+    for (const player of sport.players) {
+      const quote = player.props[stat];
+      const sim = player.sim && player.sim[stat];
+      if (!quote || quote.ppLine == null || !sim || !Number.isFinite(Number(sim.mean))) continue;
+      if (Number(sim.play) === 0) continue;
+      const availability = player.availability == null ? 1 : Number(player.availability);
+      if (availability <= 0.25) continue;
+      const side = playerSide(player);
+      const teamName = side === "home" ? player.home : side === "away" ? player.away : (player.team || "");
+      const abbr = teamAbbr(teamName) || "—";
+      const away = teamAbbr(player.away) || "—";
+      const home = teamAbbr(player.home) || "—";
+      const played = seasonRows(logs(player, stat), sport.season).filter((row) => Number(row[1]) < Number(sport.week));
+      const total = Number(quote.ppLine);
+      const proj = Number(sim.mean);
+      if (!(proj > 0) || !(total > 0)) continue;
+      const start = player.start || "";
+      if (start && Date.parse(start) < Date.now() - 3 * 60 * 60 * 1000) continue;
+      rows.push({
+        player, proj, total, diff: proj - total, played,
+        hits: played.filter((row) => Number(row[3]) + 1e-9 >= total).length,
+        abbr, teamName: teamName || player.team || "",
+        matchup: away + " @ " + home, gameId: away + "-" + home, start,
+      });
+    }
+    return rows;
+  }
+
+  function renderPrizeBoard(sportId, qs) {
+    const sport = sportData(sportId);
+    let stat = qs.get("stat") || "pass_yds";
+    if (!PP_MARKETS.some(([id]) => id === stat)) stat = "pass_yds";
+    const spec = sport.stats.find((item) => item.id === stat) || { label: stat, unit: "" };
+    const query = (qs.get("q") || "").trim().toLowerCase();
+    const game = qs.get("game") || "all";
+    const dir = qs.get("dir") || "all";
+    const sort = qs.get("sort") || "difference";
+    const page = Math.max(1, Number(qs.get("page")) || 1);
+    const open = qs.get("open") || "";
+    const base = { stat, q: query || null, game: game === "all" ? null : game, dir: dir === "all" ? null : dir, sort: sort === "difference" ? null : sort };
+    const pool = prizeRows(sport, stat);
+    const games = [...new Map(pool.map((row) => [row.gameId, row.matchup])).entries()].sort((a, b) => a[1].localeCompare(b[1]));
+    let rows = pool.filter((row) => {
+      const hay = (row.player.name + " " + row.abbr + " " + row.matchup).toLowerCase();
+      if (query && !hay.includes(query)) return false;
+      if (game !== "all" && row.gameId !== game) return false;
+      const direction = Math.abs(row.diff) < 0.05 ? "even" : row.diff > 0 ? "above" : "below";
+      row.direction = direction;
+      return dir === "all" || dir === direction;
+    });
+    rows.sort((a, b) => {
+      if (sort === "projection") return b.proj - a.proj;
+      if (sort === "season") return (b.played.length ? b.hits / b.played.length : -1) - (a.played.length ? a.hits / a.played.length : -1);
+      if (sort === "player") return a.player.name.localeCompare(b.player.name);
+      if (sort === "kickoff") return String(a.start).localeCompare(String(b.start)) || a.player.name.localeCompare(b.player.name);
+      return Math.abs(b.diff) - Math.abs(a.diff) || a.player.name.localeCompare(b.player.name);
+    });
+    const pageSize = 20;
+    const pages = Math.max(1, Math.ceil(rows.length / pageSize));
+    const shown = rows.slice((Math.min(page, pages) - 1) * pageSize, Math.min(page, pages) * pageSize);
+    const counts = Object.fromEntries(PP_MARKETS.map(([id]) => [id, prizeRows(sport, id).length]));
+    const players = new Set(PP_MARKETS.flatMap(([id]) => prizeRows(sport, id).map((row) => row.player.id)));
+    const matchups = new Set(PP_MARKETS.flatMap(([id]) => prizeRows(sport, id).map((row) => row.gameId)));
+    const props = PP_MARKETS.reduce((sum, [id]) => sum + counts[id], 0);
+    const tabs = PP_MARKETS.map(([id, label]) => `<a class="${id === stat ? "on" : ""}" href="${link(sportId, "home", { ...base, stat: id, page: null, open: null })}">${label} ${counts[id]}</a>`).join("");
+    const gameOptions = [`<option value="all">All matchups</option>`].concat(games.map(([id, label]) => `<option value="${esc(id)}"${id === game ? " selected" : ""}>${esc(label)}</option>`)).join("");
+    const body = shown.map((row) => {
+      const cls = row.direction === "above" ? "up" : row.direction === "below" ? "down" : "";
+      const pill = row.direction === "above" ? "Over" : row.direction === "below" ? "Under" : "At total";
+      const rate = row.played.length ? `${row.hits} / ${row.played.length} · ${Math.round(100 * row.hits / row.played.length)}%` : "—";
+      const dots = row.played.slice(-8).map((gameRow) => `<i class="${Number(gameRow[3]) + 1e-9 >= row.total ? "over" : "under"}"></i>`).join("");
+      const history = open === String(row.player.id) ? `<ul class="history">${row.played.map((gameRow) => {
+        const over = Number(gameRow[3]) + 1e-9 >= row.total;
+        return `<li>Week ${esc(gameRow[1])} vs ${esc(gameRow[2])}: ${fmtNum(gameRow[3], spec.kind === "count" ? 0 : 0)} ${esc(spec.unit || "")}; ${over ? "over" : "under"} the current total of ${fmtNum(row.total)}</li>`;
+      }).join("") || "<li>No games yet this season.</li>"}</ul>` : "";
+      return `<article>
+        <button class="prow" type="button" data-open="${esc(row.player.id)}">
+          <span class="who"><span class="badge">${esc(row.abbr)}</span><span><b>${esc(row.player.name)}</b><span>${esc(row.teamName || "")}</span></span></span>
+          <span class="when"><b>${esc(row.matchup)}</b><span>${esc(kickoff(row.start))}</span></span>
+          <span class="nums"><span><span>Projection</span><b>${fmtNum(row.proj)}</b></span><span><span>Total</span><b class="total">${fmtNum(row.total)}</b></span><span><span>Difference</span><b class="${cls}">${row.diff > 0 ? "+" : ""}${fmtNum(row.diff)}</b></span></span>
+          <span class="side"><span class="pill${pill === "Over" ? " over" : ""}">${pill}</span><span>+</span></span>
+        </button>
+        <div class="rate"><span>Season over ${rate}</span><span class="dots">${dots}</span></div>
+        ${history}
+      </article>`;
+    }).join("");
+    const fresh = sport.ppUpdatedAt ? `PrizePicks lines updated ${sport.ppUpdatedAt.slice(0, 16).replace("T", " ")} UTC` : "PrizePicks lines";
+    shell(sportId, "home");
+    document.title = "Player Props";
+    $("main").innerHTML = `
+      <section class="hero">
+        <div>
+          <p class="kicker">${sport.season} / National Football League</p>
+          <p class="kicker">Week ${sport.week} / Player projections</p>
+          <h1 class="display">Player Props.</h1>
+        </div>
+        <div>
+          <p>Compare the projection with the current PrizePicks total. The total is PrizePicks only.</p>
+          <div class="meters"><div><b>${props}</b><span>Props</span></div><div><b>${players.size}</b><span>Players</span></div><div><b>${matchups.size}</b><span>Games</span></div></div>
+          <p class="fresh">${esc(fresh)}</p>
+        </div>
+      </section>
+      <p class="kicker">NFL / Player props</p>
+      <div class="board-head"><h2 class="display" style="font-size:2.4rem">The Prop Board.</h2><p>Season results are scored against today's PrizePicks number.</p></div>
+      <div class="markets">${tabs}</div>
+      <form class="filters" id="pp-filters">
+        <label>Search<input name="q" value="${esc(query)}" placeholder="Search player or team…"></label>
+        <label>Matchup<select name="game">${gameOptions}</select></label>
+        <label>Projection<select name="dir">
+          <option value="all"${dir === "all" ? " selected" : ""}>All directions</option>
+          <option value="above"${dir === "above" ? " selected" : ""}>Over</option>
+          <option value="below"${dir === "below" ? " selected" : ""}>Under</option>
+          <option value="even"${dir === "even" ? " selected" : ""}>At total</option>
+        </select></label>
+        <label>Sort by<select name="sort">
+          <option value="difference"${sort === "difference" ? " selected" : ""}>Largest difference</option>
+          <option value="projection"${sort === "projection" ? " selected" : ""}>Highest projection</option>
+          <option value="season"${sort === "season" ? " selected" : ""}>Season over rate</option>
+          <option value="player"${sort === "player" ? " selected" : ""}>Player A–Z</option>
+          <option value="kickoff"${sort === "kickoff" ? " selected" : ""}>Kickoff time</option>
+        </select></label>
+      </form>
+      <div class="board-head"><h2>${esc(spec.label)} <span class="note">/ ${esc(spec.unit || "")}</span></h2><span class="note">${shown.length ? `${(Math.min(page, pages) - 1) * pageSize + 1}–${(Math.min(page, pages) - 1) * pageSize + shown.length} of ${rows.length}` : "0"} props</span></div>
+      ${body || "<p class='lede'>No PrizePicks lines for this filter.</p>"}
+      <div class="pager"><a class="ghost" href="${link(sportId, "home", { ...base, page: page > 1 ? page - 1 : null, open: null })}">Previous</a><a class="ghost" href="${link(sportId, "home", { ...base, page: page < pages ? page + 1 : page, open: null })}">Next</a></div>`;
+    const form = $("pp-filters");
+    const go = () => {
+      const data = new FormData(form);
+      location.hash = link(sportId, "home", { stat, q: data.get("q"), game: data.get("game"), dir: data.get("dir"), sort: data.get("sort") });
+    };
+    form.addEventListener("change", go);
+    form.addEventListener("submit", (event) => { event.preventDefault(); go(); });
+    $("main").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-open]");
+      if (!button) return;
+      const id = button.dataset.open;
+      location.hash = link(sportId, "home", { ...base, page, open: open === id ? null : id });
+    });
   }
 
   function renderHome(sportId) {
@@ -839,10 +1025,14 @@
 
   function draw() {
     const { sport, page, qs } = route();
-    if (page === "board") renderBoard(sport, qs);
+    if (page === "board") {
+      if (sport === "nfl") renderPrizeBoard(sport, qs);
+      else renderBoard(sport, qs);
+    }
     else if (page === "bets") renderBets(sport);
     else if (page === "player") renderPlayer(sport, qs);
     else if (page === "method") renderMethod(sport);
+    else if (sport === "nfl") renderPrizeBoard(sport, qs);
     else renderHome(sport);
   }
 
