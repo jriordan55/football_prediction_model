@@ -118,15 +118,15 @@ def signal_for(logs: list, line: float, over, under, closes: dict, name: str, st
         side, price = "Under", _price(under)
     else:
         return None
-    if price is None or price < -150:
-        return None
-    return {
-        "side": side,
+    flag = {
         "gap": round(gap, 2),
         "closes": len(posted),
         "usual": round(usual, 2),
         "sd": round(width, 2),
     }
+    if price is not None and price >= -150:
+        flag["side"] = side
+    return flag
 
 
 def attach_signals(sport: dict) -> int:

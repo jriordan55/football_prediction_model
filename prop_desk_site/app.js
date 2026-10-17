@@ -560,14 +560,16 @@
       const home = teamAbbr(player.home) || "—";
       const played = seasonRows(logs(player, stat), sport.season).filter((row) => Number(row[1]) < Number(sport.week));
       const total = Number(quote.ppLine);
-      const proj = Number(sim.mean);
+      const signal = quote.signal;
+      const adjusted = signal && Number.isFinite(Number(signal.usual));
+      const proj = adjusted ? Number(signal.usual) : Number(sim.mean);
       if (!(proj > 0) || !(total > 0)) continue;
       const start = player.start || "";
       if (start && Date.parse(start) < Date.now() - 3 * 60 * 60 * 1000) continue;
       rows.push({
         player, proj, total, diff: proj - total, played,
         hits: played.filter((row) => Number(row[3]) + 1e-9 >= total).length,
-        abbr, teamName: teamName || player.team || "",
+        abbr, teamName: teamName || player.team || "", adjusted,
         matchup: away + " @ " + home, gameId: away + "-" + home, start,
       });
     }
@@ -625,7 +627,7 @@
         <button class="prow" type="button" data-open="${esc(row.player.id)}">
           <span class="who"><span class="badge">${esc(row.abbr)}</span><span><b>${esc(row.player.name)}</b><span>${esc(row.teamName || "")}</span></span></span>
           <span class="when"><b>${esc(row.matchup)}</b><span>${esc(kickoff(row.start))}</span></span>
-          <span class="nums"><span><span>Projection</span><b>${fmtNum(row.proj)}</b></span><span><span>Total</span><b class="total">${fmtNum(row.total)}</b></span><span><span>Difference</span><b class="${cls}">${row.diff > 0 ? "+" : ""}${fmtNum(row.diff)}</b></span></span>
+          <span class="nums"><span><span>${row.adjusted ? "Usual close" : "Projection"}</span><b>${fmtNum(row.proj)}</b></span><span><span>Total</span><b class="total">${fmtNum(row.total)}</b></span><span><span>Difference</span><b class="${cls}">${row.diff > 0 ? "+" : ""}${fmtNum(row.diff)}</b></span></span>
           <span class="side"><span class="pill${pill === "Over" ? " over" : ""}">${pill}</span><span>+</span></span>
         </button>
         <div class="rate"><span>Season over ${rate}</span><span class="dots">${dots}</span></div>
@@ -643,7 +645,7 @@
           <h1 class="display">Player Props.</h1>
         </div>
         <div>
-          <p>Compare the projection with the current PrizePicks total. The total is PrizePicks only.</p>
+          <p>The projection is the play-by-play median. When today's DraftKings number is at least 0.6 standard deviations off his usual close, the projection switches to that usual close. The total is PrizePicks only.</p>
           <div class="meters"><div><b>${props}</b><span>Props</span></div><div><b>${players.size}</b><span>Players</span></div><div><b>${matchups.size}</b><span>Games</span></div></div>
           <p class="fresh">${esc(fresh)}</p>
         </div>
