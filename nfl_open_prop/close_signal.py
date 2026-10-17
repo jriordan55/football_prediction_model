@@ -110,7 +110,8 @@ def signal_for(logs: list, line: float, over, under, closes: dict, name: str, st
     width = _sd(values)
     if width is None:
         return None
-    gap = (sum(posted) / len(posted) - float(line)) / width
+    usual = sum(posted) / len(posted)
+    gap = (usual - float(line)) / width
     if gap >= GAP:
         side, price = "Over", _price(over)
     elif gap <= -GAP:
@@ -119,7 +120,13 @@ def signal_for(logs: list, line: float, over, under, closes: dict, name: str, st
         return None
     if price is None or price < -150:
         return None
-    return {"side": side, "gap": round(gap, 2), "closes": len(posted)}
+    return {
+        "side": side,
+        "gap": round(gap, 2),
+        "closes": len(posted),
+        "usual": round(usual, 2),
+        "sd": round(width, 2),
+    }
 
 
 def attach_signals(sport: dict) -> int:

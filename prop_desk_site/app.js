@@ -264,8 +264,28 @@
   function modelOf(sport, player, stat) {
     const spec = sport.stats.find((item) => item.id === stat);
     const sim = player.sim && player.sim[stat];
-    if (!sim || !Number.isFinite(Number(sim.mean))) return null;
+    const signal = player.props[stat] && player.props[stat].signal;
     const rows = logs(player, stat);
+    const availability = player.availability == null ? 1 : Number(player.availability);
+    if (availability > 0.25 && signal && Number.isFinite(Number(signal.usual)) && Number(signal.sd) > 0) {
+      const mean = Number(signal.usual);
+      const sd = Number(signal.sd);
+      const z = 1.28155;
+      return {
+        kind: spec.kind,
+        mean,
+        sd,
+        p10: Math.max(0, mean - z * sd),
+        p90: mean + z * sd,
+        play: sim && Number.isFinite(Number(sim.play)) ? Number(sim.play) : null,
+        fromSim: false,
+        basis: "close",
+        closes: signal.closes,
+        simMean: sim && Number.isFinite(Number(sim.mean)) ? Number(sim.mean) : null,
+        nSeason: seasonRows(rows, sport.season).length,
+      };
+    }
+    if (!sim || !Number.isFinite(Number(sim.mean))) return null;
     const mean = Number(sim.mean);
     let sd = Number(sim.sd);
     if (!(sd > 0)) sd = spec.kind === "yards" ? Math.max(0.22 * Math.max(mean, 1), 1) : Math.sqrt(Math.max(mean, 0.05));
@@ -283,6 +303,10 @@
 
   function describeModel(fitted, spec) {
     if (!fitted) return "No recent games for this player.";
+    if (fitted.basis === "close") {
+      const simText = fitted.simMean != null ? ` The play-by-play median was ${fmtNum(fitted.simMean)}.` : "";
+      return `Usual DraftKings close ${fmtNum(fitted.mean)}, from ${fitted.closes} earlier lines.${simText}`;
+    }
     const plays = fitted.play != null && fitted.play < 0.99 ? ` Chance he plays: ${fmtPct(fitted.play)}.` : "";
     if (spec.kind === "binary") return `Median ${fmtPct(fitted.mean)}.${plays}`;
     const band = fitted.p10 != null && fitted.p90 != null ? ` Middle 80% is ${fmtNum(fitted.p10)}–${fmtNum(fitted.p90)}.` : "";
@@ -460,9 +484,9 @@
       const line = row.quote.dkLine != null ? row.quote.dkLine : row.quote.line;
       const cls = row.signal.side === "Over" ? "pos" : "neg";
       const href = link(sportId, "player", { id: row.player.id, stat: row.stat, line, window: "l10" });
-      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td class="left">${esc(label)}</td><td>${fmtNum(line)}</td><td class="${cls}">${row.signal.side}</td></tr>`;
+      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td class="left">${esc(label)}</td><td>${fmtNum(line)}</td><td>${fmtNum(row.signal.usual)}</td><td class="${cls}">${row.signal.side}</td></tr>`;
     }).join("");
-    return `<div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th class="left">Market</th><th>Line</th><th>Bet</th></tr></thead><tbody>${body || '<tr><td class="left" colspan="5">No signals this week.</td></tr>'}</tbody></table></div>`;
+    return `<div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th class="left">Market</th><th>Line</th><th>Proj</th><th>Bet</th></tr></thead><tbody>${body || '<tr><td class="left" colspan="6">No signals this week.</td></tr>'}</tbody></table></div>`;
   }
 
   function renderBets(sportId) {
@@ -472,7 +496,7 @@
     document.title = "Bets";
     $("main").innerHTML = `
       <h1>${bets.length} bets</h1>
-      <p class="lede">Green is the over. Red is the under. Today's DraftKings number is at least 0.6 standard deviations off the average number they posted for him before this week.</p>
+      <p class="lede">Green is the over. Red is the under. Proj is his usual DraftKings close, and that is the number used for these bets. Today's line has to be at least 0.6 standard deviations off it.</p>
       ${signalTable(sportId, sport)}`;
   }
 
@@ -492,7 +516,7 @@
     const names = sport.players.slice().sort((a, b) => a.name.localeCompare(b.name)).map((player) => `<option value="${esc(player.name)}">`).join("");
     const empty = sportId === "cfb" && !sport.players.length ? "<p class='lede'>The college slate has not been built yet.</p>" : "";
     const betBlock = bets.length
-      ? `<h1>${bets.length} bets</h1><p class="lede">Green is the over. Red is the under. Today's DraftKings number is at least 0.6 standard deviations off the average number they posted for him before this week.</p>${signalTable(sportId, sport)}`
+      ? `<h1>${bets.length} bets</h1><p class="lede">Green is the over. Red is the under. Proj is his usual DraftKings close, and that is the number used for these bets. Today's line has to be at least 0.6 standard deviations off it.</p>${signalTable(sportId, sport)}`
       : `<h1>This week's slate</h1><p class="lede">How often a player cleared a number, and a forecast of his next game. Every posted prop carries DraftKings, PrizePicks, and Underdog.</p>`;
     $("main").innerHTML = `
       ${betBlock}
@@ -544,7 +568,7 @@
       const priced = offerOf(sportId, player, stat, check);
       rows.push({
         player, quote, check, hits, n, seasonN: seasonRows(played, sport.season).length,
-        prob: priced.prob, fair: priced.fair, edge: priced.edge, books: priced.books, bet,
+        prob: priced.prob, fair: priced.fair, edge: priced.edge, books: priced.books, bet, fitted: priced.fitted,
       });
     }
     rows.sort((a, b) => {
@@ -572,12 +596,13 @@
         const price = under != null ? `${american(over)} / ${american(under)}` : american(over);
         return `${bookLine != null ? fmtNum(bookLine) + " " : ""}${price}`;
       };
-      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${bookCell(row.quote.dkLine, row.quote.dkOver, row.quote.dkUnder)}</td>${signalCell(row.bet ? row.quote : null)}<td>${bookCell(row.quote.ppLine, row.quote.ppOver, null)}</td><td>${bookCell(row.quote.udLine, row.quote.udOver, null)}</td><td>${fmtPct(row.fair)}</td><td>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td><td>${fmtGap(row.books)}</td></tr>`;
+      const simTitle = row.fitted && row.fitted.basis === "close" ? ` title="Usual close ${fmtNum(row.fitted.mean)}"` : "";
+      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${bookCell(row.quote.dkLine, row.quote.dkOver, row.quote.dkUnder)}</td>${signalCell(row.bet ? row.quote : null)}<td>${bookCell(row.quote.ppLine, row.quote.ppOver, null)}</td><td>${bookCell(row.quote.udLine, row.quote.udOver, null)}</td><td>${fmtPct(row.fair)}</td><td${simTitle}>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td><td>${fmtGap(row.books)}</td></tr>`;
     }).join("");
     const betCount = rows.filter((row) => row.bet).length;
     const caption = mode === "book"
       ? (sportId === "nfl"
-        ? "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. Bet is the close-gap signal: today's DraftKings number is at least 0.6 standard deviations off the average number they posted for him before this week. A lower number is the over. A higher number is the under. Prices shorter than -150 are left blank."
+        ? "Each row is scored against the posted line. The sim is the play-by-play median, except on a Bet row, where the percent uses his usual DraftKings close. A lower line than that close is the over. A higher line is the under. Prices shorter than -150 are left blank."
         : "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. College rows are overs only.")
       : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is a posted line.`;
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
@@ -768,7 +793,7 @@
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
         <p>${sportId === "nfl"
-          ? "The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero. The Bet column is separate from that simulation. It fires when today's DraftKings number is at least 0.6 standard deviations away from the average number they posted for that player before this week, he has five earlier closes, and the price is no shorter than -150."
+          ? "The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero. On a Bet row the projection switches to his usual DraftKings close, the average number they posted for him before this week. That switch happens only when today's line is at least 0.6 standard deviations off that close, he has five earlier closes, and the price is no shorter than -150."
           : "The college number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero."}</p>
         <p>The percent is how often a game drawn around that median clears the line. The usual range is the middle 80% of those games.</p>
         <h2>Odds</h2>
