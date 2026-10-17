@@ -424,11 +424,13 @@
       ["nfl", "NFL", link("nfl", "home")],
       ["cfb", "College", link("cfb", "home")],
     ].map(([id, label, href]) => `<a class="sport${id === sportId ? " on" : ""}" href="${href}">${label}</a>`).join("");
-    const pages = [
+    const pageList = [
       ["home", "Home", link(sportId, "home")],
       ["board", "Board", link(sportId, "board")],
       ["method", "Method", link(sportId, "method")],
-    ].map(([id, label, href]) => `<a href="${href}"${id === active ? ' aria-current="page"' : ""}>${label}</a>`).join("");
+    ];
+    if (sportId === "nfl") pageList.splice(1, 0, ["bets", "Bets", link(sportId, "bets")]);
+    const pages = pageList.map(([id, label, href]) => `<a href="${href}"${id === active ? ' aria-current="page"' : ""}>${label}</a>`).join("");
     $("mast").innerHTML = `<a class="brand" href="${link(sportId, "home")}"><span class="word">${esc(sport.brand)}</span><em>with odds</em></a><nav>${nav}${pages}</nav><button class="ghost" type="button" onclick="toggleTheme()">Theme</button>`;
     const stamp = (sport.updatedAt || "").slice(0, 16).replace("T", " ") || "—";
     $("foot").innerHTML = `<span>${sport.season} week ${sport.week}</span><span>Hit rates through week ${Math.max(sport.week - 1, 0)}</span><span>Sim and odds ${esc(stamp)} UTC</span><span>DraftKings, PrizePicks, Underdog, Pinnacle</span>`;
@@ -438,23 +440,62 @@
     return sport.stats.filter((spec) => sport.players.some((player) => player.props[spec.id]));
   }
 
+  function allSignals(sport) {
+    const rows = [];
+    for (const player of sport.players) {
+      for (const [stat, quote] of Object.entries(player.props || {})) {
+        const signal = signalOf(quote);
+        if (!signal) continue;
+        const spec = (sport.stats || []).find((item) => item.id === stat);
+        rows.push({ player, stat, spec, quote, signal });
+      }
+    }
+    rows.sort((a, b) => Math.abs(b.signal.gap) - Math.abs(a.signal.gap) || a.player.name.localeCompare(b.player.name));
+    return rows;
+  }
+
+  function signalTable(sportId, sport) {
+    const body = allSignals(sport).map((row) => {
+      const label = row.spec ? row.spec.label : row.stat;
+      const line = row.quote.dkLine != null ? row.quote.dkLine : row.quote.line;
+      const cls = row.signal.side === "Over" ? "pos" : "neg";
+      const href = link(sportId, "player", { id: row.player.id, stat: row.stat, line, window: "l10" });
+      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td class="left">${esc(label)}</td><td>${fmtNum(line)}</td><td class="${cls}">${row.signal.side}</td></tr>`;
+    }).join("");
+    return `<div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th class="left">Market</th><th>Line</th><th>Bet</th></tr></thead><tbody>${body || '<tr><td class="left" colspan="5">No signals this week.</td></tr>'}</tbody></table></div>`;
+  }
+
+  function renderBets(sportId) {
+    const sport = sportData(sportId);
+    shell(sportId, "bets");
+    const bets = allSignals(sport);
+    document.title = "Bets";
+    $("main").innerHTML = `
+      <h1>${bets.length} bets</h1>
+      <p class="lede">Green is the over. Red is the under. Today's DraftKings number is at least 0.6 standard deviations off the average number they posted for him before this week.</p>
+      ${signalTable(sportId, sport)}`;
+  }
+
   function renderHome(sportId) {
     const sport = sportData(sportId);
     shell(sportId, "home");
     document.title = sport.brand;
+    const bets = sportId === "nfl" ? allSignals(sport) : [];
     const cards = postedStats(sport).map((spec) => {
       const lines = sport.players.map((player) => player.props[spec.id] && player.props[spec.id].line).filter((line) => line != null).sort((a, b) => a - b);
       const medianLine = lines.length ? lines[Math.floor(lines.length / 2)] : spec.default;
-      const bets = sportId === "nfl" ? sport.players.filter((player) => signalOf(player.props[spec.id])).length : 0;
-      const proof = bets ? `${bets} signal${bets === 1 ? "" : "s"} · ${lines.length} posted` : `${lines.length} posted · median ${fmtNum(medianLine)}`;
-      const href = link(sportId, "board", { stat: spec.id, mode: "book", bets: bets ? "1" : null });
+      const count = sportId === "nfl" ? sport.players.filter((player) => signalOf(player.props[spec.id])).length : 0;
+      const proof = count ? `${count} signal${count === 1 ? "" : "s"} · ${lines.length} posted` : `${lines.length} posted · median ${fmtNum(medianLine)}`;
+      const href = link(sportId, "board", { stat: spec.id, mode: "book", bets: count ? "1" : null });
       return `<li><a href="${href}"><strong>${esc(spec.label)}</strong><span class="proof">${proof}</span></a></li>`;
     }).join("");
     const names = sport.players.slice().sort((a, b) => a.name.localeCompare(b.name)).map((player) => `<option value="${esc(player.name)}">`).join("");
     const empty = sportId === "cfb" && !sport.players.length ? "<p class='lede'>The college slate has not been built yet.</p>" : "";
+    const betBlock = bets.length
+      ? `<h1>${bets.length} bets</h1><p class="lede">Green is the over. Red is the under. Today's DraftKings number is at least 0.6 standard deviations off the average number they posted for him before this week.</p>${signalTable(sportId, sport)}`
+      : `<h1>This week's slate</h1><p class="lede">How often a player cleared a number, and a forecast of his next game. Every posted prop carries DraftKings, PrizePicks, and Underdog.</p>`;
     $("main").innerHTML = `
-      <h1>This week's slate</h1>
-      <p class="lede">${sportId === "nfl" ? "A green or red Bet is the close-gap signal. It is the over when today's DraftKings number is short of his usual close, and the under when the number is high. The forecast is separate from that bet." : "How often a player cleared a number, and a forecast of his next game. Every posted prop carries DraftKings, PrizePicks, and Underdog."}</p>
+      ${betBlock}
       <dl class="strip">
         <div><dt>Players</dt><dd>${sport.players.length}</dd></div>
         <div><dt>Games cached</dt><dd>${sport.gameRows}</dd></div>
@@ -468,6 +509,7 @@
         <button type="submit">Open</button>
       </form>
       ${empty}
+      ${bets.length ? '<h2 style="margin-top:1.4rem">Markets</h2>' : ""}
       <ul class="cards">${cards}</ul>`;
     $("search").addEventListener("submit", (event) => {
       event.preventDefault();
@@ -545,7 +587,7 @@
       <div class="chips" style="margin-top:.8rem">${chips}</div>
       <form class="tools" id="board-form">${numberField}</form>
       <div class="chips">${modeChips}<span style="width:.4rem"></span>${floors}${betChip}</div>
-      <p class="note">${rows.length} players · ${esc(spec.label)}${sportId === "nfl" && mode === "book" ? ` · ${betCount} signals` : ""}</p>
+      <p class="note">${rows.length} players · ${esc(spec.label)}${sportId === "nfl" && mode === "book" ? ` · ${betCount} on this market` : ""}${sportId === "nfl" && mode === "book" && betCount === 0 ? ` · <a href="${link(sportId, "bets")}">${allSignals(sport).length} bets this week</a>` : ""}</p>
       <div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>${sport.season}</th><th>DraftKings</th><th>Bet</th><th>PrizePicks</th><th>Underdog</th><th>Fair</th><th>Sim</th><th>Side</th><th>vs Pin</th></tr></thead><tbody>${body || `<tr><td class="left" colspan="13">${betsOnly ? "No signal on this market." : "Nobody cleared that floor."}</td></tr>`}</tbody></table></div>`;
     const form = $("board-form");
     if (form) form.addEventListener("submit", (event) => {
@@ -773,6 +815,7 @@
   function draw() {
     const { sport, page, qs } = route();
     if (page === "board") renderBoard(sport, qs);
+    else if (page === "bets") renderBets(sport);
     else if (page === "player") renderPlayer(sport, qs);
     else if (page === "method") renderMethod(sport);
     else renderHome(sport);
