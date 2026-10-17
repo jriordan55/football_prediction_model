@@ -267,21 +267,25 @@
     const signal = player.props[stat] && player.props[stat].signal;
     const rows = logs(player, stat);
     const availability = player.availability == null ? 1 : Number(player.availability);
-    if (availability > 0.25 && signal && Number.isFinite(Number(signal.usual)) && Number(signal.sd) > 0) {
-      const mean = Number(signal.usual);
-      const sd = Number(signal.sd);
-      const z = 1.28155;
+    if (availability > 0.25 && signal && Number.isFinite(Number(signal.usual)) && sim && Number.isFinite(Number(sim.mean))) {
+      const simMean = Number(sim.mean);
+      const usual = Number(signal.usual);
+      const mean = (simMean + usual) / 2;
+      const shift = mean - simMean;
+      let sd = Number(sim.sd);
+      if (!(sd > 0)) sd = Number(signal.sd);
       return {
         kind: spec.kind,
         mean,
         sd,
-        p10: Math.max(0, mean - z * sd),
-        p90: mean + z * sd,
-        play: sim && Number.isFinite(Number(sim.play)) ? Number(sim.play) : null,
-        fromSim: false,
-        basis: "close",
+        p10: Number.isFinite(Number(sim.p10)) ? Math.max(0, Number(sim.p10) + shift) : null,
+        p90: Number.isFinite(Number(sim.p90)) ? Number(sim.p90) + shift : null,
+        play: Number.isFinite(Number(sim.play)) ? Number(sim.play) : null,
+        fromSim: true,
+        basis: "blend",
         closes: signal.closes,
-        simMean: sim && Number.isFinite(Number(sim.mean)) ? Number(sim.mean) : null,
+        simMean,
+        usual,
         nSeason: seasonRows(rows, sport.season).length,
       };
     }
@@ -303,9 +307,8 @@
 
   function describeModel(fitted, spec) {
     if (!fitted) return "No recent games for this player.";
-    if (fitted.basis === "close") {
-      const simText = fitted.simMean != null ? ` The play-by-play median was ${fmtNum(fitted.simMean)}.` : "";
-      return `Usual DraftKings close ${fmtNum(fitted.mean)}, from ${fitted.closes} earlier lines.${simText}`;
+    if (fitted.basis === "blend") {
+      return `Average of the play-by-play median ${fmtNum(fitted.simMean)} and his usual DraftKings close ${fmtNum(fitted.usual)}, from ${fitted.closes} earlier lines.`;
     }
     const plays = fitted.play != null && fitted.play < 0.99 ? ` Chance he plays: ${fmtPct(fitted.play)}.` : "";
     if (spec.kind === "binary") return `Median ${fmtPct(fitted.mean)}.${plays}`;
@@ -560,16 +563,18 @@
       const home = teamAbbr(player.home) || "—";
       const played = seasonRows(logs(player, stat), sport.season).filter((row) => Number(row[1]) < Number(sport.week));
       const total = Number(quote.ppLine);
+      const simMean = Number(sim.mean);
       const signal = quote.signal;
-      const adjusted = signal && Number.isFinite(Number(signal.usual));
-      const proj = adjusted ? Number(signal.usual) : Number(sim.mean);
+      const usual = signal && Number.isFinite(Number(signal.usual)) ? Number(signal.usual) : null;
+      const adjusted = usual != null;
+      const proj = adjusted ? (simMean + usual) / 2 : simMean;
       if (!(proj > 0) || !(total > 0)) continue;
       const start = player.start || "";
       if (start && Date.parse(start) < Date.now() - 3 * 60 * 60 * 1000) continue;
       rows.push({
         player, proj, total, diff: proj - total, played,
         hits: played.filter((row) => Number(row[3]) + 1e-9 >= total).length,
-        abbr, teamName: teamName || player.team || "", adjusted,
+        abbr, teamName: teamName || player.team || "", adjusted, simMean, usual,
         matchup: away + " @ " + home, gameId: away + "-" + home, start,
       });
     }
@@ -627,7 +632,7 @@
         <button class="prow" type="button" data-open="${esc(row.player.id)}">
           <span class="who"><span class="badge">${esc(row.abbr)}</span><span><b>${esc(row.player.name)}</b><span>${esc(row.teamName || "")}</span></span></span>
           <span class="when"><b>${esc(row.matchup)}</b><span>${esc(kickoff(row.start))}</span></span>
-          <span class="nums"><span><span>${row.adjusted ? "Usual close" : "Projection"}</span><b>${fmtNum(row.proj)}</b></span><span><span>Total</span><b class="total">${fmtNum(row.total)}</b></span><span><span>Difference</span><b class="${cls}">${row.diff > 0 ? "+" : ""}${fmtNum(row.diff)}</b></span></span>
+          <span class="nums"><span><span>Projection</span><b${row.adjusted ? ` title="Average of the play-by-play median ${fmtNum(row.simMean)} and his usual close ${fmtNum(row.usual)}."` : ""}>${fmtNum(row.proj)}</b></span><span><span>Total</span><b class="total">${fmtNum(row.total)}</b></span><span><span>Difference</span><b class="${cls}">${row.diff > 0 ? "+" : ""}${fmtNum(row.diff)}</b></span></span>
           <span class="side"><span class="pill${pill === "Over" ? " over" : ""}">${pill}</span><span>+</span></span>
         </button>
         <div class="rate"><span>Season over ${rate}</span><span class="dots">${dots}</span></div>
@@ -645,7 +650,7 @@
           <h1 class="display">Player Props.</h1>
         </div>
         <div>
-          <p>The projection is the play-by-play median. When today's DraftKings number is at least 0.6 standard deviations off his usual close, the projection switches to that usual close. The total is PrizePicks only.</p>
+          <p>The projection is the play-by-play median. When today's DraftKings number is at least 0.6 standard deviations off his usual close, that median is averaged with the usual close. The total is PrizePicks only.</p>
           <div class="meters"><div><b>${props}</b><span>Props</span></div><div><b>${players.size}</b><span>Players</span></div><div><b>${matchups.size}</b><span>Games</span></div></div>
           <p class="fresh">${esc(fresh)}</p>
         </div>
@@ -784,13 +789,13 @@
         const price = under != null ? `${american(over)} / ${american(under)}` : american(over);
         return `${bookLine != null ? fmtNum(bookLine) + " " : ""}${price}`;
       };
-      const simTitle = row.fitted && row.fitted.basis === "close" ? ` title="Usual close ${fmtNum(row.fitted.mean)}"` : "";
+      const simTitle = row.fitted && row.fitted.basis === "blend" ? ` title="Average of the play-by-play median ${fmtNum(row.fitted.simMean)} and his usual close ${fmtNum(row.fitted.usual)}."` : "";
       return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${bookCell(row.quote.dkLine, row.quote.dkOver, row.quote.dkUnder)}</td>${signalCell(row.bet ? row.quote : null)}<td>${bookCell(row.quote.ppLine, row.quote.ppOver, null)}</td><td>${bookCell(row.quote.udLine, row.quote.udOver, null)}</td><td>${fmtPct(row.fair)}</td><td${simTitle}>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td><td>${fmtGap(row.books)}</td></tr>`;
     }).join("");
     const betCount = rows.filter((row) => row.bet).length;
     const caption = mode === "book"
       ? (sportId === "nfl"
-        ? "Each row is scored against the posted line. The sim is the play-by-play median, except on a Bet row, where the percent uses his usual DraftKings close. A lower line than that close is the over. A higher line is the under. Prices shorter than -150 are left blank."
+        ? "Each row is scored against the posted line. The sim is the play-by-play median. On a Bet row that median is averaged with his usual DraftKings close. A lower line than that close is the over. A higher line is the under. Prices shorter than -150 are left blank."
         : "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. College rows are overs only.")
       : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is a posted line.`;
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
@@ -981,7 +986,7 @@
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
         <p>${sportId === "nfl"
-          ? "The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero. On a Bet row the projection switches to his usual DraftKings close, the average number they posted for him before this week. That switch happens only when today's line is at least 0.6 standard deviations off that close, he has five earlier closes, and the price is no shorter than -150."
+          ? "The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero. When today's DraftKings line is at least 0.6 standard deviations off the average line they posted for him before this week, and he has five earlier closes, the projection is the average of that median and that usual close."
           : "The college number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero."}</p>
         <p>The percent is how often a game drawn around that median clears the line. The usual range is the middle 80% of those games.</p>
         <h2>Odds</h2>
