@@ -9,8 +9,9 @@ play, and the score, down, and field position carry into the next one.
 
 Team tendencies shift the league probability in logit space, so a pass-heavy
 team stays a pass-heavy team without the probability ever leaving 0 to 1.
-The ball is given to a player in proportion to his own recent share. A player
-who is ruled out hands that share to teammates. A small share is kept.
+The ball is given to a player in proportion to his own last 10 games, on any
+team. A player who is ruled out hands that role to the next player at his
+position. A small share is kept.
 """
 from __future__ import annotations
 
@@ -385,16 +386,25 @@ def _pick(weights: np.ndarray, rng: np.random.Generator, n: int) -> np.ndarray:
 
 def _roster_weights(roster: list[dict[str, Any]], key: str) -> np.ndarray:
     raw = np.zeros(len(roster), dtype=float)
-    out_share = 0.0
+    vacated: dict[str, float] = {}
     for i, player in enumerate(roster):
         share = max(float(player.get(key) or 0.0), 0.0)
         if player.get("out"):
-            out_share += share
+            pos = str(player.get("position") or "")
+            vacated[pos] = vacated.get(pos, 0.0) + share
             continue
         raw[i] = share
-    # Only a player ruled out hands his share to teammates who still have a role.
-    if out_share > 0 and raw.sum() > 0:
-        raw = raw + out_share * raw / raw.sum()
+    # A ruled-out player hands this role to teammates who play his position.
+    for pos, amount in vacated.items():
+        if amount <= 0:
+            continue
+        idx = [i for i, player in enumerate(roster) if not player.get("out") and str(player.get("position") or "") == pos]
+        if not idx:
+            continue
+        base = np.array([raw[i] for i in idx], dtype=float)
+        if float(base.sum()) <= 0:
+            base = np.ones(len(idx), dtype=float)
+        raw[np.array(idx)] += amount * base / base.sum()
     return raw
 
 
@@ -428,9 +438,14 @@ def simulate_game(
                 continue
             share = float(player.get("pass_share") or 0.0)
             play = float(player.get("play") or 0.0)
-            if play >= 0.5:
+            position = str(player.get("position") or "")
+            if play >= 0.5 or position == "QB":
                 share = max(share, float(player.get("pass_when_in") or 0.0))
-            if share <= 0.08 or play <= 0:
+            if play <= 0:
+                continue
+            if position != "QB" and share <= 0.08:
+                continue
+            if share <= 0:
                 continue
             weights[i] = share * play
         if len(roster) == 0 or float(weights.sum()) <= 0:

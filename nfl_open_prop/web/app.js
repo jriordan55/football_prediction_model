@@ -650,7 +650,7 @@
           <h1 class="display">Player Props.</h1>
         </div>
         <div>
-          <p>The projection is the play-by-play median. When today's DraftKings number is at least 0.6 standard deviations off his usual close, that median is averaged with the usual close. The total is PrizePicks only.</p>
+          <p>The projection is the play-by-play median. Each player's share and rate come from his own last 10 games, on any team. When a starter is out, the next player at that position takes his role. When today's DraftKings number is at least 0.6 standard deviations off his usual close, that median is averaged with the usual close. The total is PrizePicks only.</p>
           <div class="meters"><div><b>${props}</b><span>Props</span></div><div><b>${players.size}</b><span>Players</span></div><div><b>${matchups.size}</b><span>Games</span></div></div>
           <p class="fresh">${esc(fresh)}</p>
         </div>
@@ -986,7 +986,7 @@
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
         <p>${sportId === "nfl"
-          ? "The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero. When today's DraftKings line is at least 0.6 standard deviations off the average line they posted for him before this week, and he has five earlier closes, the projection is the average of that median and that usual close."
+          ? "The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own last 10 games, whatever the team or season. The number is the median of those simulated games. A player who is ruled out is set to zero, and the next player at his position takes that role. When today's DraftKings line is at least 0.6 standard deviations off the average line they posted for him before this week, and he has five earlier closes, the projection is the average of that median and that usual close."
           : "The college number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero."}</p>
         <p>The percent is how often a game drawn around that median clears the line. The usual range is the middle 80% of those games.</p>
         <h2>Odds</h2>

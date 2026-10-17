@@ -2,8 +2,10 @@
 
 Each game is simulated play by play. A situation model samples pass or run,
 then the result of that play, and the clock and score carry forward. The
-number on the desk is the median of those simulated games. A player who is
-ruled out is set to zero.
+number on the desk is the median of those simulated games. Usage and rates
+come from the player's own last 10 games, on any team and in any season. A
+player who is ruled out is set to zero, and the next player at his position
+takes that role.
 """
 from __future__ import annotations
 
@@ -21,7 +23,7 @@ CACHE = DATA_DIR / "fastr_player_cache" / "nfl"
 PBP_URL = "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.parquet"
 PLAYERS_URL = "https://github.com/nflverse/nflverse-data/releases/download/players/players.parquet"
 N_SIMS = 400
-MODEL_VERSION = 4
+MODEL_VERSION = 5
 KEEP_DRAWS = 400
 MIN_SNAPS = 10
 LAST_GAMES = 10
@@ -118,6 +120,29 @@ def _pbp(season: int) -> pd.DataFrame:
     except Exception:
         frame = pd.read_parquet(path)
     return frame
+
+
+def _player_meta() -> dict[str, dict[str, str]]:
+    """gsis id -> name, position, and the team he is on now."""
+    path = CACHE / "players.parquet"
+    if not _download(PLAYERS_URL, path):
+        return {}
+    frame = pd.read_parquet(path)
+    id_col = "gsis_id" if "gsis_id" in frame.columns else "player_id"
+    name_col = "display_name" if "display_name" in frame.columns else "football_name"
+    if id_col not in frame.columns or name_col not in frame.columns:
+        return {}
+    positions = frame["position"] if "position" in frame.columns else [""] * len(frame)
+    teams = frame["latest_team"] if "latest_team" in frame.columns else [""] * len(frame)
+    out = {}
+    for pid, name, position, team in zip(frame[id_col].astype(str), frame[name_col].astype(str), positions, teams):
+        if not pid or pid == "None" or not name or name == "None":
+            continue
+        pos = str(position or "").upper()
+        if pos == "FB":
+            pos = "RB"
+        out[pid] = {"name": name, "position": pos if pos in {"QB", "RB", "WR", "TE"} else "", "team": abbr(str(team or ""))}
+    return out
 
 
 def _names() -> dict[str, str]:
@@ -217,17 +242,12 @@ def _kalman(values: np.ndarray, weights: np.ndarray, *, start: float, q: float, 
     return x, p
 
 
-def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, Any]]:
-    """player id -> current shares, efficiencies, team, and chance he plays."""
+def _ratings(weeks: pd.DataFrame, meta: dict[str, dict[str, str]]) -> dict[str, dict[str, Any]]:
+    """player id -> shares and rates from his own last 10 games, any team or season."""
     if weeks.empty:
         return {}
     team_pass = weeks.groupby(["season", "week", "posteam"])["pass_att"].sum()
     team_rush = weeks.groupby(["season", "week", "posteam"])["rush_att"].sum()
-    calendar: dict[str, list[tuple[int, int]]] = {}
-    for season, week, team in team_pass.index:
-        calendar.setdefault(str(team), []).append((int(season), int(week)))
-    for games in calendar.values():
-        games.sort()
     league_ypa = float(weeks["pass_yds"].sum() / max(weeks["pass_att"].sum(), 1))
     league_cmp = float(weeks["pass_cmp"].sum() / max(weeks["pass_att"].sum(), 1))
     league_ypc = float(weeks["rush_yds"].sum() / max(weeks["rush_att"].sum(), 1))
@@ -237,15 +257,15 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
     ordered = weeks.sort_values(["season", "week"])
     for pid, group in ordered.groupby("player_id"):
         group = group.sort_values(["season", "week"])
-        team = str(group["posteam"].iloc[-1])
-        own = {
-            (int(row.season), int(row.week)): row
-            for row in group.itertuples(index=False)
-            if str(row.posteam) == team
-        }
-        # Weeks before he joined this team are not games he sat. Zeros start
-        # at his first snap, so a new starter is not treated as a nine-week backup.
-        slots = [slot for slot in calendar.get(team, []) if not own or slot >= min(own)][-6:]
+        info = meta.get(str(pid)) or {}
+        team = str(info.get("team") or group["posteam"].iloc[-1])
+        position = str(info.get("position") or "")
+        # His own games only. A week he sat is not part of the sample, and a
+        # game on another team counts the same as a game on this one.
+        played_rows = [
+            row for row in group.itertuples(index=False)
+            if float(row.pass_att) + float(row.rush_att) + float(row.targets) > 0
+        ][-10:]
         pass_att_cal = []
         rush_att_cal = []
         targets_cal = []
@@ -254,29 +274,17 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
         rec_yds_cal = []
         team_p_cal = []
         team_r_cal = []
-        for season, week in slots:
-            row = own.get((season, week))
-            if row is None:
-                # A missed game is a zero share of that offense. It is not a
-                # zero in his yards-per-play rate, because the rate only uses
-                # games where he had the chances.
-                pass_att_cal.append(0.0)
-                rush_att_cal.append(0.0)
-                targets_cal.append(0.0)
-                pass_yds_cal.append(0.0)
-                rush_yds_cal.append(0.0)
-                rec_yds_cal.append(0.0)
-                team_p_cal.append(float(team_pass.get((season, week, team), 0) or 0))
-                team_r_cal.append(float(team_rush.get((season, week, team), 0) or 0))
-                continue
+        for row in played_rows:
+            side = str(row.posteam)
+            season, week = int(row.season), int(row.week)
             pass_att_cal.append(float(row.pass_att))
             rush_att_cal.append(float(row.rush_att))
             targets_cal.append(float(row.targets))
             pass_yds_cal.append(float(row.pass_yds))
             rush_yds_cal.append(float(row.rush_yds))
             rec_yds_cal.append(float(row.rec_yds))
-            team_p_cal.append(float(team_pass.get((season, week, team), 0) or 0))
-            team_r_cal.append(float(team_rush.get((season, week, team), 0) or 0))
+            team_p_cal.append(float(team_pass.get((season, week, side), 0) or 0))
+            team_r_cal.append(float(team_rush.get((season, week, side), 0) or 0))
         pass_att_cal = np.array(pass_att_cal)
         rush_att_cal = np.array(rush_att_cal)
         targets_cal = np.array(targets_cal)
@@ -285,8 +293,7 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
         rec_yds_cal = np.array(rec_yds_cal)
         team_p = np.array(team_p_cal)
         team_r = np.array(team_r_cal)
-        # Recent games count more. A role he held last year should not
-        # drown the share he has had this season.
+        # The newer of these 10 games counts more.
         if len(pass_att_cal):
             age = np.arange(len(pass_att_cal), dtype=float)[::-1]
             weight = np.exp(-age / 4.0)
@@ -309,34 +316,40 @@ def _ratings(weeks: pd.DataFrame, names: dict[str, str]) -> dict[str, dict[str, 
         ypt, _ = _kalman(np.divide(group["rec_yds"], np.maximum(targets, 1)), targets, start=league_ypt, q=0.05, r_scale=12)
         ctd, _ = _kalman(np.divide(group["rec_tds"], np.maximum(targets, 1)), targets, start=0.04, q=0.0004, r_scale=2)
         if len(pass_att_cal):
-            def _recent(num: np.ndarray, den: np.ndarray, fallback: float, minimum: float) -> float:
+            def _window_rate(num: np.ndarray, den: np.ndarray, fallback: float, prior: float) -> float:
                 denom = float(np.sum(den * weight))
-                if denom < minimum:
+                if denom <= 0:
                     return fallback
-                return float(np.sum(num * weight) / denom)
+                raw = float(np.sum(num * weight) / denom)
+                return (raw * denom + fallback * prior) / (denom + prior)
 
-            ypa = 0.6 * _recent(pass_yds_cal, pass_att_cal, ypa, 40) + 0.4 * ypa
-            ypc = 0.6 * _recent(rush_yds_cal, rush_att_cal, ypc, 15) + 0.4 * ypc
-            ypt = 0.6 * _recent(rec_yds_cal, targets_cal, ypt, 12) + 0.4 * ypt
+            ypa = _window_rate(pass_yds_cal, pass_att_cal, ypa, 30)
+            ypc = _window_rate(rush_yds_cal, rush_att_cal, ypc, 12)
+            ypt = _window_rate(rec_yds_cal, targets_cal, ypt, 10)
             active_qb = pass_att_cal >= 8
             pass_when_in = _share(pass_att_cal[active_qb], team_p[active_qb]) if active_qb.any() else pass_share
         else:
             pass_when_in = pass_share
-        played_game = (pass_att_cal >= 5) | (rush_att_cal >= 3) | (targets_cal >= 2)
-        recent = played_game[-4:] if len(played_game) else np.array([])
-        played = float(np.mean(recent)) if len(recent) else 0.0
+        role = (pass_att_cal >= 8) | (rush_att_cal >= 5) | (targets_cal >= 3) if len(pass_att_cal) else np.array([])
+        played = float(np.mean(role)) if len(role) else 0.35
         if len(pass_att_cal) and (
             pass_att_cal[-1] >= 15 or rush_att_cal[-1] >= 8 or targets_cal[-1] >= 4
         ):
             played = max(played, 0.92)
-        elif len(pass_att_cal) and pass_att_cal[-1] < 1 and rush_att_cal[-1] < 1 and targets_cal[-1] < 1:
-            played = min(played, 0.35)
-        name = names.get(str(pid)) or ""
+        if position not in {"QB", "RB", "WR", "TE"}:
+            if pass_share >= 0.15:
+                position = "QB"
+            elif rush_share >= tgt_share and rush_share >= 0.05:
+                position = "RB"
+            elif tgt_share >= 0.04:
+                position = "WR"
+        name = str(info.get("name") or "")
         if not name:
             continue
         players[str(pid)] = {
             "name": name,
             "team": team,
+            "position": position,
             "play": float(np.clip(played, 0.02, 0.98)),
             "pass_share": float(np.clip(pass_share, 0, 1)),
             "pass_when_in": float(np.clip(pass_when_in, 0, 1)),
@@ -371,16 +384,16 @@ def _team_env(weeks: pd.DataFrame) -> dict[str, dict[str, float]]:
     return env
 
 
-def _apply_injuries(players: dict[str, dict[str, Any]]) -> None:
+def _injury_keys() -> tuple[set[tuple[str, str]], dict[tuple[str, str], float]]:
     path = DATA_DIR / "espn_cache" / "injuries_nfl.json"
+    out: set[tuple[str, str]] = set()
+    listed: dict[tuple[str, str], float] = {}
     if not path.exists():
-        return
+        return out, listed
     try:
         rows = json.loads(path.read_text(encoding="utf-8")).get("rows") or []
     except (OSError, json.JSONDecodeError):
-        return
-    listed: dict[tuple[str, str], float] = {}
-    out = {}
+        return out, listed
     for row in rows:
         raw = row.get("availability")
         if raw is None:
@@ -388,22 +401,175 @@ def _apply_injuries(players: dict[str, dict[str, Any]]) -> None:
         availability = float(raw)
         key = (norm_name(str(row.get("name") or "")), abbr(team_abbr(str(row.get("team") or ""))))
         if availability <= 0.25:
-            out[key] = True
+            out.add(key)
         else:
             listed[key] = availability
+    return out, listed
+
+
+def _apply_injuries(players: dict[str, dict[str, Any]]) -> None:
+    out, listed = _injury_keys()
     for player in players.values():
         key = (norm_name(player["name"]), player["team"])
-        if out.get(key):
+        if key in out:
             player["play"] = 0.0
             player["out"] = True
         elif key in listed:
             player["play"] = float(np.clip(listed[key], 0.0, 0.98))
+            player["limited"] = True
+
+
+_ROLE_KEYS = {
+    "QB": ("pass_share", "pass_when_in", "rush_share"),
+    "RB": ("rush_share", "target_share"),
+    "WR": ("target_share",),
+    "TE": ("target_share",),
+}
+
+
+def _depth_chart(year: int, week: int) -> dict[tuple[str, str], list[str]]:
+    """team, position -> names from the starter down."""
+    path = CACHE / f"depth_charts_{int(year)}.parquet"
+    url = "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_{season}.parquet".format(season=int(year))
+    if not _download(url, path):
+        return {}
+    try:
+        frame = pd.read_parquet(path)
+    except Exception:
+        return {}
+    frame = frame.copy()
+    if "season" in frame.columns and "week" in frame.columns:
+        frame["season"] = pd.to_numeric(frame["season"], errors="coerce")
+        frame["week"] = pd.to_numeric(frame["week"], errors="coerce")
+        current = frame[(frame["season"] == int(year)) & (frame["week"] < int(week))]
+        if current.empty:
+            return {}
+        use = current[current["week"] == current["week"].max()]
+    else:
+        use = frame
+        if "dt" in use.columns:
+            use = use[use["dt"] == use["dt"].max()]
+    name_col = next((col for col in ("full_name", "player_name", "football_name") if col in use.columns), None)
+    team_col = next((col for col in ("club_code", "team", "posteam") if col in use.columns), None)
+    pos_col = "pos_abb" if "pos_abb" in use.columns else ("position" if "position" in use.columns else None)
+    if not name_col or not team_col or not pos_col:
+        return {}
+    depth_col = "pos_rank" if "pos_rank" in use.columns else ("depth_team" if "depth_team" in use.columns else None)
+    order: dict[tuple[str, str], list[tuple[int, str]]] = {}
+    for row in use.itertuples(index=False):
+        pos = str(getattr(row, pos_col) or "").upper()
+        if pos == "FB":
+            pos = "RB"
+        if pos not in _ROLE_KEYS:
+            continue
+        name = str(getattr(row, name_col) or "")
+        team = abbr(str(getattr(row, team_col) or ""))
+        if not name or not team:
+            continue
+        raw_depth = getattr(row, depth_col) if depth_col else 99
+        try:
+            depth = int(raw_depth)
+        except (TypeError, ValueError):
+            depth = 99
+        order.setdefault((team, pos), []).append((depth, name))
+    chart: dict[tuple[str, str], list[str]] = {}
+    for key, rows in order.items():
+        rows.sort(key=lambda item: item[0])
+        seen: set[str] = set()
+        names: list[str] = []
+        for _depth, name in rows:
+            token = norm_name(name)
+            if token in seen:
+                continue
+            seen.add(token)
+            names.append(name)
+        chart[key] = names
+    return chart
+
+
+def _promote_backups(players: dict[str, dict[str, Any]], year: int, week: int) -> None:
+    """An out starter's role goes to the next player at that position."""
+    chart = _depth_chart(year, week)
+    chart_team = {}
+    for (team, _pos), names in chart.items():
+        for name in names:
+            chart_team.setdefault(norm_name(name), team)
+    for player in players.values():
+        team = chart_team.get(norm_name(player["name"]))
+        if team:
+            player["team"] = team
+    _apply_injuries(players)
+    out, _listed = _injury_keys()
+    by_team: dict[str, list[dict[str, Any]]] = {}
+    for player in players.values():
+        by_team.setdefault(str(player["team"]), []).append(player)
+    present = {(norm_name(player["name"]), str(player["team"])) for player in players.values()}
+
+    def _blank(name: str, team: str, position: str) -> dict[str, Any]:
+        return {
+            "name": name,
+            "team": team,
+            "position": position,
+            "play": 0.92,
+            "pass_share": 0.0,
+            "pass_when_in": 0.0,
+            "rush_share": 0.0,
+            "target_share": 0.0,
+            "ypa": 7.0, "cmp": 0.64, "ptd": 0.045, "int": 0.022,
+            "ypc": 4.3, "rtd": 0.025, "catch": 0.65, "ypt": 7.5, "ctd": 0.035,
+        }
+
+    for team, roster in by_team.items():
+        for position, keys in _ROLE_KEYS.items():
+            group = [player for player in roster if str(player.get("position") or "") == position]
+            rank = {norm_name(name): index for index, name in enumerate(chart.get((team, position), []))}
+
+            def _sort_key(player: dict[str, Any], _rank: dict[str, int] = rank, _keys: tuple[str, ...] = keys) -> tuple:
+                place = _rank.get(norm_name(player["name"]))
+                share = max(float(player.get(key) or 0.0) for key in _keys)
+                if place is None:
+                    return (1, -share, player["name"])
+                return (0, place, -share)
+
+            ordered = sorted(group, key=_sort_key)
+            vacated = {key: 0.0 for key in keys}
+            heir = None
+            for player in ordered:
+                if player.get("out"):
+                    for key in keys:
+                        vacated[key] += float(player.get(key) or 0.0)
+                        player[key] = 0.0
+                    player["pass_share"] = 0.0
+                    player["pass_when_in"] = 0.0
+                    player["rush_share"] = 0.0
+                    player["target_share"] = 0.0
+                    continue
+                if heir is None:
+                    heir = player
+            if heir is not None and heir.get("out"):
+                heir = None
+            if heir is None and any(value > 0 for value in vacated.values()):
+                for name in chart.get((team, position), []):
+                    token = (norm_name(name), team)
+                    if token in present or token in out:
+                        continue
+                    heir = _blank(name, team, position)
+                    players[f"depth:{team}:{token[0]}"] = heir
+                    roster.append(heir)
+                    present.add(token)
+                    break
+            if heir is None or not any(value > 0 for value in vacated.values()):
+                continue
+            for key, value in vacated.items():
+                heir[key] = min(0.98, float(heir.get(key) or 0.0) + value)
+            if not heir.get("limited") and max(vacated.values()) >= 0.08:
+                heir["play"] = max(float(heir.get("play") or 0.0), 0.92)
 
 
 def fit(year: int, week: int) -> dict[str, Any]:
     """Ratings through the week before `week`."""
     frames = []
-    for season in (year - 1, year):
+    for season in range(int(year) - 3, int(year) + 1):
         pbp = _pbp(season)
         if pbp.empty:
             continue
@@ -414,8 +580,8 @@ def fit(year: int, week: int) -> dict[str, Any]:
         if not pbp.empty:
             frames.append(_player_weeks(pbp))
     weeks = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
-    players = _ratings(weeks, _names())
-    _apply_injuries(players)
+    players = _ratings(weeks, _player_meta())
+    _promote_backups(players, int(year), int(week))
     return {"players": players, "teams": _team_env(weeks), "year": year, "week": week}
 
 
