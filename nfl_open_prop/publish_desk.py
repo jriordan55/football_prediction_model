@@ -614,6 +614,9 @@ def publish() -> None:
     print("attaching the sim…", flush=True)
     print(f"nfl sim players {attach_nfl_sim(nfl)}", flush=True)
     print(f"cfb sim players {attach_cfb_sim(cfb)}", flush=True)
+    from nfl_open_prop.close_signal import attach_signals
+
+    print(f"nfl close signals {attach_signals(nfl)}", flush=True)
     nfl["stats"] = _stats_payload()
     cfb["stats"] = _stats_payload()
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")

@@ -219,6 +219,10 @@ def apply_sport(desk: dict, sport_id: str, fresh: dict) -> bool:
         sport.update(previous)
         print(f"{sport_id}: lines unchanged", flush=True)
         return False
+    if sport_id == "nfl":
+        from nfl_open_prop.close_signal import attach_signals
+
+        print(f"nfl close signals {attach_signals(sport)}", flush=True)
     print(f"{sport_id}: {len(merged)} players, week {fresh['week']}", flush=True)
     return True
 

@@ -26,6 +26,21 @@
     return Math.round(100 * value) + "%";
   }
 
+  function signalOf(quote) {
+    const signal = quote && quote.signal;
+    if (!signal || (signal.side !== "Over" && signal.side !== "Under")) return null;
+    return signal;
+  }
+
+  function signalCell(quote) {
+    const signal = signalOf(quote);
+    if (!signal) return "<td>—</td>";
+    const cls = signal.side === "Over" ? "pos" : "neg";
+    const way = signal.gap > 0 ? "below" : "above";
+    const title = `Today's line is ${Math.abs(signal.gap).toFixed(2)} sd ${way} his usual close, on ${signal.closes} closes.`;
+    return `<td class="${cls}" title="${esc(title)}">${signal.side}</td>`;
+  }
+
   function fmtEdge(value) {
     if (value == null || !Number.isFinite(value)) return "—";
     const points = 100 * value;
@@ -430,13 +445,16 @@
     const cards = postedStats(sport).map((spec) => {
       const lines = sport.players.map((player) => player.props[spec.id] && player.props[spec.id].line).filter((line) => line != null).sort((a, b) => a - b);
       const medianLine = lines.length ? lines[Math.floor(lines.length / 2)] : spec.default;
-      return `<li><a href="${link(sportId, "board", { stat: spec.id, mode: "book" })}"><strong>${esc(spec.label)}</strong><span class="proof">${lines.length} posted · median ${fmtNum(medianLine)}</span></a></li>`;
+      const bets = sportId === "nfl" ? sport.players.filter((player) => signalOf(player.props[spec.id])).length : 0;
+      const proof = bets ? `${bets} signal${bets === 1 ? "" : "s"} · ${lines.length} posted` : `${lines.length} posted · median ${fmtNum(medianLine)}`;
+      const href = link(sportId, "board", { stat: spec.id, mode: "book", bets: bets ? "1" : null });
+      return `<li><a href="${href}"><strong>${esc(spec.label)}</strong><span class="proof">${proof}</span></a></li>`;
     }).join("");
     const names = sport.players.slice().sort((a, b) => a.name.localeCompare(b.name)).map((player) => `<option value="${esc(player.name)}">`).join("");
     const empty = sportId === "cfb" && !sport.players.length ? "<p class='lede'>The college slate has not been built yet.</p>" : "";
     $("main").innerHTML = `
       <h1>This week's slate</h1>
-      <p class="lede">How often a player cleared a number, and a play-by-play simulation of the game. Every posted prop carries DraftKings, PrizePicks, and Underdog.</p>
+      <p class="lede">${sportId === "nfl" ? "A green or red Bet is the close-gap signal. It is the over when today's DraftKings number is short of his usual close, and the under when the number is high. The forecast is separate from that bet." : "How often a player cleared a number, and a forecast of his next game. Every posted prop carries DraftKings, PrizePicks, and Underdog."}</p>
       <dl class="strip">
         <div><dt>Players</dt><dd>${sport.players.length}</dd></div>
         <div><dt>Games cached</dt><dd>${sport.gameRows}</dd></div>
@@ -466,6 +484,7 @@
     let mode = qs.get("mode") === "number" ? "number" : "book";
     const floorRaw = qs.get("floor") || "all";
     const floor = floorRaw === "all" ? null : Number(floorRaw);
+    const betsOnly = qs.get("bets") === "1";
     let line = numParam(qs, "line");
     if (line == null) line = spec.default;
     const rows = [];
@@ -478,10 +497,12 @@
       const last10 = played.slice(-10);
       const [hits, n] = hitRate(last10, check);
       if (floor != null && (n < 5 || hits / n < floor)) continue;
+      const bet = mode === "book" ? signalOf(quote) : null;
+      if (betsOnly && !bet) continue;
       const priced = offerOf(sportId, player, stat, check);
       rows.push({
         player, quote, check, hits, n, seasonN: seasonRows(played, sport.season).length,
-        prob: priced.prob, fair: priced.fair, edge: priced.edge, books: priced.books,
+        prob: priced.prob, fair: priced.fair, edge: priced.edge, books: priced.books, bet,
       });
     }
     rows.sort((a, b) => {
@@ -495,9 +516,11 @@
     });
     shell(sportId, "board");
     document.title = spec.label + " board";
-    const chips = available.map((item) => `<a class="chip${item.id === stat ? " on" : ""}" href="${link(sportId, "board", { stat: item.id, mode, floor: floorRaw, line })}">${esc(item.label)}</a>`).join("");
-    const modeChips = [["book", "Each book's line"], ["number", "One number"]].map(([key, label]) => `<a class="chip${key === mode ? " on" : ""}" href="${link(sportId, "board", { stat, mode: key, floor: floorRaw, line })}">${label}</a>`).join("");
-    const floors = [["0.6", "60%"], ["0.7", "70%"], ["0.8", "80%"], ["all", "Everyone"]].map(([key, label]) => `<a class="chip${floorRaw === key ? " on" : ""}" href="${link(sportId, "board", { stat, mode, floor: key, line })}">${label}</a>`).join("");
+    const boardQuery = { stat, mode, floor: floorRaw, line, bets: betsOnly ? "1" : null };
+    const chips = available.map((item) => `<a class="chip${item.id === stat ? " on" : ""}" href="${link(sportId, "board", { ...boardQuery, stat: item.id })}">${esc(item.label)}</a>`).join("");
+    const modeChips = [["book", "Each book's line"], ["number", "One number"]].map(([key, label]) => `<a class="chip${key === mode ? " on" : ""}" href="${link(sportId, "board", { ...boardQuery, mode: key })}">${label}</a>`).join("");
+    const floors = [["0.6", "60%"], ["0.7", "70%"], ["0.8", "80%"], ["all", "Everyone"]].map(([key, label]) => `<a class="chip${floorRaw === key ? " on" : ""}" href="${link(sportId, "board", { ...boardQuery, floor: key })}">${label}</a>`).join("");
+    const betChip = sportId === "nfl" ? `<a class="chip${betsOnly ? " on" : ""}" href="${link(sportId, "board", { ...boardQuery, bets: betsOnly ? null : "1" })}">Signals</a>` : "";
     const body = rows.map((row) => {
       const rate = row.n ? `${row.hits}/${row.n}` : "—";
       const edgeCls = (row.edge || 0) > 0.005 ? "pos" : (row.edge || 0) < -0.005 ? "neg" : "";
@@ -507,11 +530,12 @@
         const price = under != null ? `${american(over)} / ${american(under)}` : american(over);
         return `${bookLine != null ? fmtNum(bookLine) + " " : ""}${price}`;
       };
-      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${bookCell(row.quote.dkLine, row.quote.dkOver, row.quote.dkUnder)}</td><td>${bookCell(row.quote.ppLine, row.quote.ppOver, null)}</td><td>${bookCell(row.quote.udLine, row.quote.udOver, null)}</td><td>${fmtPct(row.fair)}</td><td>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td><td>${fmtGap(row.books)}</td></tr>`;
+      return `<tr><td class="left"><a href="${href}">${esc(row.player.name)}</a></td><td class="left">${esc(row.player.opp || "—")}</td><td>${fmtNum(row.check)}</td><td>${rate}</td><td>${row.seasonN}</td><td>${bookCell(row.quote.dkLine, row.quote.dkOver, row.quote.dkUnder)}</td>${signalCell(row.bet ? row.quote : null)}<td>${bookCell(row.quote.ppLine, row.quote.ppOver, null)}</td><td>${bookCell(row.quote.udLine, row.quote.udOver, null)}</td><td>${fmtPct(row.fair)}</td><td>${fmtPct(row.prob)}</td><td class="${edgeCls}">${fmtEdge(row.edge)}</td><td>${fmtGap(row.books)}</td></tr>`;
     }).join("");
+    const betCount = rows.filter((row) => row.bet).length;
     const caption = mode === "book"
       ? (sportId === "nfl"
-        ? "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. Side is the over or the under against DraftKings, or against PrizePicks or Underdog when DraftKings has no price."
+        ? "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. Bet is the close-gap signal: today's DraftKings number is at least 0.6 standard deviations off the average number they posted for him before this week. A lower number is the over. A higher number is the under. Prices shorter than -150 are left blank."
         : "Each row is scored against the posted line. The sim is the median of a play-by-play simulation of the game. College rows are overs only.")
       : `Every player is scored against ${fmtNum(line)} ${spec.unit}. The side shows only when that number is a posted line.`;
     const numberField = mode === "number" ? `<label>Number <input id="line" type="number" step="0.5" value="${line}"></label><button type="submit">Score</button>` : "";
@@ -520,14 +544,14 @@
       <p class="lede">${esc(caption)} The 60/70/80 chips are the short list: last 10 at that rate, with at least five played games. Last 10 reaches back through ${sport.season - 2} when this season is still short.</p>
       <div class="chips" style="margin-top:.8rem">${chips}</div>
       <form class="tools" id="board-form">${numberField}</form>
-      <div class="chips">${modeChips}<span style="width:.4rem"></span>${floors}</div>
-      <p class="note">${rows.length} players · ${esc(spec.label)}</p>
-      <div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>${sport.season}</th><th>DraftKings</th><th>PrizePicks</th><th>Underdog</th><th>Fair</th><th>Sim</th><th>Side</th><th>vs Pin</th></tr></thead><tbody>${body || '<tr><td class="left" colspan="12">Nobody cleared that floor.</td></tr>'}</tbody></table></div>`;
+      <div class="chips">${modeChips}<span style="width:.4rem"></span>${floors}${betChip}</div>
+      <p class="note">${rows.length} players · ${esc(spec.label)}${sportId === "nfl" && mode === "book" ? ` · ${betCount} signals` : ""}</p>
+      <div class="table-wrap"><table><thead><tr><th class="left">Player</th><th class="left">Opp</th><th>Line</th><th>Last 10</th><th>${sport.season}</th><th>DraftKings</th><th>Bet</th><th>PrizePicks</th><th>Underdog</th><th>Fair</th><th>Sim</th><th>Side</th><th>vs Pin</th></tr></thead><tbody>${body || `<tr><td class="left" colspan="13">${betsOnly ? "No signal on this market." : "Nobody cleared that floor."}</td></tr>`}</tbody></table></div>`;
     const form = $("board-form");
     if (form) form.addEventListener("submit", (event) => {
       event.preventDefault();
       const next = Number($("line").value);
-      location.hash = link(sportId, "board", { stat, mode, floor: floorRaw, line: Number.isFinite(next) ? next : line });
+      location.hash = link(sportId, "board", { stat, mode, floor: floorRaw, bets: betsOnly ? "1" : null, line: Number.isFinite(next) ? next : line });
     });
   }
 
@@ -625,6 +649,11 @@
     const site = player.team && player.team === player.home ? "home" : "away";
     const opp = site === "home" ? player.away : player.home;
     const edgeCls = (edge || 0) > 0.005 ? "pos" : (edge || 0) < -0.005 ? "neg" : "";
+    const bet = signalOf(quote);
+    const betText = bet
+      ? `${bet.side}. Today's line is ${Math.abs(bet.gap).toFixed(2)} sd ${bet.gap > 0 ? "below" : "above"} his usual close.`
+      : "No signal.";
+    const betCls = bet ? (bet.side === "Over" ? "pos" : "neg") : "";
     const range = band80(fitted);
     const modelNote = describeModel(fitted, spec);
     document.title = player.name;
@@ -650,7 +679,7 @@
             <div class="book"><span class="note">Underdog · ${fmtNum(quote.udLine)}</span><b>${american(quote.udOver)}</b></div>
             <div class="book"><span class="note">Pinnacle · ${fmtNum(quote.pinLine)}</span><b>${american(quote.pinOver)} / ${american(quote.pinUnder)}</b></div>
           </div>
-          <dl class="facts" style="margin-top:.7rem"><div><dt>DK fair</dt><dd>${fmtPct(bookFair)}</dd></div><div><dt>DK price</dt><dd>${american(toAmerican(bookFair))}</dd></div><div><dt>Side</dt><dd class="${edgeCls}">${fmtEdge(edge)}</dd></div><div><dt>vs Pin</dt><dd>${fmtGap(priced.books)}</dd></div></dl>
+          <dl class="facts" style="margin-top:.7rem">${sportId === "nfl" ? `<div><dt>Bet</dt><dd class="${betCls}">${esc(betText)}</dd></div>` : ""}<div><dt>DK fair</dt><dd>${fmtPct(bookFair)}</dd></div><div><dt>DK price</dt><dd>${american(toAmerican(bookFair))}</dd></div><div><dt>Side</dt><dd class="${edgeCls}">${fmtEdge(edge)}</dd></div><div><dt>vs Pin</dt><dd>${fmtGap(priced.books)}</dd></div></dl>
           <p class="note">The side is the model against DraftKings only. A two-way DraftKings price is devigged. College sides are overs only, because DraftKings is not posting the under. vs Pin names the book with the cheaper over. It is blank when the number you typed is not the book's line.</p>
         </section>
         <section class="room model"><p class="kicker">Model</p><h2>Chance of ${fmtNum(line)} or more</h2>
@@ -696,8 +725,10 @@
         <p>The log is the player's ESPN ${league} game log. Games in week ${sport.week}, and anything later, are left out. ${sportId === "nfl" ? "An NFL game counts when he played at least 10 offensive snaps, whether or not he started." : "A college game counts when he started."} Last 5, last 10, and last 20 are the last that many of those games, reaching back across seasons until there are enough. The season window is ${sport.season} only.</p>
         <p>The band under the hit rates is a 95% Wilson interval. Five of the last ten is about 24% to 76%.</p>
         <h2>The model</h2>
-        <p>The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero.</p>
-        <p>${sportId === "nfl" ? "The percent is how often the simulated games cleared the line." : "The percent is how often a game drawn around that median clears the line."} The usual range is the middle 80% of those games.</p>
+        <p>${sportId === "nfl"
+          ? "The number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero. The Bet column is separate from that simulation. It fires when today's DraftKings number is at least 0.6 standard deviations away from the average number they posted for that player before this week, he has five earlier closes, and the price is no shorter than -150."
+          : "The college number comes from simulating the game play by play. Each play samples a pass or a run from the down, distance, field position, quarter, and score, then samples the result of that play. The clock and the score carry into the next play. The ball goes to a player in proportion to his own recent share. The number is the median of those simulated games. A player who is ruled out is set to zero."}</p>
+        <p>The percent is how often a game drawn around that median clears the line. The usual range is the middle 80% of those games.</p>
         <h2>Odds</h2>
         <p>The side is how far that sim sits from the price. DraftKings is used when it posts the number. Otherwise the side uses PrizePicks or Underdog. Pinnacle is not part of the edge. vs Pin shows which book is cheaper on the over. College football has no under at DraftKings, so those rows never show an under.</p>
         <p>Refresh NFL lines and Refresh college lines load the latest published slate. That slate already includes the completed week's games and the current DraftKings, PrizePicks, Underdog, and Pinnacle prices. The refresh job pulls a new week of games and a new set of odds, then republishes the sim.</p>
