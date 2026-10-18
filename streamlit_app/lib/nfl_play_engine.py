@@ -502,21 +502,36 @@ def simulate_game(
             [float(p.get("ypa") or engine.league_ypa) for p in roster] or [engine.league_ypa],
             dtype=float,
         )
+        starter = None
+        starter_key = None
         for i, player in enumerate(roster):
-            if player.get("out"):
+            if player.get("out") or float(player.get("play") or 0.0) <= 0:
                 continue
-            share = float(player.get("pass_share") or 0.0)
-            play = float(player.get("play") or 0.0)
-            position = str(player.get("position") or "")
-            if play >= 0.5 or position == "QB":
-                share = max(share, float(player.get("pass_when_in") or 0.0))
-            if play <= 0:
+            if str(player.get("position") or "") != "QB":
                 continue
-            if position != "QB" and share <= 0.08:
+            if player.get("chart") is False:
                 continue
-            if share <= 0:
-                continue
-            weights[i] = share * play
+            depth = player.get("depth")
+            key = (depth is None, 99 if depth is None else int(depth))
+            if starter_key is None or key < starter_key:
+                starter_key = key
+                starter = i
+        if starter is not None:
+            weights[starter] = 1.0
+        else:
+            for i, player in enumerate(roster):
+                if player.get("out"):
+                    continue
+                share = float(player.get("pass_share") or 0.0)
+                play = float(player.get("play") or 0.0)
+                position = str(player.get("position") or "")
+                if play >= 0.5 or position == "QB":
+                    share = max(share, float(player.get("pass_when_in") or 0.0))
+                if play <= 0 or share <= 0:
+                    continue
+                if position != "QB" and share <= 0.08:
+                    continue
+                weights[i] = share * play
         if len(roster) == 0 or float(weights.sum()) <= 0:
             qb.append(np.zeros(n, dtype=np.int16))
             qb_ypa.append(np.full(n, engine.league_ypa))
@@ -733,6 +748,32 @@ def simulate_game(
 
         _advance_clock_boundary(qtr, clock, alive, off, yard, down, dist, home_received_open)
 
+    # The situation model shrinks a pass-heavy quarterback back toward the league.
+    # Move halfway to the dropbacks in his own last 10 starts.
+    for side in (0, 1):
+        if not names[side]:
+            continue
+        starter_i = int(qb[side][0])
+        if str(sides[side][starter_i].get("position") or "") != "QB":
+            continue
+        recent = float(sides[side][starter_i].get("dropbacks") or 0.0)
+        if recent < 15:
+            continue
+        att = box[side]["pass_attempts"][starter_i]
+        played = att >= 8
+        if int(played.sum()) < 20:
+            continue
+        center = float(np.median(att[played]))
+        if center < 10:
+            continue
+        factor = float(np.clip(1.0 + 0.5 * (recent / center - 1.0), 0.90, 1.18))
+        if abs(factor - 1.0) < 0.02:
+            continue
+        for stat in ("pass_yds", "pass_yds_q1", "pass_attempts", "pass_completions"):
+            box[side][stat][starter_i] *= factor
+        for stat in ("rec_yds", "receptions"):
+            box[side][stat] *= factor
+
     out: dict[str, dict[str, np.ndarray]] = {}
     for side in (0, 1):
         for i, name in enumerate(names[side]):
@@ -870,10 +911,11 @@ def _stash(simulated, roster, series, index, seen, z, n_keep, rng) -> None:
             if (key_name, stat) in seen:
                 continue
             seen.add((key_name, stat))
-            # A prop voids when he does not play. If he starts often enough to
-            # have a posted number but not in most sims, report the games he started.
+            # A prop voids when he does not play, so the number is the games
+            # he actually threw. Zeros from a backup getting the start were
+            # pulling a full game down by about 100 yards.
             sample = draws
-            if stat in conditional and 0.2 <= starter_rate < 0.55 and int(started.sum()) >= 20:
+            if stat in conditional and starter_rate < 0.98 and int(started.sum()) >= 20:
                 sample = draws[started]
             center = float(np.median(sample))
             sd = float(np.std(sample, ddof=1)) if len(sample) > 1 else 0.0

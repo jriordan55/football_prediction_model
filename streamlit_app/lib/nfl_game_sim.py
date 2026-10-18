@@ -23,7 +23,7 @@ CACHE = DATA_DIR / "fastr_player_cache" / "nfl"
 PBP_URL = "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.parquet"
 PLAYERS_URL = "https://github.com/nflverse/nflverse-data/releases/download/players/players.parquet"
 N_SIMS = 400
-MODEL_VERSION = 9
+MODEL_VERSION = 10
 KEEP_DRAWS = 400
 MIN_SNAPS = 10
 LAST_GAMES = 10
@@ -328,8 +328,10 @@ def _ratings(weeks: pd.DataFrame, meta: dict[str, dict[str, str]]) -> dict[str, 
             ypt = _window_rate(rec_yds_cal, targets_cal, ypt, 10)
             active_qb = pass_att_cal >= 8
             pass_when_in = _share(pass_att_cal[active_qb], team_p[active_qb]) if active_qb.any() else pass_share
+            dropbacks = float(np.median(pass_att_cal[active_qb])) if active_qb.any() else 0.0
         else:
             pass_when_in = pass_share
+            dropbacks = 0.0
         role = (pass_att_cal >= 8) | (rush_att_cal >= 5) | (targets_cal >= 3) if len(pass_att_cal) else np.array([])
         played = float(np.mean(role)) if len(role) else 0.35
         if len(pass_att_cal) and (
@@ -353,6 +355,7 @@ def _ratings(weeks: pd.DataFrame, meta: dict[str, dict[str, str]]) -> dict[str, 
             "play": float(np.clip(played, 0.02, 0.98)),
             "pass_share": float(np.clip(pass_share, 0, 1)),
             "pass_when_in": float(np.clip(pass_when_in, 0, 1)),
+            "dropbacks": float(dropbacks),
             "rush_share": float(np.clip(rush_share, 0, 1)),
             "target_share": float(np.clip(tgt_share, 0, 1)),
             "ypa": float(np.clip(ypa, 3, 12)),
@@ -541,6 +544,10 @@ def _promote_backups(players: dict[str, dict[str, Any]], year: int, week: int) -
                 return (0, place, -share)
 
             ordered = sorted(group, key=_sort_key)
+            for player in group:
+                place = rank.get(norm_name(player["name"]))
+                if place is not None:
+                    player["depth"] = int(place)
             peak = {key: 0.0 for key in keys}
             heir = None
             for player in ordered:
