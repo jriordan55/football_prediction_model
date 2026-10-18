@@ -10,8 +10,9 @@ play, and the score, down, and field position carry into the next one.
 Team tendencies shift the league probability in logit space, so a pass-heavy
 team stays a pass-heavy team without the probability ever leaving 0 to 1.
 The ball is given to a player in proportion to his own last 10 games, on any
-team. A player who is ruled out hands that role to the next player at his
-position. A small share is kept.
+team, and only if he is on the current depth chart. A player who is ruled out
+hands that role to the next player at his position, up to a normal starter
+week. A small share is kept.
 """
 from __future__ import annotations
 
@@ -455,27 +456,24 @@ def _cap_shares(raw: np.ndarray) -> np.ndarray:
     return out
 
 
+def _on_depth_chart(player: dict[str, Any], key: str) -> bool:
+    """Historical shares from players no longer on the chart do not get carries."""
+    if player.get("chart") is not False:
+        return True
+    pos = str(player.get("position") or "")
+    if key == "rush_share":
+        return pos not in {"RB", "FB"}
+    if key == "target_share":
+        return pos not in {"RB", "WR", "TE", "FB"}
+    return True
+
+
 def _roster_weights(roster: list[dict[str, Any]], key: str) -> np.ndarray:
     raw = np.zeros(len(roster), dtype=float)
-    vacated: dict[str, float] = {}
     for i, player in enumerate(roster):
-        share = max(float(player.get(key) or 0.0), 0.0)
-        if player.get("out"):
-            pos = str(player.get("position") or "")
-            vacated[pos] = vacated.get(pos, 0.0) + share
+        if player.get("out") or not _on_depth_chart(player, key):
             continue
-        raw[i] = share
-    # A ruled-out player hands this role to teammates who play his position.
-    for pos, amount in vacated.items():
-        if amount <= 0:
-            continue
-        idx = [i for i, player in enumerate(roster) if not player.get("out") and str(player.get("position") or "") == pos]
-        if not idx:
-            continue
-        base = np.array([raw[i] for i in idx], dtype=float)
-        if float(base.sum()) <= 0:
-            base = np.ones(len(idx), dtype=float)
-        raw[np.array(idx)] += amount * base / base.sum()
+        raw[i] = max(float(player.get(key) or 0.0), 0.0)
     return _cap_shares(raw)
 
 

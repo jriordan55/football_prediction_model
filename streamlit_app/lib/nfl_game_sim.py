@@ -23,7 +23,7 @@ CACHE = DATA_DIR / "fastr_player_cache" / "nfl"
 PBP_URL = "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.parquet"
 PLAYERS_URL = "https://github.com/nflverse/nflverse-data/releases/download/players/players.parquet"
 N_SIMS = 400
-MODEL_VERSION = 8
+MODEL_VERSION = 9
 KEEP_DRAWS = 400
 MIN_SNAPS = 10
 LAST_GAMES = 10
@@ -488,16 +488,25 @@ def _depth_chart(year: int, week: int) -> dict[tuple[str, str], list[str]]:
 
 
 def _promote_backups(players: dict[str, dict[str, Any]], year: int, week: int) -> None:
-    """An out starter's role goes to the next player at that position."""
+    """An out starter's role goes to the next player at that position.
+
+    The next man takes that role. He does not keep his own share and then
+    add every injured teammate on top, which was projecting one backup for
+    nearly every carry.
+    """
     chart = _depth_chart(year, week)
     chart_team = {}
+    listed: set[tuple[str, str]] = set()
     for (team, _pos), names in chart.items():
         for name in names:
             chart_team.setdefault(norm_name(name), team)
+            listed.add((norm_name(name), team))
     for player in players.values():
         team = chart_team.get(norm_name(player["name"]))
         if team:
             player["team"] = team
+        if chart:
+            player["chart"] = (norm_name(player["name"]), str(player["team"])) in listed
     _apply_injuries(players)
     out, _listed = _injury_keys()
     by_team: dict[str, list[dict[str, Any]]] = {}
@@ -532,12 +541,12 @@ def _promote_backups(players: dict[str, dict[str, Any]], year: int, week: int) -
                 return (0, place, -share)
 
             ordered = sorted(group, key=_sort_key)
-            vacated = {key: 0.0 for key in keys}
+            peak = {key: 0.0 for key in keys}
             heir = None
             for player in ordered:
                 if player.get("out"):
                     for key in keys:
-                        vacated[key] += float(player.get(key) or 0.0)
+                        peak[key] = max(peak[key], float(player.get(key) or 0.0))
                         player[key] = 0.0
                     player["pass_share"] = 0.0
                     player["pass_when_in"] = 0.0
@@ -548,21 +557,27 @@ def _promote_backups(players: dict[str, dict[str, Any]], year: int, week: int) -
                     heir = player
             if heir is not None and heir.get("out"):
                 heir = None
-            if heir is None and any(value > 0 for value in vacated.values()):
+            if heir is None and any(value > 0 for value in peak.values()):
                 for name in chart.get((team, position), []):
                     token = (norm_name(name), team)
                     if token in present or token in out:
                         continue
                     heir = _blank(name, team, position)
+                    heir["chart"] = True
                     players[f"depth:{team}:{token[0]}"] = heir
                     roster.append(heir)
                     present.add(token)
                     break
-            if heir is None or not any(value > 0 for value in vacated.values()):
+            if heir is None or not any(value > 0 for value in peak.values()):
                 continue
-            for key, value in vacated.items():
-                heir[key] = min(0.98, float(heir.get(key) or 0.0) + value)
-            if not heir.get("limited") and max(vacated.values()) >= 0.08:
+            # One quarterback takes the passing job. A back or receiver takes
+            # the vacated role only up to a normal starter week, and never by
+            # stacking it on the share he already had.
+            role_cap = {"rush_share": 0.55, "target_share": 0.28, "pass_share": 0.98, "pass_when_in": 0.98}
+            for key, value in peak.items():
+                own = float(heir.get(key) or 0.0)
+                heir[key] = max(own, min(role_cap.get(key, 0.55), value))
+            if not heir.get("limited") and max(peak.values()) >= 0.08:
                 heir["play"] = max(float(heir.get("play") or 0.0), 0.92)
 
 
