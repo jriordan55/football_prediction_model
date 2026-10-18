@@ -793,22 +793,31 @@ def simulate_game(
                 box[side]["rush_attempts"][starter_i] *= rush_factor
                 box[side]["rush_yds"][starter_i] *= rush_factor
         recent = float(sides[side][starter_i].get("dropbacks") or 0.0)
-        if recent < 15:
-            continue
+        # A couple of 40-attempt games, often week 18, are not his volume.
+        if recent >= 15 and int(sides[side][starter_i].get("dropback_n") or 0) >= 5:
+            att = box[side]["pass_attempts"][starter_i]
+            played = att >= 8
+            if int(played.sum()) >= 20:
+                center = float(np.median(att[played]))
+                if center >= 10:
+                    factor = float(np.clip(1.0 + 0.5 * (recent / center - 1.0), 0.90, 1.18))
+                    if abs(factor - 1.0) >= 0.02:
+                        for stat in ("pass_yds", "pass_yds_q1", "pass_attempts", "pass_completions"):
+                            box[side][stat][starter_i] *= factor
+                        for stat in ("rec_yds", "receptions"):
+                            box[side][stat] *= factor
+        # The play yards were running hotter than this quarterback's own rate.
         att = box[side]["pass_attempts"][starter_i]
+        yds = box[side]["pass_yds"][starter_i]
         played = att >= 8
-        if int(played.sum()) < 20:
-            continue
-        center = float(np.median(att[played]))
-        if center < 10:
-            continue
-        factor = float(np.clip(1.0 + 0.5 * (recent / center - 1.0), 0.90, 1.18))
-        if abs(factor - 1.0) < 0.02:
-            continue
-        for stat in ("pass_yds", "pass_yds_q1", "pass_attempts", "pass_completions"):
-            box[side][stat][starter_i] *= factor
-        for stat in ("rec_yds", "receptions"):
-            box[side][stat] *= factor
+        target = float(sides[side][starter_i].get("ypa") or 0.0)
+        if int(played.sum()) >= 20 and target > 0:
+            att_c = float(np.median(att[played]))
+            yds_c = float(np.median(yds[played]))
+            if att_c >= 10 and yds_c > 0 and yds_c / att_c > target * 1.08:
+                ypa_factor = float(np.clip(target / (yds_c / att_c), 0.72, 1.0))
+                box[side]["pass_yds"][starter_i] *= ypa_factor
+                box[side]["pass_yds_q1"][starter_i] *= ypa_factor
 
     out: dict[str, dict[str, np.ndarray]] = {}
     for side in (0, 1):
