@@ -438,19 +438,45 @@ def _pick(weights: np.ndarray, rng: np.random.Generator, n: int) -> np.ndarray:
     return np.where(roll >= total, -1, picked).astype(np.int16)
 
 
-def _cap_shares(raw: np.ndarray) -> np.ndarray:
-    """Keep the largest share whole. Teammates only fill what is left.
+def _playing_qb(roster: list[dict[str, Any]]) -> int | None:
+    """The healthy quarterback at the top of the depth chart."""
+    starter = None
+    starter_key = None
+    for i, player in enumerate(roster):
+        if player.get("out") or float(player.get("play") or 0.0) <= 0:
+            continue
+        if str(player.get("position") or "") != "QB" or player.get("chart") is False:
+            continue
+        depth = player.get("depth")
+        key = (depth is None, 99 if depth is None else int(depth))
+        if starter_key is None or key < starter_key:
+            starter_key = key
+            starter = i
+    return starter
 
-    Each share is that player's own last 10 games, so they overlap. Dividing
-    them all down to 1 cuts a 60% back to a third of the carries.
+
+def _fill_by_depth(roster: list[dict[str, Any]], raw: np.ndarray, limit: float) -> np.ndarray:
+    """The top of the depth chart keeps its own share. The rest fill what is left.
+
+    A back buried on the chart can still have a big share from when he started
+    somewhere else. Giving that share out first takes the carries from the
+    players who actually have the role.
     """
     out = np.zeros_like(raw)
     used = 0.0
-    for index in np.argsort(-raw):
+    order = sorted(
+        range(len(raw)),
+        key=lambda i: (
+            roster[i].get("depth") is None,
+            99 if roster[i].get("depth") is None else int(roster[i].get("depth")),
+            -float(raw[i]),
+        ),
+    )
+    for index in order:
         share = float(raw[index])
-        if share <= 0 or used >= 1.0:
-            break
-        take = min(share, 1.0 - used)
+        if share <= 0 or used >= limit:
+            continue
+        take = min(share, limit - used)
         out[index] = take
         used += take
     return out
@@ -474,7 +500,22 @@ def _roster_weights(roster: list[dict[str, Any]], key: str) -> np.ndarray:
         if player.get("out") or not _on_depth_chart(player, key):
             continue
         raw[i] = max(float(player.get(key) or 0.0), 0.0)
-    return _cap_shares(raw)
+    if key != "rush_share":
+        return _fill_by_depth(roster, raw, 1.0)
+    # Only the quarterback who is playing keeps his rushes. A backup's old
+    # scrambles, and a quarterback who is no longer on the chart, do not
+    # take carries from the backfield.
+    qb = _playing_qb(roster)
+    for i, player in enumerate(roster):
+        if str(player.get("position") or "") == "QB" and i != qb:
+            raw[i] = 0.0
+    held = min(float(raw[qb]), 0.35) if qb is not None else 0.0
+    if qb is not None:
+        raw[qb] = 0.0
+    out = _fill_by_depth(roster, raw, max(0.0, 1.0 - held))
+    if qb is not None:
+        out[qb] = held
+    return out
 
 
 def simulate_game(
@@ -502,20 +543,7 @@ def simulate_game(
             [float(p.get("ypa") or engine.league_ypa) for p in roster] or [engine.league_ypa],
             dtype=float,
         )
-        starter = None
-        starter_key = None
-        for i, player in enumerate(roster):
-            if player.get("out") or float(player.get("play") or 0.0) <= 0:
-                continue
-            if str(player.get("position") or "") != "QB":
-                continue
-            if player.get("chart") is False:
-                continue
-            depth = player.get("depth")
-            key = (depth is None, 99 if depth is None else int(depth))
-            if starter_key is None or key < starter_key:
-                starter_key = key
-                starter = i
+        starter = _playing_qb(roster)
         if starter is not None:
             weights[starter] = 1.0
         else:
@@ -756,6 +784,14 @@ def simulate_game(
         starter_i = int(qb[side][0])
         if str(sides[side][starter_i].get("position") or "") != "QB":
             continue
+        rushes = box[side]["rush_attempts"][starter_i]
+        recent_r = float(sides[side][starter_i].get("rush_pg") or 0.0)
+        if recent_r >= 2 and len(rushes):
+            rush_center = float(np.median(rushes))
+            if rush_center + 0.5 < recent_r:
+                rush_factor = float(np.clip(recent_r / max(rush_center, 0.5), 1.0, 2.0))
+                box[side]["rush_attempts"][starter_i] *= rush_factor
+                box[side]["rush_yds"][starter_i] *= rush_factor
         recent = float(sides[side][starter_i].get("dropbacks") or 0.0)
         if recent < 15:
             continue

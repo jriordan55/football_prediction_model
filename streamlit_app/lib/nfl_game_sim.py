@@ -23,7 +23,7 @@ CACHE = DATA_DIR / "fastr_player_cache" / "nfl"
 PBP_URL = "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.parquet"
 PLAYERS_URL = "https://github.com/nflverse/nflverse-data/releases/download/players/players.parquet"
 N_SIMS = 400
-MODEL_VERSION = 10
+MODEL_VERSION = 11
 KEEP_DRAWS = 400
 MIN_SNAPS = 10
 LAST_GAMES = 10
@@ -303,6 +303,7 @@ def _ratings(weeks: pd.DataFrame, meta: dict[str, dict[str, str]]) -> dict[str, 
             tgt_share = _share(targets_cal * weight, team_p * weight)
         else:
             pass_share = rush_share = tgt_share = 0.02
+        rush_pg = float(np.median(rush_att_cal)) if len(rush_att_cal) else 0.0
         pass_att = group["pass_att"].to_numpy(dtype=float)
         rush_att = group["rush_att"].to_numpy(dtype=float)
         targets = group["targets"].to_numpy(dtype=float)
@@ -356,6 +357,7 @@ def _ratings(weeks: pd.DataFrame, meta: dict[str, dict[str, str]]) -> dict[str, 
             "pass_share": float(np.clip(pass_share, 0, 1)),
             "pass_when_in": float(np.clip(pass_when_in, 0, 1)),
             "dropbacks": float(dropbacks),
+            "rush_pg": float(rush_pg),
             "rush_share": float(np.clip(rush_share, 0, 1)),
             "target_share": float(np.clip(tgt_share, 0, 1)),
             "ypa": float(np.clip(ypa, 3, 12)),
