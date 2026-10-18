@@ -76,7 +76,7 @@ def _load_plays(year: int, week: int) -> pd.DataFrame:
 
     frames = []
     columns = [
-        "season", "week", "season_type", "posteam", "play_type", "down", "ydstogo",
+        "season", "week", "season_type", "posteam", "defteam", "play_type", "down", "ydstogo",
         "yardline_100", "qtr", "score_differential", "air_yards", "yards_after_catch",
         "yards_gained", "passing_yards", "receiving_yards", "pass_attempt", "rush_attempt",
         "complete_pass", "interception", "sack", "fumble_lost", "field_goal_result", "kick_distance",
@@ -127,6 +127,8 @@ class PlayEngine:
         self.fg_make = tables["fg_make"]
         self.league_ypa = float(tables.get("league_ypa") or 7.0)
         self.league_ypt = float(tables.get("league_ypt") or 7.5)
+        self.def_pass = tables.get("def_pass") or {}
+        self.def_rush = tables.get("def_rush") or {}
 
     def pass_probability(self, team: str, down: np.ndarray, dist: np.ndarray, field: np.ndarray, qtr: np.ndarray, score: np.ndarray) -> np.ndarray:
         idx = _situation_index(np.clip(down, 1, 3) - 1, dist, field, np.clip(qtr, 1, 4) - 1, score)
@@ -146,6 +148,52 @@ class PlayEngine:
         punt = rest - fg
         stacked = np.cumsum(np.column_stack([go, fg, punt]), axis=1)
         return (rng.random(len(go))[:, None] > stacked).sum(axis=1).astype(np.int8)
+
+
+def _defense_factors(plays: pd.DataFrame, year: int) -> tuple[dict[str, float], dict[str, float]]:
+    """Yards allowed versus the league. This season counts three times last season, then shrinks."""
+    if plays.empty or "defteam" not in plays.columns:
+        return {}, {}
+    from .nfl_game_sim import abbr
+
+    frame = plays[plays["defteam"].notna()]
+    if frame.empty:
+        return {}, {}
+    seasons = pd.to_numeric(frame["season"], errors="coerce").to_numpy()
+    defense = frame["defteam"].astype(str).to_numpy()
+    pass_att = frame["pass_attempt"].to_numpy(dtype=float)
+    rush_att = frame["rush_attempt"].to_numpy(dtype=float)
+    pass_yds = frame["passing_yards"].to_numpy(dtype=float) if "passing_yards" in frame.columns else frame["yards_gained"].to_numpy(dtype=float)
+    rush_col = "rushing_yards" if "rushing_yards" in frame.columns else "yards_gained"
+    rush_yds = frame[rush_col].to_numpy(dtype=float)
+
+    def _rates(attempts: np.ndarray, yards: np.ndarray) -> dict[str, float]:
+        used = attempts > 0
+        yards = np.where(np.isfinite(yards), yards, 0.0)
+        league = float(yards[used].sum() / max(float(attempts[used].sum()), 1.0))
+        if league <= 0:
+            return {}
+        out = {}
+        for team in np.unique(defense):
+            on = defense == team
+            cur = on & (seasons == int(year)) & used
+            old = on & (seasons != int(year)) & used
+            n_cur = float(attempts[cur].sum()) if cur.any() else 0.0
+            n_old = float(attempts[old].sum()) if old.any() else 0.0
+            y_cur = float(yards[cur].sum() / n_cur) if n_cur else league
+            y_old = float(yards[old].sum() / n_old) if n_old else league
+            n = 3.0 * n_cur + n_old
+            if n <= 0:
+                continue
+            rate = (3.0 * n_cur * y_cur + n_old * y_old) / n
+            shrink = n / (n + 400.0)
+            factor = 1.0 + shrink * (rate / league - 1.0)
+            if not np.isfinite(factor):
+                continue
+            out[abbr(str(team))] = float(np.clip(factor, 0.90, 1.10))
+        return out
+
+    return _rates(pass_att, pass_yds), _rates(rush_att, rush_yds)
 
 
 def fit_engine(year: int, week: int) -> PlayEngine:
@@ -293,6 +341,7 @@ def fit_plays(plays: pd.DataFrame, *, year: int | None = None) -> PlayEngine:
     thrown = attempts & (plays["sack"] == 0)
     league_ypa = float(plays.loc[attempts, "passing_yards"].sum() / max(float(attempts.sum()), 1.0))
     league_ypt = float(plays.loc[thrown, "receiving_yards"].sum() / max(float(thrown.sum()), 1.0))
+    def_pass, def_rush = _defense_factors(plays, year)
 
     return PlayEngine({
         "pass_p": pass_p.astype(np.float32),
@@ -309,6 +358,8 @@ def fit_plays(plays: pd.DataFrame, *, year: int | None = None) -> PlayEngine:
         "fg_make": fg_make.astype(np.float32),
         "league_ypa": float(np.clip(league_ypa, 5.0, 9.0)),
         "league_ypt": float(np.clip(league_ypt, 4.0, 12.0)),
+        "def_pass": def_pass,
+        "def_rush": def_rush,
     })
 
 
@@ -355,6 +406,8 @@ def _empty_engine() -> PlayEngine:
         "fg_make": np.full(8, 0.85, dtype=np.float32),
         "league_ypa": 7.0,
         "league_ypt": 7.5,
+        "def_pass": {},
+        "def_rush": {},
     })
 
 
@@ -568,10 +621,16 @@ def simulate_game(
                 if not mask.any() or not names[side]:
                     continue
                 who = _pick(rush_w[side], rng, n)
+                opp = team_code[1 - side] if side < len(team_code) else ""
+                def_r = engine.def_rush.get(opp, 1.0)
+                if not np.isfinite(def_r):
+                    def_r = 1.0
                 scale = np.ones(n, dtype=float)
                 known = who >= 0
                 if known.any():
-                    scale[known] = np.clip(ypc[side][who[known]] / _LEAGUE_YPC, 0.90, 1.10)
+                    scale[known] = ypc[side][who[known]] / _LEAGUE_YPC
+                scale *= def_r
+                scale = np.clip(scale, 0.85, 1.15)
                 yards = np.round(gained * scale).astype(np.int16)
                 _apply_gain(
                     mask, who, yards, side, off, yard, down, dist, qtr,
@@ -608,9 +667,13 @@ def simulate_game(
                 fell = mask & ~complete & ~intercepted
                 incomplete |= fell
                 yac = _draw_pool(engine.yac_pools, ab, rng)
-                yards = np.round((air + yac) * np.clip(ypt_rate / max(engine.league_ypt, 1.0), 0.70, 1.70)).astype(np.int16)
+                opp = team_code[1 - side] if side < len(team_code) else ""
+                def_p = engine.def_pass.get(opp, 1.0)
+                if not np.isfinite(def_p):
+                    def_p = 1.0
+                yards = np.round((air + yac) * np.clip(ypt_rate / max(engine.league_ypt, 1.0), 0.70, 1.70) * def_p).astype(np.int16)
                 gain = np.minimum(
-                    np.round((air + yac) * np.clip(qb_ypa[side] / max(engine.league_ypa, 1.0), 0.80, 1.28)),
+                    np.round((air + yac) * np.clip(qb_ypa[side] / max(engine.league_ypa, 1.0), 0.80, 1.28) * def_p),
                     yard,
                 ).astype(np.float32)
                 scored = complete & (yards >= yard)
