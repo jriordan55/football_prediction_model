@@ -437,6 +437,24 @@ def _pick(weights: np.ndarray, rng: np.random.Generator, n: int) -> np.ndarray:
     return np.where(roll >= total, -1, picked).astype(np.int16)
 
 
+def _cap_shares(raw: np.ndarray) -> np.ndarray:
+    """Keep the largest share whole. Teammates only fill what is left.
+
+    Each share is that player's own last 10 games, so they overlap. Dividing
+    them all down to 1 cuts a 60% back to a third of the carries.
+    """
+    out = np.zeros_like(raw)
+    used = 0.0
+    for index in np.argsort(-raw):
+        share = float(raw[index])
+        if share <= 0 or used >= 1.0:
+            break
+        take = min(share, 1.0 - used)
+        out[index] = take
+        used += take
+    return out
+
+
 def _roster_weights(roster: list[dict[str, Any]], key: str) -> np.ndarray:
     raw = np.zeros(len(roster), dtype=float)
     vacated: dict[str, float] = {}
@@ -458,7 +476,7 @@ def _roster_weights(roster: list[dict[str, Any]], key: str) -> np.ndarray:
         if float(base.sum()) <= 0:
             base = np.ones(len(idx), dtype=float)
         raw[np.array(idx)] += amount * base / base.sum()
-    return raw
+    return _cap_shares(raw)
 
 
 def simulate_game(
