@@ -16,8 +16,6 @@ on:
           - both
           - nfl
           - cfb
-  schedule:
-    - cron: "15 * * * *"
 
 permissions:
   contents: write

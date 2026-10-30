@@ -4,12 +4,6 @@ name: Pricing in-play snapshot
 
 on:
 
-  schedule:
-
-    # Every 5 minutes — runs even when your machine is off (GitHub-hosted)
-
-    - cron: "*/5 * * * *"
-
   workflow_dispatch:
 
 

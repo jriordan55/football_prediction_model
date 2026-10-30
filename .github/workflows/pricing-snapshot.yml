@@ -1,9 +1,6 @@
 name: Pricing daily snapshot
 
 on:
-  schedule:
-    - cron: "0 14 * * *"
-    - cron: "30 3 * * *"
   workflow_dispatch:
     inputs:
       capture_type:
